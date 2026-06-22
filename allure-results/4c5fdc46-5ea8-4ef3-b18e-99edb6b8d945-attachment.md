@@ -1,0 +1,4130 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: VStesting.ts >> vs
+- Location: test\VStesting.ts:2:5
+
+# Error details
+
+```
+TypeError: page.screenshot(...).toMatchSnapshot is not a function
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Results" [ref=e9] [cursor=pointer]:
+          - /url: .s-asin a:has(h2)
+    - separator [ref=e10]
+    - heading "Keyboard shortcuts" [level=2] [ref=e11]
+    - list "Keyboard shortcuts" [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Search, alt, forward slash" [ref=e14] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e15]:
+            - generic [ref=e16]: Search
+            - generic [ref=e17]:
+              - generic [ref=e18]: alt
+              - generic [ref=e19]: +
+              - generic [ref=e20]: /
+      - listitem [ref=e21]:
+        - link "Cart, shift, alt, c" [ref=e22] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e23]:
+            - generic [ref=e24]: Cart
+            - generic [ref=e25]:
+              - generic [ref=e26]: shift
+              - generic [ref=e27]: +
+              - generic [ref=e28]: alt
+              - generic [ref=e29]: +
+              - generic [ref=e30]: C
+      - listitem [ref=e31]:
+        - link "Home, shift, alt, h" [ref=e32] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e33]:
+            - generic [ref=e34]: Home
+            - generic [ref=e35]:
+              - generic [ref=e36]: shift
+              - generic [ref=e37]: +
+              - generic [ref=e38]: alt
+              - generic [ref=e39]: +
+              - generic [ref=e40]: H
+      - listitem [ref=e41]:
+        - link "Your orders, shift, alt, o" [ref=e42] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e43]:
+            - generic [ref=e44]: Orders
+            - generic [ref=e45]:
+              - generic [ref=e46]: shift
+              - generic [ref=e47]: +
+              - generic [ref=e48]: alt
+              - generic [ref=e49]: +
+              - generic [ref=e50]: O
+      - listitem [ref=e51]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Show/Hide shortcuts
+            - generic [ref=e55]:
+              - generic [ref=e56]: shift
+              - generic [ref=e57]: +
+              - generic [ref=e58]: alt
+              - generic [ref=e59]: +
+              - generic [ref=e60]: Z
+    - generic [ref=e66]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e67]:
+    - navigation "Primary" [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - link "Amazon.in" [ref=e72] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Bengaluru 562114 Update location" [ref=e75] [cursor=pointer]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Delivering to Bengaluru 562114
+              - generic [ref=e79]: Update location
+        - search [ref=e82]:
+          - generic [ref=e85]:
+            - generic [ref=e87]: All
+            - combobox "Select the department you want to search in" [ref=e89] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e92]: join amazon prime
+          - generic "Go" [ref=e95] [cursor=pointer]:
+            - button "Go" [ref=e96]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e100] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e103]:
+                - img "India" [ref=e104]
+                - generic [ref=e105]: EN
+            - button "Expand to Change Language or Country" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - link "Hello, sign in Account & Lists" [ref=e108] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fs%3Fk%3Djoin%2Bamazon%2Bprime%26adgrpid%3D1327112148528381%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26tag%3Dmsndeskstdin-21%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e110]: Hello, sign in
+              - generic [ref=e111]: Account & Lists
+            - button "Expand Account and Lists" [ref=e112] [cursor=pointer]
+          - link "Returns & Orders" [ref=e113] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e114]: Returns
+            - generic [ref=e115]: "& Orders"
+          - link "0 items in cart" [ref=e116] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e118]: "0"
+            - generic [ref=e121]: Cart
+      - generic [ref=e122]:
+        - button "Open All Categories Menu" [ref=e124] [cursor=pointer]:
+          - generic [ref=e126]: All
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - generic [ref=e132]:
+              - link "Fresh" [ref=e133] [cursor=pointer]:
+                - /url: /fresh?ref_=nav_cs_grocery
+              - button "Fresh Details" [ref=e134] [cursor=pointer]
+          - listitem [ref=e135]:
+            - link "MX Player" [ref=e137] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e138]:
+            - link "Sell" [ref=e140] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e141]:
+            - link "Bestsellers" [ref=e143] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e144]:
+            - link "Today's Deals" [ref=e146] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e147]:
+            - link "Mobiles" [ref=e149] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e150]:
+            - generic [ref=e151]:
+              - link "Prime" [ref=e152] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e153] [cursor=pointer]
+          - listitem [ref=e154]:
+            - link "New Releases" [ref=e156] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e157]:
+            - link "Customer Service" [ref=e159] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e160]:
+            - link "Electronics" [ref=e162] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e163]:
+            - link "Amazon Pay" [ref=e165] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e166]:
+            - link "Fashion" [ref=e168] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e169]:
+            - link "Home & Kitchen" [ref=e171] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e172]:
+            - link "Computers" [ref=e174] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e175]:
+            - link "Toys & Games" [ref=e177] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e178]:
+            - link "Car & Motorbike" [ref=e180] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e181]:
+            - link "Gift Cards" [ref=e183] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e184]:
+            - link "Beauty & Personal Care" [ref=e186] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e187]:
+            - link "Home Improvement" [ref=e189] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e190]:
+            - link "Health, Household & Personal Care" [ref=e192] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e193]:
+            - link "Books" [ref=e195] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e196]:
+            - link "Custom Products" [ref=e198] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e199]:
+            - link "Grocery & Gourmet Foods" [ref=e201] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e202]:
+            - link "Video Games" [ref=e204] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e205]:
+            - link "Sports, Fitness & Outdoors" [ref=e207] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e208]:
+            - link "Baby" [ref=e210] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e211]:
+            - link "Pet Supplies" [ref=e213] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e214]:
+            - link "AmazonBasics" [ref=e216] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e217]:
+            - link "Audible" [ref=e219] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e220]:
+            - link "Kindle eBooks" [ref=e222] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e223]:
+            - link "Subscribe & Save" [ref=e225] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e226]:
+            - link "Flights" [ref=e228] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+      - dialog [ref=e231]
+  - generic [ref=e233]:
+    - 'heading "1-48 of 61 results for \"join amazon prime\" Sort by: Featured" [level=1] [ref=e236]':
+      - generic [ref=e237]:
+        - heading "1-48 of 61 results for \"join amazon prime\"" [level=2] [ref=e242]
+        - generic [ref=e247]:
+          - generic [ref=e248]: "Sort by:"
+          - combobox "Sort by:" [ref=e249]:
+            - option "Featured" [selected]
+            - 'option "Price: Low to High"'
+            - 'option "Price: High to Low"'
+            - option "Avg. Customer Review"
+            - option "Newest Arrivals"
+            - option "Best Sellers"
+          - generic [ref=e252] [cursor=pointer]: Sort by:Featured
+    - generic [ref=e254]:
+      - generic [ref=e256]:
+        - generic [ref=e258]:
+          - generic [ref=e263]:
+            - img [ref=e266]:
+              - link [ref=e268] [cursor=pointer]:
+                - /url: /prime?pd_rd_w=hHCxo&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=rRU1J&pd_rd_r=b618732b-2d55-4280-90dd-937d86e4a387&qid=1780926661&ref_=sxts_snpl_3_0_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+                - img [ref=e269]
+            - generic [ref=e271]:
+              - link "Amazon Prime Get unlimited free delivery, streaming video and music, and more." [ref=e272] [cursor=pointer]:
+                - /url: /prime?pd_rd_w=hHCxo&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=rRU1J&pd_rd_r=b618732b-2d55-4280-90dd-937d86e4a387&qid=1780926661&ref_=sxts_snpl_3_0_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+                - generic [ref=e273]: Amazon Prime
+                - generic [ref=e274]: Get unlimited free delivery, streaming video and music, and more.
+              - list [ref=e275]:
+                - generic [ref=e276]:
+                  - listitem [ref=e277]:
+                    - link "View benefits or sign up for Prime" [ref=e278] [cursor=pointer]:
+                      - /url: /prime?pd_rd_w=hHCxo&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=rRU1J&pd_rd_r=b618732b-2d55-4280-90dd-937d86e4a387&qid=1780926661&ref_=sxts_snpl_3_1_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+                    - text: ·
+                  - listitem [ref=e279]:
+                    - link "Manage Prime account" [ref=e280] [cursor=pointer]:
+                      - /url: /mc?pd_rd_w=hHCxo&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=rRU1J&pd_rd_r=b618732b-2d55-4280-90dd-937d86e4a387&qid=1780926661&ref_=sxts_snpl_3_2_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+                    - text: ·
+                  - listitem [ref=e281]:
+                    - link "Help" [ref=e282] [cursor=pointer]:
+                      - /url: /gp/help/customer/display.html?nodeId=201910250&pd_rd_w=hHCxo&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=rRU1J&pd_rd_r=b618732b-2d55-4280-90dd-937d86e4a387&qid=1780926661&ref_=sxts_snpl_3_3_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+          - generic [ref=e284]:
+            - generic [ref=e287]:
+              - heading "Results" [level=2] [ref=e288]
+              - generic [ref=e289]: Check each product page for other buying options.
+            - generic:
+              - list:
+                - listitem [ref=e290]:
+                  - generic [ref=e297]:
+                    - group "Best sellerin Dietary Fiber Nutritional Supplements" [ref=e302]:
+                      - generic "Best seller" [ref=e304]
+                    - link [ref=e307] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDY3Mjc1OTAwMDAzMjo6MDo6&url=%2FTruNativ-Everyday-Constipation-Dissolves-Unflavored%2Fdp%2FB0C1ZG97MN%2Fref%3Dsr_1_1_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-1-spons%26aref%3DWsz8wf3pRp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=Wsz8wf3pRp&sp_cr=ZAZ
+                      - img [ref=e309]
+                    - generic [ref=e310]:
+                      - generic [ref=e311]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e314] [cursor=pointer]:
+                          - generic [ref=e315]: Sponsored
+                        - link "Sponsored Ad - Trunativ Everyday Fiber Supplement Powder | Instant Acidity Relief & Bloating Relief | Prebiotic Fibre Supplement | Psyllium Husk Replacer & Isabgol Replacer | Gluten Free | Unflavored 200g (Pack of 2)" [ref=e317] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDY3Mjc1OTAwMDAzMjo6MDo6&url=%2FTruNativ-Everyday-Constipation-Dissolves-Unflavored%2Fdp%2FB0C1ZG97MN%2Fref%3Dsr_1_1_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-1-spons%26aref%3DWsz8wf3pRp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=Wsz8wf3pRp&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Trunativ Everyday Fiber Supplement Powder | Instant Acidity Relief & Bloating Relief | Prebiotic Fibre Supplement | Psyllium Husk Replacer & Isabgol Replacer | Gluten Free | Unflavored 200g (Pack of 2)" [level=2] [ref=e318]: Trunativ Everyday Fiber Supplement Powder | Instant Acidity Relief & Bloating Relief | Prebiotic Fibre Supplement | Psyllium Husk Replacer & Isabgol Replacer | Gluten Free | Unflavored 200g (Pack of 2)
+                        - generic [ref=e321]: Powder
+                      - generic [ref=e322]:
+                        - generic [ref=e323]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e325] [cursor=pointer]:
+                            - generic [ref=e327]: 4.2 out of 5 stars
+                          - link "1,461 ratings" [ref=e329] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDY3Mjc1OTAwMDAzMjo6MDo6&url=%2FTruNativ-Everyday-Constipation-Dissolves-Unflavored%2Fdp%2FB0C1ZG97MN%2Fref%3Dsr_1_1_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-1-spons%26aref%3DWsz8wf3pRp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=Wsz8wf3pRp&sp_cr=ZAZ#customerReviews
+                            - text: (1.4K)
+                        - generic [ref=e330]: 400+ bought in past month
+                      - generic [ref=e331]:
+                        - generic [ref=e333]:
+                          - generic [ref=e334]: Price, product page
+                          - 'link "₹649 ( ₹324.50 /100 g) M.R.P: ₹799 M.R.P: ₹799" [ref=e335] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDY3Mjc1OTAwMDAzMjo6MDo6&url=%2FTruNativ-Everyday-Constipation-Dissolves-Unflavored%2Fdp%2FB0C1ZG97MN%2Fref%3Dsr_1_1_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-1-spons%26aref%3DWsz8wf3pRp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=Wsz8wf3pRp&sp_cr=ZAZ
+                            - generic [ref=e336]:
+                              - generic [ref=e337]: ₹649
+                              - generic [ref=e338]: ₹649
+                            - generic [ref=e339]:
+                              - text: (
+                              - generic [ref=e340]:
+                                - generic [ref=e341]: ₹324.50
+                                - text: ₹324.50
+                              - text: /100 g)
+                            - generic [ref=e342]: "M.R.P: ₹799"
+                            - generic [ref=e343]:
+                              - text: "M.R.P:"
+                              - generic [ref=e344]:
+                                - generic [ref=e345]: ₹799
+                                - text: ₹799
+                          - text: (19% off)
+                        - generic [ref=e348]:
+                          - generic [ref=e349]: Save 3%
+                          - text: with coupon
+                      - generic [ref=e352]:
+                        - generic [ref=e354]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e356]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e371] [cursor=pointer]
+                - listitem [ref=e372]:
+                  - generic [ref=e379]:
+                    - link [ref=e382] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjIwMDc4MDkxMTYzODk4OjowOjo&url=%2FCentrum-Multivitamin-extract-nutrients-Immunity%2Fdp%2FB0BD1RMHJ6%2Fref%3Dsr_1_2_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-2-spons%26aref%3DPEs1lFhgUL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=PEs1lFhgUL&sp_cr=ZAZ
+                      - img [ref=e384]
+                    - generic [ref=e385]:
+                      - generic [ref=e386]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e389] [cursor=pointer]:
+                          - generic [ref=e390]: Sponsored
+                        - link "Sponsored Ad - Centrum Men - Multivitamin Tablet for Men | With 23 Vital Nutrients including Zinc, Magnesium, Vitamin B, C, D, Calcium for Energy, Immunity, Muscles and Overall Health | Veg - 50 tablets" [ref=e392] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjIwMDc4MDkxMTYzODk4OjowOjo&url=%2FCentrum-Multivitamin-extract-nutrients-Immunity%2Fdp%2FB0BD1RMHJ6%2Fref%3Dsr_1_2_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-2-spons%26aref%3DPEs1lFhgUL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=PEs1lFhgUL&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Centrum Men - Multivitamin Tablet for Men | With 23 Vital Nutrients including Zinc, Magnesium, Vitamin B, C, D, Calcium for Energy, Immunity, Muscles and Overall Health | Veg - 50 tablets" [level=2] [ref=e393]: Centrum Men - Multivitamin Tablet for Men | With 23 Vital Nutrients including Zinc, Magnesium, Vitamin B, C, D, Calcium for Energy, Immunity, Muscles and Overall Health | Veg - 50 tablets
+                        - generic [ref=e396]: Tablet
+                      - generic [ref=e397]:
+                        - generic [ref=e398]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e400] [cursor=pointer]:
+                            - generic [ref=e402]: 4.3 out of 5 stars
+                          - link "3,992 ratings" [ref=e404] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjIwMDc4MDkxMTYzODk4OjowOjo&url=%2FCentrum-Multivitamin-extract-nutrients-Immunity%2Fdp%2FB0BD1RMHJ6%2Fref%3Dsr_1_2_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-2-spons%26aref%3DPEs1lFhgUL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=PEs1lFhgUL&sp_cr=ZAZ#customerReviews
+                            - text: (3.9K)
+                        - generic [ref=e405]: 1K+ bought in past month
+                      - generic [ref=e406]:
+                        - generic [ref=e408]:
+                          - generic [ref=e409]: Price, product page
+                          - 'link "₹565 ( ₹11.30 /count) M.R.P: ₹740 M.R.P: ₹740" [ref=e410] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjIwMDc4MDkxMTYzODk4OjowOjo&url=%2FCentrum-Multivitamin-extract-nutrients-Immunity%2Fdp%2FB0BD1RMHJ6%2Fref%3Dsr_1_2_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-2-spons%26aref%3DPEs1lFhgUL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=PEs1lFhgUL&sp_cr=ZAZ
+                            - generic [ref=e411]:
+                              - generic [ref=e412]: ₹565
+                              - generic [ref=e413]: ₹565
+                            - generic [ref=e414]:
+                              - text: (
+                              - generic [ref=e415]:
+                                - generic [ref=e416]: ₹11.30
+                                - text: ₹11.30
+                              - text: /count)
+                            - generic [ref=e417]: "M.R.P: ₹740"
+                            - generic [ref=e418]:
+                              - text: "M.R.P:"
+                              - generic [ref=e419]:
+                                - generic [ref=e420]: ₹740
+                                - text: ₹740
+                          - text: (24% off)
+                        - generic [ref=e424]:
+                          - generic [ref=e425]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e426]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e429]:
+                        - generic [ref=e431]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e433]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e448] [cursor=pointer]
+                - listitem [ref=e449]:
+                  - generic [ref=e456]:
+                    - link [ref=e459] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDU5MjkxMzkwMTczMjo6MDo6&url=%2FCollagen-Supplements-Peptides-Gluten-Free-Friendly%2Fdp%2FB0F8HFNK1Z%2Fref%3Dsr_1_3_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-3-spons%26aref%3DoZxtFYFISR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=oZxtFYFISR&sp_cr=ZAZ
+                      - img [ref=e461]
+                    - generic [ref=e462]:
+                      - generic [ref=e463]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e466] [cursor=pointer]:
+                          - generic [ref=e467]: Sponsored
+                        - link "Sponsored Ad - QUA Nutrition 1Chaze Marine Collagen Powder | Natural Collagen Supplements for Women & Men | Best Peptides for Skin, Hair, Nails, Joints | Gluten-Free, Zero Sugar, Keto Friendly | 10g x 30 Servings" [ref=e469] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDU5MjkxMzkwMTczMjo6MDo6&url=%2FCollagen-Supplements-Peptides-Gluten-Free-Friendly%2Fdp%2FB0F8HFNK1Z%2Fref%3Dsr_1_3_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-3-spons%26aref%3DoZxtFYFISR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=oZxtFYFISR&sp_cr=ZAZ
+                          - heading "Sponsored Ad - QUA Nutrition 1Chaze Marine Collagen Powder | Natural Collagen Supplements for Women & Men | Best Peptides for Skin, Hair, Nails, Joints | Gluten-Free, Zero Sugar, Keto Friendly | 10g x 30 Servings" [level=2] [ref=e470]: QUA Nutrition 1Chaze Marine Collagen Powder | Natural Collagen Supplements for Women & Men | Best Peptides for Skin, Hair, Nails, Joints | Gluten-Free, Zero Sugar, Keto Friendly | 10g x 30 Servings
+                        - generic [ref=e473]: Powder
+                      - generic [ref=e474]:
+                        - generic [ref=e475]:
+                          - text: "3.6"
+                          - button "3.6 out of 5 stars, rating details" [ref=e477] [cursor=pointer]:
+                            - generic [ref=e479]: 3.6 out of 5 stars
+                          - link "34 ratings" [ref=e481] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDU5MjkxMzkwMTczMjo6MDo6&url=%2FCollagen-Supplements-Peptides-Gluten-Free-Friendly%2Fdp%2FB0F8HFNK1Z%2Fref%3Dsr_1_3_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-3-spons%26aref%3DoZxtFYFISR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=oZxtFYFISR&sp_cr=ZAZ#customerReviews
+                            - text: (34)
+                        - generic [ref=e482]: 50+ bought in past month
+                      - generic [ref=e483]:
+                        - generic [ref=e485]:
+                          - generic [ref=e486]: Price, product page
+                          - 'link "₹1,700 ( ₹566.67 /100 g) M.R.P: ₹4,000 M.R.P: ₹4,000" [ref=e487] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDU5MjkxMzkwMTczMjo6MDo6&url=%2FCollagen-Supplements-Peptides-Gluten-Free-Friendly%2Fdp%2FB0F8HFNK1Z%2Fref%3Dsr_1_3_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-3-spons%26aref%3DoZxtFYFISR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=oZxtFYFISR&sp_cr=ZAZ
+                            - generic [ref=e488]:
+                              - generic [ref=e489]: ₹1,700
+                              - generic [ref=e490]: ₹1,700
+                            - generic [ref=e491]:
+                              - text: (
+                              - generic [ref=e492]:
+                                - generic [ref=e493]: ₹566.67
+                                - text: ₹566.67
+                              - text: /100 g)
+                            - generic [ref=e494]: "M.R.P: ₹4,000"
+                            - generic [ref=e495]:
+                              - text: "M.R.P:"
+                              - generic [ref=e496]:
+                                - generic [ref=e497]: ₹4,000
+                                - text: ₹4,000
+                          - text: (58% off)
+                        - generic [ref=e500]:
+                          - generic [ref=e501]: Save 5%
+                          - text: with coupon
+                      - generic [ref=e504]:
+                        - generic [ref=e506]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e508]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e523] [cursor=pointer]
+                - listitem [ref=e524]:
+                  - generic [ref=e531]:
+                    - link [ref=e534] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDQyMzMyNDk0MjAzMjo6MDo6&url=%2FSiens-Dabur-Omega-3-Capsules-3000mg%2Fdp%2FB0DH4SBZSK%2Fref%3Dsr_1_4_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-4-spons%26aref%3DGAOzqlcehp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=GAOzqlcehp&sp_cr=ZAZ
+                      - img [ref=e536]
+                    - generic [ref=e537]:
+                      - generic [ref=e538]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e541] [cursor=pointer]:
+                          - generic [ref=e542]: Sponsored
+                        - link "Sponsored Ad - Siens By Dabur Omega-3 Fish Oil Capsules 1000mg - 30 softgels| Supports Heart, Skin & Joint Health | With EPA & DHA | Sustainably Sourced from wild-caught Icelandic Fish | Capsule for Men & Women" [ref=e544] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDQyMzMyNDk0MjAzMjo6MDo6&url=%2FSiens-Dabur-Omega-3-Capsules-3000mg%2Fdp%2FB0DH4SBZSK%2Fref%3Dsr_1_4_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-4-spons%26aref%3DGAOzqlcehp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=GAOzqlcehp&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Siens By Dabur Omega-3 Fish Oil Capsules 1000mg - 30 softgels| Supports Heart, Skin & Joint Health | With EPA & DHA | Sustainably Sourced from wild-caught Icelandic Fish | Capsule for Men & Women" [level=2] [ref=e545]: Siens By Dabur Omega-3 Fish Oil Capsules 1000mg - 30 softgels| Supports Heart, Skin & Joint Health | With EPA & DHA | Sustainably Sourced from wild-caught Icelandic Fish | Capsule for Men & Women
+                        - generic [ref=e548]: Capsule
+                      - generic [ref=e549]:
+                        - generic [ref=e550]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e552] [cursor=pointer]:
+                            - generic [ref=e554]: 4.2 out of 5 stars
+                          - link "74 ratings" [ref=e556] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDQyMzMyNDk0MjAzMjo6MDo6&url=%2FSiens-Dabur-Omega-3-Capsules-3000mg%2Fdp%2FB0DH4SBZSK%2Fref%3Dsr_1_4_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-4-spons%26aref%3DGAOzqlcehp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=GAOzqlcehp&sp_cr=ZAZ#customerReviews
+                            - text: (74)
+                        - generic [ref=e557]: 400+ bought in past month
+                      - generic [ref=e558]:
+                        - generic [ref=e560]:
+                          - generic [ref=e561]: Price, product page
+                          - 'link "₹299 ( ₹9.97 /count) M.R.P: ₹499 M.R.P: ₹499" [ref=e562] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYXRmOjMwMDQyMzMyNDk0MjAzMjo6MDo6&url=%2FSiens-Dabur-Omega-3-Capsules-3000mg%2Fdp%2FB0DH4SBZSK%2Fref%3Dsr_1_4_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-4-spons%26aref%3DGAOzqlcehp%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=GAOzqlcehp&sp_cr=ZAZ
+                            - generic [ref=e563]:
+                              - generic [ref=e564]: ₹299
+                              - generic [ref=e565]: ₹299
+                            - generic [ref=e566]:
+                              - text: (
+                              - generic [ref=e567]:
+                                - generic [ref=e568]: ₹9.97
+                                - text: ₹9.97
+                              - text: /count)
+                            - generic [ref=e569]: "M.R.P: ₹499"
+                            - generic [ref=e570]:
+                              - text: "M.R.P:"
+                              - generic [ref=e571]:
+                                - generic [ref=e572]: ₹499
+                                - text: ₹499
+                          - text: (40% off)
+                        - generic [ref=e576]:
+                          - generic [ref=e577]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e578]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e581]:
+                        - generic [ref=e583]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e585]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e600] [cursor=pointer]
+                - listitem [ref=e601]:
+                  - generic [ref=e606]:
+                    - link [ref=e609] [cursor=pointer]:
+                      - /url: /Centrum-Multivitamin-Nutrients-Radiance-Immunity/dp/B0BD2H2XJ2/ref=sr_1_5?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-5
+                      - img [ref=e611]
+                    - generic [ref=e612]:
+                      - generic [ref=e613]:
+                        - link "Centrum Women -Multivitamin Tablet for Women|With 23 Vital Nutrients including Zinc,Magnesium,Vitamin B,C,D, Calcium for Energy, Immunity,Radiance,Strong Bones and Overall Health|Veg - 50 tablets" [ref=e614] [cursor=pointer]:
+                          - /url: /Centrum-Multivitamin-Nutrients-Radiance-Immunity/dp/B0BD2H2XJ2/ref=sr_1_5?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-5
+                          - heading "Centrum Women -Multivitamin Tablet for Women|With 23 Vital Nutrients including Zinc,Magnesium,Vitamin B,C,D, Calcium for Energy, Immunity,Radiance,Strong Bones and Overall Health|Veg - 50 tablets" [level=2] [ref=e615]
+                        - generic [ref=e618]: Tablet
+                      - generic [ref=e619]:
+                        - generic [ref=e620]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e622] [cursor=pointer]:
+                            - generic [ref=e624]: 4.4 out of 5 stars
+                          - link "5,774 ratings" [ref=e626] [cursor=pointer]:
+                            - /url: /Centrum-Multivitamin-Nutrients-Radiance-Immunity/dp/B0BD2H2XJ2/ref=sr_1_5?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-5#customerReviews
+                            - text: (5.7K)
+                        - generic [ref=e627]: 10K+ bought in past month
+                      - generic [ref=e628]:
+                        - generic [ref=e630]:
+                          - generic [ref=e631]: Price, product page
+                          - 'link "₹583 ( ₹11.66 /count) M.R.P: ₹770 M.R.P: ₹770" [ref=e632] [cursor=pointer]':
+                            - /url: /Centrum-Multivitamin-Nutrients-Radiance-Immunity/dp/B0BD2H2XJ2/ref=sr_1_5?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-5
+                            - generic [ref=e633]:
+                              - generic [ref=e634]: ₹583
+                              - generic [ref=e635]: ₹583
+                            - generic [ref=e636]:
+                              - text: (
+                              - generic [ref=e637]:
+                                - generic [ref=e638]: ₹11.66
+                                - text: ₹11.66
+                              - text: /count)
+                            - generic [ref=e639]: "M.R.P: ₹770"
+                            - generic [ref=e640]:
+                              - text: "M.R.P:"
+                              - generic [ref=e641]:
+                                - generic [ref=e642]: ₹770
+                                - text: ₹770
+                          - text: (24% off)
+                        - generic [ref=e646]:
+                          - generic [ref=e647]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e648]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e651]:
+                        - generic [ref=e653]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e655]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e670] [cursor=pointer]
+                - listitem [ref=e671]:
+                  - generic [ref=e676]:
+                    - link [ref=e679] [cursor=pointer]:
+                      - /url: /Tata-Salmon-Omega-Supplements-1000mg/dp/B0C9TGS9P4/ref=sr_1_6?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-6
+                      - img [ref=e681]
+                    - generic [ref=e682]:
+                      - generic [ref=e683]:
+                        - link "Tata 1mg Salmon Omega 3 Fish Oil Supplements 1000mg - 90 Capsules | Triglyceride form | 180mg EPA & 120mg DHA | High Absorption for Heart,Brain & Joints | Helps Manage Cholesterol" [ref=e684] [cursor=pointer]:
+                          - /url: /Tata-Salmon-Omega-Supplements-1000mg/dp/B0C9TGS9P4/ref=sr_1_6?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-6
+                          - heading "Tata 1mg Salmon Omega 3 Fish Oil Supplements 1000mg - 90 Capsules | Triglyceride form | 180mg EPA & 120mg DHA | High Absorption for Heart,Brain & Joints | Helps Manage Cholesterol" [level=2] [ref=e685]
+                        - generic [ref=e688]: Capsule
+                      - generic [ref=e689]:
+                        - generic [ref=e690]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e692] [cursor=pointer]:
+                            - generic [ref=e694]: 4.4 out of 5 stars
+                          - link "4,920 ratings" [ref=e696] [cursor=pointer]:
+                            - /url: /Tata-Salmon-Omega-Supplements-1000mg/dp/B0C9TGS9P4/ref=sr_1_6?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-6#customerReviews
+                            - text: (4.9K)
+                        - generic [ref=e697]: 7K+ bought in past month
+                      - generic [ref=e698]:
+                        - generic [ref=e700]:
+                          - generic [ref=e701]: Price, product page
+                          - 'link "₹595 ( ₹6.61 /count) M.R.P: ₹778 M.R.P: ₹778" [ref=e702] [cursor=pointer]':
+                            - /url: /Tata-Salmon-Omega-Supplements-1000mg/dp/B0C9TGS9P4/ref=sr_1_6?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-6
+                            - generic [ref=e703]:
+                              - generic [ref=e704]: ₹595
+                              - generic [ref=e705]: ₹595
+                            - generic [ref=e706]:
+                              - text: (
+                              - generic [ref=e707]:
+                                - generic [ref=e708]: ₹6.61
+                                - text: ₹6.61
+                              - text: /count)
+                            - generic [ref=e709]: "M.R.P: ₹778"
+                            - generic [ref=e710]:
+                              - text: "M.R.P:"
+                              - generic [ref=e711]:
+                                - generic [ref=e712]: ₹778
+                                - text: ₹778
+                          - text: (24% off)
+                        - generic [ref=e716]:
+                          - generic [ref=e717]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e718]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e721]:
+                        - generic [ref=e723]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e725]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e740] [cursor=pointer]
+                - listitem [ref=e741]:
+                  - generic [ref=e746]:
+                    - link [ref=e749] [cursor=pointer]:
+                      - /url: /Good-Monk-Healthy-Nutrition-Seniors/dp/B0DKJ5HKS2/ref=sr_1_7?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-7
+                      - img [ref=e751]
+                    - generic [ref=e752]:
+                      - generic [ref=e753]:
+                        - link "Good Monk Healthy 50+ Multivitamin for Senior Men & Women | For Energy, Bone & Gut Health | With Probiotics, Fibre, Ashwagandha, Vit. B12, C, D, Iron, Zinc | Add To Food - No Taste Change | 15 Sachets" [ref=e754] [cursor=pointer]:
+                          - /url: /Good-Monk-Healthy-Nutrition-Seniors/dp/B0DKJ5HKS2/ref=sr_1_7?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-7
+                          - heading "Good Monk Healthy 50+ Multivitamin for Senior Men & Women | For Energy, Bone & Gut Health | With Probiotics, Fibre, Ashwagandha, Vit. B12, C, D, Iron, Zinc | Add To Food - No Taste Change | 15 Sachets" [level=2] [ref=e755]
+                        - generic [ref=e758]: Nutrition Mix
+                      - generic [ref=e759]:
+                        - generic [ref=e760]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e762] [cursor=pointer]:
+                            - generic [ref=e764]: 4.4 out of 5 stars
+                          - link "1,627 ratings" [ref=e766] [cursor=pointer]:
+                            - /url: /Good-Monk-Healthy-Nutrition-Seniors/dp/B0DKJ5HKS2/ref=sr_1_7?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-7#customerReviews
+                            - text: (1.6K)
+                        - generic [ref=e767]: 2K+ bought in past month
+                      - generic [ref=e768]:
+                        - generic [ref=e770]:
+                          - generic [ref=e771]: Price, product page
+                          - 'link "₹349 ( ₹23.27 /count) M.R.P: ₹420 M.R.P: ₹420" [ref=e772] [cursor=pointer]':
+                            - /url: /Good-Monk-Healthy-Nutrition-Seniors/dp/B0DKJ5HKS2/ref=sr_1_7?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-7
+                            - generic [ref=e773]:
+                              - generic [ref=e774]: ₹349
+                              - generic [ref=e775]: ₹349
+                            - generic [ref=e776]:
+                              - text: (
+                              - generic [ref=e777]:
+                                - generic [ref=e778]: ₹23.27
+                                - text: ₹23.27
+                              - text: /count)
+                            - generic [ref=e779]: "M.R.P: ₹420"
+                            - generic [ref=e780]:
+                              - text: "M.R.P:"
+                              - generic [ref=e781]:
+                                - generic [ref=e782]: ₹420
+                                - text: ₹420
+                          - text: (17% off)
+                        - generic [ref=e786]:
+                          - generic [ref=e787]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e788]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e791]:
+                        - generic [ref=e793]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e795]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e810] [cursor=pointer]
+          - generic [ref=e814]:
+            - generic [ref=e819]:
+              - heading "Trending now" [level=2] [ref=e821]
+              - button "View Sponsored information or leave ad feedback" [ref=e824] [cursor=pointer]: Sponsored
+            - region "Trending now" [ref=e826]:
+              - list [ref=e832]:
+                - listitem "1 of 5" [ref=e833]:
+                  - generic [ref=e839]:
+                    - link [ref=e842] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTUyOTE5MzkwODMyOjowOjo&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0DC6CZKBP%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ
+                      - img [ref=e844]
+                    - generic [ref=e845]:
+                      - link "Sponsored Ad - Little Joys Multivitamin For Women | 30 Day Pack | With Vitamin C, E, A, B12 D3 & B6 | Biotin, Iron, Zinc & Potassium | Boosts Immunity, Supports Bone Health & Maintains Energy Levels" [ref=e847] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTUyOTE5MzkwODMyOjowOjo&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0DC6CZKBP%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ
+                        - heading "Sponsored Ad - Little Joys Multivitamin For Women | 30 Day Pack | With Vitamin C, E, A, B12 D3 & B6 | Biotin, Iron, Zinc & Potassium | Boosts Immunity, Supports Bone Health & Maintains Energy Levels" [level=2] [ref=e848]: Little Joys Multivitamin For Women | 30 Day Pack | With Vitamin C, E, A, B12 D3 & B6 | Biotin, Iron, Zinc & Potassium | Boosts Immunity, Supports Bone Health & Maintains Energy Levels
+                      - generic [ref=e849]:
+                        - generic [ref=e850]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=e852] [cursor=pointer]:
+                            - generic [ref=e854]: 4.5 out of 5 stars
+                          - link "337 ratings" [ref=e856] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTUyOTE5MzkwODMyOjowOjo&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0DC6CZKBP%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ#customerReviews
+                            - text: (337)
+                        - generic [ref=e857]: 2K+ bought in past month
+                      - generic [ref=e858]:
+                        - generic [ref=e860]:
+                          - generic [ref=e861]: Price, product page
+                          - link "₹549 ( ₹18.30 /count)" [ref=e862] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTUyOTE5MzkwODMyOjowOjo&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0DC6CZKBP%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ
+                            - generic [ref=e863]:
+                              - generic [ref=e864]: ₹549
+                              - generic [ref=e865]: ₹549
+                            - generic [ref=e866]:
+                              - text: (
+                              - generic [ref=e867]:
+                                - generic [ref=e868]: ₹18.30
+                                - text: ₹18.30
+                              - text: /count)
+                        - generic [ref=e872]:
+                          - generic [ref=e873]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e874]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e878]:
+                        - generic [ref=e880]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e882]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e897] [cursor=pointer]
+                - listitem "2 of 5" [ref=e898]:
+                  - generic [ref=e904]:
+                    - link [ref=e907] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMDY0MjMxNjI0MDMyOjoxOjo&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                      - img [ref=e909]
+                    - generic [ref=e910]:
+                      - link "Sponsored Ad - Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [ref=e912] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMDY0MjMxNjI0MDMyOjoxOjo&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                        - heading "Sponsored Ad - Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [level=2] [ref=e913]: Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin.
+                      - generic [ref=e914]:
+                        - generic [ref=e915]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=e917] [cursor=pointer]:
+                            - generic [ref=e919]: 4.6 out of 5 stars
+                          - link "3 ratings" [ref=e921] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMDY0MjMxNjI0MDMyOjoxOjo&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ#customerReviews
+                            - text: (3)
+                        - generic [ref=e922]: 50+ bought in past month
+                      - generic [ref=e923]:
+                        - link "Limited time deal" [ref=e925] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e928]: Limited time deal
+                        - generic [ref=e930]:
+                          - generic [ref=e931]: Price, product page
+                          - 'link "₹208 ( ₹6.93 /count) M.R.P: ₹350 M.R.P: ₹350" [ref=e932] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMDY0MjMxNjI0MDMyOjoxOjo&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                            - generic [ref=e933]:
+                              - generic [ref=e934]: ₹208
+                              - generic [ref=e935]: ₹208
+                            - generic [ref=e936]:
+                              - text: (
+                              - generic [ref=e937]:
+                                - generic [ref=e938]: ₹6.93
+                                - text: ₹6.93
+                              - text: /count)
+                            - generic [ref=e939]: "M.R.P: ₹350"
+                            - generic [ref=e940]:
+                              - text: "M.R.P:"
+                              - generic [ref=e941]:
+                                - generic [ref=e942]: ₹350
+                                - text: ₹350
+                          - text: (41% off)
+                        - generic [ref=e946]:
+                          - generic [ref=e947]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e948]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e952]:
+                        - generic [ref=e954]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e956]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e971] [cursor=pointer]
+                - listitem "3 of 5" [ref=e972]:
+                  - generic [ref=e978]:
+                    - link [ref=e981] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMTI1NzY3MzQwNDMyOjoyOjo&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB078S3LPRZ%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ
+                      - img [ref=e983]
+                    - generic [ref=e984]:
+                      - link "Sponsored Ad - Fast&Up Daily Multivitamins (20-Day Pack, Tasty Orange Flavor) 21 Fast-Acting Vitamins & Minerals, with Vit C, D, and Iron for Immunity, Energy & Heart Health | Suitable for both, Men & Women" [ref=e986] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMTI1NzY3MzQwNDMyOjoyOjo&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB078S3LPRZ%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ
+                        - heading "Sponsored Ad - Fast&Up Daily Multivitamins (20-Day Pack, Tasty Orange Flavor) 21 Fast-Acting Vitamins & Minerals, with Vit C, D, and Iron for Immunity, Energy & Heart Health | Suitable for both, Men & Women" [level=2] [ref=e987]: Fast&Up Daily Multivitamins (20-Day Pack, Tasty Orange Flavor) 21 Fast-Acting Vitamins & Minerals, with Vit C, D, and Iron for Immunity, Energy & Heart Health | Suitable for both, Men & Women
+                      - generic [ref=e988]:
+                        - generic [ref=e989]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e991] [cursor=pointer]:
+                            - generic [ref=e993]: 4.2 out of 5 stars
+                          - link "3,495 ratings" [ref=e995] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMTI1NzY3MzQwNDMyOjoyOjo&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB078S3LPRZ%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ#customerReviews
+                            - text: (3.4K)
+                        - generic [ref=e996]: 800+ bought in past month
+                      - generic [ref=e997]:
+                        - generic [ref=e999]:
+                          - generic [ref=e1000]: Price, product page
+                          - 'link "₹219 ( ₹10.95 /count) M.R.P: ₹249 M.R.P: ₹249" [ref=e1001] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAxMTI1NzY3MzQwNDMyOjoyOjo&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB078S3LPRZ%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ
+                            - generic [ref=e1002]:
+                              - generic [ref=e1003]: ₹219
+                              - generic [ref=e1004]: ₹219
+                            - generic [ref=e1005]:
+                              - text: (
+                              - generic [ref=e1006]:
+                                - generic [ref=e1007]: ₹10.95
+                                - text: ₹10.95
+                              - text: /count)
+                            - generic [ref=e1008]: "M.R.P: ₹249"
+                            - generic [ref=e1009]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1010]:
+                                - generic [ref=e1011]: ₹249
+                                - text: ₹249
+                          - text: (12% off)
+                        - generic [ref=e1015]:
+                          - generic [ref=e1016]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1017]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1021]:
+                        - generic [ref=e1023]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e1025]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1040] [cursor=pointer]
+                - listitem "4 of 5" [ref=e1041]:
+                  - generic [ref=e1047]:
+                    - link [ref=e1050] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwNjQzMjEzMDcwMjMyOjozOjo&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                      - img [ref=e1052]
+                    - generic [ref=e1053]:
+                      - generic [ref=e1054]:
+                        - link "Sponsored Ad - Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules" [ref=e1055] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwNjQzMjEzMDcwMjMyOjozOjo&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules" [level=2] [ref=e1056]: Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules
+                        - generic [ref=e1059]: Capsule
+                      - generic [ref=e1060]:
+                        - generic [ref=e1061]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1063] [cursor=pointer]:
+                            - generic [ref=e1065]: 4.1 out of 5 stars
+                          - link "528 ratings" [ref=e1067] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwNjQzMjEzMDcwMjMyOjozOjo&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ#customerReviews
+                            - text: (528)
+                        - generic [ref=e1068]: 1K+ bought in past month
+                      - generic [ref=e1069]:
+                        - link "Limited time deal" [ref=e1071] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1074]: Limited time deal
+                        - generic [ref=e1076]:
+                          - generic [ref=e1077]: Price, product page
+                          - 'link "₹1,189 ( ₹19.82 /count) M.R.P: ₹1,399 M.R.P: ₹1,399" [ref=e1078] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwNjQzMjEzMDcwMjMyOjozOjo&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                            - generic [ref=e1079]:
+                              - generic [ref=e1080]: ₹1,189
+                              - generic [ref=e1081]: ₹1,189
+                            - generic [ref=e1082]:
+                              - text: (
+                              - generic [ref=e1083]:
+                                - generic [ref=e1084]: ₹19.82
+                                - text: ₹19.82
+                              - text: /count)
+                            - generic [ref=e1085]: "M.R.P: ₹1,399"
+                            - generic [ref=e1086]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1087]:
+                                - generic [ref=e1088]: ₹1,399
+                                - text: ₹1,399
+                          - text: (15% off)
+                        - generic [ref=e1092]:
+                          - generic [ref=e1093]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1094]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1100]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e1115] [cursor=pointer]
+                - listitem "5 of 5" [ref=e1116]:
+                  - generic [ref=e1122]:
+                    - link [ref=e1125] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTk1NjA0Mzk3MjMyOjo0Ojo&url=%2FNutrova-Multivitamin-Women-Multivitamins-bioavailable%2Fdp%2FB0FMRM4DJM%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0FMRM4DJM%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D5xJPPRU8Mn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=5xJPPRU8Mn&sp_cr=ZAZ
+                      - img [ref=e1127]
+                    - generic [ref=e1128]:
+                      - link "Sponsored Ad - Nutrova Multivitamin For Women - Daily Multivitamins with bioavailable Iron bisglycinate, CoQ10 and Lycopene - Optimized for Indian Diets - 60 Tablets." [ref=e1130] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTk1NjA0Mzk3MjMyOjo0Ojo&url=%2FNutrova-Multivitamin-Women-Multivitamins-bioavailable%2Fdp%2FB0FMRM4DJM%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0FMRM4DJM%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D5xJPPRU8Mn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=5xJPPRU8Mn&sp_cr=ZAZ
+                        - heading "Sponsored Ad - Nutrova Multivitamin For Women - Daily Multivitamins with bioavailable Iron bisglycinate, CoQ10 and Lycopene - Optimized for Indian Diets - 60 Tablets." [level=2] [ref=e1131]: Nutrova Multivitamin For Women - Daily Multivitamins with bioavailable Iron bisglycinate, CoQ10 and Lycopene - Optimized for Indian Diets - 60 Tablets.
+                      - generic [ref=e1132]:
+                        - generic [ref=e1133]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e1135] [cursor=pointer]:
+                            - generic [ref=e1137]: 4.2 out of 5 stars
+                          - link "41 ratings" [ref=e1139] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTk1NjA0Mzk3MjMyOjo0Ojo&url=%2FNutrova-Multivitamin-Women-Multivitamins-bioavailable%2Fdp%2FB0FMRM4DJM%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0FMRM4DJM%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D5xJPPRU8Mn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=5xJPPRU8Mn&sp_cr=ZAZ#customerReviews
+                            - text: (41)
+                        - generic [ref=e1140]: 50+ bought in past month
+                      - generic [ref=e1141]:
+                        - generic [ref=e1143]:
+                          - generic [ref=e1144]: Price, product page
+                          - 'link "₹675 ( ₹11.25 /count) M.R.P: ₹710 M.R.P: ₹710" [ref=e1145] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MDYyMTE3OTQyMzUxMTM6MTc4MDkyNjY2MTpzcF9zZWFyY2hfdGhlbWF0aWM6MzAwOTk1NjA0Mzk3MjMyOjo0Ojo&url=%2FNutrova-Multivitamin-Women-Multivitamins-bioavailable%2Fdp%2FB0FMRM4DJM%2Fref%3Dsxin_14_pa_sp_search_thematic_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%253Aamzn1.sym.7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0FMRM4DJM%26pd_rd_r%3D52f4d8f8-8da1-4338-83d2-b36bf40c7125%26pd_rd_w%3D8DpId%26pd_rd_wg%3DHSacd%26pf_rd_p%3D7e2c8ac4-9f12-4bcd-9497-a8ae54bc8764%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D5xJPPRU8Mn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=5xJPPRU8Mn&sp_cr=ZAZ
+                            - generic [ref=e1146]:
+                              - generic [ref=e1147]: ₹675
+                              - generic [ref=e1148]: ₹675
+                            - generic [ref=e1149]:
+                              - text: (
+                              - generic [ref=e1150]:
+                                - generic [ref=e1151]: ₹11.25
+                                - text: ₹11.25
+                              - text: /count)
+                            - generic [ref=e1152]: "M.R.P: ₹710"
+                            - generic [ref=e1153]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1154]:
+                                - generic [ref=e1155]: ₹710
+                                - text: ₹710
+                          - text: (5% off)
+                        - generic [ref=e1158]:
+                          - generic [ref=e1159]: Save 10%
+                          - text: with coupon
+                      - generic [ref=e1163]:
+                        - generic [ref=e1165]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e1167]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1182] [cursor=pointer]
+          - generic [ref=e1184]:
+            - heading "More results" [level=2] [ref=e1188]
+            - generic:
+              - list:
+                - listitem [ref=e1189]:
+                  - generic [ref=e1194]:
+                    - link [ref=e1197] [cursor=pointer]:
+                      - /url: /Supradyn-Multivitamin-tablets-Magnesium-Immunity/dp/B0D9KDG3Q5/ref=sr_1_8?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-8
+                      - img [ref=e1199]
+                    - generic [ref=e1200]:
+                      - link "Supradyn Daily, India's No.1 Multivitamin Tablets for Women | With Vitamin A, B Complex, C, D, E, Zinc and Magnesium for Energy, Immunity and Overall Health | 90 tablets" [ref=e1202] [cursor=pointer]:
+                        - /url: /Supradyn-Multivitamin-tablets-Magnesium-Immunity/dp/B0D9KDG3Q5/ref=sr_1_8?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-8
+                        - heading "Supradyn Daily, India's No.1 Multivitamin Tablets for Women | With Vitamin A, B Complex, C, D, E, Zinc and Magnesium for Energy, Immunity and Overall Health | 90 tablets" [level=2] [ref=e1203]
+                      - generic [ref=e1204]:
+                        - generic [ref=e1205]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e1207] [cursor=pointer]:
+                            - generic [ref=e1209]: 4.3 out of 5 stars
+                          - link "4,031 ratings" [ref=e1211] [cursor=pointer]:
+                            - /url: /Supradyn-Multivitamin-tablets-Magnesium-Immunity/dp/B0D9KDG3Q5/ref=sr_1_8?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-8#customerReviews
+                            - text: (4K)
+                        - generic [ref=e1212]: 3K+ bought in past month
+                      - generic [ref=e1213]:
+                        - generic [ref=e1215]:
+                          - generic [ref=e1216]: Price, product page
+                          - 'link "₹279 ( ₹3.10 /count) M.R.P: ₹400 M.R.P: ₹400" [ref=e1217] [cursor=pointer]':
+                            - /url: /Supradyn-Multivitamin-tablets-Magnesium-Immunity/dp/B0D9KDG3Q5/ref=sr_1_8?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-8
+                            - generic [ref=e1218]:
+                              - generic [ref=e1219]: ₹279
+                              - generic [ref=e1220]: ₹279
+                            - generic [ref=e1221]:
+                              - text: (
+                              - generic [ref=e1222]:
+                                - generic [ref=e1223]: ₹3.10
+                                - text: ₹3.10
+                              - text: /count)
+                            - generic [ref=e1224]: "M.R.P: ₹400"
+                            - generic [ref=e1225]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1226]:
+                                - generic [ref=e1227]: ₹400
+                                - text: ₹400
+                          - text: (30% off)
+                        - generic [ref=e1231]:
+                          - generic [ref=e1232]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1233]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1236]:
+                        - generic [ref=e1238]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e1240]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e1255] [cursor=pointer]
+                - listitem [ref=e1256]:
+                  - generic [ref=e1261]:
+                    - link [ref=e1264] [cursor=pointer]:
+                      - /url: /Multivitamin-Vitamin-Calcium-Support-Protection/dp/B0BZDKWNSY/ref=sr_1_9?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-9
+                      - img [ref=e1266]
+                    - generic [ref=e1267]:
+                      - generic [ref=e1268]:
+                        - link "Tata 1mg Women's Multivitamin Veg Tablet with Zinc, Vitamin C, Calcium, Vitamin D and Iron, Support Health Protection, Bones & Overall Health (Pack Of 60 Tablets)" [ref=e1269] [cursor=pointer]:
+                          - /url: /Multivitamin-Vitamin-Calcium-Support-Protection/dp/B0BZDKWNSY/ref=sr_1_9?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-9
+                          - heading "Tata 1mg Women's Multivitamin Veg Tablet with Zinc, Vitamin C, Calcium, Vitamin D and Iron, Support Health Protection, Bones & Overall Health (Pack Of 60 Tablets)" [level=2] [ref=e1270]
+                        - generic [ref=e1273]: Tablet
+                      - generic [ref=e1274]:
+                        - generic [ref=e1275]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e1277] [cursor=pointer]:
+                            - generic [ref=e1279]: 4.3 out of 5 stars
+                          - link "1,241 ratings" [ref=e1281] [cursor=pointer]:
+                            - /url: /Multivitamin-Vitamin-Calcium-Support-Protection/dp/B0BZDKWNSY/ref=sr_1_9?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-9#customerReviews
+                            - text: (1.2K)
+                        - generic [ref=e1282]: 1K+ bought in past month
+                      - generic [ref=e1283]:
+                        - generic [ref=e1285]:
+                          - generic [ref=e1286]: Price, product page
+                          - 'link "₹445 ( ₹7.42 /count) M.R.P: ₹595 M.R.P: ₹595" [ref=e1287] [cursor=pointer]':
+                            - /url: /Multivitamin-Vitamin-Calcium-Support-Protection/dp/B0BZDKWNSY/ref=sr_1_9?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-9
+                            - generic [ref=e1288]:
+                              - generic [ref=e1289]: ₹445
+                              - generic [ref=e1290]: ₹445
+                            - generic [ref=e1291]:
+                              - text: (
+                              - generic [ref=e1292]:
+                                - generic [ref=e1293]: ₹7.42
+                                - text: ₹7.42
+                              - text: /count)
+                            - generic [ref=e1294]: "M.R.P: ₹595"
+                            - generic [ref=e1295]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1296]:
+                                - generic [ref=e1297]: ₹595
+                                - text: ₹595
+                          - text: (25% off)
+                        - generic [ref=e1301]:
+                          - generic [ref=e1302]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1303]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1308]: FREE delivery Fri, 12 Jun on first order
+                      - button "Add to cart" [ref=e1323] [cursor=pointer]
+                - listitem [ref=e1324]:
+                  - generic [ref=e1329]:
+                    - link [ref=e1332] [cursor=pointer]:
+                      - /url: /Health-Multivitamin-Multimineral-Maintains-Immunity/dp/B09P8Q1936/ref=sr_1_10?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-10
+                      - img [ref=e1334]
+                    - generic [ref=e1335]:
+                      - generic [ref=e1336]:
+                        - link "Mankind's Health OK Multivitamin With Natural Ginseng,Taurine Power,Daily Energy,Alertness,Vitamin D,C & Other 18 Multivitamins Minerals,For Overall Health,30 Tablets (Veg) X Pack Of 1, 250 grams" [ref=e1337] [cursor=pointer]:
+                          - /url: /Health-Multivitamin-Multimineral-Maintains-Immunity/dp/B09P8Q1936/ref=sr_1_10?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-10
+                          - heading "Mankind's Health OK Multivitamin With Natural Ginseng,Taurine Power,Daily Energy,Alertness,Vitamin D,C & Other 18 Multivitamins Minerals,For Overall Health,30 Tablets (Veg) X Pack Of 1, 250 grams" [level=2] [ref=e1338]
+                        - generic [ref=e1341]: Tablet
+                      - generic [ref=e1342]:
+                        - generic [ref=e1343]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1345] [cursor=pointer]:
+                            - generic [ref=e1347]: 4.1 out of 5 stars
+                          - link "1,001 ratings" [ref=e1349] [cursor=pointer]:
+                            - /url: /Health-Multivitamin-Multimineral-Maintains-Immunity/dp/B09P8Q1936/ref=sr_1_10?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-10#customerReviews
+                            - text: (1K)
+                        - generic [ref=e1350]: 500+ bought in past month
+                      - generic [ref=e1351]:
+                        - generic [ref=e1353]:
+                          - generic [ref=e1354]: Price, product page
+                          - 'link "₹240 ( ₹8 /count) M.R.P: ₹293 M.R.P: ₹293" [ref=e1355] [cursor=pointer]':
+                            - /url: /Health-Multivitamin-Multimineral-Maintains-Immunity/dp/B09P8Q1936/ref=sr_1_10?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-10
+                            - generic [ref=e1356]:
+                              - generic [ref=e1357]: ₹240
+                              - generic [ref=e1358]: ₹240
+                            - generic [ref=e1359]:
+                              - text: (
+                              - generic [ref=e1360]:
+                                - generic [ref=e1361]: ₹8
+                                - text: ₹8
+                              - text: /count)
+                            - generic [ref=e1362]: "M.R.P: ₹293"
+                            - generic [ref=e1363]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1364]:
+                                - generic [ref=e1365]: ₹293
+                                - text: ₹293
+                          - text: (18% off)
+                        - generic [ref=e1369]:
+                          - generic [ref=e1370]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1371]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1374]:
+                        - generic [ref=e1376]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e1378]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1393] [cursor=pointer]
+                - listitem [ref=e1394]:
+                  - generic [ref=e1399]:
+                    - link [ref=e1402] [cursor=pointer]:
+                      - /url: /Nutrition-Multivitamin-Vitamins-Anti-Oxidants-Vegetarian/dp/B0DN5JY6DQ/ref=sr_1_11?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-11
+                      - img [ref=e1404]
+                    - generic [ref=e1405]:
+                      - link "Optimum Nutrition (ON) Multivitamin for MEN– 60 Tablets, 26 Vitamins & Minerals, Amino Acids & Anti-Oxidants (Green Tea Extract, Beta Carotene, Lutein, Lycopene). Vegetarian." [ref=e1407] [cursor=pointer]:
+                        - /url: /Nutrition-Multivitamin-Vitamins-Anti-Oxidants-Vegetarian/dp/B0DN5JY6DQ/ref=sr_1_11?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-11
+                        - heading "Optimum Nutrition (ON) Multivitamin for MEN– 60 Tablets, 26 Vitamins & Minerals, Amino Acids & Anti-Oxidants (Green Tea Extract, Beta Carotene, Lutein, Lycopene). Vegetarian." [level=2] [ref=e1408]
+                      - generic [ref=e1409]:
+                        - generic [ref=e1410]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e1412] [cursor=pointer]:
+                            - generic [ref=e1414]: 4.4 out of 5 stars
+                          - link "819 ratings" [ref=e1416] [cursor=pointer]:
+                            - /url: /Nutrition-Multivitamin-Vitamins-Anti-Oxidants-Vegetarian/dp/B0DN5JY6DQ/ref=sr_1_11?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-11#customerReviews
+                            - text: (819)
+                        - generic [ref=e1417]: 2K+ bought in past month
+                      - generic [ref=e1418]:
+                        - generic [ref=e1420]:
+                          - generic [ref=e1421]: Price, product page
+                          - 'link "₹619 ( ₹10.32 /count) M.R.P: ₹839 M.R.P: ₹839" [ref=e1422] [cursor=pointer]':
+                            - /url: /Nutrition-Multivitamin-Vitamins-Anti-Oxidants-Vegetarian/dp/B0DN5JY6DQ/ref=sr_1_11?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-11
+                            - generic [ref=e1423]:
+                              - generic [ref=e1424]: ₹619
+                              - generic [ref=e1425]: ₹619
+                            - generic [ref=e1426]:
+                              - text: (
+                              - generic [ref=e1427]:
+                                - generic [ref=e1428]: ₹10.32
+                                - text: ₹10.32
+                              - text: /count)
+                            - generic [ref=e1429]: "M.R.P: ₹839"
+                            - generic [ref=e1430]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1431]:
+                                - generic [ref=e1432]: ₹839
+                                - text: ₹839
+                          - text: (26% off)
+                        - generic [ref=e1436]:
+                          - generic [ref=e1437]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1438]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1441]:
+                        - generic [ref=e1443]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e1445]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1460] [cursor=pointer]
+                - listitem [ref=e1461]:
+                  - generic [ref=e1466]:
+                    - link [ref=e1469] [cursor=pointer]:
+                      - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BD1RMHJ6/ref=sr_1_12?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-12
+                      - img [ref=e1471]
+                    - generic [ref=e1472]:
+                      - generic [ref=e1473]:
+                        - link "Centrum Men - Multivitamin Tablet for Men | With 23 Vital Nutrients including Zinc, Magnesium, Vitamin B, C, D, Calcium for Energy, Immunity, Muscles and Overall Health | Veg - 50 tablets" [ref=e1474] [cursor=pointer]:
+                          - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BD1RMHJ6/ref=sr_1_12?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-12
+                          - heading "Centrum Men - Multivitamin Tablet for Men | With 23 Vital Nutrients including Zinc, Magnesium, Vitamin B, C, D, Calcium for Energy, Immunity, Muscles and Overall Health | Veg - 50 tablets" [level=2] [ref=e1475]
+                        - generic [ref=e1478]: Tablet
+                      - generic [ref=e1479]:
+                        - generic [ref=e1480]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e1482] [cursor=pointer]:
+                            - generic [ref=e1484]: 4.3 out of 5 stars
+                          - link "3,992 ratings" [ref=e1486] [cursor=pointer]:
+                            - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BD1RMHJ6/ref=sr_1_12?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-12#customerReviews
+                            - text: (3.9K)
+                        - generic [ref=e1487]: 1K+ bought in past month
+                      - generic [ref=e1488]:
+                        - generic [ref=e1490]:
+                          - generic [ref=e1491]: Price, product page
+                          - 'link "₹565 ( ₹11.30 /count) M.R.P: ₹740 M.R.P: ₹740" [ref=e1492] [cursor=pointer]':
+                            - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BD1RMHJ6/ref=sr_1_12?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-12
+                            - generic [ref=e1493]:
+                              - generic [ref=e1494]: ₹565
+                              - generic [ref=e1495]: ₹565
+                            - generic [ref=e1496]:
+                              - text: (
+                              - generic [ref=e1497]:
+                                - generic [ref=e1498]: ₹11.30
+                                - text: ₹11.30
+                              - text: /count)
+                            - generic [ref=e1499]: "M.R.P: ₹740"
+                            - generic [ref=e1500]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1501]:
+                                - generic [ref=e1502]: ₹740
+                                - text: ₹740
+                          - text: (24% off)
+                        - generic [ref=e1506]:
+                          - generic [ref=e1507]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1508]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1511]:
+                        - generic [ref=e1513]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e1515]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1530] [cursor=pointer]
+                - listitem [ref=e1531]:
+                  - generic [ref=e1536]:
+                    - link [ref=e1539] [cursor=pointer]:
+                      - /url: /Centrum-Multivitamin-Calcium-Vitamin-Nutrients/dp/B0BD1RTMWR/ref=sr_1_13?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-13
+                      - img [ref=e1541]
+                    - generic [ref=e1542]:
+                      - link "Centrum Adults 50+ Multivitamin Tablet for Men & Women|With 23 Vital Nutrients including Zinc,Magnesium, Vitamin B,C,D, Calcium for Energy, Strong Joints, Immunity and Heart Health|Veg - 50 tablets" [ref=e1544] [cursor=pointer]:
+                        - /url: /Centrum-Multivitamin-Calcium-Vitamin-Nutrients/dp/B0BD1RTMWR/ref=sr_1_13?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-13
+                        - heading "Centrum Adults 50+ Multivitamin Tablet for Men & Women|With 23 Vital Nutrients including Zinc,Magnesium, Vitamin B,C,D, Calcium for Energy, Strong Joints, Immunity and Heart Health|Veg - 50 tablets" [level=2] [ref=e1545]
+                      - generic [ref=e1546]:
+                        - generic [ref=e1547]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e1549] [cursor=pointer]:
+                            - generic [ref=e1551]: 4.3 out of 5 stars
+                          - link "3,021 ratings" [ref=e1553] [cursor=pointer]:
+                            - /url: /Centrum-Multivitamin-Calcium-Vitamin-Nutrients/dp/B0BD1RTMWR/ref=sr_1_13?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-13#customerReviews
+                            - text: (3K)
+                        - generic [ref=e1554]: 8K+ bought in past month
+                      - generic [ref=e1555]:
+                        - generic [ref=e1557]:
+                          - generic [ref=e1558]: Price, product page
+                          - 'link "₹597 ( ₹11.94 /count) M.R.P: ₹740 M.R.P: ₹740" [ref=e1559] [cursor=pointer]':
+                            - /url: /Centrum-Multivitamin-Calcium-Vitamin-Nutrients/dp/B0BD1RTMWR/ref=sr_1_13?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-13
+                            - generic [ref=e1560]:
+                              - generic [ref=e1561]: ₹597
+                              - generic [ref=e1562]: ₹597
+                            - generic [ref=e1563]:
+                              - text: (
+                              - generic [ref=e1564]:
+                                - generic [ref=e1565]: ₹11.94
+                                - text: ₹11.94
+                              - text: /count)
+                            - generic [ref=e1566]: "M.R.P: ₹740"
+                            - generic [ref=e1567]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1568]:
+                                - generic [ref=e1569]: ₹740
+                                - text: ₹740
+                          - text: (19% off)
+                        - generic [ref=e1573]:
+                          - generic [ref=e1574]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1575]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1578]:
+                        - generic [ref=e1580]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e1582]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1597] [cursor=pointer]
+                - listitem [ref=e1598]:
+                  - generic [ref=e1603]:
+                    - link [ref=e1606] [cursor=pointer]:
+                      - /url: /Diataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide/dp/B0G4D8C9D9/ref=sr_1_14?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-14
+                      - img [ref=e1608]
+                    - generic [ref=e1609]:
+                      - link "Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [ref=e1611] [cursor=pointer]:
+                        - /url: /Diataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide/dp/B0G4D8C9D9/ref=sr_1_14?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-14
+                        - heading "Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [level=2] [ref=e1612]
+                      - generic [ref=e1613]:
+                        - generic [ref=e1614]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=e1616] [cursor=pointer]:
+                            - generic [ref=e1618]: 4.6 out of 5 stars
+                          - link "3 ratings" [ref=e1620] [cursor=pointer]:
+                            - /url: /Diataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide/dp/B0G4D8C9D9/ref=sr_1_14?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-14#customerReviews
+                            - text: (3)
+                        - generic [ref=e1621]: 50+ bought in past month
+                      - generic [ref=e1622]:
+                        - link "Limited time deal" [ref=e1624] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1627]: Limited time deal
+                        - generic [ref=e1629]:
+                          - generic [ref=e1630]: Price, product page
+                          - 'link "₹208 ( ₹6.93 /count) M.R.P: ₹350 M.R.P: ₹350" [ref=e1631] [cursor=pointer]':
+                            - /url: /Diataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide/dp/B0G4D8C9D9/ref=sr_1_14?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-14
+                            - generic [ref=e1632]:
+                              - generic [ref=e1633]: ₹208
+                              - generic [ref=e1634]: ₹208
+                            - generic [ref=e1635]:
+                              - text: (
+                              - generic [ref=e1636]:
+                                - generic [ref=e1637]: ₹6.93
+                                - text: ₹6.93
+                              - text: /count)
+                            - generic [ref=e1638]: "M.R.P: ₹350"
+                            - generic [ref=e1639]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1640]:
+                                - generic [ref=e1641]: ₹350
+                                - text: ₹350
+                          - text: (41% off)
+                        - generic [ref=e1645]:
+                          - generic [ref=e1646]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1647]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1650]:
+                        - generic [ref=e1652]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e1654]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e1669] [cursor=pointer]
+                - listitem [ref=e1670]:
+                  - generic [ref=e1675]:
+                    - link [ref=e1678] [cursor=pointer]:
+                      - /url: /Diataal-D-Multivitamin-Sustained-Immunity-Supplement/dp/B0DGGCG2RD/ref=sr_1_15?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-15
+                      - img [ref=e1680]
+                    - generic [ref=e1681]:
+                      - link "Diataal-D Multivitamin with added vit. D & ALA | Sustained Energy I Strong Bones I Immunity I Heart Health | Health, Fitness & Wellness Supplement | 30 Capsules | For Men and Women" [ref=e1683] [cursor=pointer]:
+                        - /url: /Diataal-D-Multivitamin-Sustained-Immunity-Supplement/dp/B0DGGCG2RD/ref=sr_1_15?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-15
+                        - heading "Diataal-D Multivitamin with added vit. D & ALA | Sustained Energy I Strong Bones I Immunity I Heart Health | Health, Fitness & Wellness Supplement | 30 Capsules | For Men and Women" [level=2] [ref=e1684]
+                      - generic [ref=e1685]:
+                        - generic [ref=e1686]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e1688] [cursor=pointer]:
+                            - generic [ref=e1690]: 4.4 out of 5 stars
+                          - link "72 ratings" [ref=e1692] [cursor=pointer]:
+                            - /url: /Diataal-D-Multivitamin-Sustained-Immunity-Supplement/dp/B0DGGCG2RD/ref=sr_1_15?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-15#customerReviews
+                            - text: (72)
+                        - generic [ref=e1693]: 100+ bought in past month
+                      - generic [ref=e1694]:
+                        - link "Limited time deal" [ref=e1696] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e1699]: Limited time deal
+                        - generic [ref=e1701]:
+                          - generic [ref=e1702]: Price, product page
+                          - 'link "₹219 ( ₹7.30 /count) M.R.P: ₹378 M.R.P: ₹378" [ref=e1703] [cursor=pointer]':
+                            - /url: /Diataal-D-Multivitamin-Sustained-Immunity-Supplement/dp/B0DGGCG2RD/ref=sr_1_15?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-15
+                            - generic [ref=e1704]:
+                              - generic [ref=e1705]: ₹219
+                              - generic [ref=e1706]: ₹219
+                            - generic [ref=e1707]:
+                              - text: (
+                              - generic [ref=e1708]:
+                                - generic [ref=e1709]: ₹7.30
+                                - text: ₹7.30
+                              - text: /count)
+                            - generic [ref=e1710]: "M.R.P: ₹378"
+                            - generic [ref=e1711]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1712]:
+                                - generic [ref=e1713]: ₹378
+                                - text: ₹378
+                          - text: (42% off)
+                        - generic [ref=e1717]:
+                          - generic [ref=e1718]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1719]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1722]:
+                        - generic [ref=e1724]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e1726]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e1741] [cursor=pointer]
+                - listitem [ref=e1742]:
+                  - generic [ref=e1747]:
+                    - link [ref=e1750] [cursor=pointer]:
+                      - /url: /Zanskar-Advanced-Tablets-Collagen-Magnesium/dp/B0GCSDQQ1X/ref=sr_1_16?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-16
+                      - img [ref=e1752]
+                    - generic [ref=e1753]:
+                      - generic [ref=e1754]:
+                        - link "Zanskar Advanced Bone Health Tablet (30 Tablets) | Calcium, Vitamin D3, Vitamin K2, Collagen, Magnesium & Zinc (1200mg) | 100% Veg | Bone Health and Joint Support" [ref=e1755] [cursor=pointer]:
+                          - /url: /Zanskar-Advanced-Tablets-Collagen-Magnesium/dp/B0GCSDQQ1X/ref=sr_1_16?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-16
+                          - heading "Zanskar Advanced Bone Health Tablet (30 Tablets) | Calcium, Vitamin D3, Vitamin K2, Collagen, Magnesium & Zinc (1200mg) | 100% Veg | Bone Health and Joint Support" [level=2] [ref=e1756]
+                        - generic [ref=e1759]: Unflavoured
+                      - generic [ref=e1760]:
+                        - generic [ref=e1761]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e1763] [cursor=pointer]:
+                            - generic [ref=e1765]: 4.2 out of 5 stars
+                          - link "106 ratings" [ref=e1767] [cursor=pointer]:
+                            - /url: /Zanskar-Advanced-Tablets-Collagen-Magnesium/dp/B0GCSDQQ1X/ref=sr_1_16?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-16#customerReviews
+                            - text: (106)
+                        - generic [ref=e1768]: 500+ bought in past month
+                      - generic [ref=e1769]:
+                        - generic [ref=e1771]:
+                          - generic [ref=e1772]: Price, product page
+                          - 'link "₹439 ( ₹439 /count) M.R.P: ₹499 M.R.P: ₹499" [ref=e1773] [cursor=pointer]':
+                            - /url: /Zanskar-Advanced-Tablets-Collagen-Magnesium/dp/B0GCSDQQ1X/ref=sr_1_16?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-16
+                            - generic [ref=e1774]:
+                              - generic [ref=e1775]: ₹439
+                              - generic [ref=e1776]: ₹439
+                            - generic [ref=e1777]:
+                              - text: (
+                              - generic [ref=e1778]:
+                                - generic [ref=e1779]: ₹439
+                                - text: ₹439
+                              - text: /count)
+                            - generic [ref=e1780]: "M.R.P: ₹499"
+                            - generic [ref=e1781]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1782]:
+                                - generic [ref=e1783]: ₹499
+                                - text: ₹499
+                          - text: (12% off)
+                        - generic [ref=e1786]:
+                          - generic [ref=e1787]: Save 2%
+                          - text: with coupon
+                      - generic [ref=e1790]:
+                        - generic [ref=e1792]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e1794]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1809] [cursor=pointer]
+                - listitem [ref=e1810]:
+                  - generic [ref=e1815]:
+                    - group "Best sellerin Combination Multivitamins & Minerals" [ref=e1820]:
+                      - generic "Best seller" [ref=e1822]
+                    - link [ref=e1825] [cursor=pointer]:
+                      - /url: /Carbamide-Forte-Multivitamin-Multimineral-Supplement/dp/B071S62PQP/ref=sr_1_17?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-17
+                      - img [ref=e1827]
+                    - generic [ref=e1828]:
+                      - generic [ref=e1829]:
+                        - link "Carbamide Forte Multivitamin Tablets for Women | Multi Vitamin Supplement for Women With Probiotics | Multivitamin Tablet for Women With 43 Ingredients To Support Energy & Health - 100 Tablets" [ref=e1830] [cursor=pointer]:
+                          - /url: /Carbamide-Forte-Multivitamin-Multimineral-Supplement/dp/B071S62PQP/ref=sr_1_17?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-17
+                          - heading "Carbamide Forte Multivitamin Tablets for Women | Multi Vitamin Supplement for Women With Probiotics | Multivitamin Tablet for Women With 43 Ingredients To Support Energy & Health - 100 Tablets" [level=2] [ref=e1831]
+                        - generic [ref=e1834]: Tablet
+                      - generic [ref=e1835]:
+                        - generic [ref=e1836]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e1838] [cursor=pointer]:
+                            - generic [ref=e1840]: 4.4 out of 5 stars
+                          - link "6,130 ratings" [ref=e1842] [cursor=pointer]:
+                            - /url: /Carbamide-Forte-Multivitamin-Multimineral-Supplement/dp/B071S62PQP/ref=sr_1_17?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-17#customerReviews
+                            - text: (6.1K)
+                        - generic [ref=e1843]: 4K+ bought in past month
+                      - generic [ref=e1844]:
+                        - generic [ref=e1846]:
+                          - generic [ref=e1847]: Price, product page
+                          - 'link "₹599 ( ₹5.99 /count) M.R.P: ₹770 M.R.P: ₹770" [ref=e1848] [cursor=pointer]':
+                            - /url: /Carbamide-Forte-Multivitamin-Multimineral-Supplement/dp/B071S62PQP/ref=sr_1_17?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-17
+                            - generic [ref=e1849]:
+                              - generic [ref=e1850]: ₹599
+                              - generic [ref=e1851]: ₹599
+                            - generic [ref=e1852]:
+                              - text: (
+                              - generic [ref=e1853]:
+                                - generic [ref=e1854]: ₹5.99
+                                - text: ₹5.99
+                              - text: /count)
+                            - generic [ref=e1855]: "M.R.P: ₹770"
+                            - generic [ref=e1856]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1857]:
+                                - generic [ref=e1858]: ₹770
+                                - text: ₹770
+                          - text: (22% off)
+                        - generic [ref=e1862]:
+                          - generic [ref=e1863]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1864]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1867]:
+                        - generic [ref=e1869]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e1871]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1886] [cursor=pointer]
+                - listitem [ref=e1887]:
+                  - generic [ref=e1892]:
+                    - link [ref=e1895] [cursor=pointer]:
+                      - /url: /Multivitamin-Multimineral-Essential-Vitamins-Ashwagandha/dp/B0GH83MG69/ref=sr_1_18?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-18
+                      - img [ref=e1897]
+                    - generic [ref=e1898]:
+                      - link "A to Z Daily Multivitamin & Multimineral Tablets with 26 Essential Vitamins & Minerals | Ginseng, Ashwagandha & Brahmi | Supports Energy, Immunity, Focus & Overall Health | Daily Multivitamin for Men & Women | 30 Veg Tablets" [ref=e1900] [cursor=pointer]:
+                        - /url: /Multivitamin-Multimineral-Essential-Vitamins-Ashwagandha/dp/B0GH83MG69/ref=sr_1_18?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-18
+                        - heading "A to Z Daily Multivitamin & Multimineral Tablets with 26 Essential Vitamins & Minerals | Ginseng, Ashwagandha & Brahmi | Supports Energy, Immunity, Focus & Overall Health | Daily Multivitamin for Men & Women | 30 Veg Tablets" [level=2] [ref=e1901]
+                      - generic [ref=e1902]:
+                        - generic [ref=e1903]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1905] [cursor=pointer]:
+                            - generic [ref=e1907]: 4.1 out of 5 stars
+                          - link "53 ratings" [ref=e1909] [cursor=pointer]:
+                            - /url: /Multivitamin-Multimineral-Essential-Vitamins-Ashwagandha/dp/B0GH83MG69/ref=sr_1_18?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-18#customerReviews
+                            - text: (53)
+                        - generic [ref=e1910]: 600+ bought in past month
+                      - generic [ref=e1911]:
+                        - generic [ref=e1913]:
+                          - generic [ref=e1914]: Price, product page
+                          - 'link "₹399 ( ₹399 /count) M.R.P: ₹449 M.R.P: ₹449" [ref=e1915] [cursor=pointer]':
+                            - /url: /Multivitamin-Multimineral-Essential-Vitamins-Ashwagandha/dp/B0GH83MG69/ref=sr_1_18?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-18
+                            - generic [ref=e1916]:
+                              - generic [ref=e1917]: ₹399
+                              - generic [ref=e1918]: ₹399
+                            - generic [ref=e1919]:
+                              - text: (
+                              - generic [ref=e1920]:
+                                - generic [ref=e1921]: ₹399
+                                - text: ₹399
+                              - text: /count)
+                            - generic [ref=e1922]: "M.R.P: ₹449"
+                            - generic [ref=e1923]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1924]:
+                                - generic [ref=e1925]: ₹449
+                                - text: ₹449
+                          - text: (11% off)
+                        - generic [ref=e1929]:
+                          - generic [ref=e1930]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1931]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e1934]:
+                        - generic [ref=e1936]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e1938]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e1953] [cursor=pointer]
+                - listitem [ref=e1954]:
+                  - generic [ref=e1959]:
+                    - group "Best sellerin Multivitamins" [ref=e1964]:
+                      - generic "Best seller" [ref=e1966]
+                    - link [ref=e1969] [cursor=pointer]:
+                      - /url: /Little-Joys-Multivitamin-Strawberry-Immunity/dp/B0C6TFSVZ5/ref=sr_1_19?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-19
+                      - img [ref=e1971]
+                    - generic [ref=e1972]:
+                      - link "Little Joys Multivitamin Gummies for Kids | 2-6 Years | 30 Gummies | With 11 Vitamins & Minerals | Improves Immunity, Bone health & Antibody Production | No Added Sugar | Strawberry Flavour" [ref=e1974] [cursor=pointer]:
+                        - /url: /Little-Joys-Multivitamin-Strawberry-Immunity/dp/B0C6TFSVZ5/ref=sr_1_19?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-19
+                        - heading "Little Joys Multivitamin Gummies for Kids | 2-6 Years | 30 Gummies | With 11 Vitamins & Minerals | Improves Immunity, Bone health & Antibody Production | No Added Sugar | Strawberry Flavour" [level=2] [ref=e1975]
+                      - generic [ref=e1976]:
+                        - generic [ref=e1977]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e1979] [cursor=pointer]:
+                            - generic [ref=e1981]: 4.4 out of 5 stars
+                          - link "2,553 ratings" [ref=e1983] [cursor=pointer]:
+                            - /url: /Little-Joys-Multivitamin-Strawberry-Immunity/dp/B0C6TFSVZ5/ref=sr_1_19?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-19#customerReviews
+                            - text: (2.5K)
+                        - generic [ref=e1984]: 6K+ bought in past month
+                      - generic [ref=e1985]:
+                        - generic [ref=e1987]:
+                          - generic [ref=e1988]: Price, product page
+                          - link "₹549 ( ₹18.30 /count)" [ref=e1989] [cursor=pointer]:
+                            - /url: /Little-Joys-Multivitamin-Strawberry-Immunity/dp/B0C6TFSVZ5/ref=sr_1_19?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-19
+                            - generic [ref=e1990]:
+                              - generic [ref=e1991]: ₹549
+                              - generic [ref=e1992]: ₹549
+                            - generic [ref=e1993]:
+                              - text: (
+                              - generic [ref=e1994]:
+                                - generic [ref=e1995]: ₹18.30
+                                - text: ₹18.30
+                              - text: /count)
+                        - generic [ref=e1999]:
+                          - generic [ref=e2000]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2001]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2004]:
+                        - generic [ref=e2006]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2008]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2023] [cursor=pointer]
+                - listitem [ref=e2024]:
+                  - generic [ref=e2029]:
+                    - link [ref=e2032] [cursor=pointer]:
+                      - /url: /Ace-Blend-Multivitamin-Methylated-Quatrefolic/dp/B0G94988JS/ref=sr_1_20?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-20
+                      - img [ref=e2034]
+                    - generic [ref=e2035]:
+                      - link "Ace Blend Multivitamin Capsules for Women | Pack of 60 | With Iron & Methylated Multivitamin | 19 Essential Nutrients with Quatrefolic, MenaQ7 K2 & Vitashine D3 | Supports Hormonal Balance & Immunity" [ref=e2037] [cursor=pointer]:
+                        - /url: /Ace-Blend-Multivitamin-Methylated-Quatrefolic/dp/B0G94988JS/ref=sr_1_20?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-20
+                        - heading "Ace Blend Multivitamin Capsules for Women | Pack of 60 | With Iron & Methylated Multivitamin | 19 Essential Nutrients with Quatrefolic, MenaQ7 K2 & Vitashine D3 | Supports Hormonal Balance & Immunity" [level=2] [ref=e2038]
+                      - generic [ref=e2039]:
+                        - generic [ref=e2040]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e2042] [cursor=pointer]:
+                            - generic [ref=e2044]: 4.2 out of 5 stars
+                          - link "58 ratings" [ref=e2046] [cursor=pointer]:
+                            - /url: /Ace-Blend-Multivitamin-Methylated-Quatrefolic/dp/B0G94988JS/ref=sr_1_20?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-20#customerReviews
+                            - text: (58)
+                        - generic [ref=e2047]: 700+ bought in past month
+                      - generic [ref=e2048]:
+                        - generic [ref=e2050]:
+                          - generic [ref=e2051]: Price, product page
+                          - 'link "₹949 ( ₹15.82 /count) M.R.P: ₹1,199 M.R.P: ₹1,199" [ref=e2052] [cursor=pointer]':
+                            - /url: /Ace-Blend-Multivitamin-Methylated-Quatrefolic/dp/B0G94988JS/ref=sr_1_20?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-20
+                            - generic [ref=e2053]:
+                              - generic [ref=e2054]: ₹949
+                              - generic [ref=e2055]: ₹949
+                            - generic [ref=e2056]:
+                              - text: (
+                              - generic [ref=e2057]:
+                                - generic [ref=e2058]: ₹15.82
+                                - text: ₹15.82
+                              - text: /count)
+                            - generic [ref=e2059]: "M.R.P: ₹1,199"
+                            - generic [ref=e2060]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2061]:
+                                - generic [ref=e2062]: ₹1,199
+                                - text: ₹1,199
+                          - text: (21% off)
+                        - generic [ref=e2065]:
+                          - generic [ref=e2066]: Save 2%
+                          - text: with coupon
+                      - generic [ref=e2069]:
+                        - generic [ref=e2071]: FREE delivery Sat, 13 Jun
+                        - generic [ref=e2073]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e2088] [cursor=pointer]
+                - listitem [ref=e2089]:
+                  - generic [ref=e2096]:
+                    - link [ref=e2099] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDk1MjkxOTM5MDgzMjo6MDo6&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsr_1_21_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-21-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ
+                      - img [ref=e2101]
+                    - generic [ref=e2102]:
+                      - generic [ref=e2103]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2106] [cursor=pointer]:
+                          - generic [ref=e2107]: Sponsored
+                        - link "Sponsored Ad - Little Joys Multivitamin For Women | 30 Day Pack | With Vitamin C, E, A, B12 D3 & B6 | Biotin, Iron, Zinc & Potassium | Boosts Immunity, Supports Bone Health & Maintains Energy Levels" [ref=e2109] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDk1MjkxOTM5MDgzMjo6MDo6&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsr_1_21_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-21-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Little Joys Multivitamin For Women | 30 Day Pack | With Vitamin C, E, A, B12 D3 & B6 | Biotin, Iron, Zinc & Potassium | Boosts Immunity, Supports Bone Health & Maintains Energy Levels" [level=2] [ref=e2110]: Little Joys Multivitamin For Women | 30 Day Pack | With Vitamin C, E, A, B12 D3 & B6 | Biotin, Iron, Zinc & Potassium | Boosts Immunity, Supports Bone Health & Maintains Energy Levels
+                      - generic [ref=e2111]:
+                        - generic [ref=e2112]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=e2114] [cursor=pointer]:
+                            - generic [ref=e2116]: 4.5 out of 5 stars
+                          - link "337 ratings" [ref=e2118] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDk1MjkxOTM5MDgzMjo6MDo6&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsr_1_21_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-21-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ#customerReviews
+                            - text: (337)
+                        - generic [ref=e2119]: 2K+ bought in past month
+                      - generic [ref=e2120]:
+                        - generic [ref=e2122]:
+                          - generic [ref=e2123]: Price, product page
+                          - link "₹549 ( ₹18.30 /count)" [ref=e2124] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDk1MjkxOTM5MDgzMjo6MDo6&url=%2FLittle-Joys-Multivitamin-Potassium-Maintains%2Fdp%2FB0DC6CZKBP%2Fref%3Dsr_1_21_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-21-spons%26aref%3D3NjJgnXjA1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=3NjJgnXjA1&sp_cr=ZAZ
+                            - generic [ref=e2125]:
+                              - generic [ref=e2126]: ₹549
+                              - generic [ref=e2127]: ₹549
+                            - generic [ref=e2128]:
+                              - text: (
+                              - generic [ref=e2129]:
+                                - generic [ref=e2130]: ₹18.30
+                                - text: ₹18.30
+                              - text: /count)
+                        - generic [ref=e2134]:
+                          - generic [ref=e2135]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2136]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2139]:
+                        - generic [ref=e2141]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2143]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2158] [cursor=pointer]
+                - listitem [ref=e2159]:
+                  - generic [ref=e2166]:
+                    - link [ref=e2169] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTAwMTI0MzcxMjMzMjo6MDo6&url=%2FNutrova-Calcium-Magnesium-Bioavailable-Vitamins%2Fdp%2FB0D3WMGP8M%2Fref%3Dsr_1_22_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-22-spons%26aref%3D8xjRkCBSP6%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=8xjRkCBSP6&sp_cr=ZAZ
+                      - img [ref=e2171]
+                    - generic [ref=e2172]:
+                      - generic [ref=e2173]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2176] [cursor=pointer]:
+                          - generic [ref=e2177]: Sponsored
+                        - link "Sponsored Ad - Nutrova Calcium+Magnesium | With Vitamin D3, K2-MK7 & Boron | Boosts Bone Strength, Joint & Muscle Health | High Absorption with Calcium Citrate Malate & Magnesium Bisglycinate | 60 Veg Tablets." [ref=e2179] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTAwMTI0MzcxMjMzMjo6MDo6&url=%2FNutrova-Calcium-Magnesium-Bioavailable-Vitamins%2Fdp%2FB0D3WMGP8M%2Fref%3Dsr_1_22_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-22-spons%26aref%3D8xjRkCBSP6%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=8xjRkCBSP6&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Nutrova Calcium+Magnesium | With Vitamin D3, K2-MK7 & Boron | Boosts Bone Strength, Joint & Muscle Health | High Absorption with Calcium Citrate Malate & Magnesium Bisglycinate | 60 Veg Tablets." [level=2] [ref=e2180]: Nutrova Calcium+Magnesium | With Vitamin D3, K2-MK7 & Boron | Boosts Bone Strength, Joint & Muscle Health | High Absorption with Calcium Citrate Malate & Magnesium Bisglycinate | 60 Veg Tablets.
+                        - generic [ref=e2183]: Unflavoured
+                      - generic [ref=e2184]:
+                        - generic [ref=e2185]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e2187] [cursor=pointer]:
+                            - generic [ref=e2189]: 4.2 out of 5 stars
+                          - link "52 ratings" [ref=e2191] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTAwMTI0MzcxMjMzMjo6MDo6&url=%2FNutrova-Calcium-Magnesium-Bioavailable-Vitamins%2Fdp%2FB0D3WMGP8M%2Fref%3Dsr_1_22_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-22-spons%26aref%3D8xjRkCBSP6%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=8xjRkCBSP6&sp_cr=ZAZ#customerReviews
+                            - text: (52)
+                        - generic [ref=e2192]: 100+ bought in past month
+                      - generic [ref=e2193]:
+                        - link "Limited time deal" [ref=e2195] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2198]: Limited time deal
+                        - generic [ref=e2200]:
+                          - generic [ref=e2201]: Price, product page
+                          - 'link "₹807 ( ₹13.45 /count) M.R.P: ₹850 M.R.P: ₹850" [ref=e2202] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTAwMTI0MzcxMjMzMjo6MDo6&url=%2FNutrova-Calcium-Magnesium-Bioavailable-Vitamins%2Fdp%2FB0D3WMGP8M%2Fref%3Dsr_1_22_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-22-spons%26aref%3D8xjRkCBSP6%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=8xjRkCBSP6&sp_cr=ZAZ
+                            - generic [ref=e2203]:
+                              - generic [ref=e2204]: ₹807
+                              - generic [ref=e2205]: ₹807
+                            - generic [ref=e2206]:
+                              - text: (
+                              - generic [ref=e2207]:
+                                - generic [ref=e2208]: ₹13.45
+                                - text: ₹13.45
+                              - text: /count)
+                            - generic [ref=e2209]: "M.R.P: ₹850"
+                            - generic [ref=e2210]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2211]:
+                                - generic [ref=e2212]: ₹850
+                                - text: ₹850
+                          - text: (5% off)
+                        - generic [ref=e2215]:
+                          - generic [ref=e2216]: Save 10%
+                          - text: with coupon
+                      - generic [ref=e2219]:
+                        - generic [ref=e2221]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2223]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2238] [cursor=pointer]
+                - listitem [ref=e2239]:
+                  - generic [ref=e2246]:
+                    - link [ref=e2249] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDg3MDMyNTUxMzMzMjo6MDo6&url=%2FCapsules-Hyaluronic-Essential-Vitamins-Supplement%2Fdp%2FB0F2425K4N%2Fref%3Dsr_1_23_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-23-spons%26aref%3DWxbOOBiA9x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=WxbOOBiA9x&sp_cr=ZAZ
+                      - img [ref=e2251]
+                    - generic [ref=e2252]:
+                      - generic [ref=e2253]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2256] [cursor=pointer]:
+                          - generic [ref=e2257]: Sponsored
+                        - link "Sponsored Ad - Arth Biotin Capsules For Hair Growth, Skin & Nails - 60 Veg Capsules for Men & Women | Vitamin A, B, D3, Folic Acid, Keratin Builder & Hyaluronic Acid | Supplement For Healthy Hair, Nails & Skin" [ref=e2259] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDg3MDMyNTUxMzMzMjo6MDo6&url=%2FCapsules-Hyaluronic-Essential-Vitamins-Supplement%2Fdp%2FB0F2425K4N%2Fref%3Dsr_1_23_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-23-spons%26aref%3DWxbOOBiA9x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=WxbOOBiA9x&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Arth Biotin Capsules For Hair Growth, Skin & Nails - 60 Veg Capsules for Men & Women | Vitamin A, B, D3, Folic Acid, Keratin Builder & Hyaluronic Acid | Supplement For Healthy Hair, Nails & Skin" [level=2] [ref=e2260]: Arth Biotin Capsules For Hair Growth, Skin & Nails - 60 Veg Capsules for Men & Women | Vitamin A, B, D3, Folic Acid, Keratin Builder & Hyaluronic Acid | Supplement For Healthy Hair, Nails & Skin
+                      - generic [ref=e2261]:
+                        - generic [ref=e2262]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e2264] [cursor=pointer]:
+                            - generic [ref=e2266]: 4.3 out of 5 stars
+                          - link "231 ratings" [ref=e2268] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDg3MDMyNTUxMzMzMjo6MDo6&url=%2FCapsules-Hyaluronic-Essential-Vitamins-Supplement%2Fdp%2FB0F2425K4N%2Fref%3Dsr_1_23_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-23-spons%26aref%3DWxbOOBiA9x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=WxbOOBiA9x&sp_cr=ZAZ#customerReviews
+                            - text: (231)
+                        - generic [ref=e2269]: 300+ bought in past month
+                      - generic [ref=e2270]:
+                        - generic [ref=e2272]:
+                          - generic [ref=e2273]: Price, product page
+                          - 'link "₹663 ( ₹11.05 /count) M.R.P: ₹799 M.R.P: ₹799" [ref=e2274] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMDg3MDMyNTUxMzMzMjo6MDo6&url=%2FCapsules-Hyaluronic-Essential-Vitamins-Supplement%2Fdp%2FB0F2425K4N%2Fref%3Dsr_1_23_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-23-spons%26aref%3DWxbOOBiA9x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=WxbOOBiA9x&sp_cr=ZAZ
+                            - generic [ref=e2275]:
+                              - generic [ref=e2276]: ₹663
+                              - generic [ref=e2277]: ₹663
+                            - generic [ref=e2278]:
+                              - text: (
+                              - generic [ref=e2279]:
+                                - generic [ref=e2280]: ₹11.05
+                                - text: ₹11.05
+                              - text: /count)
+                            - generic [ref=e2281]: "M.R.P: ₹799"
+                            - generic [ref=e2282]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2283]:
+                                - generic [ref=e2284]: ₹799
+                                - text: ₹799
+                          - text: (17% off)
+                        - generic [ref=e2288]:
+                          - generic [ref=e2289]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2290]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2293]:
+                        - generic [ref=e2295]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2297]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2312] [cursor=pointer]
+                - listitem [ref=e2313]:
+                  - generic [ref=e2320]:
+                    - link [ref=e2323] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTA2NDIzMTYyNDAzMjo6MDo6&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsr_1_24_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-24-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                      - img [ref=e2325]
+                    - generic [ref=e2326]:
+                      - generic [ref=e2327]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e2330] [cursor=pointer]:
+                          - generic [ref=e2331]: Sponsored
+                        - link "Sponsored Ad - Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [ref=e2333] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTA2NDIzMTYyNDAzMjo6MDo6&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsr_1_24_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-24-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [level=2] [ref=e2334]: Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin.
+                      - generic [ref=e2335]:
+                        - generic [ref=e2336]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=e2338] [cursor=pointer]:
+                            - generic [ref=e2340]: 4.6 out of 5 stars
+                          - link "3 ratings" [ref=e2342] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTA2NDIzMTYyNDAzMjo6MDo6&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsr_1_24_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-24-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ#customerReviews
+                            - text: (3)
+                        - generic [ref=e2343]: 50+ bought in past month
+                      - generic [ref=e2344]:
+                        - link "Limited time deal" [ref=e2346] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2349]: Limited time deal
+                        - generic [ref=e2351]:
+                          - generic [ref=e2352]: Price, product page
+                          - 'link "₹208 ( ₹6.93 /count) M.R.P: ₹350 M.R.P: ₹350" [ref=e2353] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfbXRmOjMwMTA2NDIzMTYyNDAzMjo6MDo6&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsr_1_24_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-24-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                            - generic [ref=e2354]:
+                              - generic [ref=e2355]: ₹208
+                              - generic [ref=e2356]: ₹208
+                            - generic [ref=e2357]:
+                              - text: (
+                              - generic [ref=e2358]:
+                                - generic [ref=e2359]: ₹6.93
+                                - text: ₹6.93
+                              - text: /count)
+                            - generic [ref=e2360]: "M.R.P: ₹350"
+                            - generic [ref=e2361]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2362]:
+                                - generic [ref=e2363]: ₹350
+                                - text: ₹350
+                          - text: (41% off)
+                        - generic [ref=e2367]:
+                          - generic [ref=e2368]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2369]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2372]:
+                        - generic [ref=e2374]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e2376]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e2391] [cursor=pointer]
+                - listitem [ref=e2392]:
+                  - generic [ref=e2397]:
+                    - link [ref=e2400] [cursor=pointer]:
+                      - /url: /Himalaya-Youthful-essential-Gelatin-free-Vegetarian/dp/B0CYLWMDY4/ref=sr_1_25?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-25
+                      - img [ref=e2402]
+                    - generic [ref=e2403]:
+                      - generic [ref=e2404]:
+                        - link "Himalaya Skin & Nail Health Gummies | Pack Of 30 | For Healthy, Glowing, Youthful Skin & Nails | With 5 Essential Vitamins|Gelatin-Free Fruit Based Gummies | 100% Vegetarian" [ref=e2405] [cursor=pointer]:
+                          - /url: /Himalaya-Youthful-essential-Gelatin-free-Vegetarian/dp/B0CYLWMDY4/ref=sr_1_25?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-25
+                          - heading "Himalaya Skin & Nail Health Gummies | Pack Of 30 | For Healthy, Glowing, Youthful Skin & Nails | With 5 Essential Vitamins|Gelatin-Free Fruit Based Gummies | 100% Vegetarian" [level=2] [ref=e2406]
+                        - generic [ref=e2409]: Gummy
+                      - generic [ref=e2410]:
+                        - generic [ref=e2411]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e2413] [cursor=pointer]:
+                            - generic [ref=e2415]: 4.0 out of 5 stars
+                          - link "400 ratings" [ref=e2417] [cursor=pointer]:
+                            - /url: /Himalaya-Youthful-essential-Gelatin-free-Vegetarian/dp/B0CYLWMDY4/ref=sr_1_25?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-25#customerReviews
+                            - text: (400)
+                        - generic [ref=e2418]: 300+ bought in past month
+                      - generic [ref=e2419]:
+                        - generic [ref=e2421]:
+                          - generic [ref=e2422]: Price, product page
+                          - 'link "₹266 ( ₹8.87 /count) M.R.P: ₹355 M.R.P: ₹355" [ref=e2423] [cursor=pointer]':
+                            - /url: /Himalaya-Youthful-essential-Gelatin-free-Vegetarian/dp/B0CYLWMDY4/ref=sr_1_25?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-25
+                            - generic [ref=e2424]:
+                              - generic [ref=e2425]: ₹266
+                              - generic [ref=e2426]: ₹266
+                            - generic [ref=e2427]:
+                              - text: (
+                              - generic [ref=e2428]:
+                                - generic [ref=e2429]: ₹8.87
+                                - text: ₹8.87
+                              - text: /count)
+                            - generic [ref=e2430]: "M.R.P: ₹355"
+                            - generic [ref=e2431]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2432]:
+                                - generic [ref=e2433]: ₹355
+                                - text: ₹355
+                          - text: (25% off)
+                        - generic [ref=e2437]:
+                          - generic [ref=e2438]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2439]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2442]:
+                        - generic [ref=e2444]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e2446]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2461] [cursor=pointer]
+                - listitem [ref=e2462]:
+                  - generic [ref=e2467]:
+                    - link [ref=e2470] [cursor=pointer]:
+                      - /url: /Carbamide-Forte-Multivitamin-Supplement-Women/dp/B0DRYN7LFP/ref=sr_1_26?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-26
+                      - img [ref=e2472]
+                    - generic [ref=e2473]:
+                      - link "Carbamide Forte Multivitamin Tablets For Adults 50+ | Multivitamin for senior citizens 50 plus | Multivitamin 50 plus With Probiotics To Support Immunity & Energy Levels - 60 Veg Tablet" [ref=e2475] [cursor=pointer]:
+                        - /url: /Carbamide-Forte-Multivitamin-Supplement-Women/dp/B0DRYN7LFP/ref=sr_1_26?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-26
+                        - heading "Carbamide Forte Multivitamin Tablets For Adults 50+ | Multivitamin for senior citizens 50 plus | Multivitamin 50 plus With Probiotics To Support Immunity & Energy Levels - 60 Veg Tablet" [level=2] [ref=e2476]
+                      - generic [ref=e2477]:
+                        - generic [ref=e2478]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e2480] [cursor=pointer]:
+                            - generic [ref=e2482]: 4.4 out of 5 stars
+                          - link "166 ratings" [ref=e2484] [cursor=pointer]:
+                            - /url: /Carbamide-Forte-Multivitamin-Supplement-Women/dp/B0DRYN7LFP/ref=sr_1_26?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-26#customerReviews
+                            - text: (166)
+                        - generic [ref=e2485]: 500+ bought in past month
+                      - generic [ref=e2486]:
+                        - generic [ref=e2488]:
+                          - generic [ref=e2489]: Price, product page
+                          - 'link "₹499 ( ₹8.32 /count) M.R.P: ₹699 M.R.P: ₹699" [ref=e2490] [cursor=pointer]':
+                            - /url: /Carbamide-Forte-Multivitamin-Supplement-Women/dp/B0DRYN7LFP/ref=sr_1_26?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-26
+                            - generic [ref=e2491]:
+                              - generic [ref=e2492]: ₹499
+                              - generic [ref=e2493]: ₹499
+                            - generic [ref=e2494]:
+                              - text: (
+                              - generic [ref=e2495]:
+                                - generic [ref=e2496]: ₹8.32
+                                - text: ₹8.32
+                              - text: /count)
+                            - generic [ref=e2497]: "M.R.P: ₹699"
+                            - generic [ref=e2498]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2499]:
+                                - generic [ref=e2500]: ₹699
+                                - text: ₹699
+                          - text: (29% off)
+                        - generic [ref=e2504]:
+                          - generic [ref=e2505]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2506]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2511]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e2526] [cursor=pointer]
+                - listitem [ref=e2527]:
+                  - generic [ref=e2532]:
+                    - link [ref=e2535] [cursor=pointer]:
+                      - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BCX2LM47/ref=sr_1_27?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-27
+                      - img [ref=e2537]
+                    - generic [ref=e2538]:
+                      - link "Centrum Men Tablet, World'S No.1 Multivitamin With Grape Seed Extract, Vitamin C & 21 Other Nutrients For Overall Health, Strong Muscles & Immunity (Veg) 30S, 43 Grams" [ref=e2540] [cursor=pointer]:
+                        - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BCX2LM47/ref=sr_1_27?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-27
+                        - heading "Centrum Men Tablet, World'S No.1 Multivitamin With Grape Seed Extract, Vitamin C & 21 Other Nutrients For Overall Health, Strong Muscles & Immunity (Veg) 30S, 43 Grams" [level=2] [ref=e2541]
+                      - generic [ref=e2542]:
+                        - generic [ref=e2543]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e2545] [cursor=pointer]:
+                            - generic [ref=e2547]: 4.2 out of 5 stars
+                          - link "1,806 ratings" [ref=e2549] [cursor=pointer]:
+                            - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BCX2LM47/ref=sr_1_27?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-27#customerReviews
+                            - text: (1.8K)
+                        - generic [ref=e2550]: 3K+ bought in past month
+                      - generic [ref=e2551]:
+                        - generic [ref=e2553]:
+                          - generic [ref=e2554]: Price, product page
+                          - 'link "₹387 ( ₹12.90 /count) M.R.P: ₹475 M.R.P: ₹475" [ref=e2555] [cursor=pointer]':
+                            - /url: /Centrum-Multivitamin-extract-nutrients-Immunity/dp/B0BCX2LM47/ref=sr_1_27?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-27
+                            - generic [ref=e2556]:
+                              - generic [ref=e2557]: ₹387
+                              - generic [ref=e2558]: ₹387
+                            - generic [ref=e2559]:
+                              - text: (
+                              - generic [ref=e2560]:
+                                - generic [ref=e2561]: ₹12.90
+                                - text: ₹12.90
+                              - text: /count)
+                            - generic [ref=e2562]: "M.R.P: ₹475"
+                            - generic [ref=e2563]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2564]:
+                                - generic [ref=e2565]: ₹475
+                                - text: ₹475
+                          - text: (19% off)
+                        - generic [ref=e2569]:
+                          - generic [ref=e2570]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2571]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2574]:
+                        - generic [ref=e2576]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e2578]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2593] [cursor=pointer]
+                - listitem [ref=e2594]:
+                  - generic [ref=e2599]:
+                    - link [ref=e2602] [cursor=pointer]:
+                      - /url: /Bodywise-Multivitamin-Gummies-Blemishes-Improves/dp/B09X5SX17T/ref=sr_1_28?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-28
+                      - img [ref=e2604]
+                    - generic [ref=e2605]:
+                      - generic [ref=e2606]:
+                        - link "Be Bodywise Multivitamin Gummies|With Fibre, Zinc, Iron & Biotin|Vitamin D3, B6, E & A|Boosts Energy & Stamina, Improves Immunity & Skin Health|Vegan, Gluten & Gelatin Free, 1 count, 60 Servings" [ref=e2607] [cursor=pointer]:
+                          - /url: /Bodywise-Multivitamin-Gummies-Blemishes-Improves/dp/B09X5SX17T/ref=sr_1_28?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-28
+                          - heading "Be Bodywise Multivitamin Gummies|With Fibre, Zinc, Iron & Biotin|Vitamin D3, B6, E & A|Boosts Energy & Stamina, Improves Immunity & Skin Health|Vegan, Gluten & Gelatin Free, 1 count, 60 Servings" [level=2] [ref=e2608]
+                        - generic [ref=e2611]: Gummy
+                      - generic [ref=e2612]:
+                        - generic [ref=e2613]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e2615] [cursor=pointer]:
+                            - generic [ref=e2617]: 4.2 out of 5 stars
+                          - link "764 ratings" [ref=e2619] [cursor=pointer]:
+                            - /url: /Bodywise-Multivitamin-Gummies-Blemishes-Improves/dp/B09X5SX17T/ref=sr_1_28?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-28#customerReviews
+                            - text: (764)
+                        - generic [ref=e2620]: 900+ bought in past month
+                      - generic [ref=e2621]:
+                        - link "Limited time deal" [ref=e2623] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2626]: Limited time deal
+                        - generic [ref=e2628]:
+                          - generic [ref=e2629]: Price, product page
+                          - 'link "₹539 ( ₹8.98 /count) M.R.P: ₹799 M.R.P: ₹799" [ref=e2630] [cursor=pointer]':
+                            - /url: /Bodywise-Multivitamin-Gummies-Blemishes-Improves/dp/B09X5SX17T/ref=sr_1_28?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-28
+                            - generic [ref=e2631]:
+                              - generic [ref=e2632]: ₹539
+                              - generic [ref=e2633]: ₹539
+                            - generic [ref=e2634]:
+                              - text: (
+                              - generic [ref=e2635]:
+                                - generic [ref=e2636]: ₹8.98
+                                - text: ₹8.98
+                              - text: /count)
+                            - generic [ref=e2637]: "M.R.P: ₹799"
+                            - generic [ref=e2638]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2639]:
+                                - generic [ref=e2640]: ₹799
+                                - text: ₹799
+                          - text: (33% off)
+                        - generic [ref=e2644]:
+                          - generic [ref=e2645]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2646]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2649]:
+                        - generic [ref=e2651]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2653]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2668] [cursor=pointer]
+                - listitem [ref=e2669]:
+                  - generic [ref=e2674]:
+                    - link [ref=e2677] [cursor=pointer]:
+                      - /url: /Amazon-Prime-Membership-Guide-Everything-ebook/dp/B00T1SK3BS/ref=sr_1_29?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-29
+                      - img [ref=e2679]
+                    - generic [ref=e2680]:
+                      - generic [ref=e2681]:
+                        - 'link "Amazon Prime Membership Guide: Everything Amazon Prime Forgot to Highlight and You Forgot to Checkout!" [ref=e2682] [cursor=pointer]':
+                          - /url: /Amazon-Prime-Membership-Guide-Everything-ebook/dp/B00T1SK3BS/ref=sr_1_29?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-29
+                          - 'heading "Amazon Prime Membership Guide: Everything Amazon Prime Forgot to Highlight and You Forgot to Checkout!" [level=2] [ref=e2683]'
+                        - generic [ref=e2685]:
+                          - text: by
+                          - link "Steve Keeler" [ref=e2686] [cursor=pointer]:
+                            - /url: /Steve-Keeler/e/B00UGCDWPC?ref=sr_ntt_srch_lnk_29&qid=1780926661&sr=8-29
+                      - generic [ref=e2688]:
+                        - text: "3.6"
+                        - button "3.6 out of 5 stars, rating details" [ref=e2690] [cursor=pointer]:
+                          - generic [ref=e2692]: 3.6 out of 5 stars
+                        - link "114 ratings" [ref=e2694] [cursor=pointer]:
+                          - /url: /Amazon-Prime-Membership-Guide-Everything-ebook/dp/B00T1SK3BS/ref=sr_1_29?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-29#customerReviews
+                          - text: (114)
+                      - generic [ref=e2695]:
+                        - link "Kindle Edition" [ref=e2697] [cursor=pointer]:
+                          - /url: /Amazon-Prime-Membership-Guide-Everything-ebook/dp/B00T1SK3BS/ref=sr_1_29?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-29
+                        - generic [ref=e2699]:
+                          - generic [ref=e2700]: Price, product page
+                          - link "₹0" [ref=e2701] [cursor=pointer]:
+                            - /url: /Amazon-Prime-Membership-Guide-Everything-ebook/dp/B00T1SK3BS/ref=sr_1_29?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-29
+                            - generic [ref=e2702]:
+                              - generic [ref=e2703]: ₹0
+                              - generic [ref=e2704]: ₹0
+                          - img "Kindle Unlimited" [ref=e2706]
+                        - generic [ref=e2707]:
+                          - text: Free with Kindle Unlimited membership
+                          - link "Learn More" [ref=e2708] [cursor=pointer]:
+                            - /url: /kindle-dbs/ku2?passThroughAsin=B00T1SK3BS&ref_=mbs_ku_lp
+                      - generic [ref=e2714]: Available instantly
+                      - generic [ref=e2716]: Or ₹224.20 to buy
+                - listitem [ref=e2717]:
+                  - generic [ref=e2722]:
+                    - link [ref=e2725] [cursor=pointer]:
+                      - /url: /GNC-Mega-Men-50-Plus/dp/B08C699LYW/ref=sr_1_30?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-30
+                      - img [ref=e2727]
+                    - generic [ref=e2728]:
+                      - generic [ref=e2729]:
+                        - link "GNC Mega Men 50 Plus Multivitamin | 120 Tablets | 37 Premium Ingredients | Promotes Prostate Health | Boosts Immunity | Protects Heart & Vision | Supports Memory | Formulated In USA" [ref=e2730] [cursor=pointer]:
+                          - /url: /GNC-Mega-Men-50-Plus/dp/B08C699LYW/ref=sr_1_30?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-30
+                          - heading "GNC Mega Men 50 Plus Multivitamin | 120 Tablets | 37 Premium Ingredients | Promotes Prostate Health | Boosts Immunity | Protects Heart & Vision | Supports Memory | Formulated In USA" [level=2] [ref=e2731]
+                        - generic [ref=e2734]: Tablet
+                      - generic [ref=e2735]:
+                        - generic [ref=e2736]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e2738] [cursor=pointer]:
+                            - generic [ref=e2740]: 4.3 out of 5 stars
+                          - link "199 ratings" [ref=e2742] [cursor=pointer]:
+                            - /url: /GNC-Mega-Men-50-Plus/dp/B08C699LYW/ref=sr_1_30?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-30#customerReviews
+                            - text: (199)
+                        - generic [ref=e2743]: 100+ bought in past month
+                      - generic [ref=e2744]:
+                        - generic [ref=e2746]:
+                          - generic [ref=e2747]: Price, product page
+                          - 'link "₹1,399 ( ₹11.66 /count) M.R.P: ₹2,399 M.R.P: ₹2,399" [ref=e2748] [cursor=pointer]':
+                            - /url: /GNC-Mega-Men-50-Plus/dp/B08C699LYW/ref=sr_1_30?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-30
+                            - generic [ref=e2749]:
+                              - generic [ref=e2750]: ₹1,399
+                              - generic [ref=e2751]: ₹1,399
+                            - generic [ref=e2752]:
+                              - text: (
+                              - generic [ref=e2753]:
+                                - generic [ref=e2754]: ₹11.66
+                                - text: ₹11.66
+                              - text: /count)
+                            - generic [ref=e2755]: "M.R.P: ₹2,399"
+                            - generic [ref=e2756]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2757]:
+                                - generic [ref=e2758]: ₹2,399
+                                - text: ₹2,399
+                          - text: (42% off)
+                        - generic [ref=e2762]:
+                          - generic [ref=e2763]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2764]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2767]:
+                        - generic [ref=e2769]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2771]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2786] [cursor=pointer]
+                - listitem [ref=e2787]:
+                  - generic [ref=e2792]:
+                    - link [ref=e2795] [cursor=pointer]:
+                      - /url: /Amazon-Prime-Tips-Tricks-Membership-ebook/dp/B07N5MGKTY/ref=sr_1_31?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-31
+                      - img [ref=e2797]
+                    - generic [ref=e2798]:
+                      - generic [ref=e2799]:
+                        - 'link "Amazon Prime: Tips and Tricks to Get the Most Out Of Your Amazon Prime Membership, How to Join Amazon Prime" [ref=e2800] [cursor=pointer]':
+                          - /url: /Amazon-Prime-Tips-Tricks-Membership-ebook/dp/B07N5MGKTY/ref=sr_1_31?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-31
+                          - 'heading "Amazon Prime: Tips and Tricks to Get the Most Out Of Your Amazon Prime Membership, How to Join Amazon Prime" [level=2] [ref=e2801]'
+                        - generic [ref=e2803]:
+                          - text: by
+                          - link "Mark Howard" [ref=e2804] [cursor=pointer]:
+                            - /url: /Mark-Howard/e/B00CHX7LVE?ref=sr_ntt_srch_lnk_31&qid=1780926661&sr=8-31
+                      - generic [ref=e2806]:
+                        - text: "3.8"
+                        - button "3.8 out of 5 stars, rating details" [ref=e2808] [cursor=pointer]:
+                          - generic [ref=e2810]: 3.8 out of 5 stars
+                        - link "58 ratings" [ref=e2812] [cursor=pointer]:
+                          - /url: /Amazon-Prime-Tips-Tricks-Membership-ebook/dp/B07N5MGKTY/ref=sr_1_31?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-31#customerReviews
+                          - text: (58)
+                      - generic [ref=e2813]:
+                        - link "Kindle Edition" [ref=e2815] [cursor=pointer]:
+                          - /url: /Amazon-Prime-Tips-Tricks-Membership-ebook/dp/B07N5MGKTY/ref=sr_1_31?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-31
+                        - generic [ref=e2817]:
+                          - generic [ref=e2818]: Price, product page
+                          - link "₹0" [ref=e2819] [cursor=pointer]:
+                            - /url: /Amazon-Prime-Tips-Tricks-Membership-ebook/dp/B07N5MGKTY/ref=sr_1_31?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-31
+                            - generic [ref=e2820]:
+                              - generic [ref=e2821]: ₹0
+                              - generic [ref=e2822]: ₹0
+                          - img "Kindle Unlimited" [ref=e2824]
+                        - generic [ref=e2825]:
+                          - text: Free with Kindle Unlimited membership
+                          - link "Learn More" [ref=e2826] [cursor=pointer]:
+                            - /url: /kindle-dbs/ku2?passThroughAsin=B07N5MGKTY&ref_=mbs_ku_lp
+                      - generic [ref=e2832]: Available instantly
+                      - generic [ref=e2834]: "Great On Kindle: A high quality digital reading experience."
+                      - generic [ref=e2836]: Or ₹262 to buy
+                - listitem [ref=e2837]:
+                  - generic [ref=e2842]:
+                    - link [ref=e2845] [cursor=pointer]:
+                      - /url: /HealthKart-Multivitamin-Advanced-Collagen-Hyaluronic/dp/B0CHRTNHCD/ref=sr_1_32?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-32
+                      - img [ref=e2847]
+                    - generic [ref=e2848]:
+                      - link "hk vitals Multivitamin Plus Women (30 Tablets) | Daily Multivitamin for Women | For Energy, Joints, Skin & Hair" [ref=e2850] [cursor=pointer]:
+                        - /url: /HealthKart-Multivitamin-Advanced-Collagen-Hyaluronic/dp/B0CHRTNHCD/ref=sr_1_32?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-32
+                        - heading "hk vitals Multivitamin Plus Women (30 Tablets) | Daily Multivitamin for Women | For Energy, Joints, Skin & Hair" [level=2] [ref=e2851]
+                      - generic [ref=e2852]:
+                        - generic [ref=e2853]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e2855] [cursor=pointer]:
+                            - generic [ref=e2857]: 4.2 out of 5 stars
+                          - link "1,058 ratings" [ref=e2859] [cursor=pointer]:
+                            - /url: /HealthKart-Multivitamin-Advanced-Collagen-Hyaluronic/dp/B0CHRTNHCD/ref=sr_1_32?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-32#customerReviews
+                            - text: (1K)
+                        - generic [ref=e2860]: 900+ bought in past month
+                      - generic [ref=e2861]:
+                        - generic [ref=e2863]:
+                          - generic [ref=e2864]: Price, product page
+                          - link "₹359 ( ₹11.97 /count)" [ref=e2865] [cursor=pointer]:
+                            - /url: /HealthKart-Multivitamin-Advanced-Collagen-Hyaluronic/dp/B0CHRTNHCD/ref=sr_1_32?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-32
+                            - generic [ref=e2866]:
+                              - generic [ref=e2867]: ₹359
+                              - generic [ref=e2868]: ₹359
+                            - generic [ref=e2869]:
+                              - text: (
+                              - generic [ref=e2870]:
+                                - generic [ref=e2871]: ₹11.97
+                                - text: ₹11.97
+                              - text: /count)
+                        - generic [ref=e2875]:
+                          - generic [ref=e2876]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2877]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e2880]:
+                        - generic [ref=e2882]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e2884]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2899] [cursor=pointer]
+                - listitem [ref=e2900]:
+                  - generic [ref=e2905]:
+                    - link [ref=e2908] [cursor=pointer]:
+                      - /url: /Rasayanam-Multivitamin-ingredients-Probiotic-Ashwagandha/dp/B0D7J183WS/ref=sr_1_33?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-33
+                      - img [ref=e2910]
+                    - generic [ref=e2911]:
+                      - generic [ref=e2912]:
+                        - link "Rasayanam Multivitamin for Men | 52 Ingredients with 100% RDA of Vitamins & Minerals | Energy, Immunity, Performance, Bone, Joint & Heart Health | Daily Multivitamin Tablet for Men - 60 Tablets" [ref=e2913] [cursor=pointer]:
+                          - /url: /Rasayanam-Multivitamin-ingredients-Probiotic-Ashwagandha/dp/B0D7J183WS/ref=sr_1_33?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-33
+                          - heading "Rasayanam Multivitamin for Men | 52 Ingredients with 100% RDA of Vitamins & Minerals | Energy, Immunity, Performance, Bone, Joint & Heart Health | Daily Multivitamin Tablet for Men - 60 Tablets" [level=2] [ref=e2914]
+                        - generic [ref=e2917]: Tablet
+                      - generic [ref=e2918]:
+                        - generic [ref=e2919]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2921] [cursor=pointer]:
+                            - generic [ref=e2923]: 4.1 out of 5 stars
+                          - link "349 ratings" [ref=e2925] [cursor=pointer]:
+                            - /url: /Rasayanam-Multivitamin-ingredients-Probiotic-Ashwagandha/dp/B0D7J183WS/ref=sr_1_33?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-33#customerReviews
+                            - text: (349)
+                        - generic [ref=e2926]: 400+ bought in past month
+                      - generic [ref=e2927]:
+                        - generic [ref=e2929]:
+                          - generic [ref=e2930]: Price, product page
+                          - 'link "₹649 ( ₹10.82 /count) M.R.P: ₹699 M.R.P: ₹699" [ref=e2931] [cursor=pointer]':
+                            - /url: /Rasayanam-Multivitamin-ingredients-Probiotic-Ashwagandha/dp/B0D7J183WS/ref=sr_1_33?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-33
+                            - generic [ref=e2932]:
+                              - generic [ref=e2933]: ₹649
+                              - generic [ref=e2934]: ₹649
+                            - generic [ref=e2935]:
+                              - text: (
+                              - generic [ref=e2936]:
+                                - generic [ref=e2937]: ₹10.82
+                                - text: ₹10.82
+                              - text: /count)
+                            - generic [ref=e2938]: "M.R.P: ₹699"
+                            - generic [ref=e2939]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2940]:
+                                - generic [ref=e2941]: ₹699
+                                - text: ₹699
+                          - text: (7% off)
+                        - generic [ref=e2944]:
+                          - generic [ref=e2945]: Save 10%
+                          - text: with coupon
+                      - generic [ref=e2948]:
+                        - generic [ref=e2950]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e2952]: Or fastest delivery Tomorrow, 9 Jun
+                      - button "Add to cart" [ref=e2967] [cursor=pointer]
+                - listitem [ref=e2968]:
+                  - generic [ref=e2973]:
+                    - link [ref=e2976] [cursor=pointer]:
+                      - /url: /MuscleBlaze-Multivitamin-Immunity-Boosters-Digestive/dp/B08TC9Z9KR/ref=sr_1_34?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-34
+                      - img [ref=e2978]
+                    - generic [ref=e2979]:
+                      - link "MuscleBlaze Mb-Vite Daily Multivitamin With 51 Ingredients & 6 Blends (60 Tablets) & Omega 3 Fish Oil 1000 Mg (60 Capsules)|With 180 Mg Epa & 120 Mg Dha|Combo Pack,2 Count" [ref=e2981] [cursor=pointer]:
+                        - /url: /MuscleBlaze-Multivitamin-Immunity-Boosters-Digestive/dp/B08TC9Z9KR/ref=sr_1_34?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-34
+                        - heading "MuscleBlaze Mb-Vite Daily Multivitamin With 51 Ingredients & 6 Blends (60 Tablets) & Omega 3 Fish Oil 1000 Mg (60 Capsules)|With 180 Mg Epa & 120 Mg Dha|Combo Pack,2 Count" [level=2] [ref=e2982]
+                      - generic [ref=e2983]:
+                        - generic [ref=e2984]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e2986] [cursor=pointer]:
+                            - generic [ref=e2988]: 4.3 out of 5 stars
+                          - link "1,930 ratings" [ref=e2990] [cursor=pointer]:
+                            - /url: /MuscleBlaze-Multivitamin-Immunity-Boosters-Digestive/dp/B08TC9Z9KR/ref=sr_1_34?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-34#customerReviews
+                            - text: (1.9K)
+                        - generic [ref=e2991]: 700+ bought in past month
+                      - generic [ref=e2992]:
+                        - generic [ref=e2994]:
+                          - generic [ref=e2995]: Price, product page
+                          - 'link "₹999 ( ₹8.33 /count) M.R.P: ₹1,199 M.R.P: ₹1,199" [ref=e2996] [cursor=pointer]':
+                            - /url: /MuscleBlaze-Multivitamin-Immunity-Boosters-Digestive/dp/B08TC9Z9KR/ref=sr_1_34?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-34
+                            - generic [ref=e2997]:
+                              - generic [ref=e2998]: ₹999
+                              - generic [ref=e2999]: ₹999
+                            - generic [ref=e3000]:
+                              - text: (
+                              - generic [ref=e3001]:
+                                - generic [ref=e3002]: ₹8.33
+                                - text: ₹8.33
+                              - text: /count)
+                            - generic [ref=e3003]: "M.R.P: ₹1,199"
+                            - generic [ref=e3004]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3005]:
+                                - generic [ref=e3006]: ₹1,199
+                                - text: ₹1,199
+                          - text: (17% off)
+                        - generic [ref=e3010]:
+                          - generic [ref=e3011]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3012]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3015]:
+                        - generic [ref=e3017]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3019]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3034] [cursor=pointer]
+                - listitem [ref=e3035]:
+                  - generic [ref=e3040]:
+                    - link [ref=e3043] [cursor=pointer]:
+                      - /url: /Carbamide-Forte-Strength-Multivitamin-Capsule/dp/B09H4NW6N4/ref=sr_1_35?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-35
+                      - img [ref=e3045]
+                    - generic [ref=e3046]:
+                      - generic [ref=e3047]:
+                        - link "Carbamide Forte Triple Strength Omega 3 Fish Oil Capsules 1400mg | Omega 3 Supplement | Omega3 Fatty Acid Supplement To Support Heart, Joints & Skin - 1400mg | 30 Softgel Capsules" [ref=e3048] [cursor=pointer]:
+                          - /url: /Carbamide-Forte-Strength-Multivitamin-Capsule/dp/B09H4NW6N4/ref=sr_1_35?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-35
+                          - heading "Carbamide Forte Triple Strength Omega 3 Fish Oil Capsules 1400mg | Omega 3 Supplement | Omega3 Fatty Acid Supplement To Support Heart, Joints & Skin - 1400mg | 30 Softgel Capsules" [level=2] [ref=e3049]
+                        - generic [ref=e3052]: Capsule
+                      - generic [ref=e3053]:
+                        - generic [ref=e3054]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e3056] [cursor=pointer]:
+                            - generic [ref=e3058]: 4.1 out of 5 stars
+                          - link "427 ratings" [ref=e3060] [cursor=pointer]:
+                            - /url: /Carbamide-Forte-Strength-Multivitamin-Capsule/dp/B09H4NW6N4/ref=sr_1_35?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-35#customerReviews
+                            - text: (427)
+                        - generic [ref=e3061]: 300+ bought in past month
+                      - generic [ref=e3062]:
+                        - generic [ref=e3064]:
+                          - generic [ref=e3065]: Price, product page
+                          - 'link "₹375 ( ₹12.50 /count) M.R.P: ₹500 M.R.P: ₹500" [ref=e3066] [cursor=pointer]':
+                            - /url: /Carbamide-Forte-Strength-Multivitamin-Capsule/dp/B09H4NW6N4/ref=sr_1_35?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-35
+                            - generic [ref=e3067]:
+                              - generic [ref=e3068]: ₹375
+                              - generic [ref=e3069]: ₹375
+                            - generic [ref=e3070]:
+                              - text: (
+                              - generic [ref=e3071]:
+                                - generic [ref=e3072]: ₹12.50
+                                - text: ₹12.50
+                              - text: /count)
+                            - generic [ref=e3073]: "M.R.P: ₹500"
+                            - generic [ref=e3074]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3075]:
+                                - generic [ref=e3076]: ₹500
+                                - text: ₹500
+                          - text: (25% off)
+                        - generic [ref=e3080]:
+                          - generic [ref=e3081]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3082]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3087]: FREE delivery on first order
+                      - button "Add to cart" [ref=e3102] [cursor=pointer]
+                - listitem [ref=e3103]:
+                  - generic [ref=e3108]:
+                    - link [ref=e3111] [cursor=pointer]:
+                      - /url: /Naturyz-1400Mg-Triple-Strength-1000Mg/dp/B07CCN2291/ref=sr_1_36?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-36
+                      - img [ref=e3113]
+                    - generic [ref=e3114]:
+                      - generic [ref=e3115]:
+                        - link "Naturyz Triple Strength Omega 3 Fish Oil with Highest Strength 2450 mg, 60 Capsules, Omega 3-6-9 Per Serving (EPA 1200mg DHA 800mg) Capsules For Men & Women" [ref=e3116] [cursor=pointer]:
+                          - /url: /Naturyz-1400Mg-Triple-Strength-1000Mg/dp/B07CCN2291/ref=sr_1_36?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-36
+                          - heading "Naturyz Triple Strength Omega 3 Fish Oil with Highest Strength 2450 mg, 60 Capsules, Omega 3-6-9 Per Serving (EPA 1200mg DHA 800mg) Capsules For Men & Women" [level=2] [ref=e3117]
+                        - generic [ref=e3120]: Capsule
+                      - generic [ref=e3121]:
+                        - generic [ref=e3122]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e3124] [cursor=pointer]:
+                            - generic [ref=e3126]: 4.1 out of 5 stars
+                          - link "6,667 ratings" [ref=e3128] [cursor=pointer]:
+                            - /url: /Naturyz-1400Mg-Triple-Strength-1000Mg/dp/B07CCN2291/ref=sr_1_36?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-36#customerReviews
+                            - text: (6.6K)
+                        - generic [ref=e3129]: 400+ bought in past month
+                      - generic [ref=e3130]:
+                        - generic [ref=e3132]:
+                          - generic [ref=e3133]: Price, product page
+                          - 'link "₹643 ( ₹10.72 /count) M.R.P: ₹1,199 M.R.P: ₹1,199" [ref=e3134] [cursor=pointer]':
+                            - /url: /Naturyz-1400Mg-Triple-Strength-1000Mg/dp/B07CCN2291/ref=sr_1_36?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-36
+                            - generic [ref=e3135]:
+                              - generic [ref=e3136]: ₹643
+                              - generic [ref=e3137]: ₹643
+                            - generic [ref=e3138]:
+                              - text: (
+                              - generic [ref=e3139]:
+                                - generic [ref=e3140]: ₹10.72
+                                - text: ₹10.72
+                              - text: /count)
+                            - generic [ref=e3141]: "M.R.P: ₹1,199"
+                            - generic [ref=e3142]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3143]:
+                                - generic [ref=e3144]: ₹1,199
+                                - text: ₹1,199
+                          - text: (46% off)
+                        - generic [ref=e3148]:
+                          - generic [ref=e3149]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3150]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3153]:
+                        - generic [ref=e3155]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3157]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3172] [cursor=pointer]
+                - listitem [ref=e3173]:
+                  - generic [ref=e3178]:
+                    - link [ref=e3181] [cursor=pointer]:
+                      - /url: /Wellman-Multivitamin-Tablets-Vitality-Cognitive/dp/B0F8D5V4RR/ref=sr_1_37?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-37
+                      - img [ref=e3183]
+                    - generic [ref=e3184]:
+                      - generic [ref=e3185]:
+                        - link "Wellman 50+ Multivitamin Tablets for Men (2 Months Pack) | 24 Nutrients with Vitamins, Minerals, Ginseng, Citrus Bioflavonoids & Amino Acids | Daily Nutritional Supplement | Gluten Free | 60 Tablets" [ref=e3186] [cursor=pointer]:
+                          - /url: /Wellman-Multivitamin-Tablets-Vitality-Cognitive/dp/B0F8D5V4RR/ref=sr_1_37?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-37
+                          - heading "Wellman 50+ Multivitamin Tablets for Men (2 Months Pack) | 24 Nutrients with Vitamins, Minerals, Ginseng, Citrus Bioflavonoids & Amino Acids | Daily Nutritional Supplement | Gluten Free | 60 Tablets" [level=2] [ref=e3187]
+                        - generic [ref=e3190]: Tablet
+                      - generic [ref=e3191]:
+                        - generic [ref=e3192]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e3194] [cursor=pointer]:
+                            - generic [ref=e3196]: 4.2 out of 5 stars
+                          - link "31 ratings" [ref=e3198] [cursor=pointer]:
+                            - /url: /Wellman-Multivitamin-Tablets-Vitality-Cognitive/dp/B0F8D5V4RR/ref=sr_1_37?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-37#customerReviews
+                            - text: (31)
+                        - generic [ref=e3199]: 100+ bought in past month
+                      - generic [ref=e3200]:
+                        - generic [ref=e3202]:
+                          - generic [ref=e3203]: Price, product page
+                          - 'link "₹547 ( ₹9.12 /count) M.R.P: ₹729 M.R.P: ₹729" [ref=e3204] [cursor=pointer]':
+                            - /url: /Wellman-Multivitamin-Tablets-Vitality-Cognitive/dp/B0F8D5V4RR/ref=sr_1_37?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-37
+                            - generic [ref=e3205]:
+                              - generic [ref=e3206]: ₹547
+                              - generic [ref=e3207]: ₹547
+                            - generic [ref=e3208]:
+                              - text: (
+                              - generic [ref=e3209]:
+                                - generic [ref=e3210]: ₹9.12
+                                - text: ₹9.12
+                              - text: /count)
+                            - generic [ref=e3211]: "M.R.P: ₹729"
+                            - generic [ref=e3212]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3213]:
+                                - generic [ref=e3214]: ₹729
+                                - text: ₹729
+                          - text: (25% off)
+                        - generic [ref=e3217]:
+                          - generic [ref=e3218]: Save 6%
+                          - text: with coupon
+                      - generic [ref=e3221]:
+                        - generic [ref=e3223]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3225]: Or fastest delivery Tomorrow, 9 Jun
+                      - button "Add to cart" [ref=e3240] [cursor=pointer]
+                - listitem [ref=e3241]:
+                  - generic [ref=e3246]:
+                    - link [ref=e3249] [cursor=pointer]:
+                      - /url: /Centrum-Multivitamin-Probiotics-nutrients-Digestion/dp/B0BD1SS2GT/ref=sr_1_38?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-38
+                      - img [ref=e3251]
+                    - generic [ref=e3252]:
+                      - link "Centrum Kids, World's No.1 Multivitamin with Probiotics, Vitamin C & 11 other nutrients for Immunity, Healthy Digestion & Eye Health (Veg)- 30 Gummies" [ref=e3254] [cursor=pointer]:
+                        - /url: /Centrum-Multivitamin-Probiotics-nutrients-Digestion/dp/B0BD1SS2GT/ref=sr_1_38?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-38
+                        - heading "Centrum Kids, World's No.1 Multivitamin with Probiotics, Vitamin C & 11 other nutrients for Immunity, Healthy Digestion & Eye Health (Veg)- 30 Gummies" [level=2] [ref=e3255]
+                      - generic [ref=e3256]:
+                        - generic [ref=e3257]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e3259] [cursor=pointer]:
+                            - generic [ref=e3261]: 4.2 out of 5 stars
+                          - link "794 ratings" [ref=e3263] [cursor=pointer]:
+                            - /url: /Centrum-Multivitamin-Probiotics-nutrients-Digestion/dp/B0BD1SS2GT/ref=sr_1_38?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-38#customerReviews
+                            - text: (794)
+                        - generic [ref=e3264]: 500+ bought in past month
+                      - generic [ref=e3265]:
+                        - generic [ref=e3267]:
+                          - generic [ref=e3268]: Price, product page
+                          - 'link "₹378 ( ₹12.60 /count) M.R.P: ₹495 M.R.P: ₹495" [ref=e3269] [cursor=pointer]':
+                            - /url: /Centrum-Multivitamin-Probiotics-nutrients-Digestion/dp/B0BD1SS2GT/ref=sr_1_38?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-38
+                            - generic [ref=e3270]:
+                              - generic [ref=e3271]: ₹378
+                              - generic [ref=e3272]: ₹378
+                            - generic [ref=e3273]:
+                              - text: (
+                              - generic [ref=e3274]:
+                                - generic [ref=e3275]: ₹12.60
+                                - text: ₹12.60
+                              - text: /count)
+                            - generic [ref=e3276]: "M.R.P: ₹495"
+                            - generic [ref=e3277]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3278]:
+                                - generic [ref=e3279]: ₹495
+                                - text: ₹495
+                          - text: (24% off)
+                        - generic [ref=e3283]:
+                          - generic [ref=e3284]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3285]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3288]:
+                        - generic [ref=e3290]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e3292]: Or fastest delivery Tomorrow, 9 Jun
+                      - button "Add to cart" [ref=e3307] [cursor=pointer]
+                - listitem [ref=e3308]:
+                  - generic [ref=e3313]:
+                    - link [ref=e3316] [cursor=pointer]:
+                      - /url: /Neuherbs-Deep-Omega-Fish-serving/dp/B07WTBN75M/ref=sr_1_39?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-39
+                      - img [ref=e3318]
+                    - generic [ref=e3319]:
+                      - generic [ref=e3320]:
+                        - link "Neuherbs Deep Sea Omega 3 Fish Oil Capsules 2500mg Triple Strength - Supplement for Heart, Brain & Joint Support - No Fishy Burps, Lemon Flavour - 60 Softgels for Men & Women" [ref=e3321] [cursor=pointer]:
+                          - /url: /Neuherbs-Deep-Omega-Fish-serving/dp/B07WTBN75M/ref=sr_1_39?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-39
+                          - heading "Neuherbs Deep Sea Omega 3 Fish Oil Capsules 2500mg Triple Strength - Supplement for Heart, Brain & Joint Support - No Fishy Burps, Lemon Flavour - 60 Softgels for Men & Women" [level=2] [ref=e3322]
+                        - generic [ref=e3325]: Softgel
+                      - generic [ref=e3326]:
+                        - generic [ref=e3327]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e3329] [cursor=pointer]:
+                            - generic [ref=e3331]: 4.3 out of 5 stars
+                          - link "13,001 ratings" [ref=e3333] [cursor=pointer]:
+                            - /url: /Neuherbs-Deep-Omega-Fish-serving/dp/B07WTBN75M/ref=sr_1_39?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-39#customerReviews
+                            - text: (13K)
+                        - generic [ref=e3334]: 5K+ bought in past month
+                      - generic [ref=e3335]:
+                        - generic [ref=e3337]:
+                          - generic [ref=e3338]: Price, product page
+                          - 'link "₹749 ( ₹12.48 /count) M.R.P: ₹999 M.R.P: ₹999" [ref=e3339] [cursor=pointer]':
+                            - /url: /Neuherbs-Deep-Omega-Fish-serving/dp/B07WTBN75M/ref=sr_1_39?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-39
+                            - generic [ref=e3340]:
+                              - generic [ref=e3341]: ₹749
+                              - generic [ref=e3342]: ₹749
+                            - generic [ref=e3343]:
+                              - text: (
+                              - generic [ref=e3344]:
+                                - generic [ref=e3345]: ₹12.48
+                                - text: ₹12.48
+                              - text: /count)
+                            - generic [ref=e3346]: "M.R.P: ₹999"
+                            - generic [ref=e3347]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3348]:
+                                - generic [ref=e3349]: ₹999
+                                - text: ₹999
+                          - text: (25% off)
+                        - generic [ref=e3352]:
+                          - generic [ref=e3353]: Save 2%
+                          - text: with coupon
+                      - generic [ref=e3356]:
+                        - generic [ref=e3358]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3360]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3375] [cursor=pointer]
+                - listitem [ref=e3376]:
+                  - generic [ref=e3381]:
+                    - link [ref=e3384] [cursor=pointer]:
+                      - /url: /Neuherbs-Multivitamin-Tablets-Magnesium-Supports/dp/B0GNSMRTD9/ref=sr_1_40?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-40
+                      - img [ref=e3386]
+                    - generic [ref=e3387]:
+                      - generic [ref=e3388]:
+                        - link "Neuherbs Multivitamin Tablets for Women 60 Count | True Vitamin Women Multivitamin with Vitamin C, B12, D, Iron, Zinc & Magnesium | Supports Energy, Skin, Hair & Overall Health" [ref=e3389] [cursor=pointer]:
+                          - /url: /Neuherbs-Multivitamin-Tablets-Magnesium-Supports/dp/B0GNSMRTD9/ref=sr_1_40?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-40
+                          - heading "Neuherbs Multivitamin Tablets for Women 60 Count | True Vitamin Women Multivitamin with Vitamin C, B12, D, Iron, Zinc & Magnesium | Supports Energy, Skin, Hair & Overall Health" [level=2] [ref=e3390]
+                        - generic [ref=e3393]: Tablet
+                      - generic [ref=e3394]:
+                        - generic [ref=e3395]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e3397] [cursor=pointer]:
+                            - generic [ref=e3399]: 4.2 out of 5 stars
+                          - link "149 ratings" [ref=e3401] [cursor=pointer]:
+                            - /url: /Neuherbs-Multivitamin-Tablets-Magnesium-Supports/dp/B0GNSMRTD9/ref=sr_1_40?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-40#customerReviews
+                            - text: (149)
+                        - generic [ref=e3402]: 100+ bought in past month
+                      - generic [ref=e3403]:
+                        - generic [ref=e3405]:
+                          - generic [ref=e3406]: Price, product page
+                          - 'link "₹599 ( ₹9.98 /count) M.R.P: ₹849 M.R.P: ₹849" [ref=e3407] [cursor=pointer]':
+                            - /url: /Neuherbs-Multivitamin-Tablets-Magnesium-Supports/dp/B0GNSMRTD9/ref=sr_1_40?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-40
+                            - generic [ref=e3408]:
+                              - generic [ref=e3409]: ₹599
+                              - generic [ref=e3410]: ₹599
+                            - generic [ref=e3411]:
+                              - text: (
+                              - generic [ref=e3412]:
+                                - generic [ref=e3413]: ₹9.98
+                                - text: ₹9.98
+                              - text: /count)
+                            - generic [ref=e3414]: "M.R.P: ₹849"
+                            - generic [ref=e3415]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3416]:
+                                - generic [ref=e3417]: ₹849
+                                - text: ₹849
+                          - text: (29% off)
+                        - generic [ref=e3420]:
+                          - generic [ref=e3421]: Save 2%
+                          - text: with coupon
+                      - generic [ref=e3424]:
+                        - generic [ref=e3426]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3428]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3443] [cursor=pointer]
+                - listitem [ref=e3444]:
+                  - generic [ref=e3449]:
+                    - link [ref=e3452] [cursor=pointer]:
+                      - /url: /Multivitamin-Vitality-Cognitive-Function-Tiredness/dp/B0DKYMCKW3/ref=sr_1_41?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-41
+                      - img [ref=e3454]
+                    - generic [ref=e3455]:
+                      - generic [ref=e3456]:
+                        - link "Wellman 50+ Multivitamin Tablets for Men Aged 50+ | Ginseng, Citrus & Amino Acids | Support Health & Vitality | Boost Cognitive & Immune Function | Reduce Tiredness & Fatigue | 30 Veg Tablets" [ref=e3457] [cursor=pointer]:
+                          - /url: /Multivitamin-Vitality-Cognitive-Function-Tiredness/dp/B0DKYMCKW3/ref=sr_1_41?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-41
+                          - heading "Wellman 50+ Multivitamin Tablets for Men Aged 50+ | Ginseng, Citrus & Amino Acids | Support Health & Vitality | Boost Cognitive & Immune Function | Reduce Tiredness & Fatigue | 30 Veg Tablets" [level=2] [ref=e3458]
+                        - generic [ref=e3461]: Tablet
+                      - generic [ref=e3462]:
+                        - generic [ref=e3463]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e3465] [cursor=pointer]:
+                            - generic [ref=e3467]: 4.4 out of 5 stars
+                          - link "213 ratings" [ref=e3469] [cursor=pointer]:
+                            - /url: /Multivitamin-Vitality-Cognitive-Function-Tiredness/dp/B0DKYMCKW3/ref=sr_1_41?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-41#customerReviews
+                            - text: (213)
+                        - generic [ref=e3470]: 300+ bought in past month
+                      - generic [ref=e3471]:
+                        - generic [ref=e3473]:
+                          - generic [ref=e3474]: Price, product page
+                          - 'link "₹319 ( ₹10.63 /count) M.R.P: ₹399 M.R.P: ₹399" [ref=e3475] [cursor=pointer]':
+                            - /url: /Multivitamin-Vitality-Cognitive-Function-Tiredness/dp/B0DKYMCKW3/ref=sr_1_41?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-41
+                            - generic [ref=e3476]:
+                              - generic [ref=e3477]: ₹319
+                              - generic [ref=e3478]: ₹319
+                            - generic [ref=e3479]:
+                              - text: (
+                              - generic [ref=e3480]:
+                                - generic [ref=e3481]: ₹10.63
+                                - text: ₹10.63
+                              - text: /count)
+                            - generic [ref=e3482]: "M.R.P: ₹399"
+                            - generic [ref=e3483]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3484]:
+                                - generic [ref=e3485]: ₹399
+                                - text: ₹399
+                          - text: (20% off)
+                        - generic [ref=e3489]:
+                          - generic [ref=e3490]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3491]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3494]:
+                        - generic [ref=e3496]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e3498]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e3513] [cursor=pointer]
+                - listitem [ref=e3514]:
+                  - generic [ref=e3519]:
+                    - link [ref=e3522] [cursor=pointer]:
+                      - /url: /Be-Multivitamin-Vitamins-Essential-Minerals/dp/B0DSKZSXC9/ref=sr_1_42?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-42
+                      - img [ref=e3524]
+                    - generic [ref=e3525]:
+                      - link "Be. 100% Daily Multivitamin Tablet for Men & Women | With Magnesium, Zinc, Biotin & Vitamin E | Everyday Multivitamin Tablets for Women & Men | Supports Energy, Immunity, Hair & Skin Care 30 Tablets" [ref=e3527] [cursor=pointer]:
+                        - /url: /Be-Multivitamin-Vitamins-Essential-Minerals/dp/B0DSKZSXC9/ref=sr_1_42?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-42
+                        - heading "Be. 100% Daily Multivitamin Tablet for Men & Women | With Magnesium, Zinc, Biotin & Vitamin E | Everyday Multivitamin Tablets for Women & Men | Supports Energy, Immunity, Hair & Skin Care 30 Tablets" [level=2] [ref=e3528]
+                      - generic [ref=e3529]:
+                        - generic [ref=e3530]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e3532] [cursor=pointer]:
+                            - generic [ref=e3534]: 4.4 out of 5 stars
+                          - link "48 ratings" [ref=e3536] [cursor=pointer]:
+                            - /url: /Be-Multivitamin-Vitamins-Essential-Minerals/dp/B0DSKZSXC9/ref=sr_1_42?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-42#customerReviews
+                            - text: (48)
+                        - generic [ref=e3537]: 50+ bought in past month
+                      - generic [ref=e3538]:
+                        - generic [ref=e3540]:
+                          - generic [ref=e3541]: Price, product page
+                          - 'link "₹559 ( ₹18.63 /count) M.R.P: ₹699 M.R.P: ₹699" [ref=e3542] [cursor=pointer]':
+                            - /url: /Be-Multivitamin-Vitamins-Essential-Minerals/dp/B0DSKZSXC9/ref=sr_1_42?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-42
+                            - generic [ref=e3543]:
+                              - generic [ref=e3544]: ₹559
+                              - generic [ref=e3545]: ₹559
+                            - generic [ref=e3546]:
+                              - text: (
+                              - generic [ref=e3547]:
+                                - generic [ref=e3548]: ₹18.63
+                                - text: ₹18.63
+                              - text: /count)
+                            - generic [ref=e3549]: "M.R.P: ₹699"
+                            - generic [ref=e3550]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3551]:
+                                - generic [ref=e3552]: ₹699
+                                - text: ₹699
+                          - text: (20% off)
+                        - generic [ref=e3556]:
+                          - generic [ref=e3557]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3558]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3561]:
+                        - generic [ref=e3563]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3565]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3580] [cursor=pointer]
+                - listitem [ref=e3581]:
+                  - generic [ref=e3586]:
+                    - link [ref=e3589] [cursor=pointer]:
+                      - /url: /Carbamide-Forte-Multivitamin-Ingredients-Superfoods/dp/B08H5PBLC2/ref=sr_1_43?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-43
+                      - img [ref=e3591]
+                    - generic [ref=e3592]:
+                      - generic [ref=e3593]:
+                        - link "Carbamide Forte Plant Based Multivitamin Tablets for Men & Women for Immunity, Energy & Detox with 82 Ingredients like Superfoods, Greens, Vegetables, Fruits & Herbs Supplement â€“ 60 Veg Tablets" [ref=e3594] [cursor=pointer]:
+                          - /url: /Carbamide-Forte-Multivitamin-Ingredients-Superfoods/dp/B08H5PBLC2/ref=sr_1_43?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-43
+                          - heading "Carbamide Forte Plant Based Multivitamin Tablets for Men & Women for Immunity, Energy & Detox with 82 Ingredients like Superfoods, Greens, Vegetables, Fruits & Herbs Supplement â€“ 60 Veg Tablets" [level=2] [ref=e3595]
+                        - generic [ref=e3598]: Tablet
+                      - generic [ref=e3599]:
+                        - generic [ref=e3600]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e3602] [cursor=pointer]:
+                            - generic [ref=e3604]: 4.1 out of 5 stars
+                          - link "845 ratings" [ref=e3606] [cursor=pointer]:
+                            - /url: /Carbamide-Forte-Multivitamin-Ingredients-Superfoods/dp/B08H5PBLC2/ref=sr_1_43?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-43#customerReviews
+                            - text: (845)
+                        - generic [ref=e3607]: 300+ bought in past month
+                      - generic [ref=e3608]:
+                        - generic [ref=e3610]:
+                          - generic [ref=e3611]: Price, product page
+                          - 'link "₹499 ( ₹8.32 /count) M.R.P: ₹770 M.R.P: ₹770" [ref=e3612] [cursor=pointer]':
+                            - /url: /Carbamide-Forte-Multivitamin-Ingredients-Superfoods/dp/B08H5PBLC2/ref=sr_1_43?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-43
+                            - generic [ref=e3613]:
+                              - generic [ref=e3614]: ₹499
+                              - generic [ref=e3615]: ₹499
+                            - generic [ref=e3616]:
+                              - text: (
+                              - generic [ref=e3617]:
+                                - generic [ref=e3618]: ₹8.32
+                                - text: ₹8.32
+                              - text: /count)
+                            - generic [ref=e3619]: "M.R.P: ₹770"
+                            - generic [ref=e3620]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3621]:
+                                - generic [ref=e3622]: ₹770
+                                - text: ₹770
+                          - text: (35% off)
+                        - generic [ref=e3626]:
+                          - generic [ref=e3627]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3628]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3631]:
+                        - generic [ref=e3633]: FREE delivery Fri, 12 Jun
+                        - generic [ref=e3635]: Or fastest delivery Wed, 10 Jun
+                      - button "Add to cart" [ref=e3650] [cursor=pointer]
+                - listitem [ref=e3651]:
+                  - generic [ref=e3656]:
+                    - link [ref=e3659] [cursor=pointer]:
+                      - /url: /Dr-Vaidyas-Multivitamin-supplement-supplements/dp/B0FT8JFZM8/ref=sr_1_44?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-44
+                      - img [ref=e3661]
+                    - generic [ref=e3662]:
+                      - generic [ref=e3663]:
+                        - link "Dr. Vaidya’s Multivitamin for Women | Natural Multivitamin Enriched with Ayurvedic Herbs like Shatavari | Goodness of Calcium and Vitamin D3 tablets, Magnesium supplement, Vitamin B12 supplements & Herbal Extracts | (60 tablets) Pack of 1" [ref=e3664] [cursor=pointer]:
+                          - /url: /Dr-Vaidyas-Multivitamin-supplement-supplements/dp/B0FT8JFZM8/ref=sr_1_44?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-44
+                          - heading "Dr. Vaidya’s Multivitamin for Women | Natural Multivitamin Enriched with Ayurvedic Herbs like Shatavari | Goodness of Calcium and Vitamin D3 tablets, Magnesium supplement, Vitamin B12 supplements & Herbal Extracts | (60 tablets) Pack of 1" [level=2] [ref=e3665]
+                        - generic [ref=e3668]: Tablet
+                      - generic [ref=e3669]:
+                        - generic [ref=e3670]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e3672] [cursor=pointer]:
+                            - generic [ref=e3674]: 4.1 out of 5 stars
+                          - link "18 ratings" [ref=e3676] [cursor=pointer]:
+                            - /url: /Dr-Vaidyas-Multivitamin-supplement-supplements/dp/B0FT8JFZM8/ref=sr_1_44?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-44#customerReviews
+                            - text: (18)
+                        - generic [ref=e3677]: 50+ bought in past month
+                      - generic [ref=e3678]:
+                        - generic [ref=e3680]:
+                          - generic [ref=e3681]: Price, product page
+                          - 'link "₹499 ( ₹8.32 /count) M.R.P: ₹595 M.R.P: ₹595" [ref=e3682] [cursor=pointer]':
+                            - /url: /Dr-Vaidyas-Multivitamin-supplement-supplements/dp/B0FT8JFZM8/ref=sr_1_44?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-44
+                            - generic [ref=e3683]:
+                              - generic [ref=e3684]: ₹499
+                              - generic [ref=e3685]: ₹499
+                            - generic [ref=e3686]:
+                              - text: (
+                              - generic [ref=e3687]:
+                                - generic [ref=e3688]: ₹8.32
+                                - text: ₹8.32
+                              - text: /count)
+                            - generic [ref=e3689]: "M.R.P: ₹595"
+                            - generic [ref=e3690]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3691]:
+                                - generic [ref=e3692]: ₹595
+                                - text: ₹595
+                          - text: (16% off)
+                        - generic [ref=e3696]:
+                          - generic [ref=e3697]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3698]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3701]:
+                        - generic [ref=e3703]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e3705]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3720] [cursor=pointer]
+                      - generic [ref=e3722]:
+                        - text: More Buying Choices
+                        - text: ₹446
+                        - link "(5 new offers)" [ref=e3724] [cursor=pointer]:
+                          - /url: /gp/offer-listing/B0FT8JFZM8/ref=sr_1_44_olp?hvlocphy=155895&hvnetw=o&mcid=3861a9d242543041b997efa1f39279d3&keywords=join+amazon+prime&hvadid=82944838805151&hvbmt=bb&qid=1780926661&hydadcr=5626_2499487&dib_tag=se&hvdev=c&hvqmt=b&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&hvtargid=kwd-82945393014646%3Aloc-90&msclkid=91454ff549471d0325b625d38e469a53&sr=8-44&adgrpid=1327112148528381
+                - listitem [ref=e3725]:
+                  - generic [ref=e3730]:
+                    - link [ref=e3733] [cursor=pointer]:
+                      - /url: /Centrum-Omega-3-Capsules-support-Multivitamin/dp/B0C4PS9HZ7/ref=sr_1_45?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-45
+                      - img [ref=e3735]
+                    - generic [ref=e3736]:
+                      - generic [ref=e3737]:
+                        - link "Centrum Omega 3 Fish Oil Capsules 1000mg Supplements | Omega 3 with 180mg EPA, 120mg DHA for Hair and Skin Health, Joint Health, Brain Health | No Fishy Aftertaste - 60 Capsules" [ref=e3738] [cursor=pointer]:
+                          - /url: /Centrum-Omega-3-Capsules-support-Multivitamin/dp/B0C4PS9HZ7/ref=sr_1_45?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-45
+                          - heading "Centrum Omega 3 Fish Oil Capsules 1000mg Supplements | Omega 3 with 180mg EPA, 120mg DHA for Hair and Skin Health, Joint Health, Brain Health | No Fishy Aftertaste - 60 Capsules" [level=2] [ref=e3739]
+                        - generic [ref=e3742]: Capsule
+                      - generic [ref=e3743]:
+                        - generic [ref=e3744]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e3746] [cursor=pointer]:
+                            - generic [ref=e3748]: 4.4 out of 5 stars
+                          - link "1,430 ratings" [ref=e3750] [cursor=pointer]:
+                            - /url: /Centrum-Omega-3-Capsules-support-Multivitamin/dp/B0C4PS9HZ7/ref=sr_1_45?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-45#customerReviews
+                            - text: (1.4K)
+                        - generic [ref=e3751]: 2K+ bought in past month
+                      - generic [ref=e3752]:
+                        - generic [ref=e3754]:
+                          - generic [ref=e3755]: Price, product page
+                          - 'link "₹578 ( ₹9.63 /count) M.R.P: ₹889 M.R.P: ₹889" [ref=e3756] [cursor=pointer]':
+                            - /url: /Centrum-Omega-3-Capsules-support-Multivitamin/dp/B0C4PS9HZ7/ref=sr_1_45?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-45
+                            - generic [ref=e3757]:
+                              - generic [ref=e3758]: ₹578
+                              - generic [ref=e3759]: ₹578
+                            - generic [ref=e3760]:
+                              - text: (
+                              - generic [ref=e3761]:
+                                - generic [ref=e3762]: ₹9.63
+                                - text: ₹9.63
+                              - text: /count)
+                            - generic [ref=e3763]: "M.R.P: ₹889"
+                            - generic [ref=e3764]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3765]:
+                                - generic [ref=e3766]: ₹889
+                                - text: ₹889
+                          - text: (35% off)
+                        - generic [ref=e3770]:
+                          - generic [ref=e3771]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3772]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3777]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e3792] [cursor=pointer]
+                - listitem [ref=e3793]:
+                  - generic [ref=e3798]:
+                    - link [ref=e3801] [cursor=pointer]:
+                      - /url: /NRoute-Nutriboost-Multi-Vitamin-Extracts-Antioxidants/dp/B0BYT279BH/ref=sr_1_46?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-46
+                      - img [ref=e3803]
+                    - generic [ref=e3804]:
+                      - generic [ref=e3805]:
+                        - link "NRoute Nutriboost Vitamin for Men & Women Vitamin & Mineral Tablets for Immunity Energy Stamina Strong Joints 60 Tablets Veg" [ref=e3806] [cursor=pointer]:
+                          - /url: /NRoute-Nutriboost-Multi-Vitamin-Extracts-Antioxidants/dp/B0BYT279BH/ref=sr_1_46?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-46
+                          - heading "NRoute Nutriboost Vitamin for Men & Women Vitamin & Mineral Tablets for Immunity Energy Stamina Strong Joints 60 Tablets Veg" [level=2] [ref=e3807]
+                        - generic [ref=e3810]: Tablet
+                      - generic [ref=e3812]:
+                        - text: "5.0"
+                        - button "5.0 out of 5 stars, rating details" [ref=e3814] [cursor=pointer]:
+                          - generic [ref=e3816]: 5.0 out of 5 stars
+                        - link "1 ratings" [ref=e3818] [cursor=pointer]:
+                          - /url: /NRoute-Nutriboost-Multi-Vitamin-Extracts-Antioxidants/dp/B0BYT279BH/ref=sr_1_46?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-46#customerReviews
+                          - text: (1)
+                      - generic [ref=e3819]:
+                        - generic [ref=e3821]:
+                          - generic [ref=e3822]: Price, product page
+                          - 'link "₹599 ( ₹599 /count) M.R.P: ₹799 M.R.P: ₹799" [ref=e3823] [cursor=pointer]':
+                            - /url: /NRoute-Nutriboost-Multi-Vitamin-Extracts-Antioxidants/dp/B0BYT279BH/ref=sr_1_46?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-46
+                            - generic [ref=e3824]:
+                              - generic [ref=e3825]: ₹599
+                              - generic [ref=e3826]: ₹599
+                            - generic [ref=e3827]:
+                              - text: (
+                              - generic [ref=e3828]:
+                                - generic [ref=e3829]: ₹599
+                                - text: ₹599
+                              - text: /count)
+                            - generic [ref=e3830]: "M.R.P: ₹799"
+                            - generic [ref=e3831]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3832]:
+                                - generic [ref=e3833]: ₹799
+                                - text: ₹799
+                          - text: (25% off)
+                        - generic [ref=e3837]:
+                          - generic [ref=e3838]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3839]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3846]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e3861] [cursor=pointer]
+                - listitem [ref=e3862]:
+                  - generic [ref=e3867]:
+                    - link [ref=e3870] [cursor=pointer]:
+                      - /url: /Bliss-Welness-Teenage-Boys-Multivitamin/dp/B0C7MYSB8S/ref=sr_1_47?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-47
+                      - img [ref=e3872]
+                    - generic [ref=e3873]:
+                      - link "Bliss Welness Multivitamin For Teenage Boy with Minerals, Brahmi, Shankpushpi, Ginkgo Biloba, Ginseng & Ashwagandha for Strength, Stamina, Immunity & Bone/Muscle Health - 60 Tablets" [ref=e3875] [cursor=pointer]:
+                        - /url: /Bliss-Welness-Teenage-Boys-Multivitamin/dp/B0C7MYSB8S/ref=sr_1_47?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-47
+                        - heading "Bliss Welness Multivitamin For Teenage Boy with Minerals, Brahmi, Shankpushpi, Ginkgo Biloba, Ginseng & Ashwagandha for Strength, Stamina, Immunity & Bone/Muscle Health - 60 Tablets" [level=2] [ref=e3876]
+                      - generic [ref=e3877]:
+                        - generic [ref=e3878]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e3880] [cursor=pointer]:
+                            - generic [ref=e3882]: 4.2 out of 5 stars
+                          - link "79 ratings" [ref=e3884] [cursor=pointer]:
+                            - /url: /Bliss-Welness-Teenage-Boys-Multivitamin/dp/B0C7MYSB8S/ref=sr_1_47?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-47#customerReviews
+                            - text: (79)
+                        - generic [ref=e3885]: 100+ bought in past month
+                      - generic [ref=e3886]:
+                        - link "Limited time deal" [ref=e3888] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3891]: Limited time deal
+                        - generic [ref=e3893]:
+                          - generic [ref=e3894]: Price, product page
+                          - 'link "₹464.07 ( ₹7.73 /count) M.R.P: ₹699 M.R.P: ₹699" [ref=e3895] [cursor=pointer]':
+                            - /url: /Bliss-Welness-Teenage-Boys-Multivitamin/dp/B0C7MYSB8S/ref=sr_1_47?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-47
+                            - generic [ref=e3896]:
+                              - generic [ref=e3897]: ₹464.07
+                              - generic [ref=e3898]:
+                                - text: ₹
+                                - generic [ref=e3899]:
+                                  - text: "464"
+                                  - generic [ref=e3900]: .
+                                - text: "07"
+                            - generic [ref=e3901]:
+                              - text: (
+                              - generic [ref=e3902]:
+                                - generic [ref=e3903]: ₹7.73
+                                - text: ₹7.73
+                              - text: /count)
+                            - generic [ref=e3904]: "M.R.P: ₹699"
+                            - generic [ref=e3905]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3906]:
+                                - generic [ref=e3907]: ₹699
+                                - text: ₹699
+                          - text: (34% off)
+                        - generic [ref=e3910]:
+                          - generic [ref=e3911]: Save 3%
+                          - text: with coupon
+                      - generic [ref=e3914]:
+                        - generic [ref=e3916]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e3918]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3933] [cursor=pointer]
+                - listitem [ref=e3934]:
+                  - generic [ref=e3939]:
+                    - link [ref=e3942] [cursor=pointer]:
+                      - /url: /Carbamide-Forte-Multivitamin-Bodybuilding-Athletes/dp/B0821M15BS/ref=sr_1_48?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-48
+                      - img [ref=e3944]
+                    - generic [ref=e3945]:
+                      - generic [ref=e3946]:
+                        - link "Carbamide Forte Multivitamin Tablet For Men & Women | Multi Vitamin For Men & Women With BCAA, Aminos & Probiotics | Gym Supplements To Support Energy, Immunity & Recovery - 60 Tablets" [ref=e3947] [cursor=pointer]:
+                          - /url: /Carbamide-Forte-Multivitamin-Bodybuilding-Athletes/dp/B0821M15BS/ref=sr_1_48?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-48
+                          - heading "Carbamide Forte Multivitamin Tablet For Men & Women | Multi Vitamin For Men & Women With BCAA, Aminos & Probiotics | Gym Supplements To Support Energy, Immunity & Recovery - 60 Tablets" [level=2] [ref=e3948]
+                        - generic [ref=e3951]: Tablet
+                      - generic [ref=e3952]:
+                        - generic [ref=e3953]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e3955] [cursor=pointer]:
+                            - generic [ref=e3957]: 4.3 out of 5 stars
+                          - link "1,184 ratings" [ref=e3959] [cursor=pointer]:
+                            - /url: /Carbamide-Forte-Multivitamin-Bodybuilding-Athletes/dp/B0821M15BS/ref=sr_1_48?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-48#customerReviews
+                            - text: (1.1K)
+                        - generic [ref=e3960]: 1K+ bought in past month
+                      - generic [ref=e3961]:
+                        - link "Limited time deal" [ref=e3963] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e3966]: Limited time deal
+                        - generic [ref=e3968]:
+                          - generic [ref=e3969]: Price, product page
+                          - 'link "₹499 ( ₹8.32 /count) M.R.P: ₹770 M.R.P: ₹770" [ref=e3970] [cursor=pointer]':
+                            - /url: /Carbamide-Forte-Multivitamin-Bodybuilding-Athletes/dp/B0821M15BS/ref=sr_1_48?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-48
+                            - generic [ref=e3971]:
+                              - generic [ref=e3972]: ₹499
+                              - generic [ref=e3973]: ₹499
+                            - generic [ref=e3974]:
+                              - text: (
+                              - generic [ref=e3975]:
+                                - generic [ref=e3976]: ₹8.32
+                                - text: ₹8.32
+                              - text: /count)
+                            - generic [ref=e3977]: "M.R.P: ₹770"
+                            - generic [ref=e3978]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3979]:
+                                - generic [ref=e3980]: ₹770
+                                - text: ₹770
+                          - text: (35% off)
+                        - generic [ref=e3984]:
+                          - generic [ref=e3985]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3986]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e3989]:
+                        - generic [ref=e3991]: FREE delivery Fri, 12 Jun
+                        - generic [ref=e3993]: Or fastest delivery Wed, 10 Jun
+                      - button "Add to cart" [ref=e4008] [cursor=pointer]
+                - listitem [ref=e4009]:
+                  - generic [ref=e4014]:
+                    - link [ref=e4017] [cursor=pointer]:
+                      - /url: /Palak-Notes-Vitamin-IMMUNITY-Booster/dp/B0968B4JWB/ref=sr_1_49?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-49
+                      - img [ref=e4019]
+                    - generic [ref=e4020]:
+                      - link "Miduty Vitamin ADK Multivitamin Contains Vitamin A - D3 - K1 - K2 Immunity Booster, Bone Strength, Healthy Heart Vitamin ADK Supplement For Men and Women - 30 Capsules" [ref=e4022] [cursor=pointer]:
+                        - /url: /Palak-Notes-Vitamin-IMMUNITY-Booster/dp/B0968B4JWB/ref=sr_1_49?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-49
+                        - heading "Miduty Vitamin ADK Multivitamin Contains Vitamin A - D3 - K1 - K2 Immunity Booster, Bone Strength, Healthy Heart Vitamin ADK Supplement For Men and Women - 30 Capsules" [level=2] [ref=e4023]
+                      - generic [ref=e4024]:
+                        - generic [ref=e4025]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e4027] [cursor=pointer]:
+                            - generic [ref=e4029]: 4.4 out of 5 stars
+                          - link "614 ratings" [ref=e4031] [cursor=pointer]:
+                            - /url: /Palak-Notes-Vitamin-IMMUNITY-Booster/dp/B0968B4JWB/ref=sr_1_49?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-49#customerReviews
+                            - text: (614)
+                        - generic [ref=e4032]: 300+ bought in past month
+                      - generic [ref=e4033]:
+                        - generic [ref=e4035]:
+                          - generic [ref=e4036]: Price, product page
+                          - link "₹839 ( ₹27.97 /count)" [ref=e4037] [cursor=pointer]:
+                            - /url: /Palak-Notes-Vitamin-IMMUNITY-Booster/dp/B0968B4JWB/ref=sr_1_49?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-49
+                            - generic [ref=e4038]:
+                              - generic [ref=e4039]: ₹839
+                              - generic [ref=e4040]: ₹839
+                            - generic [ref=e4041]:
+                              - text: (
+                              - generic [ref=e4042]:
+                                - generic [ref=e4043]: ₹27.97
+                                - text: ₹27.97
+                              - text: /count)
+                        - generic [ref=e4047]:
+                          - generic [ref=e4048]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4049]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4052]:
+                        - generic [ref=e4054]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e4056]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4071] [cursor=pointer]
+                      - generic [ref=e4073]:
+                        - text: More Buying Choices
+                        - text: ₹799
+                        - link "(3 new offers)" [ref=e4075] [cursor=pointer]:
+                          - /url: /gp/offer-listing/B0968B4JWB/ref=sr_1_49_olp?hvlocphy=155895&hvnetw=o&mcid=3861a9d242543041b997efa1f39279d3&keywords=join+amazon+prime&hvadid=82944838805151&hvbmt=bb&qid=1780926661&hydadcr=5626_2499487&dib_tag=se&hvdev=c&hvqmt=b&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&hvtargid=kwd-82945393014646%3Aloc-90&msclkid=91454ff549471d0325b625d38e469a53&sr=8-49&adgrpid=1327112148528381
+                - listitem [ref=e4076]:
+                  - generic [ref=e4081]:
+                    - link [ref=e4084] [cursor=pointer]:
+                      - /url: /Wellwoman-Hairfollic-supplements-Nutrition-Nonvegetarian/dp/B0C2TYV6XM/ref=sr_1_50?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-50
+                      - img [ref=e4086]
+                    - generic [ref=e4087]:
+                      - link "Wellwoman Hairfollic supplements with Advanced Hair Nutrition formula for Women with Biomarine collagen complex,Biotin &Zinc that support hair growth & maintain healthy hair|30 Nonveg tablet,200 grams" [ref=e4089] [cursor=pointer]:
+                        - /url: /Wellwoman-Hairfollic-supplements-Nutrition-Nonvegetarian/dp/B0C2TYV6XM/ref=sr_1_50?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-50
+                        - heading "Wellwoman Hairfollic supplements with Advanced Hair Nutrition formula for Women with Biomarine collagen complex,Biotin &Zinc that support hair growth & maintain healthy hair|30 Nonveg tablet,200 grams" [level=2] [ref=e4090]
+                      - generic [ref=e4091]:
+                        - generic [ref=e4092]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e4094] [cursor=pointer]:
+                            - generic [ref=e4096]: 4.3 out of 5 stars
+                          - link "292 ratings" [ref=e4098] [cursor=pointer]:
+                            - /url: /Wellwoman-Hairfollic-supplements-Nutrition-Nonvegetarian/dp/B0C2TYV6XM/ref=sr_1_50?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-50#customerReviews
+                            - text: (292)
+                        - generic [ref=e4099]: 300+ bought in past month
+                      - generic [ref=e4100]:
+                        - generic [ref=e4102]:
+                          - generic [ref=e4103]: Price, product page
+                          - 'link "₹552 ( ₹18.40 /count) M.R.P: ₹690 M.R.P: ₹690" [ref=e4104] [cursor=pointer]':
+                            - /url: /Wellwoman-Hairfollic-supplements-Nutrition-Nonvegetarian/dp/B0C2TYV6XM/ref=sr_1_50?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-50
+                            - generic [ref=e4105]:
+                              - generic [ref=e4106]: ₹552
+                              - generic [ref=e4107]: ₹552
+                            - generic [ref=e4108]:
+                              - text: (
+                              - generic [ref=e4109]:
+                                - generic [ref=e4110]: ₹18.40
+                                - text: ₹18.40
+                              - text: /count)
+                            - generic [ref=e4111]: "M.R.P: ₹690"
+                            - generic [ref=e4112]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4113]:
+                                - generic [ref=e4114]: ₹690
+                                - text: ₹690
+                          - text: (20% off)
+                        - generic [ref=e4118]:
+                          - generic [ref=e4119]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4120]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4123]:
+                        - generic [ref=e4125]: FREE delivery Sat, 13 Jun
+                        - generic [ref=e4127]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e4142] [cursor=pointer]
+                - listitem [ref=e4143]:
+                  - generic [ref=e4148]:
+                    - link [ref=e4151] [cursor=pointer]:
+                      - /url: /Nutrova-Multivitamin-Women-Multivitamins-bioavailable/dp/B0FMRM4DJM/ref=sr_1_51?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-51
+                      - img [ref=e4153]
+                    - generic [ref=e4154]:
+                      - link "Nutrova Multivitamin For Women - Daily Multivitamins with bioavailable Iron bisglycinate, CoQ10 and Lycopene - Optimized for Indian Diets - 60 Tablets." [ref=e4156] [cursor=pointer]:
+                        - /url: /Nutrova-Multivitamin-Women-Multivitamins-bioavailable/dp/B0FMRM4DJM/ref=sr_1_51?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-51
+                        - heading "Nutrova Multivitamin For Women - Daily Multivitamins with bioavailable Iron bisglycinate, CoQ10 and Lycopene - Optimized for Indian Diets - 60 Tablets." [level=2] [ref=e4157]
+                      - generic [ref=e4158]:
+                        - generic [ref=e4159]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e4161] [cursor=pointer]:
+                            - generic [ref=e4163]: 4.2 out of 5 stars
+                          - link "41 ratings" [ref=e4165] [cursor=pointer]:
+                            - /url: /Nutrova-Multivitamin-Women-Multivitamins-bioavailable/dp/B0FMRM4DJM/ref=sr_1_51?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-51#customerReviews
+                            - text: (41)
+                        - generic [ref=e4166]: 50+ bought in past month
+                      - generic [ref=e4167]:
+                        - generic [ref=e4169]:
+                          - generic [ref=e4170]: Price, product page
+                          - 'link "₹675 ( ₹11.25 /count) M.R.P: ₹710 M.R.P: ₹710" [ref=e4171] [cursor=pointer]':
+                            - /url: /Nutrova-Multivitamin-Women-Multivitamins-bioavailable/dp/B0FMRM4DJM/ref=sr_1_51?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-51
+                            - generic [ref=e4172]:
+                              - generic [ref=e4173]: ₹675
+                              - generic [ref=e4174]: ₹675
+                            - generic [ref=e4175]:
+                              - text: (
+                              - generic [ref=e4176]:
+                                - generic [ref=e4177]: ₹11.25
+                                - text: ₹11.25
+                              - text: /count)
+                            - generic [ref=e4178]: "M.R.P: ₹710"
+                            - generic [ref=e4179]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4180]:
+                                - generic [ref=e4181]: ₹710
+                                - text: ₹710
+                          - text: (5% off)
+                        - generic [ref=e4184]:
+                          - generic [ref=e4185]: Save 10%
+                          - text: with coupon
+                      - generic [ref=e4188]:
+                        - generic [ref=e4190]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e4192]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4207] [cursor=pointer]
+                - listitem [ref=e4208]:
+                  - generic [ref=e4213]:
+                    - link [ref=e4216] [cursor=pointer]:
+                      - /url: /Swarnakayu-Immunity-Booster-Mechanisms-Ingredients/dp/B0CKBX7NPK/ref=sr_1_52?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-52
+                      - img [ref=e4218]
+                    - generic [ref=e4219]:
+                      - generic [ref=e4220]:
+                        - link "Swarnakayu 24k Gold Bhasma Immunity Booster, India's Exclusive Ayurvedic Wellness Product, Helps Boost Body's Natural Defence Mechanisms, Stamina, Strength, 100% Ayurvedic Ingredients - 30 tablets" [ref=e4221] [cursor=pointer]:
+                          - /url: /Swarnakayu-Immunity-Booster-Mechanisms-Ingredients/dp/B0CKBX7NPK/ref=sr_1_52?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-52
+                          - heading "Swarnakayu 24k Gold Bhasma Immunity Booster, India's Exclusive Ayurvedic Wellness Product, Helps Boost Body's Natural Defence Mechanisms, Stamina, Strength, 100% Ayurvedic Ingredients - 30 tablets" [level=2] [ref=e4222]
+                        - generic [ref=e4225]: Tablet
+                      - generic [ref=e4227]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e4229] [cursor=pointer]:
+                          - generic [ref=e4231]: 4.3 out of 5 stars
+                        - link "43 ratings" [ref=e4233] [cursor=pointer]:
+                          - /url: /Swarnakayu-Immunity-Booster-Mechanisms-Ingredients/dp/B0CKBX7NPK/ref=sr_1_52?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-52#customerReviews
+                          - text: (43)
+                      - generic [ref=e4234]:
+                        - generic [ref=e4236]:
+                          - generic [ref=e4237]: Price, product page
+                          - 'link "₹1,275 ( ₹42.50 /count) M.R.P: ₹1,500 M.R.P: ₹1,500" [ref=e4238] [cursor=pointer]':
+                            - /url: /Swarnakayu-Immunity-Booster-Mechanisms-Ingredients/dp/B0CKBX7NPK/ref=sr_1_52?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-52
+                            - generic [ref=e4239]:
+                              - generic [ref=e4240]: ₹1,275
+                              - generic [ref=e4241]: ₹1,275
+                            - generic [ref=e4242]:
+                              - text: (
+                              - generic [ref=e4243]:
+                                - generic [ref=e4244]: ₹42.50
+                                - text: ₹42.50
+                              - text: /count)
+                            - generic [ref=e4245]: "M.R.P: ₹1,500"
+                            - generic [ref=e4246]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4247]:
+                                - generic [ref=e4248]: ₹1,500
+                                - text: ₹1,500
+                          - text: (15% off)
+                        - generic [ref=e4252]:
+                          - generic [ref=e4253]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4254]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4257]:
+                        - generic [ref=e4259]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e4261]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4276] [cursor=pointer]
+                - listitem [ref=e4277]:
+                  - generic [ref=e4282]:
+                    - link [ref=e4285] [cursor=pointer]:
+                      - /url: /Nutribears-Multivitamin-Gummies-Kids-Essential/dp/B07YZR1144/ref=sr_1_53?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-53
+                      - img [ref=e4287]
+                    - generic [ref=e4288]:
+                      - generic [ref=e4289]:
+                        - link "NutriBears Kids Multivitamin Gummies | 12 Essential Nutrients | No Artificial Colours or Sweeteners | Low Sugar | Immunity, Growth & Brain Development | Ages 2-12 | Strawberry & Orange | 30 Gummies" [ref=e4290] [cursor=pointer]:
+                          - /url: /Nutribears-Multivitamin-Gummies-Kids-Essential/dp/B07YZR1144/ref=sr_1_53?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-53
+                          - heading "NutriBears Kids Multivitamin Gummies | 12 Essential Nutrients | No Artificial Colours or Sweeteners | Low Sugar | Immunity, Growth & Brain Development | Ages 2-12 | Strawberry & Orange | 30 Gummies" [level=2] [ref=e4291]
+                        - generic [ref=e4294]: Gummy
+                      - generic [ref=e4295]:
+                        - generic [ref=e4296]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e4298] [cursor=pointer]:
+                            - generic [ref=e4300]: 4.2 out of 5 stars
+                          - link "2,377 ratings" [ref=e4302] [cursor=pointer]:
+                            - /url: /Nutribears-Multivitamin-Gummies-Kids-Essential/dp/B07YZR1144/ref=sr_1_53?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-53#customerReviews
+                            - text: (2.3K)
+                        - generic [ref=e4303]: 200+ bought in past month
+                      - generic [ref=e4304]:
+                        - generic [ref=e4306]:
+                          - generic [ref=e4307]: Price, product page
+                          - 'link "₹416 ( ₹13.87 /count) M.R.P: ₹438 M.R.P: ₹438" [ref=e4308] [cursor=pointer]':
+                            - /url: /Nutribears-Multivitamin-Gummies-Kids-Essential/dp/B07YZR1144/ref=sr_1_53?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-53
+                            - generic [ref=e4309]:
+                              - generic [ref=e4310]: ₹416
+                              - generic [ref=e4311]: ₹416
+                            - generic [ref=e4312]:
+                              - text: (
+                              - generic [ref=e4313]:
+                                - generic [ref=e4314]: ₹13.87
+                                - text: ₹13.87
+                              - text: /count)
+                            - generic [ref=e4315]: "M.R.P: ₹438"
+                            - generic [ref=e4316]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4317]:
+                                - generic [ref=e4318]: ₹438
+                                - text: ₹438
+                          - text: (5% off)
+                        - generic [ref=e4321]:
+                          - generic [ref=e4322]: Save 2%
+                          - text: with coupon
+                      - generic [ref=e4325]:
+                        - generic [ref=e4327]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e4329]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4344] [cursor=pointer]
+                - listitem [ref=e4345]:
+                  - generic [ref=e4350]:
+                    - link [ref=e4353] [cursor=pointer]:
+                      - /url: /Supradyn-Naturals-Multivitamin-Shatavari-nutrients/dp/B0CZ6DZQB7/ref=sr_1_54?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-54
+                      - img [ref=e4355]
+                    - generic [ref=e4356]:
+                      - generic [ref=e4357]:
+                        - link "Supradyn Naturals Iron (60 tablets) For Women, Multivitamin with 3X Iron, Ashoka, Shatavari, Zinc, Vitamin C, Folic Acid, 30 vital nutrients, Supports Blood Health & Provides Energy, Veg" [ref=e4358] [cursor=pointer]:
+                          - /url: /Supradyn-Naturals-Multivitamin-Shatavari-nutrients/dp/B0CZ6DZQB7/ref=sr_1_54?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-54
+                          - heading "Supradyn Naturals Iron (60 tablets) For Women, Multivitamin with 3X Iron, Ashoka, Shatavari, Zinc, Vitamin C, Folic Acid, 30 vital nutrients, Supports Blood Health & Provides Energy, Veg" [level=2] [ref=e4359]
+                        - generic [ref=e4362]: Tablet
+                      - generic [ref=e4363]:
+                        - generic [ref=e4364]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e4366] [cursor=pointer]:
+                            - generic [ref=e4368]: 4.2 out of 5 stars
+                          - link "778 ratings" [ref=e4370] [cursor=pointer]:
+                            - /url: /Supradyn-Naturals-Multivitamin-Shatavari-nutrients/dp/B0CZ6DZQB7/ref=sr_1_54?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-54#customerReviews
+                            - text: (778)
+                        - generic [ref=e4371]: 50+ bought in past month
+                      - generic [ref=e4372]:
+                        - link "Limited time deal" [ref=e4374] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4377]: Limited time deal
+                        - generic [ref=e4379]:
+                          - generic [ref=e4380]: Price, product page
+                          - 'link "₹381 ( ₹6.35 /count) M.R.P: ₹660 M.R.P: ₹660" [ref=e4381] [cursor=pointer]':
+                            - /url: /Supradyn-Naturals-Multivitamin-Shatavari-nutrients/dp/B0CZ6DZQB7/ref=sr_1_54?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-54
+                            - generic [ref=e4382]:
+                              - generic [ref=e4383]: ₹381
+                              - generic [ref=e4384]: ₹381
+                            - generic [ref=e4385]:
+                              - text: (
+                              - generic [ref=e4386]:
+                                - generic [ref=e4387]: ₹6.35
+                                - text: ₹6.35
+                              - text: /count)
+                            - generic [ref=e4388]: "M.R.P: ₹660"
+                            - generic [ref=e4389]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4390]:
+                                - generic [ref=e4391]: ₹660
+                                - text: ₹660
+                          - text: (42% off)
+                        - generic [ref=e4395]:
+                          - generic [ref=e4396]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4397]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4402]: FREE delivery 12 - 14 Jun on first order
+                      - button "Add to cart" [ref=e4417] [cursor=pointer]
+                - listitem [ref=e4418]:
+                  - generic [ref=e4423]:
+                    - link [ref=e4426] [cursor=pointer]:
+                      - /url: /Wellwoman-Multivitamin-Capsules-All-Round-Nonvegetarian/dp/B088R7DCFB/ref=sr_1_55?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-55
+                      - img [ref=e4428]
+                    - generic [ref=e4429]:
+                      - generic [ref=e4430]:
+                        - link "Wellwoman Multivitamin Capsules For Women With Evening Primrose Oil,Magnesium,Vitamin C,B6,Folic Acid To Provide All Round Nutrition,Immunity,Helps Reduce Pms,Pcos Symptoms,30 Veg Capsules,200 grams" [ref=e4431] [cursor=pointer]:
+                          - /url: /Wellwoman-Multivitamin-Capsules-All-Round-Nonvegetarian/dp/B088R7DCFB/ref=sr_1_55?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-55
+                          - heading "Wellwoman Multivitamin Capsules For Women With Evening Primrose Oil,Magnesium,Vitamin C,B6,Folic Acid To Provide All Round Nutrition,Immunity,Helps Reduce Pms,Pcos Symptoms,30 Veg Capsules,200 grams" [level=2] [ref=e4432]
+                        - generic [ref=e4435]: Capsule
+                      - generic [ref=e4436]:
+                        - generic [ref=e4437]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e4439] [cursor=pointer]:
+                            - generic [ref=e4441]: 4.4 out of 5 stars
+                          - link "912 ratings" [ref=e4443] [cursor=pointer]:
+                            - /url: /Wellwoman-Multivitamin-Capsules-All-Round-Nonvegetarian/dp/B088R7DCFB/ref=sr_1_55?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-55#customerReviews
+                            - text: (912)
+                        - generic [ref=e4444]: 600+ bought in past month
+                      - generic [ref=e4445]:
+                        - generic [ref=e4447]:
+                          - generic [ref=e4448]: Price, product page
+                          - 'link "₹535 ( ₹17.83 /count) M.R.P: ₹669 M.R.P: ₹669" [ref=e4449] [cursor=pointer]':
+                            - /url: /Wellwoman-Multivitamin-Capsules-All-Round-Nonvegetarian/dp/B088R7DCFB/ref=sr_1_55?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-55
+                            - generic [ref=e4450]:
+                              - generic [ref=e4451]: ₹535
+                              - generic [ref=e4452]: ₹535
+                            - generic [ref=e4453]:
+                              - text: (
+                              - generic [ref=e4454]:
+                                - generic [ref=e4455]: ₹17.83
+                                - text: ₹17.83
+                              - text: /count)
+                            - generic [ref=e4456]: "M.R.P: ₹669"
+                            - generic [ref=e4457]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4458]:
+                                - generic [ref=e4459]: ₹669
+                                - text: ₹669
+                          - text: (20% off)
+                        - generic [ref=e4463]:
+                          - generic [ref=e4464]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4465]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4468]:
+                        - generic [ref=e4470]: FREE delivery Sat, 13 Jun
+                        - generic [ref=e4472]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e4487] [cursor=pointer]
+                - listitem [ref=e4488]:
+                  - generic [ref=e4493]:
+                    - link [ref=e4496] [cursor=pointer]:
+                      - /url: /Multivitamin-Probiotics-Ashwagandha-Enhances-Immunity/dp/B0BNJ5N4GY/ref=sr_1_56?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-56
+                      - img [ref=e4498]
+                    - generic [ref=e4499]:
+                      - link "Fytika Vita 365-180 Tablets (Pack of 3) | Multivitamin For Men and Women | With Ashwagandha, Ginseng, Probiotics & Prebiotics and Biotin| Enhances Energy, Immunity and Digestion" [ref=e4501] [cursor=pointer]:
+                        - /url: /Multivitamin-Probiotics-Ashwagandha-Enhances-Immunity/dp/B0BNJ5N4GY/ref=sr_1_56?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-56
+                        - heading "Fytika Vita 365-180 Tablets (Pack of 3) | Multivitamin For Men and Women | With Ashwagandha, Ginseng, Probiotics & Prebiotics and Biotin| Enhances Energy, Immunity and Digestion" [level=2] [ref=e4502]
+                      - generic [ref=e4504]:
+                        - text: "4.0"
+                        - button "4.0 out of 5 stars, rating details" [ref=e4506] [cursor=pointer]:
+                          - generic [ref=e4508]: 4.0 out of 5 stars
+                        - link "1,970 ratings" [ref=e4510] [cursor=pointer]:
+                          - /url: /Multivitamin-Probiotics-Ashwagandha-Enhances-Immunity/dp/B0BNJ5N4GY/ref=sr_1_56?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-56#customerReviews
+                          - text: (1.9K)
+                      - generic [ref=e4511]:
+                        - generic [ref=e4513]:
+                          - generic [ref=e4514]: Price, product page
+                          - 'link "₹1,499 ( ₹93.69 /count) M.R.P: ₹3,597 M.R.P: ₹3,597" [ref=e4515] [cursor=pointer]':
+                            - /url: /Multivitamin-Probiotics-Ashwagandha-Enhances-Immunity/dp/B0BNJ5N4GY/ref=sr_1_56?adgrpid=1327112148528381&dib=eyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI&dib_tag=se&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&sr=8-56
+                            - generic [ref=e4516]:
+                              - generic [ref=e4517]: ₹1,499
+                              - generic [ref=e4518]: ₹1,499
+                            - generic [ref=e4519]:
+                              - text: (
+                              - generic [ref=e4520]:
+                                - generic [ref=e4521]: ₹93.69
+                                - text: ₹93.69
+                              - text: /count)
+                            - generic [ref=e4522]: "M.R.P: ₹3,597"
+                            - generic [ref=e4523]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4524]:
+                                - generic [ref=e4525]: ₹3,597
+                                - text: ₹3,597
+                          - text: (58% off)
+                        - generic [ref=e4529]:
+                          - generic [ref=e4530]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4531]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4536]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e4551] [cursor=pointer]
+                - listitem [ref=e4552]:
+                  - generic [ref=e4559]:
+                    - link [ref=e4562] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMTEyNTc2NzM0MDQzMjo6MDo6&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsr_1_57_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-57-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ
+                      - img [ref=e4564]
+                    - generic [ref=e4565]:
+                      - generic [ref=e4566]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e4569] [cursor=pointer]:
+                          - generic [ref=e4570]: Sponsored
+                        - link "Sponsored Ad - Fast&Up Daily Multivitamins (20-Day Pack, Tasty Orange Flavor) 21 Fast-Acting Vitamins & Minerals, with Vit C, D, and Iron for Immunity, Energy & Heart Health | Suitable for both, Men & Women" [ref=e4572] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMTEyNTc2NzM0MDQzMjo6MDo6&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsr_1_57_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-57-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Fast&Up Daily Multivitamins (20-Day Pack, Tasty Orange Flavor) 21 Fast-Acting Vitamins & Minerals, with Vit C, D, and Iron for Immunity, Energy & Heart Health | Suitable for both, Men & Women" [level=2] [ref=e4573]: Fast&Up Daily Multivitamins (20-Day Pack, Tasty Orange Flavor) 21 Fast-Acting Vitamins & Minerals, with Vit C, D, and Iron for Immunity, Energy & Heart Health | Suitable for both, Men & Women
+                      - generic [ref=e4574]:
+                        - generic [ref=e4575]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e4577] [cursor=pointer]:
+                            - generic [ref=e4579]: 4.2 out of 5 stars
+                          - link "3,495 ratings" [ref=e4581] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMTEyNTc2NzM0MDQzMjo6MDo6&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsr_1_57_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-57-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ#customerReviews
+                            - text: (3.4K)
+                        - generic [ref=e4582]: 800+ bought in past month
+                      - generic [ref=e4583]:
+                        - generic [ref=e4585]:
+                          - generic [ref=e4586]: Price, product page
+                          - 'link "₹219 ( ₹10.95 /count) M.R.P: ₹249 M.R.P: ₹249" [ref=e4587] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMTEyNTc2NzM0MDQzMjo6MDo6&url=%2FFast-Up-Multivitamins-Fast-Acting-Vitamins%2Fdp%2FB078S3LPRZ%2Fref%3Dsr_1_57_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-57-spons%26aref%3DRK8M5NphFG%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=RK8M5NphFG&sp_cr=ZAZ
+                            - generic [ref=e4588]:
+                              - generic [ref=e4589]: ₹219
+                              - generic [ref=e4590]: ₹219
+                            - generic [ref=e4591]:
+                              - text: (
+                              - generic [ref=e4592]:
+                                - generic [ref=e4593]: ₹10.95
+                                - text: ₹10.95
+                              - text: /count)
+                            - generic [ref=e4594]: "M.R.P: ₹249"
+                            - generic [ref=e4595]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4596]:
+                                - generic [ref=e4597]: ₹249
+                                - text: ₹249
+                          - text: (12% off)
+                        - generic [ref=e4601]:
+                          - generic [ref=e4602]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4603]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4606]:
+                        - generic [ref=e4608]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e4610]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4625] [cursor=pointer]
+                - listitem [ref=e4626]:
+                  - generic [ref=e4633]:
+                    - link [ref=e4636] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDQ4MzU3NTAzMzQzMjo6MDo6&url=%2FSiens-Dabur-Multivitamin-Enriched-nutrients%2Fdp%2FB0DH4QLJ9S%2Fref%3Dsr_1_58_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-58-spons%26aref%3D4MfESzyWKh%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=4MfESzyWKh&sp_cr=ZAZ
+                      - img [ref=e4638]
+                    - generic [ref=e4639]:
+                      - generic [ref=e4640]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e4643] [cursor=pointer]:
+                          - generic [ref=e4644]: Sponsored
+                        - link "Sponsored Ad - Siens By Dabur Multivitamin for Men-30 tablets | Enriched with 34 nutrients to Support Overall Health, Energy, Stamina & Muscle Function" [ref=e4646] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDQ4MzU3NTAzMzQzMjo6MDo6&url=%2FSiens-Dabur-Multivitamin-Enriched-nutrients%2Fdp%2FB0DH4QLJ9S%2Fref%3Dsr_1_58_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-58-spons%26aref%3D4MfESzyWKh%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=4MfESzyWKh&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Siens By Dabur Multivitamin for Men-30 tablets | Enriched with 34 nutrients to Support Overall Health, Energy, Stamina & Muscle Function" [level=2] [ref=e4647]: Siens By Dabur Multivitamin for Men-30 tablets | Enriched with 34 nutrients to Support Overall Health, Energy, Stamina & Muscle Function
+                      - generic [ref=e4648]:
+                        - generic [ref=e4649]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e4651] [cursor=pointer]:
+                            - generic [ref=e4653]: 3.9 out of 5 stars
+                          - link "340 ratings" [ref=e4655] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDQ4MzU3NTAzMzQzMjo6MDo6&url=%2FSiens-Dabur-Multivitamin-Enriched-nutrients%2Fdp%2FB0DH4QLJ9S%2Fref%3Dsr_1_58_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-58-spons%26aref%3D4MfESzyWKh%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=4MfESzyWKh&sp_cr=ZAZ#customerReviews
+                            - text: (340)
+                        - generic [ref=e4656]: 1K+ bought in past month
+                      - generic [ref=e4657]:
+                        - generic [ref=e4659]:
+                          - generic [ref=e4660]: Price, product page
+                          - 'link "₹338 ( ₹11.27 /count) M.R.P: ₹475 M.R.P: ₹475" [ref=e4661] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDQ4MzU3NTAzMzQzMjo6MDo6&url=%2FSiens-Dabur-Multivitamin-Enriched-nutrients%2Fdp%2FB0DH4QLJ9S%2Fref%3Dsr_1_58_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-58-spons%26aref%3D4MfESzyWKh%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=4MfESzyWKh&sp_cr=ZAZ
+                            - generic [ref=e4662]:
+                              - generic [ref=e4663]: ₹338
+                              - generic [ref=e4664]: ₹338
+                            - generic [ref=e4665]:
+                              - text: (
+                              - generic [ref=e4666]:
+                                - generic [ref=e4667]: ₹11.27
+                                - text: ₹11.27
+                              - text: /count)
+                            - generic [ref=e4668]: "M.R.P: ₹475"
+                            - generic [ref=e4669]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4670]:
+                                - generic [ref=e4671]: ₹475
+                                - text: ₹475
+                          - text: (29% off)
+                        - generic [ref=e4675]:
+                          - generic [ref=e4676]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4677]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4680]:
+                        - generic [ref=e4682]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e4684]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e4699] [cursor=pointer]
+                - listitem [ref=e4700]:
+                  - generic [ref=e4707]:
+                    - link [ref=e4710] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDkzODMyMDU1MTEzMjo6MDo6&url=%2FDiataal-Nutripop-Multivitamin-Immunity-Supplement%2Fdp%2FB0DGGD45ML%2Fref%3Dsr_1_59_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-59-spons%26aref%3DKQ1l9PUAQk%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=KQ1l9PUAQk&sp_cr=ZAZ
+                      - img [ref=e4712]
+                    - generic [ref=e4713]:
+                      - generic [ref=e4714]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e4717] [cursor=pointer]:
+                          - generic [ref=e4718]: Sponsored
+                        - link "Sponsored Ad - Diataal Nutripop Multivitamin I Biotin for Hair I Energy I Immunity I Supplement For Fitness & Wellness | 30 Capsules" [ref=e4720] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDkzODMyMDU1MTEzMjo6MDo6&url=%2FDiataal-Nutripop-Multivitamin-Immunity-Supplement%2Fdp%2FB0DGGD45ML%2Fref%3Dsr_1_59_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-59-spons%26aref%3DKQ1l9PUAQk%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=KQ1l9PUAQk&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Diataal Nutripop Multivitamin I Biotin for Hair I Energy I Immunity I Supplement For Fitness & Wellness | 30 Capsules" [level=2] [ref=e4721]: Diataal Nutripop Multivitamin I Biotin for Hair I Energy I Immunity I Supplement For Fitness & Wellness | 30 Capsules
+                      - generic [ref=e4722]:
+                        - generic [ref=e4723]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e4725] [cursor=pointer]:
+                            - generic [ref=e4727]: 4.3 out of 5 stars
+                          - link "111 ratings" [ref=e4729] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDkzODMyMDU1MTEzMjo6MDo6&url=%2FDiataal-Nutripop-Multivitamin-Immunity-Supplement%2Fdp%2FB0DGGD45ML%2Fref%3Dsr_1_59_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-59-spons%26aref%3DKQ1l9PUAQk%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=KQ1l9PUAQk&sp_cr=ZAZ#customerReviews
+                            - text: (111)
+                        - generic [ref=e4730]: 200+ bought in past month
+                      - generic [ref=e4731]:
+                        - link "Limited time deal" [ref=e4733] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4736]: Limited time deal
+                        - generic [ref=e4738]:
+                          - generic [ref=e4739]: Price, product page
+                          - 'link "₹113 ( ₹3.77 /count) M.R.P: ₹214 M.R.P: ₹214" [ref=e4740] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDkzODMyMDU1MTEzMjo6MDo6&url=%2FDiataal-Nutripop-Multivitamin-Immunity-Supplement%2Fdp%2FB0DGGD45ML%2Fref%3Dsr_1_59_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-59-spons%26aref%3DKQ1l9PUAQk%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=KQ1l9PUAQk&sp_cr=ZAZ
+                            - generic [ref=e4741]:
+                              - generic [ref=e4742]: ₹113
+                              - generic [ref=e4743]: ₹113
+                            - generic [ref=e4744]:
+                              - text: (
+                              - generic [ref=e4745]:
+                                - generic [ref=e4746]: ₹3.77
+                                - text: ₹3.77
+                              - text: /count)
+                            - generic [ref=e4747]: "M.R.P: ₹214"
+                            - generic [ref=e4748]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4749]:
+                                - generic [ref=e4750]: ₹214
+                                - text: ₹214
+                          - text: (47% off)
+                        - generic [ref=e4754]:
+                          - generic [ref=e4755]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4756]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4759]:
+                        - generic [ref=e4761]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e4763]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e4778] [cursor=pointer]
+                - listitem [ref=e4779]:
+                  - generic [ref=e4786]:
+                    - link [ref=e4789] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDY0MzIxMzA3MDIzMjo6MDo6&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsr_1_60_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-60-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                      - img [ref=e4791]
+                    - generic [ref=e4792]:
+                      - generic [ref=e4793]:
+                        - button "View Sponsored information or leave ad feedback" [ref=e4796] [cursor=pointer]:
+                          - generic [ref=e4797]: Sponsored
+                        - link "Sponsored Ad - Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules" [ref=e4799] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDY0MzIxMzA3MDIzMjo6MDo6&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsr_1_60_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-60-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules" [level=2] [ref=e4800]: Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules
+                        - generic [ref=e4803]: Capsule
+                      - generic [ref=e4804]:
+                        - generic [ref=e4805]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e4807] [cursor=pointer]:
+                            - generic [ref=e4809]: 4.1 out of 5 stars
+                          - link "528 ratings" [ref=e4811] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDY0MzIxMzA3MDIzMjo6MDo6&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsr_1_60_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-60-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ#customerReviews
+                            - text: (528)
+                        - generic [ref=e4812]: 1K+ bought in past month
+                      - generic [ref=e4813]:
+                        - link "Limited time deal" [ref=e4815] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4818]: Limited time deal
+                        - generic [ref=e4820]:
+                          - generic [ref=e4821]: Price, product page
+                          - 'link "₹1,189 ( ₹19.82 /count) M.R.P: ₹1,399 M.R.P: ₹1,399" [ref=e4822] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToxMjUzMzYwNDk3MDA4ODIyOjE3ODA5MjY2NjE6c3BfYnRmOjMwMDY0MzIxMzA3MDIzMjo6MDo6&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsr_1_60_sspa%3Fadgrpid%3D1327112148528381%26dib%3DeyJ2IjoiMSJ9.IHTmAt4SAhrfO_O6MZBTiRQ7G1an28OfsLSm0Ae7JUfwhmaN--Feo_FqThcLZTw9lYfDM3o4SpZUxYl42gpSx6yEwWRcTF-rMWu3jkzOvYenFRt0gwavXPMszxDL1k3-prQ_JIR4gOl3X1aeOdQDAXtrzdTkN1NVdqfSm2y68yqDH0XGjCQshsiy_xKK2n9uc93CyVBMJsse9R0ApRnuGMBEgE_n9GLvvHrgvrLdQMJCQMSQeSPebJ9sZxdz1b5AIuOLv5I-L0XEaLMvXuTjJwf-w7N11dq0QDITZQ5wpk8.0dS1ffAwqRoKZ2hppiCfXoZacnL7MtKPVzp9bzkuerI%26dib_tag%3Dse%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26qid%3D1780926661%26sr%3D8-60-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                            - generic [ref=e4823]:
+                              - generic [ref=e4824]: ₹1,189
+                              - generic [ref=e4825]: ₹1,189
+                            - generic [ref=e4826]:
+                              - text: (
+                              - generic [ref=e4827]:
+                                - generic [ref=e4828]: ₹19.82
+                                - text: ₹19.82
+                              - text: /count)
+                            - generic [ref=e4829]: "M.R.P: ₹1,399"
+                            - generic [ref=e4830]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4831]:
+                                - generic [ref=e4832]: ₹1,399
+                                - text: ₹1,399
+                          - text: (15% off)
+                        - generic [ref=e4836]:
+                          - generic [ref=e4837]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4838]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4843]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e4858] [cursor=pointer]
+          - generic [ref=e4862]:
+            - generic [ref=e4867]:
+              - heading "Today's deals" [level=2] [ref=e4869]
+              - button "View Sponsored information or leave ad feedback" [ref=e4872] [cursor=pointer]: Sponsored
+            - region "Today's deals" [ref=e4874]:
+              - list [ref=e4880]:
+                - listitem "1 of 5" [ref=e4881]:
+                  - generic [ref=e4887]:
+                    - link [ref=e4890] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjQyMzE2MjQwMzI6OjA6Og&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                      - img [ref=e4892]
+                    - generic [ref=e4893]:
+                      - link "Sponsored Ad - Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [ref=e4895] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjQyMzE2MjQwMzI6OjA6Og&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                        - heading "Sponsored Ad - Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin." [level=2] [ref=e4896]: Diataal ChocoVits Veg, Chewable Multivitamin | 30 Chocolaty Tabs with 11 Essential Vitamins | Power of B-complex vitamins, B12, D3, Nicotinamide, Vitamin A, C & E for Energy | Immunity | Healthy Skin.
+                      - generic [ref=e4897]:
+                        - generic [ref=e4898]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=e4900] [cursor=pointer]:
+                            - generic [ref=e4902]: 4.6 out of 5 stars
+                          - link "3 ratings" [ref=e4904] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjQyMzE2MjQwMzI6OjA6Og&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ#customerReviews
+                            - text: (3)
+                        - generic [ref=e4905]: 50+ bought in past month
+                      - generic [ref=e4906]:
+                        - link "Limited time deal" [ref=e4908] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4911]: Limited time deal
+                        - generic [ref=e4913]:
+                          - generic [ref=e4914]: Price, product page
+                          - 'link "₹208 ( ₹6.93 /count) M.R.P: ₹350 M.R.P: ₹350" [ref=e4915] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjQyMzE2MjQwMzI6OjA6Og&url=%2FDiataal-ChocoVits-Multivitamin-Chocolaty-Nicotinamide%2Fdp%2FB0G4D8C9D9%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0G4D8C9D9%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DTsjQBan9HR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TsjQBan9HR&sp_cr=ZAZ
+                            - generic [ref=e4916]:
+                              - generic [ref=e4917]: ₹208
+                              - generic [ref=e4918]: ₹208
+                            - generic [ref=e4919]:
+                              - text: (
+                              - generic [ref=e4920]:
+                                - generic [ref=e4921]: ₹6.93
+                                - text: ₹6.93
+                              - text: /count)
+                            - generic [ref=e4922]: "M.R.P: ₹350"
+                            - generic [ref=e4923]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4924]:
+                                - generic [ref=e4925]: ₹350
+                                - text: ₹350
+                          - text: (41% off)
+                        - generic [ref=e4929]:
+                          - generic [ref=e4930]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4931]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e4935]:
+                        - generic [ref=e4937]: FREE delivery Sat, 13 Jun on first order
+                        - generic [ref=e4939]: Or fastest delivery Thu, 11 Jun
+                      - button "Add to cart" [ref=e4954] [cursor=pointer]
+                - listitem "2 of 5" [ref=e4955]:
+                  - generic [ref=e4961]:
+                    - link [ref=e4964] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NDMyMTMwNzAyMzI6OjE6Og&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                      - img [ref=e4966]
+                    - generic [ref=e4967]:
+                      - generic [ref=e4968]:
+                        - link "Sponsored Ad - Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules" [ref=e4969] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NDMyMTMwNzAyMzI6OjE6Og&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules" [level=2] [ref=e4970]: Wellbeing Nutrition Slow Multivitamin + Omega 3 for Men with Probiotics, B-Complex, Ginseng, 23 Vitamins & Minerals, 15 Antioxidants | Stamina, Metabolism, Bones, Immunity, Digestion, 60 Veg Capsules
+                        - generic [ref=e4973]: Capsule
+                      - generic [ref=e4974]:
+                        - generic [ref=e4975]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e4977] [cursor=pointer]:
+                            - generic [ref=e4979]: 4.1 out of 5 stars
+                          - link "528 ratings" [ref=e4981] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NDMyMTMwNzAyMzI6OjE6Og&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ#customerReviews
+                            - text: (528)
+                        - generic [ref=e4982]: 1K+ bought in past month
+                      - generic [ref=e4983]:
+                        - link "Limited time deal" [ref=e4985] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e4988]: Limited time deal
+                        - generic [ref=e4990]:
+                          - generic [ref=e4991]: Price, product page
+                          - 'link "₹1,189 ( ₹19.82 /count) M.R.P: ₹1,399 M.R.P: ₹1,399" [ref=e4992] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NDMyMTMwNzAyMzI6OjE6Og&url=%2FWellbeing-Nutrition-Multivitamin-essential-Vitamins%2Fdp%2FB09WF32QT8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB09WF32QT8%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLPRkTwE0fL%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LPRkTwE0fL&sp_cr=ZAZ
+                            - generic [ref=e4993]:
+                              - generic [ref=e4994]: ₹1,189
+                              - generic [ref=e4995]: ₹1,189
+                            - generic [ref=e4996]:
+                              - text: (
+                              - generic [ref=e4997]:
+                                - generic [ref=e4998]: ₹19.82
+                                - text: ₹19.82
+                              - text: /count)
+                            - generic [ref=e4999]: "M.R.P: ₹1,399"
+                            - generic [ref=e5000]:
+                              - text: "M.R.P:"
+                              - generic [ref=e5001]:
+                                - generic [ref=e5002]: ₹1,399
+                                - text: ₹1,399
+                          - text: (15% off)
+                        - generic [ref=e5006]:
+                          - generic [ref=e5007]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5008]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e5014]: FREE delivery Sat, 13 Jun
+                      - button "Add to cart" [ref=e5029] [cursor=pointer]
+                - listitem "3 of 5" [ref=e5030]:
+                  - generic [ref=e5036]:
+                    - link [ref=e5039] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNTk5MTY4ODYyMzI6OjI6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-Potassium%2Fdp%2FB0B8SP5PMD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B8SP5PMD%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DhAXJ0yY7BZ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=hAXJ0yY7BZ&sp_cr=ZAZ
+                      - img [ref=e5041]
+                    - generic [ref=e5042]:
+                      - generic [ref=e5043]:
+                        - link "Sponsored Ad - ZEROHARM Multivitamin Tablets for Women | Whole Foods with Vitamin A, B, C, D, Biotin, Iron, Zinc & Selenium | Boosts Energy, Immunity, Radiance, Hair, Skin, Bones & Overall Wellness | 60 Tablets" [ref=e5044] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNTk5MTY4ODYyMzI6OjI6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-Potassium%2Fdp%2FB0B8SP5PMD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B8SP5PMD%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DhAXJ0yY7BZ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=hAXJ0yY7BZ&sp_cr=ZAZ
+                          - heading "Sponsored Ad - ZEROHARM Multivitamin Tablets for Women | Whole Foods with Vitamin A, B, C, D, Biotin, Iron, Zinc & Selenium | Boosts Energy, Immunity, Radiance, Hair, Skin, Bones & Overall Wellness | 60 Tablets" [level=2] [ref=e5045]: ZEROHARM Multivitamin Tablets for Women | Whole Foods with Vitamin A, B, C, D, Biotin, Iron, Zinc & Selenium | Boosts Energy, Immunity, Radiance, Hair, Skin, Bones & Overall Wellness | 60 Tablets
+                        - generic [ref=e5048]: Tablet
+                      - generic [ref=e5049]:
+                        - generic [ref=e5050]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e5052] [cursor=pointer]:
+                            - generic [ref=e5054]: 4.2 out of 5 stars
+                          - link "190 ratings" [ref=e5056] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNTk5MTY4ODYyMzI6OjI6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-Potassium%2Fdp%2FB0B8SP5PMD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B8SP5PMD%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DhAXJ0yY7BZ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=hAXJ0yY7BZ&sp_cr=ZAZ#customerReviews
+                            - text: (190)
+                        - generic [ref=e5057]: 50+ bought in past month
+                      - generic [ref=e5058]:
+                        - link "Limited time deal" [ref=e5060] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e5063]: Limited time deal
+                        - generic [ref=e5065]:
+                          - generic [ref=e5066]: Price, product page
+                          - 'link "₹474 ( ₹7.90 /count) M.R.P: ₹849 M.R.P: ₹849" [ref=e5067] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNTk5MTY4ODYyMzI6OjI6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-Potassium%2Fdp%2FB0B8SP5PMD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B8SP5PMD%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DhAXJ0yY7BZ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=hAXJ0yY7BZ&sp_cr=ZAZ
+                            - generic [ref=e5068]:
+                              - generic [ref=e5069]: ₹474
+                              - generic [ref=e5070]: ₹474
+                            - generic [ref=e5071]:
+                              - text: (
+                              - generic [ref=e5072]:
+                                - generic [ref=e5073]: ₹7.90
+                                - text: ₹7.90
+                              - text: /count)
+                            - generic [ref=e5074]: "M.R.P: ₹849"
+                            - generic [ref=e5075]:
+                              - text: "M.R.P:"
+                              - generic [ref=e5076]:
+                                - generic [ref=e5077]: ₹849
+                                - text: ₹849
+                          - text: (44% off)
+                        - generic [ref=e5080]:
+                          - generic [ref=e5081]: Save 6%
+                          - text: with coupon
+                      - generic [ref=e5085]:
+                        - generic [ref=e5087]: FREE delivery Wed, 10 Jun on first order
+                        - generic [ref=e5089]: Or fastest delivery Tomorrow, 9 Jun
+                      - button "Add to cart" [ref=e5104] [cursor=pointer]
+                - listitem "4 of 5" [ref=e5105]:
+                  - generic [ref=e5111]:
+                    - link [ref=e5114] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjI5ODY4NzM2MzI6OjM6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-performance%2Fdp%2FB0B94BJCSV%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B94BJCSV%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DuqpZyDmSqP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=uqpZyDmSqP&sp_cr=ZAZ
+                      - img [ref=e5116]
+                    - generic [ref=e5117]:
+                      - link "Sponsored Ad - ZEROHARM Multivitamin Tablets for Men | Whole Food Multivitamin with Essential Vitamins A, B, C, D, E & Iron, Zinc, Magnesium | Daily Supplements for Immunity & Energy Support | 60 Veg Tablets" [ref=e5119] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjI5ODY4NzM2MzI6OjM6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-performance%2Fdp%2FB0B94BJCSV%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B94BJCSV%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DuqpZyDmSqP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=uqpZyDmSqP&sp_cr=ZAZ
+                        - heading "Sponsored Ad - ZEROHARM Multivitamin Tablets for Men | Whole Food Multivitamin with Essential Vitamins A, B, C, D, E & Iron, Zinc, Magnesium | Daily Supplements for Immunity & Energy Support | 60 Veg Tablets" [level=2] [ref=e5120]: ZEROHARM Multivitamin Tablets for Men | Whole Food Multivitamin with Essential Vitamins A, B, C, D, E & Iron, Zinc, Magnesium | Daily Supplements for Immunity & Energy Support | 60 Veg Tablets
+                      - generic [ref=e5121]:
+                        - generic [ref=e5122]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e5124] [cursor=pointer]:
+                            - generic [ref=e5126]: 4.0 out of 5 stars
+                          - link "204 ratings" [ref=e5128] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjI5ODY4NzM2MzI6OjM6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-performance%2Fdp%2FB0B94BJCSV%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B94BJCSV%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DuqpZyDmSqP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=uqpZyDmSqP&sp_cr=ZAZ#customerReviews
+                            - text: (204)
+                        - generic [ref=e5129]: 50+ bought in past month
+                      - generic [ref=e5130]:
+                        - link "Limited time deal" [ref=e5132] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e5135]: Limited time deal
+                        - generic [ref=e5137]:
+                          - generic [ref=e5138]: Price, product page
+                          - 'link "₹529 ( ₹8.82 /count) M.R.P: ₹849 M.R.P: ₹849" [ref=e5139] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNjI5ODY4NzM2MzI6OjM6Og&url=%2FZEROHARM-Multivitamin-Multimineral-Magnesium-performance%2Fdp%2FB0B94BJCSV%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0B94BJCSV%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DuqpZyDmSqP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=uqpZyDmSqP&sp_cr=ZAZ
+                            - generic [ref=e5140]:
+                              - generic [ref=e5141]: ₹529
+                              - generic [ref=e5142]: ₹529
+                            - generic [ref=e5143]:
+                              - text: (
+                              - generic [ref=e5144]:
+                                - generic [ref=e5145]: ₹8.82
+                                - text: ₹8.82
+                              - text: /count)
+                            - generic [ref=e5146]: "M.R.P: ₹849"
+                            - generic [ref=e5147]:
+                              - text: "M.R.P:"
+                              - generic [ref=e5148]:
+                                - generic [ref=e5149]: ₹849
+                                - text: ₹849
+                          - text: (38% off)
+                        - generic [ref=e5152]:
+                          - generic [ref=e5153]: Save 6%
+                          - text: with coupon
+                      - generic [ref=e5157]:
+                        - generic [ref=e5159]: FREE delivery Fri, 12 Jun
+                        - generic [ref=e5161]: Or fastest delivery Wed, 10 Jun
+                      - button "Add to cart" [ref=e5176] [cursor=pointer]
+                - listitem "5 of 5" [ref=e5177]:
+                  - generic [ref=e5183]:
+                    - link [ref=e5186] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNzE1NDg0Mjk2MzI6OjQ6Og&url=%2FRevital-Multivitamin-Capsules-Vitamins-Minerals%2Fdp%2FB0D9FM2LCZ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0D9FM2LCZ%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D9oaRMMAqHX%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9oaRMMAqHX&sp_cr=ZAZ
+                      - img [ref=e5188]
+                    - generic [ref=e5189]:
+                      - generic [ref=e5190]:
+                        - link "Sponsored Ad - Revital H Multivitamin For Men (60 Capsules) With Natural Ginseng, Zinc, 10 Vitamins & 8 Minerals For Daily Energy, Stamina & Immunity - Pack of 2" [ref=e5191] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNzE1NDg0Mjk2MzI6OjQ6Og&url=%2FRevital-Multivitamin-Capsules-Vitamins-Minerals%2Fdp%2FB0D9FM2LCZ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0D9FM2LCZ%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D9oaRMMAqHX%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9oaRMMAqHX&sp_cr=ZAZ
+                          - heading "Sponsored Ad - Revital H Multivitamin For Men (60 Capsules) With Natural Ginseng, Zinc, 10 Vitamins & 8 Minerals For Daily Energy, Stamina & Immunity - Pack of 2" [level=2] [ref=e5192]: Revital H Multivitamin For Men (60 Capsules) With Natural Ginseng, Zinc, 10 Vitamins & 8 Minerals For Daily Energy, Stamina & Immunity - Pack of 2
+                        - generic [ref=e5195]: Capsule
+                      - generic [ref=e5196]:
+                        - generic [ref=e5197]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=e5199] [cursor=pointer]:
+                            - generic [ref=e5201]: 4.6 out of 5 stars
+                          - link "83 ratings" [ref=e5203] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNzE1NDg0Mjk2MzI6OjQ6Og&url=%2FRevital-Multivitamin-Capsules-Vitamins-Minerals%2Fdp%2FB0D9FM2LCZ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0D9FM2LCZ%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D9oaRMMAqHX%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9oaRMMAqHX&sp_cr=ZAZ#customerReviews
+                            - text: (83)
+                        - generic [ref=e5204]: 50+ bought in past month
+                      - generic [ref=e5205]:
+                        - link "Limited time deal" [ref=e5207] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e5210]: Limited time deal
+                        - generic [ref=e5212]:
+                          - generic [ref=e5213]: Price, product page
+                          - 'link "₹952 ( ₹476 /count) M.R.P: ₹1,260 M.R.P: ₹1,260" [ref=e5214] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1MTY5OTk2MDk5ODAxODY5OjE3ODA5MjY2NjE6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwNzE1NDg0Mjk2MzI6OjQ6Og&url=%2FRevital-Multivitamin-Capsules-Vitamins-Minerals%2Fdp%2FB0D9FM2LCZ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fadgrpid%3D1327112148528381%26content-id%3Damzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%253Aamzn1.sym.6748dafd-1857-4dd2-9058-aab807cb526e%26cv_ct_cx%3Djoin%2Bamazon%2Bprime%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26keywords%3Djoin%2Bamazon%2Bprime%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26pd_rd_i%3DB0D9FM2LCZ%26pd_rd_r%3D7d1714f2-53da-49d6-a60c-5fbc4c70cb9e%26pd_rd_w%3DEdqzv%26pd_rd_wg%3DmfPFm%26pf_rd_p%3D6748dafd-1857-4dd2-9058-aab807cb526e%26pf_rd_r%3DDT40KFVMDQD18G9PZQAZ%26qid%3D1780926661%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D9oaRMMAqHX%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9oaRMMAqHX&sp_cr=ZAZ
+                            - generic [ref=e5215]:
+                              - generic [ref=e5216]: ₹952
+                              - generic [ref=e5217]: ₹952
+                            - generic [ref=e5218]:
+                              - text: (
+                              - generic [ref=e5219]:
+                                - generic [ref=e5220]: ₹476
+                                - text: ₹476
+                              - text: /count)
+                            - generic [ref=e5221]: "M.R.P: ₹1,260"
+                            - generic [ref=e5222]:
+                              - text: "M.R.P:"
+                              - generic [ref=e5223]:
+                                - generic [ref=e5224]: ₹1,260
+                                - text: ₹1,260
+                          - text: (24% off)
+                        - generic [ref=e5228]:
+                          - generic [ref=e5229]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e5230]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=e5234]:
+                        - generic [ref=e5236]: FREE delivery Wed, 10 Jun
+                        - generic [ref=e5238]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e5253] [cursor=pointer]
+          - generic [ref=e5259]:
+            - generic "Related searches in join amazon prime" [ref=e5260]:
+              - heading "Related searches" [level=2] [ref=e5263]
+            - list [ref=e5265]:
+              - generic [ref=e5266]:
+                - listitem [ref=e5267]:
+                  - link "join+amazon+prime" [ref=e5269] [cursor=pointer]:
+                    - /url: /s?k=join%2Bamazon%2Bprime&ref=rsl_sug_0_0&pd_rd_w=Xz6iB&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=mfPFm&pd_rd_r=7d1714f2-53da-49d6-a60c-5fbc4c70cb9e&qid=1780926661
+                    - generic [ref=e5274]: join+amazon+prime
+                - listitem [ref=e5275]:
+                  - link "amazon mobile buy" [ref=e5277] [cursor=pointer]:
+                    - /url: /s?k=amazon+mobile+buy&ref=rsl_sug_0_3&pd_rd_w=Xz6iB&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=mfPFm&pd_rd_r=7d1714f2-53da-49d6-a60c-5fbc4c70cb9e&qid=1780926661
+                    - generic [ref=e5282]: amazon mobile buy
+              - generic [ref=e5283]:
+                - listitem [ref=e5284]:
+                  - link "amazon prime membership" [ref=e5286] [cursor=pointer]:
+                    - /url: /s?k=amazon+prime+membership&ref=rsl_sug_0_1&pd_rd_w=Xz6iB&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=mfPFm&pd_rd_r=7d1714f2-53da-49d6-a60c-5fbc4c70cb9e&qid=1780926661
+                    - generic [ref=e5291]: amazon prime membership
+                - listitem [ref=e5292]:
+                  - link "amazon sign in" [ref=e5294] [cursor=pointer]:
+                    - /url: /s?k=amazon+sign+in&ref=rsl_sug_0_4&pd_rd_w=Xz6iB&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=mfPFm&pd_rd_r=7d1714f2-53da-49d6-a60c-5fbc4c70cb9e&qid=1780926661
+                    - generic [ref=e5299]: amazon sign in
+              - generic [ref=e5300]:
+                - listitem [ref=e5301]:
+                  - link "amazon online shopping mall" [ref=e5303] [cursor=pointer]:
+                    - /url: /s?k=amazon+online+shopping+mall&ref=rsl_sug_0_2&pd_rd_w=Xz6iB&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=mfPFm&pd_rd_r=7d1714f2-53da-49d6-a60c-5fbc4c70cb9e&qid=1780926661
+                    - generic [ref=e5308]: amazon online shopping mall
+                - listitem [ref=e5309]:
+                  - link "amazon's card" [ref=e5311] [cursor=pointer]:
+                    - /url: /s?k=amazon%27s+card&ref=rsl_sug_0_5&pd_rd_w=Xz6iB&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=mfPFm&pd_rd_r=7d1714f2-53da-49d6-a60c-5fbc4c70cb9e&qid=1780926661
+                    - generic [ref=e5316]: amazon's card
+          - navigation "pagination" [ref=e5319]:
+            - list [ref=e5321]:
+              - listitem [ref=e5322]:
+                - button "Previous" [disabled] [ref=e5324]:
+                  - img [ref=e5325]
+                  - text: Previous
+              - listitem [ref=e5327]:
+                - button "Page 1" [ref=e5329]: "1"
+              - listitem [ref=e5330]:
+                - button "Go to page 2" [ref=e5332] [cursor=pointer]: "2"
+              - listitem [ref=e5333]:
+                - button "Go to next page, page 2" [ref=e5335] [cursor=pointer]:
+                  - text: Next
+                  - img [ref=e5336]
+          - generic [ref=e5340]:
+            - separator [ref=e5341]
+            - generic [ref=e5342]:
+              - heading "Brands related to your search" [ref=e5343]
+              - button "Leave feedback on Sponsored ad" [ref=e5348] [cursor=pointer]: Sponsored
+              - generic [ref=e5352]:
+                - generic [ref=e5354]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JPIQLeVwnJDxBsK73qjnmI8AAAGep4BDPAoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICD-oLr4/clv1c_ek-YBIXWKrTWneebE_tACeoAIjlXubRqLZOZhXBm-ez_7J0ApfsW4ywb1j-6COnvVok1hvUg9uioOt4d9WrqfvdYDhjasWxZkg1vRXjl_ch3g1DbIxAJvo9z68VMJjIxyjQ5rd78MpoF6muMSKXRP_7JCNwEFlfnntRwfncrwJU3Lat8nsu75sxralWE8ioMwMRpq-Pq9m_K7XSc9c9Q82yPBdkXzlx-PCZ0OQ1vZ5PWkBe2aGwibZOLPUnnPct9e8gzQFJt5Wgp80ULIRBTxwQVoOOwJkD5djtlAhIkoEn_PLqNztgS_EjDSWYJ46ixH1CWMdRDGJ93ebmQPvAD2bZpUKe1N8RrtxEMo6_i6CSWy6VWNnKY8NX1qdDT8GLI3HXppj1EDdxl-N9rdFC1Tr9oaTz6s0HMJ2iuDJWH7P5hVhX4-YrSGOh2-hv5fCi159W2EyHju-nMZlJgOJ_4xHlDFUIAfEKw3OngAxF1ab97pwNiq_xNO1b1GSsS3FS0KaQkfHO9PKYKfTgFaxiyhdgnKWHAARMMiBs3dlw68STw0sIBv_V23xvsPCIF_xKDH6J21t43MsriyDPjHWfgwSStzZgfcvlSIO-cgb8GNf0_vfgZVyGSI5T92qmsaCWcAuq_UKPCV_thsU0zcbXuiGeitWzSH1z-rphxEL_Tx4B50dxffyAqFiC9oDqdqo6-GcCw3zvUINvcN0AgaCAJ6D-rNlYaxZYZWmpQ1bGYnfWMTiun6753gNBvjsLZaG5e-PTyKmAiaLsd2UXEuBUK3AEjyscDBySOT7aSHlFOslmdXeCGn6zYWOGg_tksUxeVqNZUHIqi5KTiPNwY2BNnxVjXfmEVYO5C9f8uBRvF7Xvk1-bp0eA8kxTAeYO5FqWGTYx5H6RBIVuL-7TP2DOEGMq5I9Zd0IjshZbi-TasoISYPAl8-WbZxMWa4HQbN3I_adUtQ68davDB0hiaam7WdPmKwavRyLKxB9LquBM_thSOijf8YhBYxHsXQvwjFnr9ZcHt3Lcwn1fqQJPaf6sqY7aK7EKBGHTFGH5Ioze_8m53S6BFC6eXFeNfytqLabCAR-WePkgL-nphu0sarCcHkjD-6V8XkVjkZ-rf5lv28Zq1Q7Qx14H3ccFvMSwVjYWhbqlE4LGfxJT1Hkl1aPYpRsmF4T9zjIbxsoYVj9bp_et34yH7h3XNV8-xZPSE0cg5n241MP7nlPvYnq6i2ttWpNG9EUodEylQqfAhfxg-6zEhC_3SJSD4bygm1ySpTup4gHIQMZ3lwa5-sM1LdGPHSpHJl1Vb8ZARlJglWaEKKQsbs5-jVkamSYE_xTfL8Isn2A1F9D2l5QY92EzZJwJSZlPv9MYDTNQZp4zo929ZNz-uT-C-38roDnLxefpvxeIg2rmuy5SdF0apdg8ka_4A5i9SDeGH-FPmPHBoZiVRwjjWFLmvIdpa2Lvpnfv62vvYJKU7xelg_kXhTNvJaOIb1moSb0cnQkRgdu5Qxwlm0UWvVcdr3N0Q283sVnYoTZFwb7jV7ororp0BjSDRqingtiMZtCXUSbCUxFn8MFudMutAZYewB6FRMI6yqAu0lsUhkamxtR8dVmpj3gt0M59ZShqCvNXkIggao0mtKBSGY7s_4clqI9QkRyNGI8_s9mg650OVLW3TaDKDw2r8S5CLeBCps0cAaw/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                      - link "Trexgen Pharmaceuticals PvtLtd" [ref=e5355] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JPIQLeVwnJDxBsK73qjnmI8AAAGep4BDPAoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICD-oLr4/clv1c_ek-YBIXWKrTWneebE_tACeoAIjlXubRqLZOZhXBm-ez_7J0ApfsW4ywb1j-6COnvVok1hvUg9uioOt4d9WrqfvdYDhjasWxZkg1vRXjl_ch3g1DbIxAJvo9z68VMJjIxyjQ5rd78MpoF6muMSKXRP_7JCNwEFlfnntRwfncrwJU3Lat8nsu75sxralWE8ioMwMRpq-Pq9m_K7XSc9c9Q82yPBdkXzlx-PCZ0OQ1vZ5PWkBe2aGwibZOLPUnnPct9e8gzQFJt5Wgp80ULIRBTxwQVoOOwJkD5djtlAhIkoEn_PLqNztgS_EjDSWYJ46ixH1CWMdRDGJ93ebmQPvAD2bZpUKe1N8RrtxEMo6_i6CSWy6VWNnKY8NX1qdDT8GLI3HXppj1EDdxl-N9rdFC1Tr9oaTz6s0HMJ2iuDJWH7P5hVhX4-YrSGOh2-hv5fCi159W2EyHju-nMZlJgOJ_4xHlDFUIAfEKw3OngAxF1ab97pwNiq_xNO1b1GSsS3FS0KaQkfHO9PKYKfTgFaxiyhdgnKWHAARMMiBs3dlw68STw0sIBv_V23xvsPCIF_xKDH6J21t43MsriyDPjHWfgwSStzZgfcvlSIO-cgb8GNf0_vfgZVyGSI5T92qmsaCWcAuq_UKPCV_thsU0zcbXuiGeitWzSH1z-rphxEL_Tx4B50dxffyAqFiC9oDqdqo6-GcCw3zvUINvcN0AgaCAJ6D-rNlYaxZYZWmpQ1bGYnfWMTiun6753gNBvjsLZaG5e-PTyKmAiaLsd2UXEuBUK3AEjyscDBySOT7aSHlFOslmdXeCGn6zYWOGg_tksUxeVqNZUHIqi5KTiPNwY2BNnxVjXfmEVYO5C9f8uBRvF7Xvk1-bp0eA8kxTAeYO5FqWGTYx5H6RBIVuL-7TP2DOEGMq5I9Zd0IjshZbi-TasoISYPAl8-WbZxMWa4HQbN3I_adUtQ68davDB0hiaam7WdPmKwavRyLKxB9LquBM_thSOijf8YhBYxHsXQvwjFnr9ZcHt3Lcwn1fqQJPaf6sqY7aK7EKBGHTFGH5Ioze_8m53S6BFC6eXFeNfytqLabCAR-WePkgL-nphu0sarCcHkjD-6V8XkVjkZ-rf5lv28Zq1Q7Qx14H3ccFvMSwVjYWhbqlE4LGfxJT1Hkl1aPYpRsmF4T9zjIbxsoYVj9bp_et34yH7h3XNV8-xZPSE0cg5n241MP7nlPvYnq6i2ttWpNG9EUodEylQqfAhfxg-6zEhC_3SJSD4bygm1ySpTup4gHIQMZ3lwa5-sM1LdGPHSpHJl1Vb8ZARlJglWaEKKQsbs5-jVkamSYE_xTfL8Isn2A1F9D2l5QY92EzZJwJSZlPv9MYDTNQZp4zo929ZNz-uT-C-38roDnLxefpvxeIg2rmuy5SdF0apdg8ka_4A5i9SDeGH-FPmPHBoZiVRwjjWFLmvIdpa2Lvpnfv62vvYJKU7xelg_kXhTNvJaOIb1moSb0cnQkRgdu5Qxwlm0UWvVcdr3N0Q283sVnYoTZFwb7jV7ororp0BjSDRqingtiMZtCXUSbCUxFn8MFudMutAZYewB6FRMI6yqAu0lsUhkamxtR8dVmpj3gt0M59ZShqCvNXkIggao0mtKBSGY7s_4clqI9QkRyNGI8_s9mg650OVLW3TaDKDw2r8S5CLeBCps0cAaw/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                        - img "Trexgen Pharmaceuticals PvtLtd" [ref=e5356]
+                      - generic [ref=e5358]:
+                        - generic [ref=e5359]:
+                          - link [ref=e5360] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JPIQLeVwnJDxBsK73qjnmI8AAAGep4BDPAoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICD-oLr4/clv1c_ek-YBIXWKrTWneebE_tACeoAIjlXubRqLZOZhXBm-ez_7J0ApfsW4ywb1j-6COnvVok1hvUg9uioOt4d9WrqfvdYDhjasWxZkg1vRXjl_ch3g1DbIxAJvo9z68VMJjIxyjQ5rd78MpoF6muMSKXRP_7JCNwEFlfnntRwfncrwJU3Lat8nsu75sxralWE8ioMwMRpq-Pq9m_K7XSc9c9Q82yPBdkXzlx-PCZ0OQ1vZ5PWkBe2aGwibZOLPUnnPct9e8gzQFJt5Wgp80ULIRBTxwQVoOOwJkD5djtlAhIkoEn_PLqNztgS_EjDSWYJ46ixH1CWMdRDGJ93ebmQPvAD2bZpUKe1N8RrtxEMo6_i6CSWy6VWNnKY8NX1qdDT8GLI3HXppj1EDdxl-N9rdFC1Tr9oaTz6s0HMJ2iuDJWH7P5hVhX4-YrSGOh2-hv5fCi159W2EyHju-nMZlJgOJ_4xHlDFUIAfEKw3OngAxF1ab97pwNiq_xNO1b1GSsS3FS0KaQkfHO9PKYKfTgFaxiyhdgnKWHAARMMiBs3dlw68STw0sIBv_V23xvsPCIF_xKDH6J21t43MsriyDPjHWfgwSStzZgfcvlSIO-cgb8GNf0_vfgZVyGSI5T92qmsaCWcAuq_UKPCV_thsU0zcbXuiGeitWzSH1z-rphxEL_Tx4B50dxffyAqFiC9oDqdqo6-GcCw3zvUINvcN0AgaCAJ6D-rNlYaxZYZWmpQ1bGYnfWMTiun6753gNBvjsLZaG5e-PTyKmAiaLsd2UXEuBUK3AEjyscDBySOT7aSHlFOslmdXeCGn6zYWOGg_tksUxeVqNZUHIqi5KTiPNwY2BNnxVjXfmEVYO5C9f8uBRvF7Xvk1-bp0eA8kxTAeYO5FqWGTYx5H6RBIVuL-7TP2DOEGMq5I9Zd0IjshZbi-TasoISYPAl8-WbZxMWa4HQbN3I_adUtQ68davDB0hiaam7WdPmKwavRyLKxB9LquBM_thSOijf8YhBYxHsXQvwjFnr9ZcHt3Lcwn1fqQJPaf6sqY7aK7EKBGHTFGH5Ioze_8m53S6BFC6eXFeNfytqLabCAR-WePkgL-nphu0sarCcHkjD-6V8XkVjkZ-rf5lv28Zq1Q7Qx14H3ccFvMSwVjYWhbqlE4LGfxJT1Hkl1aPYpRsmF4T9zjIbxsoYVj9bp_et34yH7h3XNV8-xZPSE0cg5n241MP7nlPvYnq6i2ttWpNG9EUodEylQqfAhfxg-6zEhC_3SJSD4bygm1ySpTup4gHIQMZ3lwa5-sM1LdGPHSpHJl1Vb8ZARlJglWaEKKQsbs5-jVkamSYE_xTfL8Isn2A1F9D2l5QY92EzZJwJSZlPv9MYDTNQZp4zo929ZNz-uT-C-38roDnLxefpvxeIg2rmuy5SdF0apdg8ka_4A5i9SDeGH-FPmPHBoZiVRwjjWFLmvIdpa2Lvpnfv62vvYJKU7xelg_kXhTNvJaOIb1moSb0cnQkRgdu5Qxwlm0UWvVcdr3N0Q283sVnYoTZFwb7jV7ororp0BjSDRqingtiMZtCXUSbCUxFn8MFudMutAZYewB6FRMI6yqAu0lsUhkamxtR8dVmpj3gt0M59ZShqCvNXkIggao0mtKBSGY7s_4clqI9QkRyNGI8_s9mg650OVLW3TaDKDw2r8S5CLeBCps0cAaw/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                          - link "Trexgen Pharmaceuticals PvtLtd" [ref=e5361] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JPIQLeVwnJDxBsK73qjnmI8AAAGep4BDPAoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICD-oLr4/clv1c_ek-YBIXWKrTWneebE_tACeoAIjlXubRqLZOZhXBm-ez_7J0ApfsW4ywb1j-6COnvVok1hvUg9uioOt4d9WrqfvdYDhjasWxZkg1vRXjl_ch3g1DbIxAJvo9z68VMJjIxyjQ5rd78MpoF6muMSKXRP_7JCNwEFlfnntRwfncrwJU3Lat8nsu75sxralWE8ioMwMRpq-Pq9m_K7XSc9c9Q82yPBdkXzlx-PCZ0OQ1vZ5PWkBe2aGwibZOLPUnnPct9e8gzQFJt5Wgp80ULIRBTxwQVoOOwJkD5djtlAhIkoEn_PLqNztgS_EjDSWYJ46ixH1CWMdRDGJ93ebmQPvAD2bZpUKe1N8RrtxEMo6_i6CSWy6VWNnKY8NX1qdDT8GLI3HXppj1EDdxl-N9rdFC1Tr9oaTz6s0HMJ2iuDJWH7P5hVhX4-YrSGOh2-hv5fCi159W2EyHju-nMZlJgOJ_4xHlDFUIAfEKw3OngAxF1ab97pwNiq_xNO1b1GSsS3FS0KaQkfHO9PKYKfTgFaxiyhdgnKWHAARMMiBs3dlw68STw0sIBv_V23xvsPCIF_xKDH6J21t43MsriyDPjHWfgwSStzZgfcvlSIO-cgb8GNf0_vfgZVyGSI5T92qmsaCWcAuq_UKPCV_thsU0zcbXuiGeitWzSH1z-rphxEL_Tx4B50dxffyAqFiC9oDqdqo6-GcCw3zvUINvcN0AgaCAJ6D-rNlYaxZYZWmpQ1bGYnfWMTiun6753gNBvjsLZaG5e-PTyKmAiaLsd2UXEuBUK3AEjyscDBySOT7aSHlFOslmdXeCGn6zYWOGg_tksUxeVqNZUHIqi5KTiPNwY2BNnxVjXfmEVYO5C9f8uBRvF7Xvk1-bp0eA8kxTAeYO5FqWGTYx5H6RBIVuL-7TP2DOEGMq5I9Zd0IjshZbi-TasoISYPAl8-WbZxMWa4HQbN3I_adUtQ68davDB0hiaam7WdPmKwavRyLKxB9LquBM_thSOijf8YhBYxHsXQvwjFnr9ZcHt3Lcwn1fqQJPaf6sqY7aK7EKBGHTFGH5Ioze_8m53S6BFC6eXFeNfytqLabCAR-WePkgL-nphu0sarCcHkjD-6V8XkVjkZ-rf5lv28Zq1Q7Qx14H3ccFvMSwVjYWhbqlE4LGfxJT1Hkl1aPYpRsmF4T9zjIbxsoYVj9bp_et34yH7h3XNV8-xZPSE0cg5n241MP7nlPvYnq6i2ttWpNG9EUodEylQqfAhfxg-6zEhC_3SJSD4bygm1ySpTup4gHIQMZ3lwa5-sM1LdGPHSpHJl1Vb8ZARlJglWaEKKQsbs5-jVkamSYE_xTfL8Isn2A1F9D2l5QY92EzZJwJSZlPv9MYDTNQZp4zo929ZNz-uT-C-38roDnLxefpvxeIg2rmuy5SdF0apdg8ka_4A5i9SDeGH-FPmPHBoZiVRwjjWFLmvIdpa2Lvpnfv62vvYJKU7xelg_kXhTNvJaOIb1moSb0cnQkRgdu5Qxwlm0UWvVcdr3N0Q283sVnYoTZFwb7jV7ororp0BjSDRqingtiMZtCXUSbCUxFn8MFudMutAZYewB6FRMI6yqAu0lsUhkamxtR8dVmpj3gt0M59ZShqCvNXkIggao0mtKBSGY7s_4clqI9QkRyNGI8_s9mg650OVLW3TaDKDw2r8S5CLeBCps0cAaw/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                            - img "Trexgen Pharmaceuticals PvtLtd" [ref=e5363]
+                        - generic [ref=e5364]:
+                          - link [ref=e5365] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JPIQLeVwnJDxBsK73qjnmI8AAAGep4BDPAoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICD-oLr4/clv1c_ek-YBIXWKrTWneebE_tACeoAIjlXubRqLZOZhXBm-ez_7J0ApfsW4ywb1j-6COnvVok1hvUg9uioOt4d9WrqfvdYDhjasWxZkg1vRXjl_ch3g1DbIxAJvo9z68VMJjIxyjQ5rd78MpoF6muMSKXRP_7JCNwEFlfnntRwfncrwJU3Lat8nsu75sxralWE8ioMwMRpq-Pq9m_K7XSc9c9Q82yPBdkXzlx-PCZ0OQ1vZ5PWkBe2aGwibZOLPUnnPct9e8gzQFJt5Wgp80ULIRBTxwQVoOOwJkD5djtlAhIkoEn_PLqNztgS_EjDSWYJ46ixH1CWMdRDGJ93ebmQPvAD2bZpUKe1N8RrtxEMo6_i6CSWy6VWNnKY8NX1qdDT8GLI3HXppj1EDdxl-N9rdFC1Tr9oaTz6s0HMJ2iuDJWH7P5hVhX4-YrSGOh2-hv5fCi159W2EyHju-nMZlJgOJ_4xHlDFUIAfEKw3OngAxF1ab97pwNiq_xNO1b1GSsS3FS0KaQkfHO9PKYKfTgFaxiyhdgnKWHAARMMiBs3dlw68STw0sIBv_V23xvsPCIF_xKDH6J21t43MsriyDPjHWfgwSStzZgfcvlSIO-cgb8GNf0_vfgZVyGSI5T92qmsaCWcAuq_UKPCV_thsU0zcbXuiGeitWzSH1z-rphxEL_Tx4B50dxffyAqFiC9oDqdqo6-GcCw3zvUINvcN0AgaCAJ6D-rNlYaxZYZWmpQ1bGYnfWMTiun6753gNBvjsLZaG5e-PTyKmAiaLsd2UXEuBUK3AEjyscDBySOT7aSHlFOslmdXeCGn6zYWOGg_tksUxeVqNZUHIqi5KTiPNwY2BNnxVjXfmEVYO5C9f8uBRvF7Xvk1-bp0eA8kxTAeYO5FqWGTYx5H6RBIVuL-7TP2DOEGMq5I9Zd0IjshZbi-TasoISYPAl8-WbZxMWa4HQbN3I_adUtQ68davDB0hiaam7WdPmKwavRyLKxB9LquBM_thSOijf8YhBYxHsXQvwjFnr9ZcHt3Lcwn1fqQJPaf6sqY7aK7EKBGHTFGH5Ioze_8m53S6BFC6eXFeNfytqLabCAR-WePkgL-nphu0sarCcHkjD-6V8XkVjkZ-rf5lv28Zq1Q7Qx14H3ccFvMSwVjYWhbqlE4LGfxJT1Hkl1aPYpRsmF4T9zjIbxsoYVj9bp_et34yH7h3XNV8-xZPSE0cg5n241MP7nlPvYnq6i2ttWpNG9EUodEylQqfAhfxg-6zEhC_3SJSD4bygm1ySpTup4gHIQMZ3lwa5-sM1LdGPHSpHJl1Vb8ZARlJglWaEKKQsbs5-jVkamSYE_xTfL8Isn2A1F9D2l5QY92EzZJwJSZlPv9MYDTNQZp4zo929ZNz-uT-C-38roDnLxefpvxeIg2rmuy5SdF0apdg8ka_4A5i9SDeGH-FPmPHBoZiVRwjjWFLmvIdpa2Lvpnfv62vvYJKU7xelg_kXhTNvJaOIb1moSb0cnQkRgdu5Qxwlm0UWvVcdr3N0Q283sVnYoTZFwb7jV7ororp0BjSDRqingtiMZtCXUSbCUxFn8MFudMutAZYewB6FRMI6yqAu0lsUhkamxtR8dVmpj3gt0M59ZShqCvNXkIggao0mtKBSGY7s_4clqI9QkRyNGI8_s9mg650OVLW3TaDKDw2r8S5CLeBCps0cAaw/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                          - link "Joint Pain ? Advanced Joint Pain Formulas" [ref=e5366] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JPIQLeVwnJDxBsK73qjnmI8AAAGep4BDPAoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICD-oLr4/clv1c_ek-YBIXWKrTWneebE_tACeoAIjlXubRqLZOZhXBm-ez_7J0ApfsW4ywb1j-6COnvVok1hvUg9uioOt4d9WrqfvdYDhjasWxZkg1vRXjl_ch3g1DbIxAJvo9z68VMJjIxyjQ5rd78MpoF6muMSKXRP_7JCNwEFlfnntRwfncrwJU3Lat8nsu75sxralWE8ioMwMRpq-Pq9m_K7XSc9c9Q82yPBdkXzlx-PCZ0OQ1vZ5PWkBe2aGwibZOLPUnnPct9e8gzQFJt5Wgp80ULIRBTxwQVoOOwJkD5djtlAhIkoEn_PLqNztgS_EjDSWYJ46ixH1CWMdRDGJ93ebmQPvAD2bZpUKe1N8RrtxEMo6_i6CSWy6VWNnKY8NX1qdDT8GLI3HXppj1EDdxl-N9rdFC1Tr9oaTz6s0HMJ2iuDJWH7P5hVhX4-YrSGOh2-hv5fCi159W2EyHju-nMZlJgOJ_4xHlDFUIAfEKw3OngAxF1ab97pwNiq_xNO1b1GSsS3FS0KaQkfHO9PKYKfTgFaxiyhdgnKWHAARMMiBs3dlw68STw0sIBv_V23xvsPCIF_xKDH6J21t43MsriyDPjHWfgwSStzZgfcvlSIO-cgb8GNf0_vfgZVyGSI5T92qmsaCWcAuq_UKPCV_thsU0zcbXuiGeitWzSH1z-rphxEL_Tx4B50dxffyAqFiC9oDqdqo6-GcCw3zvUINvcN0AgaCAJ6D-rNlYaxZYZWmpQ1bGYnfWMTiun6753gNBvjsLZaG5e-PTyKmAiaLsd2UXEuBUK3AEjyscDBySOT7aSHlFOslmdXeCGn6zYWOGg_tksUxeVqNZUHIqi5KTiPNwY2BNnxVjXfmEVYO5C9f8uBRvF7Xvk1-bp0eA8kxTAeYO5FqWGTYx5H6RBIVuL-7TP2DOEGMq5I9Zd0IjshZbi-TasoISYPAl8-WbZxMWa4HQbN3I_adUtQ68davDB0hiaam7WdPmKwavRyLKxB9LquBM_thSOijf8YhBYxHsXQvwjFnr9ZcHt3Lcwn1fqQJPaf6sqY7aK7EKBGHTFGH5Ioze_8m53S6BFC6eXFeNfytqLabCAR-WePkgL-nphu0sarCcHkjD-6V8XkVjkZ-rf5lv28Zq1Q7Qx14H3ccFvMSwVjYWhbqlE4LGfxJT1Hkl1aPYpRsmF4T9zjIbxsoYVj9bp_et34yH7h3XNV8-xZPSE0cg5n241MP7nlPvYnq6i2ttWpNG9EUodEylQqfAhfxg-6zEhC_3SJSD4bygm1ySpTup4gHIQMZ3lwa5-sM1LdGPHSpHJl1Vb8ZARlJglWaEKKQsbs5-jVkamSYE_xTfL8Isn2A1F9D2l5QY92EzZJwJSZlPv9MYDTNQZp4zo929ZNz-uT-C-38roDnLxefpvxeIg2rmuy5SdF0apdg8ka_4A5i9SDeGH-FPmPHBoZiVRwjjWFLmvIdpa2Lvpnfv62vvYJKU7xelg_kXhTNvJaOIb1moSb0cnQkRgdu5Qxwlm0UWvVcdr3N0Q283sVnYoTZFwb7jV7ororp0BjSDRqingtiMZtCXUSbCUxFn8MFudMutAZYewB6FRMI6yqAu0lsUhkamxtR8dVmpj3gt0M59ZShqCvNXkIggao0mtKBSGY7s_4clqI9QkRyNGI8_s9mg650OVLW3TaDKDw2r8S5CLeBCps0cAaw/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                            - generic [ref=e5368]:
+                              - generic [ref=e5369]: Joint Pain ? Advanced Joint Pain Formulas
+                              - generic [ref=e5370]: Joint Pain ? Advanced Joint Pain Formulas
+                - generic [ref=e5372]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JHMxIFRlTRVFd4rsigvfNKUAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCU-Nx-/clv1c_ek-wBAfWFbbazTI3YotcKUShGg1S63etQbvyD-yizlOLSMy07lDKNYYzcg3FukZ4Q5rhmVVmdOkiIchHEOaYkg_SZDwTInIlOKtpCi3oAuwulzu_8jCSHcbx89_0BjG2llo9R5Lhms9N3YWB1PsTUcTDqhWcl1z-ssRnX_ZpzZoMCTOtf4yDjXacvTWRMAEvE6Dsp-UuFUs4pUQ-0grD8Py6l-07OHQM2KwdsKsy56DwaHC0PLV647Ai1Dpr_STxywhDrqW4G_62gM-9NJyBtPFk5qpiMB1y5jrKwS1tgsdfrw6C3Qfq6r37pnPoh7QSEy0aPBuoShFQY-ZnTba89iNOsOdXtrJFzdSYSRjnJX4vzkpOP8RqpjbbPLHDRYz7NldnaL8F3oba_rsbsGy4ec_5vShVVAkAgmRwlofE_WyzOUGsP-jvZ2Vtogkb3S7XeuwjoAfPeUivJLOF74wI1_70ZcpVv8Ht4lOsXUNlYGg0aY41-apvDRZejNj_TRtVH8dfeyj51ROztWWJ15go8aV1RQkpdiBlGOdfPwMAuAzUeB0WY-yTZTgPRwcbHYON0-0EKf2M2VQaBduOHvI9ISQA4RpRRUTHJ7Ji33dq1uW8yQkOOpMTqhtprB_fFf_4SLUnNCvHQ4HGgSafbpSSWR_lAJHM1w8VXFy5cTuTtYuHwAib4TcG4yhdASgWLCehhjSKRoRlpLq73oLv-UOv8UG5pE9_Q7gutscTrtu86wHTyHieGzwbqWhgxmplIC0OPP1L3rcmpb28b7Wq0JbPCI-nFY-vxngae5nJYe09e12sQok23qMYrz4A3feoBs8DXKxu47WP65PlMjiATWhEMPdlDGO-706x0IZbssVz8DRWLu8nHcpTZj1P0DtYEt-uhgZXOpuh0xQLbHXI70NFQa6BRJxdNQ9B0VdEABnQTQnDrgpt5vCMVuvsDNHvbJBNuVBNuEWUnpxBhhiZuoGCCvPGlWiJfTfnYpT81_XhG8tNbMRVk50ScT2sOSaMpjfcm4dsNGrAWloDWs4Y5dI7OHtcaqw-QIaH_emH5FOvMc4sT6f2bteSAi1wqY0b7d4lPoe1YQ4BhXAS6ShLGVLNfn4JLzN1CpvqUjmyTG1VEn9Kx0LyNQsX_TMOMzVtVI35ce1EhUBs_nihQ2rRbq6WEGeUTwl18nvb6etzyShO4C-JwMRe9QB3EXPzHjWuieT1sMZ_iqKyWZSWi0z82k4WvI4SUF0Hav9YxzUhdEMApYxSa76VFIE0OYq1D4UnarSwBWTtRodEducABn8sKIn2yatzVLj4TMpS-m5RPG1CinNCSu58qjxQ-nBHR7rwcR8lRt7lhahn3HgMCDxjJ6U9_GXCbk1sZMGTMNQe8WfwTDdlmBtFIp8wVyN4H0NWHARVLKfYG6xvkTnoaatJ_RNqrunah36ZZXSDKLHeUejGt0-f1z0upssCUXdohxS0zrearVkIGV0wp_LvR7Dem96H6PtQ8HICUqAg7OYaZjQAyGv5MMdL5Yd2d6ifHp2nGHJP1BdC2n36VnHN8DKTXDipC4nrHOBzIfHTtStUyC_OFRkH8Z4gXVfuwNJeofmU8rsYmhJrMSxHVOzgxlKltelrcj7CABvOyiifzzRbeFwU7kvC_M19hIBu5oM1HmRRtKC7RhH3c1BIeX2-ZdrgXx8/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                      - link "Nutrisage" [ref=e5373] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JHMxIFRlTRVFd4rsigvfNKUAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCU-Nx-/clv1c_ek-wBAfWFbbazTI3YotcKUShGg1S63etQbvyD-yizlOLSMy07lDKNYYzcg3FukZ4Q5rhmVVmdOkiIchHEOaYkg_SZDwTInIlOKtpCi3oAuwulzu_8jCSHcbx89_0BjG2llo9R5Lhms9N3YWB1PsTUcTDqhWcl1z-ssRnX_ZpzZoMCTOtf4yDjXacvTWRMAEvE6Dsp-UuFUs4pUQ-0grD8Py6l-07OHQM2KwdsKsy56DwaHC0PLV647Ai1Dpr_STxywhDrqW4G_62gM-9NJyBtPFk5qpiMB1y5jrKwS1tgsdfrw6C3Qfq6r37pnPoh7QSEy0aPBuoShFQY-ZnTba89iNOsOdXtrJFzdSYSRjnJX4vzkpOP8RqpjbbPLHDRYz7NldnaL8F3oba_rsbsGy4ec_5vShVVAkAgmRwlofE_WyzOUGsP-jvZ2Vtogkb3S7XeuwjoAfPeUivJLOF74wI1_70ZcpVv8Ht4lOsXUNlYGg0aY41-apvDRZejNj_TRtVH8dfeyj51ROztWWJ15go8aV1RQkpdiBlGOdfPwMAuAzUeB0WY-yTZTgPRwcbHYON0-0EKf2M2VQaBduOHvI9ISQA4RpRRUTHJ7Ji33dq1uW8yQkOOpMTqhtprB_fFf_4SLUnNCvHQ4HGgSafbpSSWR_lAJHM1w8VXFy5cTuTtYuHwAib4TcG4yhdASgWLCehhjSKRoRlpLq73oLv-UOv8UG5pE9_Q7gutscTrtu86wHTyHieGzwbqWhgxmplIC0OPP1L3rcmpb28b7Wq0JbPCI-nFY-vxngae5nJYe09e12sQok23qMYrz4A3feoBs8DXKxu47WP65PlMjiATWhEMPdlDGO-706x0IZbssVz8DRWLu8nHcpTZj1P0DtYEt-uhgZXOpuh0xQLbHXI70NFQa6BRJxdNQ9B0VdEABnQTQnDrgpt5vCMVuvsDNHvbJBNuVBNuEWUnpxBhhiZuoGCCvPGlWiJfTfnYpT81_XhG8tNbMRVk50ScT2sOSaMpjfcm4dsNGrAWloDWs4Y5dI7OHtcaqw-QIaH_emH5FOvMc4sT6f2bteSAi1wqY0b7d4lPoe1YQ4BhXAS6ShLGVLNfn4JLzN1CpvqUjmyTG1VEn9Kx0LyNQsX_TMOMzVtVI35ce1EhUBs_nihQ2rRbq6WEGeUTwl18nvb6etzyShO4C-JwMRe9QB3EXPzHjWuieT1sMZ_iqKyWZSWi0z82k4WvI4SUF0Hav9YxzUhdEMApYxSa76VFIE0OYq1D4UnarSwBWTtRodEducABn8sKIn2yatzVLj4TMpS-m5RPG1CinNCSu58qjxQ-nBHR7rwcR8lRt7lhahn3HgMCDxjJ6U9_GXCbk1sZMGTMNQe8WfwTDdlmBtFIp8wVyN4H0NWHARVLKfYG6xvkTnoaatJ_RNqrunah36ZZXSDKLHeUejGt0-f1z0upssCUXdohxS0zrearVkIGV0wp_LvR7Dem96H6PtQ8HICUqAg7OYaZjQAyGv5MMdL5Yd2d6ifHp2nGHJP1BdC2n36VnHN8DKTXDipC4nrHOBzIfHTtStUyC_OFRkH8Z4gXVfuwNJeofmU8rsYmhJrMSxHVOzgxlKltelrcj7CABvOyiifzzRbeFwU7kvC_M19hIBu5oM1HmRRtKC7RhH3c1BIeX2-ZdrgXx8/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                        - img "Nutrisage" [ref=e5374]
+                      - generic [ref=e5376]:
+                        - generic [ref=e5377]:
+                          - link [ref=e5378] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JHMxIFRlTRVFd4rsigvfNKUAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCU-Nx-/clv1c_ek-wBAfWFbbazTI3YotcKUShGg1S63etQbvyD-yizlOLSMy07lDKNYYzcg3FukZ4Q5rhmVVmdOkiIchHEOaYkg_SZDwTInIlOKtpCi3oAuwulzu_8jCSHcbx89_0BjG2llo9R5Lhms9N3YWB1PsTUcTDqhWcl1z-ssRnX_ZpzZoMCTOtf4yDjXacvTWRMAEvE6Dsp-UuFUs4pUQ-0grD8Py6l-07OHQM2KwdsKsy56DwaHC0PLV647Ai1Dpr_STxywhDrqW4G_62gM-9NJyBtPFk5qpiMB1y5jrKwS1tgsdfrw6C3Qfq6r37pnPoh7QSEy0aPBuoShFQY-ZnTba89iNOsOdXtrJFzdSYSRjnJX4vzkpOP8RqpjbbPLHDRYz7NldnaL8F3oba_rsbsGy4ec_5vShVVAkAgmRwlofE_WyzOUGsP-jvZ2Vtogkb3S7XeuwjoAfPeUivJLOF74wI1_70ZcpVv8Ht4lOsXUNlYGg0aY41-apvDRZejNj_TRtVH8dfeyj51ROztWWJ15go8aV1RQkpdiBlGOdfPwMAuAzUeB0WY-yTZTgPRwcbHYON0-0EKf2M2VQaBduOHvI9ISQA4RpRRUTHJ7Ji33dq1uW8yQkOOpMTqhtprB_fFf_4SLUnNCvHQ4HGgSafbpSSWR_lAJHM1w8VXFy5cTuTtYuHwAib4TcG4yhdASgWLCehhjSKRoRlpLq73oLv-UOv8UG5pE9_Q7gutscTrtu86wHTyHieGzwbqWhgxmplIC0OPP1L3rcmpb28b7Wq0JbPCI-nFY-vxngae5nJYe09e12sQok23qMYrz4A3feoBs8DXKxu47WP65PlMjiATWhEMPdlDGO-706x0IZbssVz8DRWLu8nHcpTZj1P0DtYEt-uhgZXOpuh0xQLbHXI70NFQa6BRJxdNQ9B0VdEABnQTQnDrgpt5vCMVuvsDNHvbJBNuVBNuEWUnpxBhhiZuoGCCvPGlWiJfTfnYpT81_XhG8tNbMRVk50ScT2sOSaMpjfcm4dsNGrAWloDWs4Y5dI7OHtcaqw-QIaH_emH5FOvMc4sT6f2bteSAi1wqY0b7d4lPoe1YQ4BhXAS6ShLGVLNfn4JLzN1CpvqUjmyTG1VEn9Kx0LyNQsX_TMOMzVtVI35ce1EhUBs_nihQ2rRbq6WEGeUTwl18nvb6etzyShO4C-JwMRe9QB3EXPzHjWuieT1sMZ_iqKyWZSWi0z82k4WvI4SUF0Hav9YxzUhdEMApYxSa76VFIE0OYq1D4UnarSwBWTtRodEducABn8sKIn2yatzVLj4TMpS-m5RPG1CinNCSu58qjxQ-nBHR7rwcR8lRt7lhahn3HgMCDxjJ6U9_GXCbk1sZMGTMNQe8WfwTDdlmBtFIp8wVyN4H0NWHARVLKfYG6xvkTnoaatJ_RNqrunah36ZZXSDKLHeUejGt0-f1z0upssCUXdohxS0zrearVkIGV0wp_LvR7Dem96H6PtQ8HICUqAg7OYaZjQAyGv5MMdL5Yd2d6ifHp2nGHJP1BdC2n36VnHN8DKTXDipC4nrHOBzIfHTtStUyC_OFRkH8Z4gXVfuwNJeofmU8rsYmhJrMSxHVOzgxlKltelrcj7CABvOyiifzzRbeFwU7kvC_M19hIBu5oM1HmRRtKC7RhH3c1BIeX2-ZdrgXx8/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                          - link "Nutrisage" [ref=e5379] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JHMxIFRlTRVFd4rsigvfNKUAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCU-Nx-/clv1c_ek-wBAfWFbbazTI3YotcKUShGg1S63etQbvyD-yizlOLSMy07lDKNYYzcg3FukZ4Q5rhmVVmdOkiIchHEOaYkg_SZDwTInIlOKtpCi3oAuwulzu_8jCSHcbx89_0BjG2llo9R5Lhms9N3YWB1PsTUcTDqhWcl1z-ssRnX_ZpzZoMCTOtf4yDjXacvTWRMAEvE6Dsp-UuFUs4pUQ-0grD8Py6l-07OHQM2KwdsKsy56DwaHC0PLV647Ai1Dpr_STxywhDrqW4G_62gM-9NJyBtPFk5qpiMB1y5jrKwS1tgsdfrw6C3Qfq6r37pnPoh7QSEy0aPBuoShFQY-ZnTba89iNOsOdXtrJFzdSYSRjnJX4vzkpOP8RqpjbbPLHDRYz7NldnaL8F3oba_rsbsGy4ec_5vShVVAkAgmRwlofE_WyzOUGsP-jvZ2Vtogkb3S7XeuwjoAfPeUivJLOF74wI1_70ZcpVv8Ht4lOsXUNlYGg0aY41-apvDRZejNj_TRtVH8dfeyj51ROztWWJ15go8aV1RQkpdiBlGOdfPwMAuAzUeB0WY-yTZTgPRwcbHYON0-0EKf2M2VQaBduOHvI9ISQA4RpRRUTHJ7Ji33dq1uW8yQkOOpMTqhtprB_fFf_4SLUnNCvHQ4HGgSafbpSSWR_lAJHM1w8VXFy5cTuTtYuHwAib4TcG4yhdASgWLCehhjSKRoRlpLq73oLv-UOv8UG5pE9_Q7gutscTrtu86wHTyHieGzwbqWhgxmplIC0OPP1L3rcmpb28b7Wq0JbPCI-nFY-vxngae5nJYe09e12sQok23qMYrz4A3feoBs8DXKxu47WP65PlMjiATWhEMPdlDGO-706x0IZbssVz8DRWLu8nHcpTZj1P0DtYEt-uhgZXOpuh0xQLbHXI70NFQa6BRJxdNQ9B0VdEABnQTQnDrgpt5vCMVuvsDNHvbJBNuVBNuEWUnpxBhhiZuoGCCvPGlWiJfTfnYpT81_XhG8tNbMRVk50ScT2sOSaMpjfcm4dsNGrAWloDWs4Y5dI7OHtcaqw-QIaH_emH5FOvMc4sT6f2bteSAi1wqY0b7d4lPoe1YQ4BhXAS6ShLGVLNfn4JLzN1CpvqUjmyTG1VEn9Kx0LyNQsX_TMOMzVtVI35ce1EhUBs_nihQ2rRbq6WEGeUTwl18nvb6etzyShO4C-JwMRe9QB3EXPzHjWuieT1sMZ_iqKyWZSWi0z82k4WvI4SUF0Hav9YxzUhdEMApYxSa76VFIE0OYq1D4UnarSwBWTtRodEducABn8sKIn2yatzVLj4TMpS-m5RPG1CinNCSu58qjxQ-nBHR7rwcR8lRt7lhahn3HgMCDxjJ6U9_GXCbk1sZMGTMNQe8WfwTDdlmBtFIp8wVyN4H0NWHARVLKfYG6xvkTnoaatJ_RNqrunah36ZZXSDKLHeUejGt0-f1z0upssCUXdohxS0zrearVkIGV0wp_LvR7Dem96H6PtQ8HICUqAg7OYaZjQAyGv5MMdL5Yd2d6ifHp2nGHJP1BdC2n36VnHN8DKTXDipC4nrHOBzIfHTtStUyC_OFRkH8Z4gXVfuwNJeofmU8rsYmhJrMSxHVOzgxlKltelrcj7CABvOyiifzzRbeFwU7kvC_M19hIBu5oM1HmRRtKC7RhH3c1BIeX2-ZdrgXx8/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                            - img "Nutrisage" [ref=e5381]
+                        - generic [ref=e5382]:
+                          - link [ref=e5383] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JHMxIFRlTRVFd4rsigvfNKUAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCU-Nx-/clv1c_ek-wBAfWFbbazTI3YotcKUShGg1S63etQbvyD-yizlOLSMy07lDKNYYzcg3FukZ4Q5rhmVVmdOkiIchHEOaYkg_SZDwTInIlOKtpCi3oAuwulzu_8jCSHcbx89_0BjG2llo9R5Lhms9N3YWB1PsTUcTDqhWcl1z-ssRnX_ZpzZoMCTOtf4yDjXacvTWRMAEvE6Dsp-UuFUs4pUQ-0grD8Py6l-07OHQM2KwdsKsy56DwaHC0PLV647Ai1Dpr_STxywhDrqW4G_62gM-9NJyBtPFk5qpiMB1y5jrKwS1tgsdfrw6C3Qfq6r37pnPoh7QSEy0aPBuoShFQY-ZnTba89iNOsOdXtrJFzdSYSRjnJX4vzkpOP8RqpjbbPLHDRYz7NldnaL8F3oba_rsbsGy4ec_5vShVVAkAgmRwlofE_WyzOUGsP-jvZ2Vtogkb3S7XeuwjoAfPeUivJLOF74wI1_70ZcpVv8Ht4lOsXUNlYGg0aY41-apvDRZejNj_TRtVH8dfeyj51ROztWWJ15go8aV1RQkpdiBlGOdfPwMAuAzUeB0WY-yTZTgPRwcbHYON0-0EKf2M2VQaBduOHvI9ISQA4RpRRUTHJ7Ji33dq1uW8yQkOOpMTqhtprB_fFf_4SLUnNCvHQ4HGgSafbpSSWR_lAJHM1w8VXFy5cTuTtYuHwAib4TcG4yhdASgWLCehhjSKRoRlpLq73oLv-UOv8UG5pE9_Q7gutscTrtu86wHTyHieGzwbqWhgxmplIC0OPP1L3rcmpb28b7Wq0JbPCI-nFY-vxngae5nJYe09e12sQok23qMYrz4A3feoBs8DXKxu47WP65PlMjiATWhEMPdlDGO-706x0IZbssVz8DRWLu8nHcpTZj1P0DtYEt-uhgZXOpuh0xQLbHXI70NFQa6BRJxdNQ9B0VdEABnQTQnDrgpt5vCMVuvsDNHvbJBNuVBNuEWUnpxBhhiZuoGCCvPGlWiJfTfnYpT81_XhG8tNbMRVk50ScT2sOSaMpjfcm4dsNGrAWloDWs4Y5dI7OHtcaqw-QIaH_emH5FOvMc4sT6f2bteSAi1wqY0b7d4lPoe1YQ4BhXAS6ShLGVLNfn4JLzN1CpvqUjmyTG1VEn9Kx0LyNQsX_TMOMzVtVI35ce1EhUBs_nihQ2rRbq6WEGeUTwl18nvb6etzyShO4C-JwMRe9QB3EXPzHjWuieT1sMZ_iqKyWZSWi0z82k4WvI4SUF0Hav9YxzUhdEMApYxSa76VFIE0OYq1D4UnarSwBWTtRodEducABn8sKIn2yatzVLj4TMpS-m5RPG1CinNCSu58qjxQ-nBHR7rwcR8lRt7lhahn3HgMCDxjJ6U9_GXCbk1sZMGTMNQe8WfwTDdlmBtFIp8wVyN4H0NWHARVLKfYG6xvkTnoaatJ_RNqrunah36ZZXSDKLHeUejGt0-f1z0upssCUXdohxS0zrearVkIGV0wp_LvR7Dem96H6PtQ8HICUqAg7OYaZjQAyGv5MMdL5Yd2d6ifHp2nGHJP1BdC2n36VnHN8DKTXDipC4nrHOBzIfHTtStUyC_OFRkH8Z4gXVfuwNJeofmU8rsYmhJrMSxHVOzgxlKltelrcj7CABvOyiifzzRbeFwU7kvC_M19hIBu5oM1HmRRtKC7RhH3c1BIeX2-ZdrgXx8/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                          - link "Advanced Joints Pain Relief By Nutrisage" [ref=e5384] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JHMxIFRlTRVFd4rsigvfNKUAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCU-Nx-/clv1c_ek-wBAfWFbbazTI3YotcKUShGg1S63etQbvyD-yizlOLSMy07lDKNYYzcg3FukZ4Q5rhmVVmdOkiIchHEOaYkg_SZDwTInIlOKtpCi3oAuwulzu_8jCSHcbx89_0BjG2llo9R5Lhms9N3YWB1PsTUcTDqhWcl1z-ssRnX_ZpzZoMCTOtf4yDjXacvTWRMAEvE6Dsp-UuFUs4pUQ-0grD8Py6l-07OHQM2KwdsKsy56DwaHC0PLV647Ai1Dpr_STxywhDrqW4G_62gM-9NJyBtPFk5qpiMB1y5jrKwS1tgsdfrw6C3Qfq6r37pnPoh7QSEy0aPBuoShFQY-ZnTba89iNOsOdXtrJFzdSYSRjnJX4vzkpOP8RqpjbbPLHDRYz7NldnaL8F3oba_rsbsGy4ec_5vShVVAkAgmRwlofE_WyzOUGsP-jvZ2Vtogkb3S7XeuwjoAfPeUivJLOF74wI1_70ZcpVv8Ht4lOsXUNlYGg0aY41-apvDRZejNj_TRtVH8dfeyj51ROztWWJ15go8aV1RQkpdiBlGOdfPwMAuAzUeB0WY-yTZTgPRwcbHYON0-0EKf2M2VQaBduOHvI9ISQA4RpRRUTHJ7Ji33dq1uW8yQkOOpMTqhtprB_fFf_4SLUnNCvHQ4HGgSafbpSSWR_lAJHM1w8VXFy5cTuTtYuHwAib4TcG4yhdASgWLCehhjSKRoRlpLq73oLv-UOv8UG5pE9_Q7gutscTrtu86wHTyHieGzwbqWhgxmplIC0OPP1L3rcmpb28b7Wq0JbPCI-nFY-vxngae5nJYe09e12sQok23qMYrz4A3feoBs8DXKxu47WP65PlMjiATWhEMPdlDGO-706x0IZbssVz8DRWLu8nHcpTZj1P0DtYEt-uhgZXOpuh0xQLbHXI70NFQa6BRJxdNQ9B0VdEABnQTQnDrgpt5vCMVuvsDNHvbJBNuVBNuEWUnpxBhhiZuoGCCvPGlWiJfTfnYpT81_XhG8tNbMRVk50ScT2sOSaMpjfcm4dsNGrAWloDWs4Y5dI7OHtcaqw-QIaH_emH5FOvMc4sT6f2bteSAi1wqY0b7d4lPoe1YQ4BhXAS6ShLGVLNfn4JLzN1CpvqUjmyTG1VEn9Kx0LyNQsX_TMOMzVtVI35ce1EhUBs_nihQ2rRbq6WEGeUTwl18nvb6etzyShO4C-JwMRe9QB3EXPzHjWuieT1sMZ_iqKyWZSWi0z82k4WvI4SUF0Hav9YxzUhdEMApYxSa76VFIE0OYq1D4UnarSwBWTtRodEducABn8sKIn2yatzVLj4TMpS-m5RPG1CinNCSu58qjxQ-nBHR7rwcR8lRt7lhahn3HgMCDxjJ6U9_GXCbk1sZMGTMNQe8WfwTDdlmBtFIp8wVyN4H0NWHARVLKfYG6xvkTnoaatJ_RNqrunah36ZZXSDKLHeUejGt0-f1z0upssCUXdohxS0zrearVkIGV0wp_LvR7Dem96H6PtQ8HICUqAg7OYaZjQAyGv5MMdL5Yd2d6ifHp2nGHJP1BdC2n36VnHN8DKTXDipC4nrHOBzIfHTtStUyC_OFRkH8Z4gXVfuwNJeofmU8rsYmhJrMSxHVOzgxlKltelrcj7CABvOyiifzzRbeFwU7kvC_M19hIBu5oM1HmRRtKC7RhH3c1BIeX2-ZdrgXx8/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                            - generic [ref=e5386]:
+                              - generic [ref=e5387]: Advanced Joints Pain Relief By Nutrisage
+                              - generic [ref=e5388]: Advanced Joints Pain Relief By Nutrisage
+                - generic [ref=e5390]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JJH49YFH0y8u6m1GXB4bDMAAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAmPZSV/clv1c_ek-wBAfWIjbXDj9Td-_9mxYAUE1zPrvfBWrHSC98n80tk02h2TMIPuFPkSpkUD_1ZhS7GcgOYUsFF1SAYBq4kjP3QJVeNDehq-ULYpWbozNUv5X67KBAjOnC-bVF53Ayl1ifq5pHHtOmqN27Url_6lWFw24UV1JqkfQwzzmGjPRP2e0RTpTNDs4jko3esEuwVaFrxst8gzLZbvyfHijA_3OJxQtvhUkFnwxiqjOmGhpNLgYuKu8Sh8lWspX_M7qQEU8tvjBsKqGLb9HmGnt4n1Ra_R2WLIkEPkvtdNbeUTwrwkSoX3zaipva8b-905mrryHJNkZO8AfH5VsWAvl18z-Kc7IxVObEkknZ-D0W5jigGMhpRdrg70lt8BY4khvX0_ZD3IjZBYLsw_RYOXFrMdxH8fENMOy-AgwvvwXrMz0Hki1ACDTE2277GKiL3qCBf9OlamTIdYFuXKTCeM5UUD2RrCWUUD03WeNKst1bPK-3sY934fEZrcpnzzr3tM9MIa1714tcJAL6VYTHX0-17BkisIIXvdD04L9rhy9_popyCV42TtXgWUbHTOF7EOASrmN4AY9Rqi5LgTw3yjoLaQvbOMN_cdSxaSSaSPht4Aw2dm_RRtZ5OpKR0ydLz9O13K4SMrtRMSMbuoAGGOQOTvmCltgCsXLfRg4A9aY3E7jrQQ4LJm9bxOKxlrHDR5j7W1vvgKVlMapdD0i0WVkvcTXeZ-3-ma4gJQNdeuGWw7B-IJvtn3P44010aPxgO7PWcomD8cPtgWviNqaWMCQBUYAu6b0m4tE5GAsJN1JfRehril7MvmKROxlHqj7s9Xrp2mmOr-AxZFos5kYqj1dp_h8T-Z1lZIuQpB7yRayWhukAu1JW_X8yYljmi4zVZjEN-2s0CRD8sjoVX6FIV9FZGQmqAQy1KCXTN4YqLwuZBo0GI2rysnlalAnn1iel_Bs08BIolBH2fiRe_2VpttOUXUZD8lZrGfTwN8bZrW5PRIQApGdWEEhtsch_eWZm-BoTFVbeqGCEcPJSOJxT-Se2pkdC7a_VOwXZMS3tuw-VzQTTBJQiSKdJ9BqKlERnEMfptjDt0J1pZMqn7WAYPcoSl731Xvlocag5vJEW8Lhe2p3P9ee9Nitmt8R4iL4sa_jBY768VtSwkBW6RcTAlG4NI-u1GmeBYkzP_n6AG3C8BnbuQPk0szmnQamD1Uvf5J41-LILNaRnX7pLYm4M0Ml7rZoNZvA19Ih-e9GBh5fqOdMGcGeONLEorE65MAfYKlv_YYuN78JJwa0hyVQiahY_XrTrZ5bBGFy3ue2dN6laq8OTBdvz-Q7_DOCz7wWQ_OyciBaG0nyqOo5q_HzKad6M2QGX6oxUlMkc_IurESaE_p40qKv2wNxCMr3B4yT268fIq2VskvQl0TQB0ylK1d1ohMxWnid46VleJhi0EhtfsFGRByzxY5R9UflPfWbcBq64dDkWR13RWxofquBrBx9SGngUC0ppiMRnwP1VBZjCm8g15Y2wDJh5oe2v9jpL_Q_WkKIf_hzPCEb79RYK5P2NQyrj-nuBKp_sY5I9gL2hxSFBxSUAsKRodptUV8CbDPn1-DAlM_IODRp3Tu3vRCAxR-6iQHA_l5dNTR9oMW-9OeXJb3pCRljPH3VVUZfBZRa4Cu3Ea5evVxLV4GqbCqwvOzlpWQDrYWVqiZZCL3wagml3a4MYPEA/https://www.amazon.in/stores/page/05657AEA-428F-451A-B56B-27642B57E1FC/?_encoding=UTF8&store_ref=SB_A09317341HAFVXIAETG85-A0572951TG7SRA0CKZ91&pd_rd_plhdr=t&aaxitk=6fb374eff28dd872694b07207b0c6b98&hsa_cr_id=0&lp_asins=B0DKX8BW6Y%2CB0FG7Y6WT9&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=2r9dsgWcKO&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                      - link "Bayer Supradyn" [ref=e5391] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JJH49YFH0y8u6m1GXB4bDMAAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAmPZSV/clv1c_ek-wBAfWIjbXDj9Td-_9mxYAUE1zPrvfBWrHSC98n80tk02h2TMIPuFPkSpkUD_1ZhS7GcgOYUsFF1SAYBq4kjP3QJVeNDehq-ULYpWbozNUv5X67KBAjOnC-bVF53Ayl1ifq5pHHtOmqN27Url_6lWFw24UV1JqkfQwzzmGjPRP2e0RTpTNDs4jko3esEuwVaFrxst8gzLZbvyfHijA_3OJxQtvhUkFnwxiqjOmGhpNLgYuKu8Sh8lWspX_M7qQEU8tvjBsKqGLb9HmGnt4n1Ra_R2WLIkEPkvtdNbeUTwrwkSoX3zaipva8b-905mrryHJNkZO8AfH5VsWAvl18z-Kc7IxVObEkknZ-D0W5jigGMhpRdrg70lt8BY4khvX0_ZD3IjZBYLsw_RYOXFrMdxH8fENMOy-AgwvvwXrMz0Hki1ACDTE2277GKiL3qCBf9OlamTIdYFuXKTCeM5UUD2RrCWUUD03WeNKst1bPK-3sY934fEZrcpnzzr3tM9MIa1714tcJAL6VYTHX0-17BkisIIXvdD04L9rhy9_popyCV42TtXgWUbHTOF7EOASrmN4AY9Rqi5LgTw3yjoLaQvbOMN_cdSxaSSaSPht4Aw2dm_RRtZ5OpKR0ydLz9O13K4SMrtRMSMbuoAGGOQOTvmCltgCsXLfRg4A9aY3E7jrQQ4LJm9bxOKxlrHDR5j7W1vvgKVlMapdD0i0WVkvcTXeZ-3-ma4gJQNdeuGWw7B-IJvtn3P44010aPxgO7PWcomD8cPtgWviNqaWMCQBUYAu6b0m4tE5GAsJN1JfRehril7MvmKROxlHqj7s9Xrp2mmOr-AxZFos5kYqj1dp_h8T-Z1lZIuQpB7yRayWhukAu1JW_X8yYljmi4zVZjEN-2s0CRD8sjoVX6FIV9FZGQmqAQy1KCXTN4YqLwuZBo0GI2rysnlalAnn1iel_Bs08BIolBH2fiRe_2VpttOUXUZD8lZrGfTwN8bZrW5PRIQApGdWEEhtsch_eWZm-BoTFVbeqGCEcPJSOJxT-Se2pkdC7a_VOwXZMS3tuw-VzQTTBJQiSKdJ9BqKlERnEMfptjDt0J1pZMqn7WAYPcoSl731Xvlocag5vJEW8Lhe2p3P9ee9Nitmt8R4iL4sa_jBY768VtSwkBW6RcTAlG4NI-u1GmeBYkzP_n6AG3C8BnbuQPk0szmnQamD1Uvf5J41-LILNaRnX7pLYm4M0Ml7rZoNZvA19Ih-e9GBh5fqOdMGcGeONLEorE65MAfYKlv_YYuN78JJwa0hyVQiahY_XrTrZ5bBGFy3ue2dN6laq8OTBdvz-Q7_DOCz7wWQ_OyciBaG0nyqOo5q_HzKad6M2QGX6oxUlMkc_IurESaE_p40qKv2wNxCMr3B4yT268fIq2VskvQl0TQB0ylK1d1ohMxWnid46VleJhi0EhtfsFGRByzxY5R9UflPfWbcBq64dDkWR13RWxofquBrBx9SGngUC0ppiMRnwP1VBZjCm8g15Y2wDJh5oe2v9jpL_Q_WkKIf_hzPCEb79RYK5P2NQyrj-nuBKp_sY5I9gL2hxSFBxSUAsKRodptUV8CbDPn1-DAlM_IODRp3Tu3vRCAxR-6iQHA_l5dNTR9oMW-9OeXJb3pCRljPH3VVUZfBZRa4Cu3Ea5evVxLV4GqbCqwvOzlpWQDrYWVqiZZCL3wagml3a4MYPEA/https://www.amazon.in/stores/page/05657AEA-428F-451A-B56B-27642B57E1FC/?_encoding=UTF8&store_ref=SB_A09317341HAFVXIAETG85-A0572951TG7SRA0CKZ91&pd_rd_plhdr=t&aaxitk=6fb374eff28dd872694b07207b0c6b98&hsa_cr_id=0&lp_asins=B0DKX8BW6Y%2CB0FG7Y6WT9&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=2r9dsgWcKO&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                        - img "Bayer Supradyn" [ref=e5392]
+                      - generic [ref=e5394]:
+                        - generic [ref=e5395]:
+                          - link [ref=e5396] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JJH49YFH0y8u6m1GXB4bDMAAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAmPZSV/clv1c_ek-wBAfWIjbXDj9Td-_9mxYAUE1zPrvfBWrHSC98n80tk02h2TMIPuFPkSpkUD_1ZhS7GcgOYUsFF1SAYBq4kjP3QJVeNDehq-ULYpWbozNUv5X67KBAjOnC-bVF53Ayl1ifq5pHHtOmqN27Url_6lWFw24UV1JqkfQwzzmGjPRP2e0RTpTNDs4jko3esEuwVaFrxst8gzLZbvyfHijA_3OJxQtvhUkFnwxiqjOmGhpNLgYuKu8Sh8lWspX_M7qQEU8tvjBsKqGLb9HmGnt4n1Ra_R2WLIkEPkvtdNbeUTwrwkSoX3zaipva8b-905mrryHJNkZO8AfH5VsWAvl18z-Kc7IxVObEkknZ-D0W5jigGMhpRdrg70lt8BY4khvX0_ZD3IjZBYLsw_RYOXFrMdxH8fENMOy-AgwvvwXrMz0Hki1ACDTE2277GKiL3qCBf9OlamTIdYFuXKTCeM5UUD2RrCWUUD03WeNKst1bPK-3sY934fEZrcpnzzr3tM9MIa1714tcJAL6VYTHX0-17BkisIIXvdD04L9rhy9_popyCV42TtXgWUbHTOF7EOASrmN4AY9Rqi5LgTw3yjoLaQvbOMN_cdSxaSSaSPht4Aw2dm_RRtZ5OpKR0ydLz9O13K4SMrtRMSMbuoAGGOQOTvmCltgCsXLfRg4A9aY3E7jrQQ4LJm9bxOKxlrHDR5j7W1vvgKVlMapdD0i0WVkvcTXeZ-3-ma4gJQNdeuGWw7B-IJvtn3P44010aPxgO7PWcomD8cPtgWviNqaWMCQBUYAu6b0m4tE5GAsJN1JfRehril7MvmKROxlHqj7s9Xrp2mmOr-AxZFos5kYqj1dp_h8T-Z1lZIuQpB7yRayWhukAu1JW_X8yYljmi4zVZjEN-2s0CRD8sjoVX6FIV9FZGQmqAQy1KCXTN4YqLwuZBo0GI2rysnlalAnn1iel_Bs08BIolBH2fiRe_2VpttOUXUZD8lZrGfTwN8bZrW5PRIQApGdWEEhtsch_eWZm-BoTFVbeqGCEcPJSOJxT-Se2pkdC7a_VOwXZMS3tuw-VzQTTBJQiSKdJ9BqKlERnEMfptjDt0J1pZMqn7WAYPcoSl731Xvlocag5vJEW8Lhe2p3P9ee9Nitmt8R4iL4sa_jBY768VtSwkBW6RcTAlG4NI-u1GmeBYkzP_n6AG3C8BnbuQPk0szmnQamD1Uvf5J41-LILNaRnX7pLYm4M0Ml7rZoNZvA19Ih-e9GBh5fqOdMGcGeONLEorE65MAfYKlv_YYuN78JJwa0hyVQiahY_XrTrZ5bBGFy3ue2dN6laq8OTBdvz-Q7_DOCz7wWQ_OyciBaG0nyqOo5q_HzKad6M2QGX6oxUlMkc_IurESaE_p40qKv2wNxCMr3B4yT268fIq2VskvQl0TQB0ylK1d1ohMxWnid46VleJhi0EhtfsFGRByzxY5R9UflPfWbcBq64dDkWR13RWxofquBrBx9SGngUC0ppiMRnwP1VBZjCm8g15Y2wDJh5oe2v9jpL_Q_WkKIf_hzPCEb79RYK5P2NQyrj-nuBKp_sY5I9gL2hxSFBxSUAsKRodptUV8CbDPn1-DAlM_IODRp3Tu3vRCAxR-6iQHA_l5dNTR9oMW-9OeXJb3pCRljPH3VVUZfBZRa4Cu3Ea5evVxLV4GqbCqwvOzlpWQDrYWVqiZZCL3wagml3a4MYPEA/https://www.amazon.in/stores/page/05657AEA-428F-451A-B56B-27642B57E1FC/?_encoding=UTF8&store_ref=SB_A09317341HAFVXIAETG85-A0572951TG7SRA0CKZ91&pd_rd_plhdr=t&aaxitk=6fb374eff28dd872694b07207b0c6b98&hsa_cr_id=0&lp_asins=B0DKX8BW6Y%2CB0FG7Y6WT9&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=2r9dsgWcKO&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                          - link "Bayer Supradyn" [ref=e5397] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JJH49YFH0y8u6m1GXB4bDMAAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAmPZSV/clv1c_ek-wBAfWIjbXDj9Td-_9mxYAUE1zPrvfBWrHSC98n80tk02h2TMIPuFPkSpkUD_1ZhS7GcgOYUsFF1SAYBq4kjP3QJVeNDehq-ULYpWbozNUv5X67KBAjOnC-bVF53Ayl1ifq5pHHtOmqN27Url_6lWFw24UV1JqkfQwzzmGjPRP2e0RTpTNDs4jko3esEuwVaFrxst8gzLZbvyfHijA_3OJxQtvhUkFnwxiqjOmGhpNLgYuKu8Sh8lWspX_M7qQEU8tvjBsKqGLb9HmGnt4n1Ra_R2WLIkEPkvtdNbeUTwrwkSoX3zaipva8b-905mrryHJNkZO8AfH5VsWAvl18z-Kc7IxVObEkknZ-D0W5jigGMhpRdrg70lt8BY4khvX0_ZD3IjZBYLsw_RYOXFrMdxH8fENMOy-AgwvvwXrMz0Hki1ACDTE2277GKiL3qCBf9OlamTIdYFuXKTCeM5UUD2RrCWUUD03WeNKst1bPK-3sY934fEZrcpnzzr3tM9MIa1714tcJAL6VYTHX0-17BkisIIXvdD04L9rhy9_popyCV42TtXgWUbHTOF7EOASrmN4AY9Rqi5LgTw3yjoLaQvbOMN_cdSxaSSaSPht4Aw2dm_RRtZ5OpKR0ydLz9O13K4SMrtRMSMbuoAGGOQOTvmCltgCsXLfRg4A9aY3E7jrQQ4LJm9bxOKxlrHDR5j7W1vvgKVlMapdD0i0WVkvcTXeZ-3-ma4gJQNdeuGWw7B-IJvtn3P44010aPxgO7PWcomD8cPtgWviNqaWMCQBUYAu6b0m4tE5GAsJN1JfRehril7MvmKROxlHqj7s9Xrp2mmOr-AxZFos5kYqj1dp_h8T-Z1lZIuQpB7yRayWhukAu1JW_X8yYljmi4zVZjEN-2s0CRD8sjoVX6FIV9FZGQmqAQy1KCXTN4YqLwuZBo0GI2rysnlalAnn1iel_Bs08BIolBH2fiRe_2VpttOUXUZD8lZrGfTwN8bZrW5PRIQApGdWEEhtsch_eWZm-BoTFVbeqGCEcPJSOJxT-Se2pkdC7a_VOwXZMS3tuw-VzQTTBJQiSKdJ9BqKlERnEMfptjDt0J1pZMqn7WAYPcoSl731Xvlocag5vJEW8Lhe2p3P9ee9Nitmt8R4iL4sa_jBY768VtSwkBW6RcTAlG4NI-u1GmeBYkzP_n6AG3C8BnbuQPk0szmnQamD1Uvf5J41-LILNaRnX7pLYm4M0Ml7rZoNZvA19Ih-e9GBh5fqOdMGcGeONLEorE65MAfYKlv_YYuN78JJwa0hyVQiahY_XrTrZ5bBGFy3ue2dN6laq8OTBdvz-Q7_DOCz7wWQ_OyciBaG0nyqOo5q_HzKad6M2QGX6oxUlMkc_IurESaE_p40qKv2wNxCMr3B4yT268fIq2VskvQl0TQB0ylK1d1ohMxWnid46VleJhi0EhtfsFGRByzxY5R9UflPfWbcBq64dDkWR13RWxofquBrBx9SGngUC0ppiMRnwP1VBZjCm8g15Y2wDJh5oe2v9jpL_Q_WkKIf_hzPCEb79RYK5P2NQyrj-nuBKp_sY5I9gL2hxSFBxSUAsKRodptUV8CbDPn1-DAlM_IODRp3Tu3vRCAxR-6iQHA_l5dNTR9oMW-9OeXJb3pCRljPH3VVUZfBZRa4Cu3Ea5evVxLV4GqbCqwvOzlpWQDrYWVqiZZCL3wagml3a4MYPEA/https://www.amazon.in/stores/page/05657AEA-428F-451A-B56B-27642B57E1FC/?_encoding=UTF8&store_ref=SB_A09317341HAFVXIAETG85-A0572951TG7SRA0CKZ91&pd_rd_plhdr=t&aaxitk=6fb374eff28dd872694b07207b0c6b98&hsa_cr_id=0&lp_asins=B0DKX8BW6Y%2CB0FG7Y6WT9&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=2r9dsgWcKO&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                            - img "Bayer Supradyn" [ref=e5399]
+                        - generic [ref=e5400]:
+                          - link [ref=e5401] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JJH49YFH0y8u6m1GXB4bDMAAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAmPZSV/clv1c_ek-wBAfWIjbXDj9Td-_9mxYAUE1zPrvfBWrHSC98n80tk02h2TMIPuFPkSpkUD_1ZhS7GcgOYUsFF1SAYBq4kjP3QJVeNDehq-ULYpWbozNUv5X67KBAjOnC-bVF53Ayl1ifq5pHHtOmqN27Url_6lWFw24UV1JqkfQwzzmGjPRP2e0RTpTNDs4jko3esEuwVaFrxst8gzLZbvyfHijA_3OJxQtvhUkFnwxiqjOmGhpNLgYuKu8Sh8lWspX_M7qQEU8tvjBsKqGLb9HmGnt4n1Ra_R2WLIkEPkvtdNbeUTwrwkSoX3zaipva8b-905mrryHJNkZO8AfH5VsWAvl18z-Kc7IxVObEkknZ-D0W5jigGMhpRdrg70lt8BY4khvX0_ZD3IjZBYLsw_RYOXFrMdxH8fENMOy-AgwvvwXrMz0Hki1ACDTE2277GKiL3qCBf9OlamTIdYFuXKTCeM5UUD2RrCWUUD03WeNKst1bPK-3sY934fEZrcpnzzr3tM9MIa1714tcJAL6VYTHX0-17BkisIIXvdD04L9rhy9_popyCV42TtXgWUbHTOF7EOASrmN4AY9Rqi5LgTw3yjoLaQvbOMN_cdSxaSSaSPht4Aw2dm_RRtZ5OpKR0ydLz9O13K4SMrtRMSMbuoAGGOQOTvmCltgCsXLfRg4A9aY3E7jrQQ4LJm9bxOKxlrHDR5j7W1vvgKVlMapdD0i0WVkvcTXeZ-3-ma4gJQNdeuGWw7B-IJvtn3P44010aPxgO7PWcomD8cPtgWviNqaWMCQBUYAu6b0m4tE5GAsJN1JfRehril7MvmKROxlHqj7s9Xrp2mmOr-AxZFos5kYqj1dp_h8T-Z1lZIuQpB7yRayWhukAu1JW_X8yYljmi4zVZjEN-2s0CRD8sjoVX6FIV9FZGQmqAQy1KCXTN4YqLwuZBo0GI2rysnlalAnn1iel_Bs08BIolBH2fiRe_2VpttOUXUZD8lZrGfTwN8bZrW5PRIQApGdWEEhtsch_eWZm-BoTFVbeqGCEcPJSOJxT-Se2pkdC7a_VOwXZMS3tuw-VzQTTBJQiSKdJ9BqKlERnEMfptjDt0J1pZMqn7WAYPcoSl731Xvlocag5vJEW8Lhe2p3P9ee9Nitmt8R4iL4sa_jBY768VtSwkBW6RcTAlG4NI-u1GmeBYkzP_n6AG3C8BnbuQPk0szmnQamD1Uvf5J41-LILNaRnX7pLYm4M0Ml7rZoNZvA19Ih-e9GBh5fqOdMGcGeONLEorE65MAfYKlv_YYuN78JJwa0hyVQiahY_XrTrZ5bBGFy3ue2dN6laq8OTBdvz-Q7_DOCz7wWQ_OyciBaG0nyqOo5q_HzKad6M2QGX6oxUlMkc_IurESaE_p40qKv2wNxCMr3B4yT268fIq2VskvQl0TQB0ylK1d1ohMxWnid46VleJhi0EhtfsFGRByzxY5R9UflPfWbcBq64dDkWR13RWxofquBrBx9SGngUC0ppiMRnwP1VBZjCm8g15Y2wDJh5oe2v9jpL_Q_WkKIf_hzPCEb79RYK5P2NQyrj-nuBKp_sY5I9gL2hxSFBxSUAsKRodptUV8CbDPn1-DAlM_IODRp3Tu3vRCAxR-6iQHA_l5dNTR9oMW-9OeXJb3pCRljPH3VVUZfBZRa4Cu3Ea5evVxLV4GqbCqwvOzlpWQDrYWVqiZZCL3wagml3a4MYPEA/https://www.amazon.in/stores/page/05657AEA-428F-451A-B56B-27642B57E1FC/?_encoding=UTF8&store_ref=SB_A09317341HAFVXIAETG85-A0572951TG7SRA0CKZ91&pd_rd_plhdr=t&aaxitk=6fb374eff28dd872694b07207b0c6b98&hsa_cr_id=0&lp_asins=B0DKX8BW6Y%2CB0FG7Y6WT9&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=2r9dsgWcKO&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                          - link "Complete Nutrition for an Active Life" [ref=e5402] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JJH49YFH0y8u6m1GXB4bDMAAAAGep4BDPQoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAmPZSV/clv1c_ek-wBAfWIjbXDj9Td-_9mxYAUE1zPrvfBWrHSC98n80tk02h2TMIPuFPkSpkUD_1ZhS7GcgOYUsFF1SAYBq4kjP3QJVeNDehq-ULYpWbozNUv5X67KBAjOnC-bVF53Ayl1ifq5pHHtOmqN27Url_6lWFw24UV1JqkfQwzzmGjPRP2e0RTpTNDs4jko3esEuwVaFrxst8gzLZbvyfHijA_3OJxQtvhUkFnwxiqjOmGhpNLgYuKu8Sh8lWspX_M7qQEU8tvjBsKqGLb9HmGnt4n1Ra_R2WLIkEPkvtdNbeUTwrwkSoX3zaipva8b-905mrryHJNkZO8AfH5VsWAvl18z-Kc7IxVObEkknZ-D0W5jigGMhpRdrg70lt8BY4khvX0_ZD3IjZBYLsw_RYOXFrMdxH8fENMOy-AgwvvwXrMz0Hki1ACDTE2277GKiL3qCBf9OlamTIdYFuXKTCeM5UUD2RrCWUUD03WeNKst1bPK-3sY934fEZrcpnzzr3tM9MIa1714tcJAL6VYTHX0-17BkisIIXvdD04L9rhy9_popyCV42TtXgWUbHTOF7EOASrmN4AY9Rqi5LgTw3yjoLaQvbOMN_cdSxaSSaSPht4Aw2dm_RRtZ5OpKR0ydLz9O13K4SMrtRMSMbuoAGGOQOTvmCltgCsXLfRg4A9aY3E7jrQQ4LJm9bxOKxlrHDR5j7W1vvgKVlMapdD0i0WVkvcTXeZ-3-ma4gJQNdeuGWw7B-IJvtn3P44010aPxgO7PWcomD8cPtgWviNqaWMCQBUYAu6b0m4tE5GAsJN1JfRehril7MvmKROxlHqj7s9Xrp2mmOr-AxZFos5kYqj1dp_h8T-Z1lZIuQpB7yRayWhukAu1JW_X8yYljmi4zVZjEN-2s0CRD8sjoVX6FIV9FZGQmqAQy1KCXTN4YqLwuZBo0GI2rysnlalAnn1iel_Bs08BIolBH2fiRe_2VpttOUXUZD8lZrGfTwN8bZrW5PRIQApGdWEEhtsch_eWZm-BoTFVbeqGCEcPJSOJxT-Se2pkdC7a_VOwXZMS3tuw-VzQTTBJQiSKdJ9BqKlERnEMfptjDt0J1pZMqn7WAYPcoSl731Xvlocag5vJEW8Lhe2p3P9ee9Nitmt8R4iL4sa_jBY768VtSwkBW6RcTAlG4NI-u1GmeBYkzP_n6AG3C8BnbuQPk0szmnQamD1Uvf5J41-LILNaRnX7pLYm4M0Ml7rZoNZvA19Ih-e9GBh5fqOdMGcGeONLEorE65MAfYKlv_YYuN78JJwa0hyVQiahY_XrTrZ5bBGFy3ue2dN6laq8OTBdvz-Q7_DOCz7wWQ_OyciBaG0nyqOo5q_HzKad6M2QGX6oxUlMkc_IurESaE_p40qKv2wNxCMr3B4yT268fIq2VskvQl0TQB0ylK1d1ohMxWnid46VleJhi0EhtfsFGRByzxY5R9UflPfWbcBq64dDkWR13RWxofquBrBx9SGngUC0ppiMRnwP1VBZjCm8g15Y2wDJh5oe2v9jpL_Q_WkKIf_hzPCEb79RYK5P2NQyrj-nuBKp_sY5I9gL2hxSFBxSUAsKRodptUV8CbDPn1-DAlM_IODRp3Tu3vRCAxR-6iQHA_l5dNTR9oMW-9OeXJb3pCRljPH3VVUZfBZRa4Cu3Ea5evVxLV4GqbCqwvOzlpWQDrYWVqiZZCL3wagml3a4MYPEA/https://www.amazon.in/stores/page/05657AEA-428F-451A-B56B-27642B57E1FC/?_encoding=UTF8&store_ref=SB_A09317341HAFVXIAETG85-A0572951TG7SRA0CKZ91&pd_rd_plhdr=t&aaxitk=6fb374eff28dd872694b07207b0c6b98&hsa_cr_id=0&lp_asins=B0DKX8BW6Y%2CB0FG7Y6WT9&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=2r9dsgWcKO&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=LqLY7&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=DT40KFVMDQD18G9PZQAZ&pd_rd_wg=Fk5it&pd_rd_r=e6a5f125-2757-48c3-98b1-f7acbc58bfa1
+                            - generic [ref=e5404]:
+                              - generic [ref=e5405]: Complete Nutrition for an Active Life
+                              - generic [ref=e5406]: Complete Nutrition for an Active Life
+          - generic [ref=e5412]:
+            - heading "Need help?" [level=2] [ref=e5415]
+            - generic [ref=e5416]:
+              - link "Visit the help section" [ref=e5417] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=201889520
+              - text: or
+              - link "contact us" [ref=e5418] [cursor=pointer]:
+                - /url: /gp/help/customer/contact-us
+          - generic [ref=e5421]:
+            - iframe [ref=e5422]:
+              - generic [ref=f1e4]:
+                - generic [ref=f1e5]: Click to navigate to product detail page Sponsored Ad. Product image. Branded image. Bliss Welness Pure Himalayan Shilajit Extract | Shuddh Shilajeet 1000mg | Enhanced Stamina Power Strength Vitality Vigor & Endurance Performance Booster Ayurvedic Herbal Supplement - 60 Veg Tablets. 464.07.
+                - generic [ref=f1e8]:
+                  - img "Brand logo" [ref=f1e13]
+                  - img "Product image" [ref=f1e18]
+                - link "Click to navigate to product detail page" [ref=f1e22] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/RLrwE1ZU6cgQ2zSs_6HQxtEAAAGep4BDCgoAAAH_AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCCdDiN/clv1c_ek-gg4fWLcTCjhDeOZ4ZvhfJakOyKZBVtW3juqWa0dE828KNEqBSsrgBlNK9yz9uoVwi1nMSqmCoIUuzsy5UjWROEgC8t73bdBzHjiuNMCE9OwGpN6CmZ3cNO7J2rlQ3eygv_iygh2_itIZ7VtQceYgSYNqQmmVrlTZyTK7x5QIxkP7oMPaWmuNgtsv_A--SZGkL7tRtERyNww-rdV1y1ir7f5_yZEy4ncwt7CGd0qI9S8isRvNAmuEqvz5lEDd2CkbDRrKchdtelZdYRAfRuIH1RcyQvfdB_CNBo5axug9vM2I0T7-ATgT3oW0b_sHy7AvLE8nYCrib_j5WBy1Umg8wEi20p29UcGhxwlDeWZTB9_0KnSALsmCL1XohmD7VwbmBhm709xNO_hhobsJUlPTx4t9Ctf_bUurapEu1JwIG-S-hJDr1tkOriq7BdHdYLKI28eOBFvANGpa2L1f6htM5Cm8GgaIp6CW4Ufb5SoZW7LthtIw74a2HQQoJXrAli__dolpeZgKGZn9Cy54U6eNoKPnG2SJxEcF5MUC5FICRNJ6p7Wkf7xue5B-yEoiILG73POInplDpeKbnBnV0PjIDw6V7yMa9DonFh9jyfxiQoiLPq2kp0eIKpWo6h9gau1d5PfDC80trD7Trf5VsRGnePZ9HasEzLzXQXhQQ4f9NF2XCgTBKCXsjmgWVMMQzgXravC5w7syeQLS4iTpwVj-flEq7wajMYjQzkL9LuukkHg1XPCoiPHbPoazT_phTVLnsAU94u4vGWQyMnvEpn7Udh3toSOH_gbatE1Bs-6t7zpt8keSkcXszvv1mPU_tzO3mkw30Xk0YKk2BbRiTIAw7CJQPBXT0g_pLj3SBUilosDmuegF0IJuZqb0VfcY-c5qFtaerGlbup1nMjBjUQpyG7D4logvUVbC7mIODE08J0_DyoVk11sLcCb9gT5RBQsMYYBhHG6Mlu2R237caSxdWaLFZvoTB97gkZbqcjQDr9QPjLf-mC0DfKuz-7SYzlVmXcedxXdDk/http://www.amazon.in/dp/B09QXDCZSP/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=YIkwc0wf7A
+            - button "Leave feedback on Sponsored advertisement" [ref=e5424] [cursor=pointer]:
+              - generic [ref=e5425]: Sponsored
+        - link "Go back to filtering menu" [ref=e5427] [cursor=pointer]:
+          - /url: "#s-skipLinkTargetForFilterOptions"
+      - dialog "Filters" [ref=e5428]:
+        - generic [ref=e5429]:
+          - link "Skip to main search results" [ref=e5430] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e5432]:
+            - generic [ref=e5436]:
+              - group "Eligible for Free Shipping" [ref=e5437]:
+                - heading "Eligible for Free Shipping" [level=2] [ref=e5438]
+                - list "Eligible for Free Shipping" [ref=e5439]:
+                  - listitem [ref=e5440]:
+                    - link "Apply the filter Free Shipping to narrow results" [ref=e5442] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_n_free_shipping_eligible%3A205563695031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=205563694031&tag=msndeskstdin-21&ref=sr_nr_p_n_free_shipping_eligible_1&ds=v1%3AV%2FnSHqnuECQa4BsNeVNF3xMpGpOh4RsetwEHevJ6e48
+                      - checkbox [ref=e5445]
+                      - text: Free Shipping
+                      - generic [ref=e5447]: Get FREE Shipping on eligible orders shipped by Amazon
+              - group "Customer Review" [ref=e5448]:
+                - heading "Customer Review" [level=2] [ref=e5449]
+                - list "Customer Review" [ref=e5450]:
+                  - listitem [ref=e5451]:
+                    - link "Apply the filter 4 Stars & Up to narrow results" [ref=e5454] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_72%3A1318476031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=1318475031&tag=msndeskstdin-21&ref=sr_nr_p_72_1&ds=v1%3A8iuxnJPhc0%2BYo616csyv%2B1%2Fy4adFdiqDQXOfCZaW5vk
+                      - generic [ref=e5456]: 4 Stars
+                      - text: "& Up"
+              - group "Deals & Discounts" [ref=e5457]:
+                - heading "Deals & Discounts" [level=2] [ref=e5458]
+                - list "Deals & Discounts" [ref=e5459]:
+                  - listitem [ref=e5460]:
+                    - link "All Discounts" [ref=e5462] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_n_deal_type%3A26921226031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=26921223031&tag=msndeskstdin-21&ref=sr_nr_p_n_deal_type_1&ds=v1%3AOsC5xkieBKrG224G%2BgtfPqmEdZyR%2F6c0Me5j%2FvXGRGY
+                  - listitem [ref=e5463]:
+                    - link "Buy More, Save More" [ref=e5465] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_n_deal_type%3A210770213031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=26921223031&tag=msndeskstdin-21&ref=sr_nr_p_n_deal_type_2&ds=v1%3A17c2FO5m6Px7fIovr6WmvZGZ8bsdxwJhpKnczCfSQAk
+              - group "Pay On Delivery" [ref=e5466]:
+                - heading "Pay On Delivery" [level=2] [ref=e5467]
+                - list "Pay On Delivery" [ref=e5468]:
+                  - listitem [ref=e5469]:
+                    - link "Apply the filter Eligible for Pay On Delivery to narrow results" [ref=e5471] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_n_is_cod_eligible%3A4931671031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=4931670031&tag=msndeskstdin-21&ref=sr_nr_p_n_is_cod_eligible_1&ds=v1%3AFTJdFXl51yiUwLw1%2BxlDzQF7YWDgEXjaIJUXH7dR3Go
+                      - checkbox [ref=e5474]
+                      - text: Eligible for Pay On Delivery
+              - group "Availability" [ref=e5476]:
+                - heading "Availability" [level=2] [ref=e5477]
+                - list "Availability" [ref=e5478]:
+                  - listitem [ref=e5479]:
+                    - link "Apply the filter In Stock Only to narrow results" [ref=e5481] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_n_availability%3A1318484031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=1318483031&tag=msndeskstdin-21&ref=sr_nr_p_n_availability_2&ds=v1%3AIIsIhgSkkcMYCoQN3uH9SRiFVP5AbWsEhU8JFbkpGT8
+                      - checkbox [ref=e5484]
+                      - text: In Stock Only
+              - group "Local Market" [ref=e5486]:
+                - heading "Local Market" [level=2] [ref=e5487]
+                - list "Local Market" [ref=e5488]:
+                  - listitem [ref=e5489]:
+                    - link "Apply the filter Amazon Fresh to narrow results" [ref=e5491] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=p_n_alm_brand_id%3A17107035031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=17107034031&tag=msndeskstdin-21&ref=sr_nr_p_n_alm_brand_id_1&ds=v1%3AedwPBteNGNBWowWnmTplBgzK39TmMCB607KiFRKz0RU
+                      - checkbox [ref=e5494]
+                      - text: Amazon Fresh
+              - group "Category" [ref=e5496]:
+                - heading "Category" [level=2] [ref=e5497]
+                - list "Category" [ref=e5498]:
+                  - listitem [ref=e5499]:
+                    - link "Apps & Games" [ref=e5501] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=n%3A1661666031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=3576079031&tag=msndeskstdin-21&ref=sr_nr_n_1&ds=v1%3ApcSJb7YfntCFv64nrGP1GczVecafL%2BiXQazTO1gLocw
+                  - list [ref=e5502]:
+                    - listitem [ref=e5503]:
+                      - link "Movies & TV" [ref=e5505] [cursor=pointer]:
+                        - /url: /s?k=join+amazon+prime&rh=n%3A1661666031%2Cn%3A9385685031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=3576079031&tag=msndeskstdin-21&ref=sr_nr_n_2&ds=v1%3AbWv157FMnu9YAshSDOSetD1gtcSfCzY3hT%2FsfiNy5OY
+                    - list
+                  - listitem [ref=e5506]:
+                    - link "Omega-3" [ref=e5508] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=n%3A11364693031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=3576079031&tag=msndeskstdin-21&ref=sr_nr_n_3&ds=v1%3AZiaC319vl%2Fynd58J%2FZrARYoF7Tdc4Vy9hUvI2hvPWT4
+                  - list
+                  - listitem [ref=e5509]:
+                    - link "Combination Multivitamins & Minerals" [ref=e5511] [cursor=pointer]:
+                      - /url: /s?k=join+amazon+prime&rh=n%3A11364661031&dc&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&qid=1780926661&rnid=3576079031&tag=msndeskstdin-21&ref=sr_nr_n_4&ds=v1%3AtbK8dQT4usv4%2FRC%2Bt23Ig8m329YRq7GI9Ynp2AlHnDk
+                  - list
+            - generic [ref=e5515]:
+              - iframe [ref=e5516]:
+                - generic [ref=f2e4]:
+                  - generic [ref=f2e5]:
+                    - link "Rasayanam Vitamin D3 + K2 & Vitamin B12 Combo for Daily Deficiency Support | For Energy, Nerve, Bone & Heart Health | 100% RDA, Lab-Tested & Vegetarian | D3+K2 (120 Tablets) + B12 (60 Capsules)" [ref=f2e6] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RH8JSLmR3BSSo8mBGYo-89kAAAGep4BDJAoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5TeLb/clv1c_ek8OM3GX57OOBXc7_aNg_RuuhEMJ08TPO2uCMgMKhWexu_8tZzfAPndsPGJP-T9X--edcCDxWeucYod1TAFYM0JiunBn2_OFskc70HCMsp2Y7bfygBGf8GSfuR6W8hn29ii44Y1LIl-AihlF78Ek_uXTQgxxYjT5Ns55hkOXvof3tYKrTV35I-cddSe0bRR0WcxBKmCB1Cl8B84vhpgSxEVRMOsONJxhRjhsnApr9Uq9lSGRp5GHggoOwgGbgeLhot5SENprHUA2bglanePOQhSPRGKud22i-1sk7NGI85ZMWi7VCtR4y-xji3O2ZABvsMvkCzuJaNOhZGMl5uJmCiik6tCsVfcRjmjiO1ErTtQ6xgc53ETTVaDCjCEn1ZZtHfiVF-zp0Q/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo0NDgyNTE3ODg0MzU4MjIyOjE3ODA5MjY2NjE6c3Bfc2VhcmNoX2xlZnRfc2hhcmVkOjMwMTAyMzQyODgwNDAzMjo6Ojo&url=%2Fdp%2FB0GHN5C9PN%2Fref%3Dsspa_dk_left_sx_aax_0%3Fpsc%3D1%26aref%3DRmBduKMgtv%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=RmBduKMgtv&sp_cr=ZAZ
+                    - img "Rasayanam Vitamin D3 + K2 & Vitamin B12 Combo for Daily Deficiency Support | For Energy, Nerve, Bone & Heart Health | 100% RDA, Lab-Tested & Vegetarian | D3+K2 (120 Tablets) + B12 (60 Capsules)" [ref=f2e10]
+                    - generic [ref=f2e12]:
+                      - generic [ref=f2e13]: Rasayanam Vitamin D3 + K2 & Vitamin B12 Combo f...
+                      - link "5" [ref=f2e15] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/RH8JSLmR3BSSo8mBGYo-89kAAAGep4BDJAoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5TeLb/clv1c_ek8OM3GX57OOBXc7_aNg_RuuhEMJ08TPO2uCMgMKhWexu_8tZzfAPndsPGJP-T9X--edcCDxWeucYod1TAFYM0JiunBn2_OFskc70HCMsp2Y7bfygBGf8GSfuR6W8hn29ii44Y1LIl-AihlF78Ek_uXTQgxxYjT5Ns55hkOXvof3tYKrTV35I-cddSe0bRR0WcxBKmCB1Cl8B84vhpgSxEVRMOsONJxhRjhsnApr9Uq9lSGRp5GHggoOwgGbgeLhot5SENprHUA2bglanePOQhSPRGKud22i-1sk7NGI85ZMWi7VCtR4y-xji3O2ZABvsMvkCzuJaNOhZGMl5uJmCiik6tCsVfcRjmjiO1ErTtQ6xgc53ETTVaDCjCEn1ZZtHfiVF-zp0Q/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo0NDgyNTE3ODg0MzU4MjIyOjE3ODA5MjY2NjE6c3Bfc2VhcmNoX2xlZnRfc2hhcmVkOjMwMTAyMzQyODgwNDAzMjo6Ojo&url=%2Fdp%2FB0GHN5C9PN%2Fref%3Dsspa_dk_left_sx_aax_0%3Fpsc%3D1%26aref%3DRmBduKMgtv%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=RmBduKMgtv&sp_cr=ZAZ#customerReviews
+                        - text: "5"
+                      - generic [ref=f2e17]: ₹949.00
+                    - link "Shop now" [ref=f2e22] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RH8JSLmR3BSSo8mBGYo-89kAAAGep4BDJAoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5TeLb/clv1c_ek8OM3GX57OOBXc7_aNg_RuuhEMJ08TPO2uCMgMKhWexu_8tZzfAPndsPGJP-T9X--edcCDxWeucYod1TAFYM0JiunBn2_OFskc70HCMsp2Y7bfygBGf8GSfuR6W8hn29ii44Y1LIl-AihlF78Ek_uXTQgxxYjT5Ns55hkOXvof3tYKrTV35I-cddSe0bRR0WcxBKmCB1Cl8B84vhpgSxEVRMOsONJxhRjhsnApr9Uq9lSGRp5GHggoOwgGbgeLhot5SENprHUA2bglanePOQhSPRGKud22i-1sk7NGI85ZMWi7VCtR4y-xji3O2ZABvsMvkCzuJaNOhZGMl5uJmCiik6tCsVfcRjmjiO1ErTtQ6xgc53ETTVaDCjCEn1ZZtHfiVF-zp0Q/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo0NDgyNTE3ODg0MzU4MjIyOjE3ODA5MjY2NjE6c3Bfc2VhcmNoX2xlZnRfc2hhcmVkOjMwMTAyMzQyODgwNDAzMjo6Ojo&url=%2Fdp%2FB0GHN5C9PN%2Fref%3Dsspa_dk_left_sx_aax_0%3Fpsc%3D1%26aref%3DRmBduKMgtv%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=RmBduKMgtv&sp_cr=ZAZ
+                  - separator [ref=f2e24]
+                  - generic [ref=f2e25]:
+                    - link "AgeWell Eterna Astaxanthin Multivitamin Capsules for Men & Women 40+ | Anti-Aging Multivitamin Supplement for Skin, Eye & Heart Health | With Astaxanthin, Vitamins E, D & A | Liquid Filled Veg Capsules | 30 Capsules" [ref=f2e26] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RH8JSLmR3BSSo8mBGYo-89kAAAGep4BDJAoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5TeLb/clv1c_ek8OM3GX57OOBXc7_aNg_RuuhEMJ08TPO2uCMgMKhWexu_8tZzfAPndsPGJP-T9X--edcCDxWeucYod1TAFYM0JiunBn2_OFskc70HCMsp2Y7bfygBGf8GSfuR6W8hn29ii44Y1LIl-AihlF78Ek_uXTQgxxYjT5Ns55hkOXvof3tYKrTV35I-cddSe0bRR0WcxBKmCB1Cl8B84vhpgSxEVRMOsONJxhRjhsnApr9Uq9lSGRp5GHggoOwgGbgeLhot5SENprHUA2bglanePOQhSPRGKud22i-1sk7NGI85ZMWi7VCtR4y-xji3O2ZABvsMvkCzuJaNOhZGMl5uJmCiik6tCsVfcRjmjiO1ErTtQ6xgc53ETTVaDCjCEn1ZZtHfiVF-zp0Q/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo0NDgyNTE3ODg0MzU4MjIyOjE3ODA5MjY2NjE6c3Bfc2VhcmNoX2xlZnRfc2hhcmVkOjMwMTEyOTMzNDkwNzAzMjo6Ojo&url=%2Fdp%2FB0GDV7F86J%2Fref%3Dsspa_dk_left_sx_aax_1%3Fpsc%3D1%26aref%3Dk8hT7Znnm5%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=k8hT7Znnm5&sp_cr=ZAZ
+                    - img "AgeWell Eterna Astaxanthin Multivitamin Capsules for Men & Women 40+ | Anti-Aging Multivitamin Supplement for Skin, Eye & Heart Health | With Astaxanthin, Vitamins E, D & A | Liquid Filled Veg Capsules | 30 Capsules" [ref=f2e30]
+                    - generic [ref=f2e32]:
+                      - generic [ref=f2e33]: AgeWell Eterna Astaxanthin Multivitamin Capsule...
+                      - generic [ref=f2e34]: ₹1,349.00
+                    - link "Shop now" [ref=f2e39] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/RH8JSLmR3BSSo8mBGYo-89kAAAGep4BDJAoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5TeLb/clv1c_ek8OM3GX57OOBXc7_aNg_RuuhEMJ08TPO2uCMgMKhWexu_8tZzfAPndsPGJP-T9X--edcCDxWeucYod1TAFYM0JiunBn2_OFskc70HCMsp2Y7bfygBGf8GSfuR6W8hn29ii44Y1LIl-AihlF78Ek_uXTQgxxYjT5Ns55hkOXvof3tYKrTV35I-cddSe0bRR0WcxBKmCB1Cl8B84vhpgSxEVRMOsONJxhRjhsnApr9Uq9lSGRp5GHggoOwgGbgeLhot5SENprHUA2bglanePOQhSPRGKud22i-1sk7NGI85ZMWi7VCtR4y-xji3O2ZABvsMvkCzuJaNOhZGMl5uJmCiik6tCsVfcRjmjiO1ErTtQ6xgc53ETTVaDCjCEn1ZZtHfiVF-zp0Q/https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo0NDgyNTE3ODg0MzU4MjIyOjE3ODA5MjY2NjE6c3Bfc2VhcmNoX2xlZnRfc2hhcmVkOjMwMTEyOTMzNDkwNzAzMjo6Ojo&url=%2Fdp%2FB0GDV7F86J%2Fref%3Dsspa_dk_left_sx_aax_1%3Fpsc%3D1%26aref%3Dk8hT7Znnm5%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfbGVmdF9zaGFyZWQ&aref=k8hT7Znnm5&sp_cr=ZAZ
+              - button "Leave feedback on Sponsored advertisement" [ref=e5518] [cursor=pointer]:
+                - generic [ref=e5519]: Sponsored
+            - generic [ref=e5524]:
+              - iframe [ref=e5525]:
+                - generic [ref=f3e4]:
+                  - generic [ref=f3e5]: Sponsored Ad. Brand logo. Product image. Bliss Welness Pure Himalayan Shilajit Extract | Shuddh Shilajeet 1000mg | Enhanced Stamina Power Strength Vitality Vigor & Endurance Performance Booster Ayurvedic Herbal Supplement - 60 Veg Tablets 464.07 Shop now
+                  - link "Click to navigate to product detail page" [ref=f3e8] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/RIZxiD6hWhirad00KSiQXeIAAAGep4BDJAoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICCSE6t7/clv1c_ek-gg4fWLcTCjhDeOZ4ZvhfJarHDM09NDtsEpqIm15qXPVCp7sIXjuksmg9PO5UaZv-UVzXz7pWfX9UnmUVYW3BYDRgLeXLYNix3rgk9y6xX6hpqmkx_3gYXKPkxM7CxvMy0LU1ij0uXw6GeOT-SdJRYsNWsV1frOtaMm9bk7bjpCCdW_Jr9K-pprAN4Z1mdR5FFh3jwToH8Vi23AECe9E4xCWkgPi4mhfRxaCw09q0Syj92O-sZiDdoXGE8LeoSH2khNI-1nciOdgwPP1PESNQwghPR4bYWXGr7o6Mb0uRwjsUeuxXCuE9ZD5XVaqdHpcQsX6A_Aokx75h7oGcgUHH1gAtX1r6G5457BWD5w4bxWA63QMNwxGCBnSPpPKxXBjW_Pe8btBnE71mKBIjtAhOrKT6ke1GOm0mXgjSgWIR_r8Ch2E03qgGilQtbPcz3yDufY788o4rqZPOir9_X3mZdAoi82LerlORLVVXWj2U05ZfwDEK1mH95GTq3KA6rnvyYjWIiCJMJVkQfkIGlYl9tNcYJmDsmUKp6gQakVLkLsO6r43lQL85EhlrLK7uDcKmgvnLCgDK-nj0ivLmEK48TkU1vVKVMQdBp6oWs4yyxMOeht1wBUg_0LPrCjEM4y4nJusNAZJgGLadNupSE4GOvhWf3YdR106AqC5VdoARkB-RvML27yxUNadrkRGQqcSoR7JH5ZUU4pM5IgCAASP_G9n1aUhFvlSqGenmbrcUJUlAgkQptkP3cA4qoHp-OJxSkkaqgnu9CBXqNyDwNYGUKaVfGHPoUpKgmnr_aE7b1MxZ_1vRCoga-O45SDfisdmVQfNrRgRKKBFURRxTcBiSVk9i6q16oB3cJeRm3GFggDVydeymyLRavsT_01nhPH-hATJLh-STv3wh03_yfLxXRm9j7kSKs396ektqq7s91m9VD2RlB9_Y_m7BT4bcnfIl9F0NisPPnTF437SnFDs_7aNd4Ch_53PWZy3-OkN1MJjt1V9ueO70CWIHFEr5CL6Cg5PuloFmgGvqt52se-mM/http://www.amazon.in/dp/B09QXDCZSP/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=YIkwc0wf7A
+                  - generic [ref=f3e9]:
+                    - img "Brand logo" [ref=f3e13]
+                    - img "Product image" [ref=f3e17]
+              - button "Leave feedback on Sponsored advertisement" [ref=e5527] [cursor=pointer]:
+                - generic [ref=e5528]: Sponsored
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e5530]:
+    - button "Back to top" [ref=e5531] [cursor=pointer]:
+      - generic [ref=e5532]: Back to top
+    - generic [ref=e5533]:
+      - generic [ref=e5534]:
+        - heading "Get to Know Us" [level=6] [ref=e5535]
+        - list [ref=e5536]:
+          - listitem [ref=e5537]:
+            - link "About Amazon" [ref=e5538] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e5539]:
+            - link "Careers" [ref=e5540] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e5541]:
+            - link "Press Releases" [ref=e5542] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e5543]:
+            - link "Amazon Science" [ref=e5544] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e5546]:
+        - heading "Connect with Us" [level=6] [ref=e5547]
+        - list [ref=e5548]:
+          - listitem [ref=e5549]:
+            - link "Facebook" [ref=e5550] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e5551]:
+            - link "Twitter" [ref=e5552] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e5553]:
+            - link "Instagram" [ref=e5554] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e5556]:
+        - heading "Make Money with Us" [level=6] [ref=e5557]
+        - list [ref=e5558]:
+          - listitem [ref=e5559]:
+            - link "Sell on Amazon" [ref=e5560] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e5561]:
+            - link "Sell under Amazon Accelerator" [ref=e5562] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e5563]:
+            - link "Protect and Build Your Brand" [ref=e5564] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e5565]:
+            - link "Amazon Global Selling" [ref=e5566] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e5567]:
+            - link "Supply to Amazon" [ref=e5568] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e5569]:
+            - link "Become an Affiliate" [ref=e5570] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e5571]:
+            - link "Fulfilment by Amazon" [ref=e5572] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e5573]:
+            - link "Advertise Your Products" [ref=e5574] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e5575]:
+            - link "Amazon Pay on Merchants" [ref=e5576] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e5578]:
+        - heading "Let Us Help You" [level=6] [ref=e5579]
+        - list [ref=e5580]:
+          - listitem [ref=e5581]:
+            - link "Your Account" [ref=e5582] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e5583]:
+            - link "Returns Centre" [ref=e5584] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e5585]:
+            - link "Recalls and Product Safety Alerts" [ref=e5586] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e5587]:
+            - link "100% Purchase Protection" [ref=e5588] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e5589]:
+            - link "Amazon App Download" [ref=e5590] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e5591]:
+            - link "Help" [ref=e5592] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e5594]:
+      - link "Amazon India Home" [ref=e5597] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e5600]:
+        - generic [ref=e5601]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e5602] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e5604]: English
+          - button "Expand to Change Language or Country" [ref=e5605] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e5606] [cursor=pointer]:
+          - generic [ref=e5608]: India
+    - generic "More on Amazon" [ref=e5609]:
+      - generic "More on Amazon" [ref=e5610]:
+        - list [ref=e5611]:
+          - listitem [ref=e5612]:
+            - link "AbeBooks Books, art & collectibles" [ref=e5613] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e5614]
+              - generic [ref=e5615]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e5616]
+          - listitem [ref=e5617]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e5618] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e5619]
+              - generic [ref=e5620]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e5621]
+          - listitem [ref=e5622]:
+            - link "Audible Download Audio Books" [ref=e5623] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e5624]
+              - generic [ref=e5625]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e5626]
+          - listitem [ref=e5627]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e5628] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e5629]
+              - generic [ref=e5630]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e5631]:
+          - listitem [ref=e5632]:
+            - link "Shopbop Designer Fashion Brands" [ref=e5633] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e5634]
+              - generic [ref=e5635]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e5636]
+          - listitem [ref=e5637]:
+            - link "Amazon Business Everything For Your Business" [ref=e5638] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e5639]
+              - generic [ref=e5640]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e5641]
+          - listitem [ref=e5642]:
+            - link "Amazon Music Stream millions of songs" [ref=e5643] [cursor=pointer]:
+              - /url: /music/player?ref=footer_apm
+              - heading "Amazon Music" [level=5] [ref=e5644]
+              - generic [ref=e5645]: Stream millions of songs
+          - listitem [ref=e5646]
+          - listitem [ref=e5647]
+    - generic [ref=e5648]:
+      - list [ref=e5649]:
+        - listitem [ref=e5650]:
+          - link "Conditions of Use & Sale" [ref=e5651] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e5652]:
+          - link "Privacy Notice" [ref=e5653] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e5654]:
+          - link "Interest-Based Ads" [ref=e5655] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e5656]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=e5658]:
+    - iframe [ref=f5e2]:
+      - generic [active]:
+        - img [ref=f6e1]
+        - img [ref=f6e2]
+        - img [ref=f6e3]
+        - img [ref=f6e4]
+        - img [ref=f6e5]
+        - img [ref=f6e6]
+        - img [ref=f6e7]
+        - img [ref=f6e8]
+        - img [ref=f6e9]
+        - img [ref=f6e10]
+        - img [ref=f6e11]
+        - img [ref=f6e12]
+        - img [ref=f6e13]
+        - img [ref=f6e14]
+        - img [ref=f6e15]
+        - img [ref=f6e16]
+        - img [ref=f6e17]
+        - img [ref=f6e18]
+        - img [ref=f6e19]
+        - img [ref=f6e20]
+        - img [ref=f6e21]
+        - img [ref=f6e22]
+        - img [ref=f6e23]
+        - img [ref=f6e24]
+        - img [ref=f6e25]
+        - img [ref=f6e26]
+        - img [ref=f6e27]
+        - img [ref=f6e28]
+        - img [ref=f6e29]
+        - img [ref=f6e30]
+        - img [ref=f6e31]
+        - img [ref=f6e32]
+        - img [ref=f6e33]
+        - img [ref=f6e34]
+        - img [ref=f6e35]
+        - img [ref=f6e36]
+        - img [ref=f6e37]
+        - img [ref=f6e38]
+```
+
+# Test source
+
+```ts
+  1 | import {test,expect} from '@playwright/test';
+  2 | test('vs',async({page})=>{
+  3 |     await page.goto('https://www.amazon.in/s?k=join+amazon+prime&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&tag=msndeskstdin-21&ref=pd_sl_9ntprzamt3_b');
+> 4 |     expect(await page.screenshot().toMatchSnapshot('amazon.png'));
+    |                                    ^ TypeError: page.screenshot(...).toMatchSnapshot is not a function
+  5 | })
+```

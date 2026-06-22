@@ -1,0 +1,729 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: VStesting.ts >> vs
+- Location: test\VStesting.ts:2:5
+
+# Error details
+
+```
+TypeError: page.screenshot(...).toMatchSnapshot is not a function
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+    - separator [ref=e8]
+    - heading "Keyboard shortcuts" [level=2] [ref=e9]
+    - list "Keyboard shortcuts" [ref=e10]:
+      - listitem [ref=e11]:
+        - link "Search, alt, forward slash" [ref=e12] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e13]:
+            - generic [ref=e14]: Search
+            - generic [ref=e15]:
+              - generic [ref=e16]: alt
+              - generic [ref=e17]: +
+              - generic [ref=e18]: /
+      - listitem [ref=e19]:
+        - link "Cart, shift, alt, c" [ref=e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e21]:
+            - generic [ref=e22]: Cart
+            - generic [ref=e23]:
+              - generic [ref=e24]: shift
+              - generic [ref=e25]: +
+              - generic [ref=e26]: alt
+              - generic [ref=e27]: +
+              - generic [ref=e28]: C
+      - listitem [ref=e29]:
+        - link "Home, shift, alt, h" [ref=e30] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e31]:
+            - generic [ref=e32]: Home
+            - generic [ref=e33]:
+              - generic [ref=e34]: shift
+              - generic [ref=e35]: +
+              - generic [ref=e36]: alt
+              - generic [ref=e37]: +
+              - generic [ref=e38]: H
+      - listitem [ref=e39]:
+        - link "Your orders, shift, alt, o" [ref=e40] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e41]:
+            - generic [ref=e42]: Orders
+            - generic [ref=e43]:
+              - generic [ref=e44]: shift
+              - generic [ref=e45]: +
+              - generic [ref=e46]: alt
+              - generic [ref=e47]: +
+              - generic [ref=e48]: O
+      - listitem [ref=e49]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Show/Hide shortcuts
+            - generic [ref=e53]:
+              - generic [ref=e54]: shift
+              - generic [ref=e55]: +
+              - generic [ref=e56]: alt
+              - generic [ref=e57]: +
+              - generic [ref=e58]: Z
+    - generic [ref=e64]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e65]:
+    - navigation "Primary" [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - link "Amazon.in" [ref=e70] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Bengaluru 562114 Update location" [ref=e73] [cursor=pointer]:
+            - generic [ref=e75]:
+              - generic [ref=e76]: Delivering to Bengaluru 562114
+              - generic [ref=e77]: Update location
+        - search [ref=e80]:
+          - generic [ref=e83]:
+            - generic [ref=e85]: All
+            - combobox "Select the department you want to search in" [ref=e87] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e90]: join amazon prime
+          - generic "Go" [ref=e93] [cursor=pointer]:
+            - button "Go" [ref=e94]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e98] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e101]:
+                - img "India" [ref=e102]
+                - generic [ref=e103]: EN
+            - button "Expand to Change Language or Country" [ref=e104] [cursor=pointer]
+          - generic [ref=e105]:
+            - link "Hello, sign in Account & Lists" [ref=e106] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fs%3Fk%3Djoin%2Bamazon%2Bprime%26adgrpid%3D1327112148528381%26hvadid%3D82944838805151%26hvbmt%3Dbb%26hvdev%3Dc%26hvlocphy%3D155895%26hvnetw%3Do%26hvqmt%3Db%26hvtargid%3Dkwd-82945393014646%253Aloc-90%26hydadcr%3D5626_2499487%26mcid%3D3861a9d242543041b997efa1f39279d3%26msclkid%3D91454ff549471d0325b625d38e469a53%26tag%3Dmsndeskstdin-21%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e108]: Hello, sign in
+              - generic [ref=e109]: Account & Lists
+            - button "Expand Account and Lists" [ref=e110] [cursor=pointer]
+          - link "Returns & Orders" [ref=e111] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e112]: Returns
+            - generic [ref=e113]: "& Orders"
+          - link "0 items in cart" [ref=e114] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e116]: "0"
+            - generic [ref=e119]: Cart
+      - generic [ref=e120]:
+        - button "Open All Categories Menu" [ref=e122] [cursor=pointer]:
+          - generic [ref=e124]: All
+        - list [ref=e128]:
+          - listitem [ref=e129]:
+            - generic [ref=e130]:
+              - link "Fresh" [ref=e131] [cursor=pointer]:
+                - /url: /fresh?ref_=nav_cs_grocery
+              - button "Fresh Details" [ref=e132] [cursor=pointer]
+          - listitem [ref=e133]:
+            - link "MX Player" [ref=e135] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e136]:
+            - link "Sell" [ref=e138] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e139]:
+            - link "Bestsellers" [ref=e141] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e142]:
+            - link "Today's Deals" [ref=e144] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e145]:
+            - link "Mobiles" [ref=e147] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e148]:
+            - generic [ref=e149]:
+              - link "Prime" [ref=e150] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e151] [cursor=pointer]
+          - listitem [ref=e152]:
+            - link "New Releases" [ref=e154] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e155]:
+            - link "Customer Service" [ref=e157] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e158]:
+            - link "Electronics" [ref=e160] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e161]:
+            - link "Amazon Pay" [ref=e163] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e164]:
+            - link "Fashion" [ref=e166] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e167]:
+            - link "Home & Kitchen" [ref=e169] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e170]:
+            - link "Computers" [ref=e172] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e173]:
+            - link "Toys & Games" [ref=e175] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e176]:
+            - link "Car & Motorbike" [ref=e178] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e179]:
+            - link "Gift Cards" [ref=e181] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e182]:
+            - link "Beauty & Personal Care" [ref=e184] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e185]:
+            - link "Home Improvement" [ref=e187] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e188]:
+            - link "Health, Household & Personal Care" [ref=e190] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e191]:
+            - link "Books" [ref=e193] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e194]:
+            - link "Custom Products" [ref=e196] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e197]:
+            - link "Grocery & Gourmet Foods" [ref=e199] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e200]:
+            - link "Video Games" [ref=e202] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e203]:
+            - link "Sports, Fitness & Outdoors" [ref=e205] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e206]:
+            - link "Baby" [ref=e208] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e209]:
+            - link "Pet Supplies" [ref=e211] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e212]:
+            - link "AmazonBasics" [ref=e214] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e215]:
+            - link "Audible" [ref=e217] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e218]:
+            - link "Kindle eBooks" [ref=e220] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e221]:
+            - link "Subscribe & Save" [ref=e223] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e224]:
+            - link "Flights" [ref=e226] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+      - dialog [ref=e229]
+  - generic [ref=e232]:
+    - generic [ref=e234]:
+      - generic [ref=e236]:
+        - generic [ref=e241]:
+          - img [ref=e244]:
+            - link [ref=e246] [cursor=pointer]:
+              - /url: /prime?pd_rd_w=G39Xe&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=8KEhv&pd_rd_r=52893575-f9da-4af8-8078-98609461cc7f&qid=1780926859&ref_=sxts_snpl_3_0_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+              - img [ref=e247]
+          - generic [ref=e249]:
+            - link "Amazon Prime Get unlimited free delivery, streaming video and music, and more." [ref=e250] [cursor=pointer]:
+              - /url: /prime?pd_rd_w=G39Xe&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=8KEhv&pd_rd_r=52893575-f9da-4af8-8078-98609461cc7f&qid=1780926859&ref_=sxts_snpl_3_0_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+              - generic [ref=e251]: Amazon Prime
+              - generic [ref=e252]: Get unlimited free delivery, streaming video and music, and more.
+            - list [ref=e253]:
+              - generic [ref=e254]:
+                - listitem [ref=e255]:
+                  - link "View benefits or sign up for Prime" [ref=e256] [cursor=pointer]:
+                    - /url: /prime?pd_rd_w=G39Xe&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=8KEhv&pd_rd_r=52893575-f9da-4af8-8078-98609461cc7f&qid=1780926859&ref_=sxts_snpl_3_1_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+                  - text: ·
+                - listitem [ref=e257]:
+                  - link "Manage Prime account" [ref=e258] [cursor=pointer]:
+                    - /url: /mc?pd_rd_w=G39Xe&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=8KEhv&pd_rd_r=52893575-f9da-4af8-8078-98609461cc7f&qid=1780926859&ref_=sxts_snpl_3_2_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+                  - text: ·
+                - listitem [ref=e259]:
+                  - link "Help" [ref=e260] [cursor=pointer]:
+                    - /url: /gp/help/customer/display.html?nodeId=201910250&pd_rd_w=G39Xe&content-id=amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce:amzn1.sym.e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_p=e6e96513-c48e-4568-bfa8-e32f4fdaabce&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=8KEhv&pd_rd_r=52893575-f9da-4af8-8078-98609461cc7f&qid=1780926859&ref_=sxts_snpl_3_3_e6e96513-c48e-4568-bfa8-e32f4fdaabce
+        - generic [ref=e264]:
+          - heading "No results for your search query." [level=2] [ref=e266]
+          - generic [ref=e267]: Try checking your spelling or use more general terms
+        - generic [ref=e275]:
+          - generic [ref=e278]:
+            - link "Sponsored video; click to navigate to featured product page. INSIX PAIN RELIEF GEL | QUICK Relief from Knee pain, back, neck, joint pain and sprains | Eases inflammation and muscle spasms | Fenugreek oil gel | Deep absorption | Non greasy | Pack of 3 |45g" [ref=e279] [cursor=pointer]:
+              - /url: https://aax-eu-zaz.amazon.in/x/c/JI4h8MEXHfRMJ1B7r1hU34YAAAGep4NI8QoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDS2ja4/clv1c_ek-YBPHXUsbWHn2mJtYb8xPAyU13fwsZ4fy6Xoz_tgGnu7dAcErzJkTHqxlpbx7JW8Y7rg48ogFZWmdkZf9jkeXwIwkvb27XF3CvrA09ba6ymleDFsQtOBw1YPVnxkKQFDgXPlAUB_6peKZqRhUCKTb6IdekxhXpmMzzxTOSjOQdWGArEgOJR6iUgLVqE7uadYqa9GcDLyYIVOpqsUXYqvy3_kov1Z9H3GSC-CU9pRIC40bjiK5Q6vuto59TZKqGg5J2fI5o8ymcIOpRZzDMTSBkW8X-x8xPtZt85ixEBAs4QpkjMRVAua42SvAK4f2Vtj5eE2F0BTvDZerm8NbzTBj33HdI6OgH0eSUqiu98QK1k4oHIH-pF4zeDshbEZ82R6MCmgTYOz6lSgk4V7Gh2oq43pIHpSCrini-Wsh0j6qfo5GUeKZQ0v4Tg9uvLZlgRpxPPxEpu0ql-C3dvy3HhIJeoppwvi83sM0DO_ZIgtckHKZrnKZAVC8anrDJmZJMKvCtvjKJfKa55IXQO1kWj-mBMBhaIqRWl5PgEhM612a7d99kQURSJ5Fbus-yroyvmEaRhqqdeGe1jQ6HqBEs4h3R6i3mu3NG-6KTYOIMWagSvxbPFxOcb9G_9iyT70PYfXBUoMXk2VQ3VEmBEWhgRqt0_82WGfs1FFDmJlWlpnnZPZp8bvb9en_CWAcSIImUGiAiWBtoywMc6-CQllHaA6K5qw43y5BUJ7Z1GyFyZvWISa9sc8eQTH9oPjxKCmMoDnqEewW7kF_2BW-8tk5I6s4e97rhzm79zLLDVRV2YYg77emD0Aiii-AsWmsSpIhVo3xwNUn7rcLBp2-JNGy-C4yefDxSe6jzQ8RV027Rbo-ydEMXQP2XU7OYIZI7egBAuBRw-z3YFeKWNDhzvxTyIX7etyXI765ruYUJuGgc5uQ98lVwpp5dML9oM17GEHBsu8yZ5QEZW3VIkwfHxKiGL87sPpljXIujE8PGfYkv0YZ-3-QVXcTOiPXGARZtHuQeiQOzv0JY7FUrgfM1JB-_wTEFnl2GJyntr3iCFrdoOJZduRkXTArv4e6CX3OXjPDylQyTvDk3m2Bws_C47LN_MZky9BEBAoWUGffdf7PokGsjTt9xI76eKce6mM9Qgv-MjJmdEbZW9evgtiqUjBLr69fZemx8uvVdMyDnB_aPEcVxQi06EFms-kV_-4Xg9JUtSV0vx5tDv9dwbPxnvIMjiyRmoZLfaoMsNfJRVQ2WS0VF9-qPnVfROWwRzKh6VuODwwnLYzonE6zKvmpHygiCMLUwsjVH93PSgdzqQmzvEmg8NVBgCHIJ8fgNlmKw0TU3ruRYDBcZ_aMjnkZvJACIf71UchWjOj-DMMRMtQJjxbXLSnxqmlwVJMwTatjUYkpjv8tO5XOfimocx5tkd3wLWkQ0vFgOiFHrCsZLxKYY8fjp9_OWJk0BXwCO6hUltUmESzakgOedSpsZD6voHX-qJWA1chBvRPRtCE2Yz1CyXksXvKK6FJr9W51w47FhV36TNNhyhCzzArPjoCmC1c8CW5fj4lS5G204-kqEygWddIVXhOjBHgyL96_FX-ERIVB1nHKeKhsTYkBFW-uj9lv1KY3bnkvg5jWc4BloKfVwOokA5e4_yL6d23KA3pNWqNZAaLTbb38yTe8/https://www.amazon.in/dp/B0DHKB5P57?aref=oDso4ygv4I&pd_rd_i=B0DHKB5P57&pf_rd_p=fa654091-9aaa-43a3-ac17-a2ad95526fd2&pd_rd_wg=bnVuF&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_w=iWJ2M&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429
+              - generic "Sponsored video; click to navigate to featured product page. INSIX PAIN RELIEF GEL | QUICK Relief from Knee pain, back, neck, joint pain and sprains | Eases inflammation and muscle spasms | Fenugreek oil gel | Deep absorption | Non greasy | Pack of 3 |45g" [ref=e280]
+            - generic [ref=e282]:
+              - button "Pause Sponsored Video" [ref=e283] [cursor=pointer]:
+                - img [ref=e285]
+              - button "Mute Sponsored Video" [pressed] [ref=e290] [cursor=pointer]:
+                - img [ref=e292]
+          - generic [ref=e306]:
+            - link [ref=e312] [cursor=pointer]:
+              - /url: https://aax-eu-zaz.amazon.in/x/c/JI4h8MEXHfRMJ1B7r1hU34YAAAGep4NI8QoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDS2ja4/clv1c_ek-YBPHXUsbWHn2mJtYb8xPAyU13fwsZ4fy6Xoz_tgGnu7dAcErzJkTHqxlpbx7JW8Y7rg48ogFZWmdkZf9jkeXwIwkvb27XF3CvrA09ba6ymleDFsQtOBw1YPVnxkKQFDgXPlAUB_6peKZqRhUCKTb6IdekxhXpmMzzxTOSjOQdWGArEgOJR6iUgLVqE7uadYqa9GcDLyYIVOpqsUXYqvy3_kov1Z9H3GSC-CU9pRIC40bjiK5Q6vuto59TZKqGg5J2fI5o8ymcIOpRZzDMTSBkW8X-x8xPtZt85ixEBAs4QpkjMRVAua42SvAK4f2Vtj5eE2F0BTvDZerm8NbzTBj33HdI6OgH0eSUqiu98QK1k4oHIH-pF4zeDshbEZ82R6MCmgTYOz6lSgk4V7Gh2oq43pIHpSCrini-Wsh0j6qfo5GUeKZQ0v4Tg9uvLZlgRpxPPxEpu0ql-C3dvy3HhIJeoppwvi83sM0DO_ZIgtckHKZrnKZAVC8anrDJmZJMKvCtvjKJfKa55IXQO1kWj-mBMBhaIqRWl5PgEhM612a7d99kQURSJ5Fbus-yroyvmEaRhqqdeGe1jQ6HqBEs4h3R6i3mu3NG-6KTYOIMWagSvxbPFxOcb9G_9iyT70PYfXBUoMXk2VQ3VEmBEWhgRqt0_82WGfs1FFDmJlWlpnnZPZp8bvb9en_CWAcSIImUGiAiWBtoywMc6-CQllHaA6K5qw43y5BUJ7Z1GyFyZvWISa9sc8eQTH9oPjxKCmMoDnqEewW7kF_2BW-8tk5I6s4e97rhzm79zLLDVRV2YYg77emD0Aiii-AsWmsSpIhVo3xwNUn7rcLBp2-JNGy-C4yefDxSe6jzQ8RV027Rbo-ydEMXQP2XU7OYIZI7egBAuBRw-z3YFeKWNDhzvxTyIX7etyXI765ruYUJuGgc5uQ98lVwpp5dML9oM17GEHBsu8yZ5QEZW3VIkwfHxKiGL87sPpljXIujE8PGfYkv0YZ-3-QVXcTOiPXGARZtHuQeiQOzv0JY7FUrgfM1JB-_wTEFnl2GJyntr3iCFrdoOJZduRkXTArv4e6CX3OXjPDylQyTvDk3m2Bws_C47LN_MZky9BEBAoWUGffdf7PokGsjTt9xI76eKce6mM9Qgv-MjJmdEbZW9evgtiqUjBLr69fZemx8uvVdMyDnB_aPEcVxQi06EFms-kV_-4Xg9JUtSV0vx5tDv9dwbPxnvIMjiyRmoZLfaoMsNfJRVQ2WS0VF9-qPnVfROWwRzKh6VuODwwnLYzonE6zKvmpHygiCMLUwsjVH93PSgdzqQmzvEmg8NVBgCHIJ8fgNlmKw0TU3ruRYDBcZ_aMjnkZvJACIf71UchWjOj-DMMRMtQJjxbXLSnxqmlwVJMwTatjUYkpjv8tO5XOfimocx5tkd3wLWkQ0vFgOiFHrCsZLxKYY8fjp9_OWJk0BXwCO6hUltUmESzakgOedSpsZD6voHX-qJWA1chBvRPRtCE2Yz1CyXksXvKK6FJr9W51w47FhV36TNNhyhCzzArPjoCmC1c8CW5fj4lS5G204-kqEygWddIVXhOjBHgyL96_FX-ERIVB1nHKeKhsTYkBFW-uj9lv1KY3bnkvg5jWc4BloKfVwOokA5e4_yL6d23KA3pNWqNZAaLTbb38yTe8/https://www.amazon.in/INSIX-sprains-inflammation-Fenugreek-absorption/dp/B0DHKB5P57/ref=sxbs_sbv_search_btf?adgrpid=1327112148528381&aref=oDso4ygv4I&content-id=amzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2%3Aamzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2&cv_ct_cx=join+amazon+prime&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&pd_rd_i=B0DHKB5P57&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&pd_rd_w=iWJ2M&pd_rd_wg=bnVuF&pf_rd_p=fa654091-9aaa-43a3-ac17-a2ad95526fd2&pf_rd_r=A11QQFHKV5R75PX3QQFE&qid=1780926859&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55
+              - img [ref=e314]
+            - generic [ref=e317]:
+              - generic [ref=e318]:
+                - generic [ref=e321] [cursor=pointer]: Sponsored
+                - link "INSIX PAIN RELIEF GEL | QUICK Relief from Knee pain, back, neck, joint pain and sprains | Eases inflammation and muscle spasms | Fenugreek oil gel | Deep absorption | Non greasy | Pack of 3 |45g" [ref=e323] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/JI4h8MEXHfRMJ1B7r1hU34YAAAGep4NI8QoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDS2ja4/clv1c_ek-YBPHXUsbWHn2mJtYb8xPAyU13fwsZ4fy6Xoz_tgGnu7dAcErzJkTHqxlpbx7JW8Y7rg48ogFZWmdkZf9jkeXwIwkvb27XF3CvrA09ba6ymleDFsQtOBw1YPVnxkKQFDgXPlAUB_6peKZqRhUCKTb6IdekxhXpmMzzxTOSjOQdWGArEgOJR6iUgLVqE7uadYqa9GcDLyYIVOpqsUXYqvy3_kov1Z9H3GSC-CU9pRIC40bjiK5Q6vuto59TZKqGg5J2fI5o8ymcIOpRZzDMTSBkW8X-x8xPtZt85ixEBAs4QpkjMRVAua42SvAK4f2Vtj5eE2F0BTvDZerm8NbzTBj33HdI6OgH0eSUqiu98QK1k4oHIH-pF4zeDshbEZ82R6MCmgTYOz6lSgk4V7Gh2oq43pIHpSCrini-Wsh0j6qfo5GUeKZQ0v4Tg9uvLZlgRpxPPxEpu0ql-C3dvy3HhIJeoppwvi83sM0DO_ZIgtckHKZrnKZAVC8anrDJmZJMKvCtvjKJfKa55IXQO1kWj-mBMBhaIqRWl5PgEhM612a7d99kQURSJ5Fbus-yroyvmEaRhqqdeGe1jQ6HqBEs4h3R6i3mu3NG-6KTYOIMWagSvxbPFxOcb9G_9iyT70PYfXBUoMXk2VQ3VEmBEWhgRqt0_82WGfs1FFDmJlWlpnnZPZp8bvb9en_CWAcSIImUGiAiWBtoywMc6-CQllHaA6K5qw43y5BUJ7Z1GyFyZvWISa9sc8eQTH9oPjxKCmMoDnqEewW7kF_2BW-8tk5I6s4e97rhzm79zLLDVRV2YYg77emD0Aiii-AsWmsSpIhVo3xwNUn7rcLBp2-JNGy-C4yefDxSe6jzQ8RV027Rbo-ydEMXQP2XU7OYIZI7egBAuBRw-z3YFeKWNDhzvxTyIX7etyXI765ruYUJuGgc5uQ98lVwpp5dML9oM17GEHBsu8yZ5QEZW3VIkwfHxKiGL87sPpljXIujE8PGfYkv0YZ-3-QVXcTOiPXGARZtHuQeiQOzv0JY7FUrgfM1JB-_wTEFnl2GJyntr3iCFrdoOJZduRkXTArv4e6CX3OXjPDylQyTvDk3m2Bws_C47LN_MZky9BEBAoWUGffdf7PokGsjTt9xI76eKce6mM9Qgv-MjJmdEbZW9evgtiqUjBLr69fZemx8uvVdMyDnB_aPEcVxQi06EFms-kV_-4Xg9JUtSV0vx5tDv9dwbPxnvIMjiyRmoZLfaoMsNfJRVQ2WS0VF9-qPnVfROWwRzKh6VuODwwnLYzonE6zKvmpHygiCMLUwsjVH93PSgdzqQmzvEmg8NVBgCHIJ8fgNlmKw0TU3ruRYDBcZ_aMjnkZvJACIf71UchWjOj-DMMRMtQJjxbXLSnxqmlwVJMwTatjUYkpjv8tO5XOfimocx5tkd3wLWkQ0vFgOiFHrCsZLxKYY8fjp9_OWJk0BXwCO6hUltUmESzakgOedSpsZD6voHX-qJWA1chBvRPRtCE2Yz1CyXksXvKK6FJr9W51w47FhV36TNNhyhCzzArPjoCmC1c8CW5fj4lS5G204-kqEygWddIVXhOjBHgyL96_FX-ERIVB1nHKeKhsTYkBFW-uj9lv1KY3bnkvg5jWc4BloKfVwOokA5e4_yL6d23KA3pNWqNZAaLTbb38yTe8/https://www.amazon.in/INSIX-sprains-inflammation-Fenugreek-absorption/dp/B0DHKB5P57/ref=sxbs_sbv_search_btf?adgrpid=1327112148528381&aref=oDso4ygv4I&content-id=amzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2%3Aamzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2&cv_ct_cx=join+amazon+prime&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&pd_rd_i=B0DHKB5P57&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&pd_rd_w=iWJ2M&pd_rd_wg=bnVuF&pf_rd_p=fa654091-9aaa-43a3-ac17-a2ad95526fd2&pf_rd_r=A11QQFHKV5R75PX3QQFE&qid=1780926859&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55
+                  - heading "INSIX PAIN RELIEF GEL | QUICK Relief from Knee pain, back, neck, joint pain and sprains | Eases inflammation and muscle spasms | Fenugreek oil gel | Deep absorption | Non greasy | Pack of 3 |45g" [level=2] [ref=e324]
+              - generic [ref=e325]:
+                - generic [ref=e326]:
+                  - text: "4.2"
+                  - button "4.2 out of 5 stars, rating details" [ref=e328] [cursor=pointer]:
+                    - generic [ref=e330]: 4.2 out of 5 stars
+                  - link "92 ratings" [ref=e332] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JI4h8MEXHfRMJ1B7r1hU34YAAAGep4NI8QoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDS2ja4/clv1c_ek-YBPHXUsbWHn2mJtYb8xPAyU13fwsZ4fy6Xoz_tgGnu7dAcErzJkTHqxlpbx7JW8Y7rg48ogFZWmdkZf9jkeXwIwkvb27XF3CvrA09ba6ymleDFsQtOBw1YPVnxkKQFDgXPlAUB_6peKZqRhUCKTb6IdekxhXpmMzzxTOSjOQdWGArEgOJR6iUgLVqE7uadYqa9GcDLyYIVOpqsUXYqvy3_kov1Z9H3GSC-CU9pRIC40bjiK5Q6vuto59TZKqGg5J2fI5o8ymcIOpRZzDMTSBkW8X-x8xPtZt85ixEBAs4QpkjMRVAua42SvAK4f2Vtj5eE2F0BTvDZerm8NbzTBj33HdI6OgH0eSUqiu98QK1k4oHIH-pF4zeDshbEZ82R6MCmgTYOz6lSgk4V7Gh2oq43pIHpSCrini-Wsh0j6qfo5GUeKZQ0v4Tg9uvLZlgRpxPPxEpu0ql-C3dvy3HhIJeoppwvi83sM0DO_ZIgtckHKZrnKZAVC8anrDJmZJMKvCtvjKJfKa55IXQO1kWj-mBMBhaIqRWl5PgEhM612a7d99kQURSJ5Fbus-yroyvmEaRhqqdeGe1jQ6HqBEs4h3R6i3mu3NG-6KTYOIMWagSvxbPFxOcb9G_9iyT70PYfXBUoMXk2VQ3VEmBEWhgRqt0_82WGfs1FFDmJlWlpnnZPZp8bvb9en_CWAcSIImUGiAiWBtoywMc6-CQllHaA6K5qw43y5BUJ7Z1GyFyZvWISa9sc8eQTH9oPjxKCmMoDnqEewW7kF_2BW-8tk5I6s4e97rhzm79zLLDVRV2YYg77emD0Aiii-AsWmsSpIhVo3xwNUn7rcLBp2-JNGy-C4yefDxSe6jzQ8RV027Rbo-ydEMXQP2XU7OYIZI7egBAuBRw-z3YFeKWNDhzvxTyIX7etyXI765ruYUJuGgc5uQ98lVwpp5dML9oM17GEHBsu8yZ5QEZW3VIkwfHxKiGL87sPpljXIujE8PGfYkv0YZ-3-QVXcTOiPXGARZtHuQeiQOzv0JY7FUrgfM1JB-_wTEFnl2GJyntr3iCFrdoOJZduRkXTArv4e6CX3OXjPDylQyTvDk3m2Bws_C47LN_MZky9BEBAoWUGffdf7PokGsjTt9xI76eKce6mM9Qgv-MjJmdEbZW9evgtiqUjBLr69fZemx8uvVdMyDnB_aPEcVxQi06EFms-kV_-4Xg9JUtSV0vx5tDv9dwbPxnvIMjiyRmoZLfaoMsNfJRVQ2WS0VF9-qPnVfROWwRzKh6VuODwwnLYzonE6zKvmpHygiCMLUwsjVH93PSgdzqQmzvEmg8NVBgCHIJ8fgNlmKw0TU3ruRYDBcZ_aMjnkZvJACIf71UchWjOj-DMMRMtQJjxbXLSnxqmlwVJMwTatjUYkpjv8tO5XOfimocx5tkd3wLWkQ0vFgOiFHrCsZLxKYY8fjp9_OWJk0BXwCO6hUltUmESzakgOedSpsZD6voHX-qJWA1chBvRPRtCE2Yz1CyXksXvKK6FJr9W51w47FhV36TNNhyhCzzArPjoCmC1c8CW5fj4lS5G204-kqEygWddIVXhOjBHgyL96_FX-ERIVB1nHKeKhsTYkBFW-uj9lv1KY3bnkvg5jWc4BloKfVwOokA5e4_yL6d23KA3pNWqNZAaLTbb38yTe8/https://www.amazon.in/INSIX-sprains-inflammation-Fenugreek-absorption/dp/B0DHKB5P57/ref=sxbs_sbv_search_btf?adgrpid=1327112148528381&aref=oDso4ygv4I&content-id=amzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2%3Aamzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2&cv_ct_cx=join+amazon+prime&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&pd_rd_i=B0DHKB5P57&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&pd_rd_w=iWJ2M&pd_rd_wg=bnVuF&pf_rd_p=fa654091-9aaa-43a3-ac17-a2ad95526fd2&pf_rd_r=A11QQFHKV5R75PX3QQFE&qid=1780926859&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55#customerReviews
+                    - text: (92)
+                - generic [ref=e333]: 400+ bought in past month
+              - generic [ref=e336]:
+                - generic [ref=e337]:
+                  - generic [ref=e339]:
+                    - generic [ref=e340]: Price, product page
+                    - 'link "₹274 M.R.P: ₹852 M.R.P: ₹852" [ref=e341] [cursor=pointer]':
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JI4h8MEXHfRMJ1B7r1hU34YAAAGep4NI8QoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDS2ja4/clv1c_ek-YBPHXUsbWHn2mJtYb8xPAyU13fwsZ4fy6Xoz_tgGnu7dAcErzJkTHqxlpbx7JW8Y7rg48ogFZWmdkZf9jkeXwIwkvb27XF3CvrA09ba6ymleDFsQtOBw1YPVnxkKQFDgXPlAUB_6peKZqRhUCKTb6IdekxhXpmMzzxTOSjOQdWGArEgOJR6iUgLVqE7uadYqa9GcDLyYIVOpqsUXYqvy3_kov1Z9H3GSC-CU9pRIC40bjiK5Q6vuto59TZKqGg5J2fI5o8ymcIOpRZzDMTSBkW8X-x8xPtZt85ixEBAs4QpkjMRVAua42SvAK4f2Vtj5eE2F0BTvDZerm8NbzTBj33HdI6OgH0eSUqiu98QK1k4oHIH-pF4zeDshbEZ82R6MCmgTYOz6lSgk4V7Gh2oq43pIHpSCrini-Wsh0j6qfo5GUeKZQ0v4Tg9uvLZlgRpxPPxEpu0ql-C3dvy3HhIJeoppwvi83sM0DO_ZIgtckHKZrnKZAVC8anrDJmZJMKvCtvjKJfKa55IXQO1kWj-mBMBhaIqRWl5PgEhM612a7d99kQURSJ5Fbus-yroyvmEaRhqqdeGe1jQ6HqBEs4h3R6i3mu3NG-6KTYOIMWagSvxbPFxOcb9G_9iyT70PYfXBUoMXk2VQ3VEmBEWhgRqt0_82WGfs1FFDmJlWlpnnZPZp8bvb9en_CWAcSIImUGiAiWBtoywMc6-CQllHaA6K5qw43y5BUJ7Z1GyFyZvWISa9sc8eQTH9oPjxKCmMoDnqEewW7kF_2BW-8tk5I6s4e97rhzm79zLLDVRV2YYg77emD0Aiii-AsWmsSpIhVo3xwNUn7rcLBp2-JNGy-C4yefDxSe6jzQ8RV027Rbo-ydEMXQP2XU7OYIZI7egBAuBRw-z3YFeKWNDhzvxTyIX7etyXI765ruYUJuGgc5uQ98lVwpp5dML9oM17GEHBsu8yZ5QEZW3VIkwfHxKiGL87sPpljXIujE8PGfYkv0YZ-3-QVXcTOiPXGARZtHuQeiQOzv0JY7FUrgfM1JB-_wTEFnl2GJyntr3iCFrdoOJZduRkXTArv4e6CX3OXjPDylQyTvDk3m2Bws_C47LN_MZky9BEBAoWUGffdf7PokGsjTt9xI76eKce6mM9Qgv-MjJmdEbZW9evgtiqUjBLr69fZemx8uvVdMyDnB_aPEcVxQi06EFms-kV_-4Xg9JUtSV0vx5tDv9dwbPxnvIMjiyRmoZLfaoMsNfJRVQ2WS0VF9-qPnVfROWwRzKh6VuODwwnLYzonE6zKvmpHygiCMLUwsjVH93PSgdzqQmzvEmg8NVBgCHIJ8fgNlmKw0TU3ruRYDBcZ_aMjnkZvJACIf71UchWjOj-DMMRMtQJjxbXLSnxqmlwVJMwTatjUYkpjv8tO5XOfimocx5tkd3wLWkQ0vFgOiFHrCsZLxKYY8fjp9_OWJk0BXwCO6hUltUmESzakgOedSpsZD6voHX-qJWA1chBvRPRtCE2Yz1CyXksXvKK6FJr9W51w47FhV36TNNhyhCzzArPjoCmC1c8CW5fj4lS5G204-kqEygWddIVXhOjBHgyL96_FX-ERIVB1nHKeKhsTYkBFW-uj9lv1KY3bnkvg5jWc4BloKfVwOokA5e4_yL6d23KA3pNWqNZAaLTbb38yTe8/https://www.amazon.in/INSIX-sprains-inflammation-Fenugreek-absorption/dp/B0DHKB5P57/ref=sxbs_sbv_search_btf?adgrpid=1327112148528381&aref=oDso4ygv4I&content-id=amzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2%3Aamzn1.sym.fa654091-9aaa-43a3-ac17-a2ad95526fd2&cv_ct_cx=join+amazon+prime&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&keywords=join+amazon+prime&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&pd_rd_i=B0DHKB5P57&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&pd_rd_w=iWJ2M&pd_rd_wg=bnVuF&pf_rd_p=fa654091-9aaa-43a3-ac17-a2ad95526fd2&pf_rd_r=A11QQFHKV5R75PX3QQFE&qid=1780926859&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55
+                      - generic [ref=e342]:
+                        - generic [ref=e343]: ₹274
+                        - generic [ref=e344]: ₹274
+                      - generic [ref=e345]: "M.R.P: ₹852"
+                      - generic [ref=e346]:
+                        - text: "M.R.P:"
+                        - generic [ref=e347]:
+                          - generic [ref=e348]: ₹852
+                          - text: ₹852
+                    - text: (68% off)
+                  - generic [ref=e351]:
+                    - generic [ref=e352]: Save 2%
+                    - text: with coupon
+                - generic [ref=e355]:
+                  - generic [ref=e357]: FREE delivery Wed, 10 Jun on first order
+                  - generic [ref=e359]: Or fastest delivery Tomorrow 8 am - 12 pm
+        - generic [ref=e365]:
+          - generic "Related searches in join amazon prime" [ref=e366]:
+            - heading "Related searches" [level=2] [ref=e369]
+          - list [ref=e371]:
+            - generic [ref=e372]:
+              - listitem [ref=e373]:
+                - link "join+amazon+prime" [ref=e375] [cursor=pointer]:
+                  - /url: /s?k=join%2Bamazon%2Bprime&ref=rsl_sug_0_0&pd_rd_w=Njpsx&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=bnVuF&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&qid=1780926859
+                  - generic [ref=e380]: join+amazon+prime
+              - listitem [ref=e381]:
+                - link "amazon mobile buy" [ref=e383] [cursor=pointer]:
+                  - /url: /s?k=amazon+mobile+buy&ref=rsl_sug_0_3&pd_rd_w=Njpsx&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=bnVuF&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&qid=1780926859
+                  - generic [ref=e388]: amazon mobile buy
+            - generic [ref=e389]:
+              - listitem [ref=e390]:
+                - link "amazon prime membership" [ref=e392] [cursor=pointer]:
+                  - /url: /s?k=amazon+prime+membership&ref=rsl_sug_0_1&pd_rd_w=Njpsx&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=bnVuF&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&qid=1780926859
+                  - generic [ref=e397]: amazon prime membership
+              - listitem [ref=e398]:
+                - link "amazon sign in" [ref=e400] [cursor=pointer]:
+                  - /url: /s?k=amazon+sign+in&ref=rsl_sug_0_4&pd_rd_w=Njpsx&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=bnVuF&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&qid=1780926859
+                  - generic [ref=e405]: amazon sign in
+            - generic [ref=e406]:
+              - listitem [ref=e407]:
+                - link "amazon online shopping mall" [ref=e409] [cursor=pointer]:
+                  - /url: /s?k=amazon+online+shopping+mall&ref=rsl_sug_0_2&pd_rd_w=Njpsx&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=bnVuF&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&qid=1780926859
+                  - generic [ref=e414]: amazon online shopping mall
+              - listitem [ref=e415]:
+                - link "amazon's card" [ref=e417] [cursor=pointer]:
+                  - /url: /s?k=amazon%27s+card&ref=rsl_sug_0_5&pd_rd_w=Njpsx&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=bnVuF&pd_rd_r=afb19b53-0fd2-4872-87a3-41df2d539429&qid=1780926859
+                  - generic [ref=e422]: amazon's card
+        - generic [ref=e425]:
+          - separator [ref=e426]
+          - generic [ref=e427]:
+            - heading "Brands related to your search" [ref=e428]
+            - button "Leave feedback on Sponsored ad" [ref=e433] [cursor=pointer]: Sponsored
+            - generic [ref=e437]:
+              - generic [ref=e439]:
+                - generic:
+                  - generic:
+                    - link:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JPsfnw4VReR-7bz_kcy65KMAAAGep4NJVQoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICA0tZxT/clv1c_ek-wBHfWVcba3TO2Z8p873dcuEsGb28JMD0PqyVHNTmQZ1SbjAX_9OAMP6kxlJkIjzOCayx-2OKnK9Oq3A7pJM72XnSuHU2xKidGL8-AWqxG43mzwtMB52Hx5HkU5vFPox5AqQZXZw0YTfz-aNvivMeaocHUNlXsOkb8zgHKJAbf3W6gC5r__zd_hEvv1rPTWMWakulDHAWkvYTPFkrBgSAJP9y_juSmHIULHnAVYFL6CsnbmUft93xq4EhJGYtKdTpCJSiaFSnc4-IS64ik9bax9Sc_krZoNuESFMJsXQH6z9ZcrC1ikRbdN16zCR8RBztiEfSNbnf5ma_qeAiEG5zHRDSsQOp2zXMS4E03Psfzy1kInw93w5v1u2cxRW1ejCadFncAor0hBqvUZ3jTeFeL09jLGftp5ZPApS2o6nvqm8OGifVf8sU_zbGCuFzPswNguxJye2SjMUaDqnbOZXABhu1ML4Q3ke-DYPM9F3y3xt1nZ_Djm4-1Y6l0hbhnPhP3PRX6xhA1U7-IhMfofWftJ5uUnjRsPdj5VtAIv18aF3o9yV8ujVSjcv9FGs_JI69w3ZjWAevB3xSmNf2Hi1l3FMnMDW2hu2FaHvXdkyohjZ2GJgFfVkTQRVUOkcFL3PqwCSWlIa6OzZkdZz_vJW23PWj2sStwPa2ukRTIeLbDsqYdxa56211pSrw2Jdk3Rg5NF8Oc9kICONdwtzTf1Kmx4z5ohRUpbubf04p-veQy8nSKJ4IEanAujpZkjyPI0iCpPRXPCz24U2Pzv6YJGM8OLwZ6kxft5IAXLdYR9hyJcCeS6HWYVFJlD_cKPWLPWWlTbEhhMEz9IJFJT2pYH4PuyoSTrP4WqiMR5DBB_jbwW0M7IpyxXGlEQUWS0dJT7Y4uG42XM6aPwPbErMoOuQ1HebLm8Qp-UUHAor3HXe6jfswzAN6Wf9VCVonnjO-tiRuuRJQ5Tq92d4tQtl4AMWrXfIO6_oSFGlpfcccxMNp-oEbDRqz9Y8ZI0-GydXZLz33hgLJ3drk6ZPQroTfAxP6croavHZBzaf6zgru_DS3kxq599MAsGrOGj_eiJ31bp8oZ257RBYfQvKIBijyCbcPvzNO04hX-6VhaWtMN1Q8RSejyOJCuMhP7U1VrCCIGW9-hdqDYmintdc12KMGplMGl6zvrwogp0pcqEiUbkxdvLY_M-BCNuDbgT-L6HA_LZzBMKntbOiAAtTOq6_mECvNwNmylOOafqyuVEgrH9SZtlI16dbnB0hGL82tQs4DKwdv9HISsmeBylj1mYsqaoi4EkaQfV28nPHUD3yVdHUkEgnDXcmLMJ1ok7baDgrhlk9oKWMAbQyz8XEOVaqMKogBGaG5Neq4MT56DW9GnMaTIY9NGDFzax5SjeFm8x_NSHJHKblldPvzv2aONiNOphAuUjWmIRAgGkdd6WnXbOedo3mW6fXEJA7uLA4Kzd_prSSoaZTHwUohKh2Kt3K8A2PerOxMkOJG33xh73lt0dZkjjI7vDF84k2XJ0WTDO6mSy0tTvONLjEJBNI8ziv8U4aN0KwM5Hf9PqC4ManP5OxG1amKNpiFNlq5br9hKUcKC4U5P9HXjmRkLd8txZl_ImfkIqzDJad-OTq5gAWVySsMKqLSvgz79AYyJLDS_6LAtVfjXwI9vwjtVdadNJbopwQ/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                    - link "Nutrisage" [ref=e440] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JPsfnw4VReR-7bz_kcy65KMAAAGep4NJVQoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICA0tZxT/clv1c_ek-wBHfWVcba3TO2Z8p873dcuEsGb28JMD0PqyVHNTmQZ1SbjAX_9OAMP6kxlJkIjzOCayx-2OKnK9Oq3A7pJM72XnSuHU2xKidGL8-AWqxG43mzwtMB52Hx5HkU5vFPox5AqQZXZw0YTfz-aNvivMeaocHUNlXsOkb8zgHKJAbf3W6gC5r__zd_hEvv1rPTWMWakulDHAWkvYTPFkrBgSAJP9y_juSmHIULHnAVYFL6CsnbmUft93xq4EhJGYtKdTpCJSiaFSnc4-IS64ik9bax9Sc_krZoNuESFMJsXQH6z9ZcrC1ikRbdN16zCR8RBztiEfSNbnf5ma_qeAiEG5zHRDSsQOp2zXMS4E03Psfzy1kInw93w5v1u2cxRW1ejCadFncAor0hBqvUZ3jTeFeL09jLGftp5ZPApS2o6nvqm8OGifVf8sU_zbGCuFzPswNguxJye2SjMUaDqnbOZXABhu1ML4Q3ke-DYPM9F3y3xt1nZ_Djm4-1Y6l0hbhnPhP3PRX6xhA1U7-IhMfofWftJ5uUnjRsPdj5VtAIv18aF3o9yV8ujVSjcv9FGs_JI69w3ZjWAevB3xSmNf2Hi1l3FMnMDW2hu2FaHvXdkyohjZ2GJgFfVkTQRVUOkcFL3PqwCSWlIa6OzZkdZz_vJW23PWj2sStwPa2ukRTIeLbDsqYdxa56211pSrw2Jdk3Rg5NF8Oc9kICONdwtzTf1Kmx4z5ohRUpbubf04p-veQy8nSKJ4IEanAujpZkjyPI0iCpPRXPCz24U2Pzv6YJGM8OLwZ6kxft5IAXLdYR9hyJcCeS6HWYVFJlD_cKPWLPWWlTbEhhMEz9IJFJT2pYH4PuyoSTrP4WqiMR5DBB_jbwW0M7IpyxXGlEQUWS0dJT7Y4uG42XM6aPwPbErMoOuQ1HebLm8Qp-UUHAor3HXe6jfswzAN6Wf9VCVonnjO-tiRuuRJQ5Tq92d4tQtl4AMWrXfIO6_oSFGlpfcccxMNp-oEbDRqz9Y8ZI0-GydXZLz33hgLJ3drk6ZPQroTfAxP6croavHZBzaf6zgru_DS3kxq599MAsGrOGj_eiJ31bp8oZ257RBYfQvKIBijyCbcPvzNO04hX-6VhaWtMN1Q8RSejyOJCuMhP7U1VrCCIGW9-hdqDYmintdc12KMGplMGl6zvrwogp0pcqEiUbkxdvLY_M-BCNuDbgT-L6HA_LZzBMKntbOiAAtTOq6_mECvNwNmylOOafqyuVEgrH9SZtlI16dbnB0hGL82tQs4DKwdv9HISsmeBylj1mYsqaoi4EkaQfV28nPHUD3yVdHUkEgnDXcmLMJ1ok7baDgrhlk9oKWMAbQyz8XEOVaqMKogBGaG5Neq4MT56DW9GnMaTIY9NGDFzax5SjeFm8x_NSHJHKblldPvzv2aONiNOphAuUjWmIRAgGkdd6WnXbOedo3mW6fXEJA7uLA4Kzd_prSSoaZTHwUohKh2Kt3K8A2PerOxMkOJG33xh73lt0dZkjjI7vDF84k2XJ0WTDO6mSy0tTvONLjEJBNI8ziv8U4aN0KwM5Hf9PqC4ManP5OxG1amKNpiFNlq5br9hKUcKC4U5P9HXjmRkLd8txZl_ImfkIqzDJad-OTq5gAWVySsMKqLSvgz79AYyJLDS_6LAtVfjXwI9vwjtVdadNJbopwQ/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                      - img "Nutrisage" [ref=e441]
+                    - generic [ref=e443]:
+                      - generic [ref=e444]:
+                        - link [ref=e445] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JPsfnw4VReR-7bz_kcy65KMAAAGep4NJVQoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICA0tZxT/clv1c_ek-wBHfWVcba3TO2Z8p873dcuEsGb28JMD0PqyVHNTmQZ1SbjAX_9OAMP6kxlJkIjzOCayx-2OKnK9Oq3A7pJM72XnSuHU2xKidGL8-AWqxG43mzwtMB52Hx5HkU5vFPox5AqQZXZw0YTfz-aNvivMeaocHUNlXsOkb8zgHKJAbf3W6gC5r__zd_hEvv1rPTWMWakulDHAWkvYTPFkrBgSAJP9y_juSmHIULHnAVYFL6CsnbmUft93xq4EhJGYtKdTpCJSiaFSnc4-IS64ik9bax9Sc_krZoNuESFMJsXQH6z9ZcrC1ikRbdN16zCR8RBztiEfSNbnf5ma_qeAiEG5zHRDSsQOp2zXMS4E03Psfzy1kInw93w5v1u2cxRW1ejCadFncAor0hBqvUZ3jTeFeL09jLGftp5ZPApS2o6nvqm8OGifVf8sU_zbGCuFzPswNguxJye2SjMUaDqnbOZXABhu1ML4Q3ke-DYPM9F3y3xt1nZ_Djm4-1Y6l0hbhnPhP3PRX6xhA1U7-IhMfofWftJ5uUnjRsPdj5VtAIv18aF3o9yV8ujVSjcv9FGs_JI69w3ZjWAevB3xSmNf2Hi1l3FMnMDW2hu2FaHvXdkyohjZ2GJgFfVkTQRVUOkcFL3PqwCSWlIa6OzZkdZz_vJW23PWj2sStwPa2ukRTIeLbDsqYdxa56211pSrw2Jdk3Rg5NF8Oc9kICONdwtzTf1Kmx4z5ohRUpbubf04p-veQy8nSKJ4IEanAujpZkjyPI0iCpPRXPCz24U2Pzv6YJGM8OLwZ6kxft5IAXLdYR9hyJcCeS6HWYVFJlD_cKPWLPWWlTbEhhMEz9IJFJT2pYH4PuyoSTrP4WqiMR5DBB_jbwW0M7IpyxXGlEQUWS0dJT7Y4uG42XM6aPwPbErMoOuQ1HebLm8Qp-UUHAor3HXe6jfswzAN6Wf9VCVonnjO-tiRuuRJQ5Tq92d4tQtl4AMWrXfIO6_oSFGlpfcccxMNp-oEbDRqz9Y8ZI0-GydXZLz33hgLJ3drk6ZPQroTfAxP6croavHZBzaf6zgru_DS3kxq599MAsGrOGj_eiJ31bp8oZ257RBYfQvKIBijyCbcPvzNO04hX-6VhaWtMN1Q8RSejyOJCuMhP7U1VrCCIGW9-hdqDYmintdc12KMGplMGl6zvrwogp0pcqEiUbkxdvLY_M-BCNuDbgT-L6HA_LZzBMKntbOiAAtTOq6_mECvNwNmylOOafqyuVEgrH9SZtlI16dbnB0hGL82tQs4DKwdv9HISsmeBylj1mYsqaoi4EkaQfV28nPHUD3yVdHUkEgnDXcmLMJ1ok7baDgrhlk9oKWMAbQyz8XEOVaqMKogBGaG5Neq4MT56DW9GnMaTIY9NGDFzax5SjeFm8x_NSHJHKblldPvzv2aONiNOphAuUjWmIRAgGkdd6WnXbOedo3mW6fXEJA7uLA4Kzd_prSSoaZTHwUohKh2Kt3K8A2PerOxMkOJG33xh73lt0dZkjjI7vDF84k2XJ0WTDO6mSy0tTvONLjEJBNI8ziv8U4aN0KwM5Hf9PqC4ManP5OxG1amKNpiFNlq5br9hKUcKC4U5P9HXjmRkLd8txZl_ImfkIqzDJad-OTq5gAWVySsMKqLSvgz79AYyJLDS_6LAtVfjXwI9vwjtVdadNJbopwQ/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                        - link "Nutrisage" [ref=e446] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JPsfnw4VReR-7bz_kcy65KMAAAGep4NJVQoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICA0tZxT/clv1c_ek-wBHfWVcba3TO2Z8p873dcuEsGb28JMD0PqyVHNTmQZ1SbjAX_9OAMP6kxlJkIjzOCayx-2OKnK9Oq3A7pJM72XnSuHU2xKidGL8-AWqxG43mzwtMB52Hx5HkU5vFPox5AqQZXZw0YTfz-aNvivMeaocHUNlXsOkb8zgHKJAbf3W6gC5r__zd_hEvv1rPTWMWakulDHAWkvYTPFkrBgSAJP9y_juSmHIULHnAVYFL6CsnbmUft93xq4EhJGYtKdTpCJSiaFSnc4-IS64ik9bax9Sc_krZoNuESFMJsXQH6z9ZcrC1ikRbdN16zCR8RBztiEfSNbnf5ma_qeAiEG5zHRDSsQOp2zXMS4E03Psfzy1kInw93w5v1u2cxRW1ejCadFncAor0hBqvUZ3jTeFeL09jLGftp5ZPApS2o6nvqm8OGifVf8sU_zbGCuFzPswNguxJye2SjMUaDqnbOZXABhu1ML4Q3ke-DYPM9F3y3xt1nZ_Djm4-1Y6l0hbhnPhP3PRX6xhA1U7-IhMfofWftJ5uUnjRsPdj5VtAIv18aF3o9yV8ujVSjcv9FGs_JI69w3ZjWAevB3xSmNf2Hi1l3FMnMDW2hu2FaHvXdkyohjZ2GJgFfVkTQRVUOkcFL3PqwCSWlIa6OzZkdZz_vJW23PWj2sStwPa2ukRTIeLbDsqYdxa56211pSrw2Jdk3Rg5NF8Oc9kICONdwtzTf1Kmx4z5ohRUpbubf04p-veQy8nSKJ4IEanAujpZkjyPI0iCpPRXPCz24U2Pzv6YJGM8OLwZ6kxft5IAXLdYR9hyJcCeS6HWYVFJlD_cKPWLPWWlTbEhhMEz9IJFJT2pYH4PuyoSTrP4WqiMR5DBB_jbwW0M7IpyxXGlEQUWS0dJT7Y4uG42XM6aPwPbErMoOuQ1HebLm8Qp-UUHAor3HXe6jfswzAN6Wf9VCVonnjO-tiRuuRJQ5Tq92d4tQtl4AMWrXfIO6_oSFGlpfcccxMNp-oEbDRqz9Y8ZI0-GydXZLz33hgLJ3drk6ZPQroTfAxP6croavHZBzaf6zgru_DS3kxq599MAsGrOGj_eiJ31bp8oZ257RBYfQvKIBijyCbcPvzNO04hX-6VhaWtMN1Q8RSejyOJCuMhP7U1VrCCIGW9-hdqDYmintdc12KMGplMGl6zvrwogp0pcqEiUbkxdvLY_M-BCNuDbgT-L6HA_LZzBMKntbOiAAtTOq6_mECvNwNmylOOafqyuVEgrH9SZtlI16dbnB0hGL82tQs4DKwdv9HISsmeBylj1mYsqaoi4EkaQfV28nPHUD3yVdHUkEgnDXcmLMJ1ok7baDgrhlk9oKWMAbQyz8XEOVaqMKogBGaG5Neq4MT56DW9GnMaTIY9NGDFzax5SjeFm8x_NSHJHKblldPvzv2aONiNOphAuUjWmIRAgGkdd6WnXbOedo3mW6fXEJA7uLA4Kzd_prSSoaZTHwUohKh2Kt3K8A2PerOxMkOJG33xh73lt0dZkjjI7vDF84k2XJ0WTDO6mSy0tTvONLjEJBNI8ziv8U4aN0KwM5Hf9PqC4ManP5OxG1amKNpiFNlq5br9hKUcKC4U5P9HXjmRkLd8txZl_ImfkIqzDJad-OTq5gAWVySsMKqLSvgz79AYyJLDS_6LAtVfjXwI9vwjtVdadNJbopwQ/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                          - img "Nutrisage" [ref=e448]
+                      - generic [ref=e449]:
+                        - link [ref=e450] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JPsfnw4VReR-7bz_kcy65KMAAAGep4NJVQoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICA0tZxT/clv1c_ek-wBHfWVcba3TO2Z8p873dcuEsGb28JMD0PqyVHNTmQZ1SbjAX_9OAMP6kxlJkIjzOCayx-2OKnK9Oq3A7pJM72XnSuHU2xKidGL8-AWqxG43mzwtMB52Hx5HkU5vFPox5AqQZXZw0YTfz-aNvivMeaocHUNlXsOkb8zgHKJAbf3W6gC5r__zd_hEvv1rPTWMWakulDHAWkvYTPFkrBgSAJP9y_juSmHIULHnAVYFL6CsnbmUft93xq4EhJGYtKdTpCJSiaFSnc4-IS64ik9bax9Sc_krZoNuESFMJsXQH6z9ZcrC1ikRbdN16zCR8RBztiEfSNbnf5ma_qeAiEG5zHRDSsQOp2zXMS4E03Psfzy1kInw93w5v1u2cxRW1ejCadFncAor0hBqvUZ3jTeFeL09jLGftp5ZPApS2o6nvqm8OGifVf8sU_zbGCuFzPswNguxJye2SjMUaDqnbOZXABhu1ML4Q3ke-DYPM9F3y3xt1nZ_Djm4-1Y6l0hbhnPhP3PRX6xhA1U7-IhMfofWftJ5uUnjRsPdj5VtAIv18aF3o9yV8ujVSjcv9FGs_JI69w3ZjWAevB3xSmNf2Hi1l3FMnMDW2hu2FaHvXdkyohjZ2GJgFfVkTQRVUOkcFL3PqwCSWlIa6OzZkdZz_vJW23PWj2sStwPa2ukRTIeLbDsqYdxa56211pSrw2Jdk3Rg5NF8Oc9kICONdwtzTf1Kmx4z5ohRUpbubf04p-veQy8nSKJ4IEanAujpZkjyPI0iCpPRXPCz24U2Pzv6YJGM8OLwZ6kxft5IAXLdYR9hyJcCeS6HWYVFJlD_cKPWLPWWlTbEhhMEz9IJFJT2pYH4PuyoSTrP4WqiMR5DBB_jbwW0M7IpyxXGlEQUWS0dJT7Y4uG42XM6aPwPbErMoOuQ1HebLm8Qp-UUHAor3HXe6jfswzAN6Wf9VCVonnjO-tiRuuRJQ5Tq92d4tQtl4AMWrXfIO6_oSFGlpfcccxMNp-oEbDRqz9Y8ZI0-GydXZLz33hgLJ3drk6ZPQroTfAxP6croavHZBzaf6zgru_DS3kxq599MAsGrOGj_eiJ31bp8oZ257RBYfQvKIBijyCbcPvzNO04hX-6VhaWtMN1Q8RSejyOJCuMhP7U1VrCCIGW9-hdqDYmintdc12KMGplMGl6zvrwogp0pcqEiUbkxdvLY_M-BCNuDbgT-L6HA_LZzBMKntbOiAAtTOq6_mECvNwNmylOOafqyuVEgrH9SZtlI16dbnB0hGL82tQs4DKwdv9HISsmeBylj1mYsqaoi4EkaQfV28nPHUD3yVdHUkEgnDXcmLMJ1ok7baDgrhlk9oKWMAbQyz8XEOVaqMKogBGaG5Neq4MT56DW9GnMaTIY9NGDFzax5SjeFm8x_NSHJHKblldPvzv2aONiNOphAuUjWmIRAgGkdd6WnXbOedo3mW6fXEJA7uLA4Kzd_prSSoaZTHwUohKh2Kt3K8A2PerOxMkOJG33xh73lt0dZkjjI7vDF84k2XJ0WTDO6mSy0tTvONLjEJBNI8ziv8U4aN0KwM5Hf9PqC4ManP5OxG1amKNpiFNlq5br9hKUcKC4U5P9HXjmRkLd8txZl_ImfkIqzDJad-OTq5gAWVySsMKqLSvgz79AYyJLDS_6LAtVfjXwI9vwjtVdadNJbopwQ/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                        - link "Advanced Joints Pain Relief By Nutrisage" [ref=e451] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JPsfnw4VReR-7bz_kcy65KMAAAGep4NJVQoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICA0tZxT/clv1c_ek-wBHfWVcba3TO2Z8p873dcuEsGb28JMD0PqyVHNTmQZ1SbjAX_9OAMP6kxlJkIjzOCayx-2OKnK9Oq3A7pJM72XnSuHU2xKidGL8-AWqxG43mzwtMB52Hx5HkU5vFPox5AqQZXZw0YTfz-aNvivMeaocHUNlXsOkb8zgHKJAbf3W6gC5r__zd_hEvv1rPTWMWakulDHAWkvYTPFkrBgSAJP9y_juSmHIULHnAVYFL6CsnbmUft93xq4EhJGYtKdTpCJSiaFSnc4-IS64ik9bax9Sc_krZoNuESFMJsXQH6z9ZcrC1ikRbdN16zCR8RBztiEfSNbnf5ma_qeAiEG5zHRDSsQOp2zXMS4E03Psfzy1kInw93w5v1u2cxRW1ejCadFncAor0hBqvUZ3jTeFeL09jLGftp5ZPApS2o6nvqm8OGifVf8sU_zbGCuFzPswNguxJye2SjMUaDqnbOZXABhu1ML4Q3ke-DYPM9F3y3xt1nZ_Djm4-1Y6l0hbhnPhP3PRX6xhA1U7-IhMfofWftJ5uUnjRsPdj5VtAIv18aF3o9yV8ujVSjcv9FGs_JI69w3ZjWAevB3xSmNf2Hi1l3FMnMDW2hu2FaHvXdkyohjZ2GJgFfVkTQRVUOkcFL3PqwCSWlIa6OzZkdZz_vJW23PWj2sStwPa2ukRTIeLbDsqYdxa56211pSrw2Jdk3Rg5NF8Oc9kICONdwtzTf1Kmx4z5ohRUpbubf04p-veQy8nSKJ4IEanAujpZkjyPI0iCpPRXPCz24U2Pzv6YJGM8OLwZ6kxft5IAXLdYR9hyJcCeS6HWYVFJlD_cKPWLPWWlTbEhhMEz9IJFJT2pYH4PuyoSTrP4WqiMR5DBB_jbwW0M7IpyxXGlEQUWS0dJT7Y4uG42XM6aPwPbErMoOuQ1HebLm8Qp-UUHAor3HXe6jfswzAN6Wf9VCVonnjO-tiRuuRJQ5Tq92d4tQtl4AMWrXfIO6_oSFGlpfcccxMNp-oEbDRqz9Y8ZI0-GydXZLz33hgLJ3drk6ZPQroTfAxP6croavHZBzaf6zgru_DS3kxq599MAsGrOGj_eiJ31bp8oZ257RBYfQvKIBijyCbcPvzNO04hX-6VhaWtMN1Q8RSejyOJCuMhP7U1VrCCIGW9-hdqDYmintdc12KMGplMGl6zvrwogp0pcqEiUbkxdvLY_M-BCNuDbgT-L6HA_LZzBMKntbOiAAtTOq6_mECvNwNmylOOafqyuVEgrH9SZtlI16dbnB0hGL82tQs4DKwdv9HISsmeBylj1mYsqaoi4EkaQfV28nPHUD3yVdHUkEgnDXcmLMJ1ok7baDgrhlk9oKWMAbQyz8XEOVaqMKogBGaG5Neq4MT56DW9GnMaTIY9NGDFzax5SjeFm8x_NSHJHKblldPvzv2aONiNOphAuUjWmIRAgGkdd6WnXbOedo3mW6fXEJA7uLA4Kzd_prSSoaZTHwUohKh2Kt3K8A2PerOxMkOJG33xh73lt0dZkjjI7vDF84k2XJ0WTDO6mSy0tTvONLjEJBNI8ziv8U4aN0KwM5Hf9PqC4ManP5OxG1amKNpiFNlq5br9hKUcKC4U5P9HXjmRkLd8txZl_ImfkIqzDJad-OTq5gAWVySsMKqLSvgz79AYyJLDS_6LAtVfjXwI9vwjtVdadNJbopwQ/https://www.amazon.in/stores/page/4F8EBBB4-120E-48AD-A821-BCE1CA527AFC/?_encoding=UTF8&store_ref=SB_A05978113MKNGF4NNRT9L-A039346137GA3IS897K3S&pd_rd_plhdr=t&aaxitk=f49ff3e045105d81e622be4e77f4a17d&hsa_cr_id=3283176880002&lp_asins=B07QHBQVF6%2CB07QGCHBQV%2CB07QG8KT2T&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=rNYALOrfJB&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                          - generic [ref=e453]:
+                            - generic [ref=e454]: Advanced Joints Pain Relief By Nutrisage
+                            - generic [ref=e455]: Advanced Joints Pain Relief By Nutrisage
+              - generic [ref=e457]:
+                - generic:
+                  - generic:
+                    - link:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JDKmgFr22c8eHlhIPHWuukkAAAGep4NJVgoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICD-tjuh/clv1c_ek-YBPHXFbbWzjK3YoscrxfcuU0CLg9JQm6LDEf1t4GiiBTerU67AXYU1xs_yRGFXqSY5kOUaDla3hav0Bjpzz-aInZZlSAtfCRnemhZM9x0kzJv2545pQcYSfx9gLKRlJ-qmob5Ln62z1GQh9TaMwrLn4CYjx1KEsL83zm-vPafGW4JCKy1x86v3_iIQEr2QkXJYnlWKTxEtGZ-tFXu4XDjRfkbLXxGXEZMOQ3uJ4PJVFam7O0CU5wLfFfnvsttifgztBNN9W-o80UrLRCRsp1GeNRXLKPJmlp1BhBFIM4-_ctSzaga8qSgScqoW_Mvz42FvzoCTz0_yuIttU1AuZOiCB57OdotLQCaQLTq_1bW7RvG-o2073oDSfQt8wlyYsmaQGV81g0x155RAJoe8jwoYX5CPfOwJUm-D_W56sj0EtdRolzhmB9UkHrDmrgv2chdKX4gd4NC6Z-IgcSRNPck2XpjalCI08xY1H0Oo6eh7obyUdOMAZDVoAPscUL-Y6KvZiG2Wo9bAsEns4k7R0WxG8hmoglKB9tpWhaOeHIStZjykG0iIojvZJ76Y6oTUDD3Wd3uiMtNcebcAkcDEBcc6SKbPfwzxcEyXkLRKn-PFStoyWhh0SqQKdtmSLNgBdSjYLzbCfusog8rO5Qo97ri11LsNtHRSnMeZpUJsxuMddaaK5XY_tov-NRX9hkPwnxK6cJFqQic6BJoAreJSuf8x98DwYe0Akf8-1vAF6iehzBdhzEsTEIgePiKYpKid8Nwn-wS_3zAqnjCz7a-z0UN6ayRL1URiOp8slFv2jw0vqjA0iqtUg7C6eQcReRMFHWNH7hyQ-iueOK-SzKxr1ZfKjhwCdZxnfwLxFmh-0kRtDksYLz7eWdhH37jS48cQeSaf7-azsqnUhxkGDcIATWaz8mk5iPrMDIL9lwr9JPm541Ytip82UQzdxSLil_wCRMQ4ZyiUtXcMx3BKv3x4xgWBdaitPEgm17IvFgFdBw7efkti3x_pUybjlDhBnwUTSBMTR9YMlLcZfRH3UWz-pCPN2c9piiBOwxE3ZKssixtatokK8-Iy_Ot_kSBLo-pCUA7_Ur8RAbUA8EgCOS7XlslQyqCJOuZ2RiLQL85ASdzdjvC5mLhgpFdl0qy7Ij0G6uQOMdb3wfNosYRjMhEGNGFBLk08uGS5gN347Hc7M65ZjTqtgjKyEUJgw9lF2sG3ATltARhCGzzPibz1lUVakLNtrtXHxw4wOEYuUQbELEJqLN1FBo7Ue4MaVhZb4B9GV7OvHOQtMjH23MhC1O62fP6pAA_U2CoGIQN3iyim84fn8CQ1PVKVSNqOzc_-5a-JhBsbNH_9zijykOb7Q3jAWy0o90i9Rrpwo-KwMg_RmrVRq7fHTknFk9Kzoxl-UraRl44dw4m1mFLt2G08M4ZEMGdCCQiF8XOB10w8JBfkmNWql0QArvOkc7t_PBsnN0MEfew5_5f9KAKJ9jg_mKVxHZeswXlTMJQHIHV9jJ7178jdUytFUKfssbITaGSAGw1AePQewf7sHpER1DX4YyJ4sRjRWjo3lbkuXlxGyslQ0FWBRoBv0JoRlAyxQa7bkeJfWUu_Zdgoc9vCHFiPZg-59qB62y3wN7rdmai9eYbKscA0cpnagy3o4j9BqIRgfGq76j0CIvFYbB5lVZFqcGlZzU8ZXlRyCk/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                    - link "Trexgen Pharmaceuticals PvtLtd" [ref=e458] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JDKmgFr22c8eHlhIPHWuukkAAAGep4NJVgoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICD-tjuh/clv1c_ek-YBPHXFbbWzjK3YoscrxfcuU0CLg9JQm6LDEf1t4GiiBTerU67AXYU1xs_yRGFXqSY5kOUaDla3hav0Bjpzz-aInZZlSAtfCRnemhZM9x0kzJv2545pQcYSfx9gLKRlJ-qmob5Ln62z1GQh9TaMwrLn4CYjx1KEsL83zm-vPafGW4JCKy1x86v3_iIQEr2QkXJYnlWKTxEtGZ-tFXu4XDjRfkbLXxGXEZMOQ3uJ4PJVFam7O0CU5wLfFfnvsttifgztBNN9W-o80UrLRCRsp1GeNRXLKPJmlp1BhBFIM4-_ctSzaga8qSgScqoW_Mvz42FvzoCTz0_yuIttU1AuZOiCB57OdotLQCaQLTq_1bW7RvG-o2073oDSfQt8wlyYsmaQGV81g0x155RAJoe8jwoYX5CPfOwJUm-D_W56sj0EtdRolzhmB9UkHrDmrgv2chdKX4gd4NC6Z-IgcSRNPck2XpjalCI08xY1H0Oo6eh7obyUdOMAZDVoAPscUL-Y6KvZiG2Wo9bAsEns4k7R0WxG8hmoglKB9tpWhaOeHIStZjykG0iIojvZJ76Y6oTUDD3Wd3uiMtNcebcAkcDEBcc6SKbPfwzxcEyXkLRKn-PFStoyWhh0SqQKdtmSLNgBdSjYLzbCfusog8rO5Qo97ri11LsNtHRSnMeZpUJsxuMddaaK5XY_tov-NRX9hkPwnxK6cJFqQic6BJoAreJSuf8x98DwYe0Akf8-1vAF6iehzBdhzEsTEIgePiKYpKid8Nwn-wS_3zAqnjCz7a-z0UN6ayRL1URiOp8slFv2jw0vqjA0iqtUg7C6eQcReRMFHWNH7hyQ-iueOK-SzKxr1ZfKjhwCdZxnfwLxFmh-0kRtDksYLz7eWdhH37jS48cQeSaf7-azsqnUhxkGDcIATWaz8mk5iPrMDIL9lwr9JPm541Ytip82UQzdxSLil_wCRMQ4ZyiUtXcMx3BKv3x4xgWBdaitPEgm17IvFgFdBw7efkti3x_pUybjlDhBnwUTSBMTR9YMlLcZfRH3UWz-pCPN2c9piiBOwxE3ZKssixtatokK8-Iy_Ot_kSBLo-pCUA7_Ur8RAbUA8EgCOS7XlslQyqCJOuZ2RiLQL85ASdzdjvC5mLhgpFdl0qy7Ij0G6uQOMdb3wfNosYRjMhEGNGFBLk08uGS5gN347Hc7M65ZjTqtgjKyEUJgw9lF2sG3ATltARhCGzzPibz1lUVakLNtrtXHxw4wOEYuUQbELEJqLN1FBo7Ue4MaVhZb4B9GV7OvHOQtMjH23MhC1O62fP6pAA_U2CoGIQN3iyim84fn8CQ1PVKVSNqOzc_-5a-JhBsbNH_9zijykOb7Q3jAWy0o90i9Rrpwo-KwMg_RmrVRq7fHTknFk9Kzoxl-UraRl44dw4m1mFLt2G08M4ZEMGdCCQiF8XOB10w8JBfkmNWql0QArvOkc7t_PBsnN0MEfew5_5f9KAKJ9jg_mKVxHZeswXlTMJQHIHV9jJ7178jdUytFUKfssbITaGSAGw1AePQewf7sHpER1DX4YyJ4sRjRWjo3lbkuXlxGyslQ0FWBRoBv0JoRlAyxQa7bkeJfWUu_Zdgoc9vCHFiPZg-59qB62y3wN7rdmai9eYbKscA0cpnagy3o4j9BqIRgfGq76j0CIvFYbB5lVZFqcGlZzU8ZXlRyCk/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                      - img "Trexgen Pharmaceuticals PvtLtd" [ref=e459]
+                    - generic [ref=e461]:
+                      - generic [ref=e462]:
+                        - link [ref=e463] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JDKmgFr22c8eHlhIPHWuukkAAAGep4NJVgoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICD-tjuh/clv1c_ek-YBPHXFbbWzjK3YoscrxfcuU0CLg9JQm6LDEf1t4GiiBTerU67AXYU1xs_yRGFXqSY5kOUaDla3hav0Bjpzz-aInZZlSAtfCRnemhZM9x0kzJv2545pQcYSfx9gLKRlJ-qmob5Ln62z1GQh9TaMwrLn4CYjx1KEsL83zm-vPafGW4JCKy1x86v3_iIQEr2QkXJYnlWKTxEtGZ-tFXu4XDjRfkbLXxGXEZMOQ3uJ4PJVFam7O0CU5wLfFfnvsttifgztBNN9W-o80UrLRCRsp1GeNRXLKPJmlp1BhBFIM4-_ctSzaga8qSgScqoW_Mvz42FvzoCTz0_yuIttU1AuZOiCB57OdotLQCaQLTq_1bW7RvG-o2073oDSfQt8wlyYsmaQGV81g0x155RAJoe8jwoYX5CPfOwJUm-D_W56sj0EtdRolzhmB9UkHrDmrgv2chdKX4gd4NC6Z-IgcSRNPck2XpjalCI08xY1H0Oo6eh7obyUdOMAZDVoAPscUL-Y6KvZiG2Wo9bAsEns4k7R0WxG8hmoglKB9tpWhaOeHIStZjykG0iIojvZJ76Y6oTUDD3Wd3uiMtNcebcAkcDEBcc6SKbPfwzxcEyXkLRKn-PFStoyWhh0SqQKdtmSLNgBdSjYLzbCfusog8rO5Qo97ri11LsNtHRSnMeZpUJsxuMddaaK5XY_tov-NRX9hkPwnxK6cJFqQic6BJoAreJSuf8x98DwYe0Akf8-1vAF6iehzBdhzEsTEIgePiKYpKid8Nwn-wS_3zAqnjCz7a-z0UN6ayRL1URiOp8slFv2jw0vqjA0iqtUg7C6eQcReRMFHWNH7hyQ-iueOK-SzKxr1ZfKjhwCdZxnfwLxFmh-0kRtDksYLz7eWdhH37jS48cQeSaf7-azsqnUhxkGDcIATWaz8mk5iPrMDIL9lwr9JPm541Ytip82UQzdxSLil_wCRMQ4ZyiUtXcMx3BKv3x4xgWBdaitPEgm17IvFgFdBw7efkti3x_pUybjlDhBnwUTSBMTR9YMlLcZfRH3UWz-pCPN2c9piiBOwxE3ZKssixtatokK8-Iy_Ot_kSBLo-pCUA7_Ur8RAbUA8EgCOS7XlslQyqCJOuZ2RiLQL85ASdzdjvC5mLhgpFdl0qy7Ij0G6uQOMdb3wfNosYRjMhEGNGFBLk08uGS5gN347Hc7M65ZjTqtgjKyEUJgw9lF2sG3ATltARhCGzzPibz1lUVakLNtrtXHxw4wOEYuUQbELEJqLN1FBo7Ue4MaVhZb4B9GV7OvHOQtMjH23MhC1O62fP6pAA_U2CoGIQN3iyim84fn8CQ1PVKVSNqOzc_-5a-JhBsbNH_9zijykOb7Q3jAWy0o90i9Rrpwo-KwMg_RmrVRq7fHTknFk9Kzoxl-UraRl44dw4m1mFLt2G08M4ZEMGdCCQiF8XOB10w8JBfkmNWql0QArvOkc7t_PBsnN0MEfew5_5f9KAKJ9jg_mKVxHZeswXlTMJQHIHV9jJ7178jdUytFUKfssbITaGSAGw1AePQewf7sHpER1DX4YyJ4sRjRWjo3lbkuXlxGyslQ0FWBRoBv0JoRlAyxQa7bkeJfWUu_Zdgoc9vCHFiPZg-59qB62y3wN7rdmai9eYbKscA0cpnagy3o4j9BqIRgfGq76j0CIvFYbB5lVZFqcGlZzU8ZXlRyCk/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                        - link "Trexgen Pharmaceuticals PvtLtd" [ref=e464] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JDKmgFr22c8eHlhIPHWuukkAAAGep4NJVgoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICD-tjuh/clv1c_ek-YBPHXFbbWzjK3YoscrxfcuU0CLg9JQm6LDEf1t4GiiBTerU67AXYU1xs_yRGFXqSY5kOUaDla3hav0Bjpzz-aInZZlSAtfCRnemhZM9x0kzJv2545pQcYSfx9gLKRlJ-qmob5Ln62z1GQh9TaMwrLn4CYjx1KEsL83zm-vPafGW4JCKy1x86v3_iIQEr2QkXJYnlWKTxEtGZ-tFXu4XDjRfkbLXxGXEZMOQ3uJ4PJVFam7O0CU5wLfFfnvsttifgztBNN9W-o80UrLRCRsp1GeNRXLKPJmlp1BhBFIM4-_ctSzaga8qSgScqoW_Mvz42FvzoCTz0_yuIttU1AuZOiCB57OdotLQCaQLTq_1bW7RvG-o2073oDSfQt8wlyYsmaQGV81g0x155RAJoe8jwoYX5CPfOwJUm-D_W56sj0EtdRolzhmB9UkHrDmrgv2chdKX4gd4NC6Z-IgcSRNPck2XpjalCI08xY1H0Oo6eh7obyUdOMAZDVoAPscUL-Y6KvZiG2Wo9bAsEns4k7R0WxG8hmoglKB9tpWhaOeHIStZjykG0iIojvZJ76Y6oTUDD3Wd3uiMtNcebcAkcDEBcc6SKbPfwzxcEyXkLRKn-PFStoyWhh0SqQKdtmSLNgBdSjYLzbCfusog8rO5Qo97ri11LsNtHRSnMeZpUJsxuMddaaK5XY_tov-NRX9hkPwnxK6cJFqQic6BJoAreJSuf8x98DwYe0Akf8-1vAF6iehzBdhzEsTEIgePiKYpKid8Nwn-wS_3zAqnjCz7a-z0UN6ayRL1URiOp8slFv2jw0vqjA0iqtUg7C6eQcReRMFHWNH7hyQ-iueOK-SzKxr1ZfKjhwCdZxnfwLxFmh-0kRtDksYLz7eWdhH37jS48cQeSaf7-azsqnUhxkGDcIATWaz8mk5iPrMDIL9lwr9JPm541Ytip82UQzdxSLil_wCRMQ4ZyiUtXcMx3BKv3x4xgWBdaitPEgm17IvFgFdBw7efkti3x_pUybjlDhBnwUTSBMTR9YMlLcZfRH3UWz-pCPN2c9piiBOwxE3ZKssixtatokK8-Iy_Ot_kSBLo-pCUA7_Ur8RAbUA8EgCOS7XlslQyqCJOuZ2RiLQL85ASdzdjvC5mLhgpFdl0qy7Ij0G6uQOMdb3wfNosYRjMhEGNGFBLk08uGS5gN347Hc7M65ZjTqtgjKyEUJgw9lF2sG3ATltARhCGzzPibz1lUVakLNtrtXHxw4wOEYuUQbELEJqLN1FBo7Ue4MaVhZb4B9GV7OvHOQtMjH23MhC1O62fP6pAA_U2CoGIQN3iyim84fn8CQ1PVKVSNqOzc_-5a-JhBsbNH_9zijykOb7Q3jAWy0o90i9Rrpwo-KwMg_RmrVRq7fHTknFk9Kzoxl-UraRl44dw4m1mFLt2G08M4ZEMGdCCQiF8XOB10w8JBfkmNWql0QArvOkc7t_PBsnN0MEfew5_5f9KAKJ9jg_mKVxHZeswXlTMJQHIHV9jJ7178jdUytFUKfssbITaGSAGw1AePQewf7sHpER1DX4YyJ4sRjRWjo3lbkuXlxGyslQ0FWBRoBv0JoRlAyxQa7bkeJfWUu_Zdgoc9vCHFiPZg-59qB62y3wN7rdmai9eYbKscA0cpnagy3o4j9BqIRgfGq76j0CIvFYbB5lVZFqcGlZzU8ZXlRyCk/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                          - img "Trexgen Pharmaceuticals PvtLtd" [ref=e466]
+                      - generic [ref=e467]:
+                        - link [ref=e468] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JDKmgFr22c8eHlhIPHWuukkAAAGep4NJVgoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICD-tjuh/clv1c_ek-YBPHXFbbWzjK3YoscrxfcuU0CLg9JQm6LDEf1t4GiiBTerU67AXYU1xs_yRGFXqSY5kOUaDla3hav0Bjpzz-aInZZlSAtfCRnemhZM9x0kzJv2545pQcYSfx9gLKRlJ-qmob5Ln62z1GQh9TaMwrLn4CYjx1KEsL83zm-vPafGW4JCKy1x86v3_iIQEr2QkXJYnlWKTxEtGZ-tFXu4XDjRfkbLXxGXEZMOQ3uJ4PJVFam7O0CU5wLfFfnvsttifgztBNN9W-o80UrLRCRsp1GeNRXLKPJmlp1BhBFIM4-_ctSzaga8qSgScqoW_Mvz42FvzoCTz0_yuIttU1AuZOiCB57OdotLQCaQLTq_1bW7RvG-o2073oDSfQt8wlyYsmaQGV81g0x155RAJoe8jwoYX5CPfOwJUm-D_W56sj0EtdRolzhmB9UkHrDmrgv2chdKX4gd4NC6Z-IgcSRNPck2XpjalCI08xY1H0Oo6eh7obyUdOMAZDVoAPscUL-Y6KvZiG2Wo9bAsEns4k7R0WxG8hmoglKB9tpWhaOeHIStZjykG0iIojvZJ76Y6oTUDD3Wd3uiMtNcebcAkcDEBcc6SKbPfwzxcEyXkLRKn-PFStoyWhh0SqQKdtmSLNgBdSjYLzbCfusog8rO5Qo97ri11LsNtHRSnMeZpUJsxuMddaaK5XY_tov-NRX9hkPwnxK6cJFqQic6BJoAreJSuf8x98DwYe0Akf8-1vAF6iehzBdhzEsTEIgePiKYpKid8Nwn-wS_3zAqnjCz7a-z0UN6ayRL1URiOp8slFv2jw0vqjA0iqtUg7C6eQcReRMFHWNH7hyQ-iueOK-SzKxr1ZfKjhwCdZxnfwLxFmh-0kRtDksYLz7eWdhH37jS48cQeSaf7-azsqnUhxkGDcIATWaz8mk5iPrMDIL9lwr9JPm541Ytip82UQzdxSLil_wCRMQ4ZyiUtXcMx3BKv3x4xgWBdaitPEgm17IvFgFdBw7efkti3x_pUybjlDhBnwUTSBMTR9YMlLcZfRH3UWz-pCPN2c9piiBOwxE3ZKssixtatokK8-Iy_Ot_kSBLo-pCUA7_Ur8RAbUA8EgCOS7XlslQyqCJOuZ2RiLQL85ASdzdjvC5mLhgpFdl0qy7Ij0G6uQOMdb3wfNosYRjMhEGNGFBLk08uGS5gN347Hc7M65ZjTqtgjKyEUJgw9lF2sG3ATltARhCGzzPibz1lUVakLNtrtXHxw4wOEYuUQbELEJqLN1FBo7Ue4MaVhZb4B9GV7OvHOQtMjH23MhC1O62fP6pAA_U2CoGIQN3iyim84fn8CQ1PVKVSNqOzc_-5a-JhBsbNH_9zijykOb7Q3jAWy0o90i9Rrpwo-KwMg_RmrVRq7fHTknFk9Kzoxl-UraRl44dw4m1mFLt2G08M4ZEMGdCCQiF8XOB10w8JBfkmNWql0QArvOkc7t_PBsnN0MEfew5_5f9KAKJ9jg_mKVxHZeswXlTMJQHIHV9jJ7178jdUytFUKfssbITaGSAGw1AePQewf7sHpER1DX4YyJ4sRjRWjo3lbkuXlxGyslQ0FWBRoBv0JoRlAyxQa7bkeJfWUu_Zdgoc9vCHFiPZg-59qB62y3wN7rdmai9eYbKscA0cpnagy3o4j9BqIRgfGq76j0CIvFYbB5lVZFqcGlZzU8ZXlRyCk/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                        - link "Joint Pain ? Advanced Joint Pain Formulas" [ref=e469] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JDKmgFr22c8eHlhIPHWuukkAAAGep4NJVgoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICD-tjuh/clv1c_ek-YBPHXFbbWzjK3YoscrxfcuU0CLg9JQm6LDEf1t4GiiBTerU67AXYU1xs_yRGFXqSY5kOUaDla3hav0Bjpzz-aInZZlSAtfCRnemhZM9x0kzJv2545pQcYSfx9gLKRlJ-qmob5Ln62z1GQh9TaMwrLn4CYjx1KEsL83zm-vPafGW4JCKy1x86v3_iIQEr2QkXJYnlWKTxEtGZ-tFXu4XDjRfkbLXxGXEZMOQ3uJ4PJVFam7O0CU5wLfFfnvsttifgztBNN9W-o80UrLRCRsp1GeNRXLKPJmlp1BhBFIM4-_ctSzaga8qSgScqoW_Mvz42FvzoCTz0_yuIttU1AuZOiCB57OdotLQCaQLTq_1bW7RvG-o2073oDSfQt8wlyYsmaQGV81g0x155RAJoe8jwoYX5CPfOwJUm-D_W56sj0EtdRolzhmB9UkHrDmrgv2chdKX4gd4NC6Z-IgcSRNPck2XpjalCI08xY1H0Oo6eh7obyUdOMAZDVoAPscUL-Y6KvZiG2Wo9bAsEns4k7R0WxG8hmoglKB9tpWhaOeHIStZjykG0iIojvZJ76Y6oTUDD3Wd3uiMtNcebcAkcDEBcc6SKbPfwzxcEyXkLRKn-PFStoyWhh0SqQKdtmSLNgBdSjYLzbCfusog8rO5Qo97ri11LsNtHRSnMeZpUJsxuMddaaK5XY_tov-NRX9hkPwnxK6cJFqQic6BJoAreJSuf8x98DwYe0Akf8-1vAF6iehzBdhzEsTEIgePiKYpKid8Nwn-wS_3zAqnjCz7a-z0UN6ayRL1URiOp8slFv2jw0vqjA0iqtUg7C6eQcReRMFHWNH7hyQ-iueOK-SzKxr1ZfKjhwCdZxnfwLxFmh-0kRtDksYLz7eWdhH37jS48cQeSaf7-azsqnUhxkGDcIATWaz8mk5iPrMDIL9lwr9JPm541Ytip82UQzdxSLil_wCRMQ4ZyiUtXcMx3BKv3x4xgWBdaitPEgm17IvFgFdBw7efkti3x_pUybjlDhBnwUTSBMTR9YMlLcZfRH3UWz-pCPN2c9piiBOwxE3ZKssixtatokK8-Iy_Ot_kSBLo-pCUA7_Ur8RAbUA8EgCOS7XlslQyqCJOuZ2RiLQL85ASdzdjvC5mLhgpFdl0qy7Ij0G6uQOMdb3wfNosYRjMhEGNGFBLk08uGS5gN347Hc7M65ZjTqtgjKyEUJgw9lF2sG3ATltARhCGzzPibz1lUVakLNtrtXHxw4wOEYuUQbELEJqLN1FBo7Ue4MaVhZb4B9GV7OvHOQtMjH23MhC1O62fP6pAA_U2CoGIQN3iyim84fn8CQ1PVKVSNqOzc_-5a-JhBsbNH_9zijykOb7Q3jAWy0o90i9Rrpwo-KwMg_RmrVRq7fHTknFk9Kzoxl-UraRl44dw4m1mFLt2G08M4ZEMGdCCQiF8XOB10w8JBfkmNWql0QArvOkc7t_PBsnN0MEfew5_5f9KAKJ9jg_mKVxHZeswXlTMJQHIHV9jJ7178jdUytFUKfssbITaGSAGw1AePQewf7sHpER1DX4YyJ4sRjRWjo3lbkuXlxGyslQ0FWBRoBv0JoRlAyxQa7bkeJfWUu_Zdgoc9vCHFiPZg-59qB62y3wN7rdmai9eYbKscA0cpnagy3o4j9BqIRgfGq76j0CIvFYbB5lVZFqcGlZzU8ZXlRyCk/https://www.amazon.in/stores/page/A1BA6B56-888E-4341-BFB5-F1BA99895156/?_encoding=UTF8&store_ref=SB_A0824981OBH7FKL2S56E-A0689095E1A6KBL0LZIK&pd_rd_plhdr=t&aaxitk=8842a92dc10c68d37c0ff31bae6c65f4&hsa_cr_id=6847743340202&lp_asins=B081DS6X6X%2CB07RRY3JMG%2CB0813FLJT1&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=cg7IpQdSVI&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                          - generic [ref=e471]:
+                            - generic [ref=e472]: Joint Pain ? Advanced Joint Pain Formulas
+                            - generic [ref=e473]: Joint Pain ? Advanced Joint Pain Formulas
+              - generic [ref=e475]:
+                - generic:
+                  - generic:
+                    - link:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JJQAwimU2hlZ0DlpLEbw1ZEAAAGep4NJVwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICC_mNjz/clv1c_ek-wBIf3FbbazjI3kId3r1eKTDKRmJm8p9qlI_3piw7ihBRzlBei3URW0xjaIVb1RFY_7RYGh_5wdhgOhfDNCOnVWKGlthwsTMEljqkXHK0m6C1bGvmmyjn7wI30Z_Q7ugI3MYo3TpQkum65QiAqP1LyI9OIRpXqlIz5_U_yjCYdU2g7qg7L_ku3B59hm53S11mzIHop9-eplGEwMUrk_jHKKUobYCo71PoW_K4bOCoi00dobjb8f5hfJ2j3f0p72MjwSuJxsym0hXn19xf5PAU_wHBn6v4OysU70zlYsoBqIUkwf21Z52ITRERwoS4BmP3RP4g5sPW6PqBCsGcksTP4kEXw4uSBY8dorx9DrNMZhVyYuu2679gIgnU-kvEEsC2KdIktjqY-zLTwj2CEV0UORXcDUI61vWJ-4RxDUrl20zKDGiOpQit4kP25ZN_VStCmZdlXE_hacRMYOvOzsB__mOEtn_GxbTQgUCWEsXkc5UK4LrCJXXTAjrChngvhps-YXapWGv5J771C1VM9BrMRK1Eaai6GDuF5HN4LBnJoO66J78od9cHsGHX7-4dP7xqYdDP7SC_8c84lmQdQTPt8xlYRJJblu5O8AR9H9BlZ_BvG1XRodk6eOzOKFeHiqr1gUI6wZDynHIQZkH4yiNzts8-zVPzwP1Q50rimCRYuliI5N3c6BnncgHkHTTVgjYfRG_SlN1SuwkacUQf8iwvQXsrmIVBK2lQwGf0ISYea-5FsyH5ATUMmnVDFaQi5jp-AFX-OOn22PNmGUDCMcRw2hEsqbLtfwwQSB8nGUXWkG7agmhuWaYwz-Ecb5y5Xz6v33qT_w6mD7bug0sFzjcDdhNTvhzmGXYwC5hYbyA6wrZwTmgzwN71M4eyZuOe1PnRoaQ7D8JiZHPV81f_EpGXYzh7YKz7ttV5Y3okmnvGzu5el_7E9FQt2BRdiTeOtX_piVgV8Zq4cQTxtUx6IV4rzioUeWLF3e_eAs4d0fjyfjraP7fqxYPeaRiYF3imfoMes8RoKJRy7Aazf9St0c3rvZ1URck7_4QH53QYCrV9idRqrZe3E19dsQlQOSPuCNT7fD0rcvdqwmfnbvS_ss5DfPcTr7hOsU78IFPPkiyyD7lEMb2bXTC6n4npr6jh31y-I_1dSSax4DEHw1FfS_EtclqRzZDYN_L0hrHDBbxAvDk1c4oMolVY2oB8URYQ5fcrX2RHT0C8CWB7K-BPShshe-KbCQTySmHosqYFHv3ndIvBko5yVFDUBECBzADNnthpstOsOHhC28ndd-iOwO65poE53guosI72miWbw1Lr-E9Axh5mJe-Xgz8dxE3tGsp4l3NGCcZr5yh8aZ7ImMsKrvkYPrNgJkgJ8aZNIiBHHZ_dGUH0hCS4nseFXsXui4lKOdj6dBRiMYq6Aze3_qkJeoX0VCjKaI6f8RTNU6P9enzw5qDwYMnSSt6lq8Ovreo2goNWvOT7G1v0Gz-E_tbZfgdpe6y1ZYImuKkiDRQuZptCxXltBAPaQjlIU1ma4k-pmxObupOXL31O43C2VwGzeTnRbohpBJYPQXEwOJjh759ZknzmBVG7rtCoLoDcx7kzxYMKREfxKLz0HC9SoF3s9_nFu36udhR-h1LLUFEQjud-Nh7eg0qAbvE_9WVBe5fhRgfR0eBrgwx7Dayn7VYQ4SG5nbmW-PKW4QArbJg/https://www.amazon.in/stores/page/8F9BF274-A8B3-4A06-AFEF-3A87B77CEC7E/?_encoding=UTF8&store_ref=SB_A0602207190ATJZYVEJ72-A0462177273B3D1U6KAE2&pd_rd_plhdr=t&aaxitk=e17370857039e4f285159339c810f776&hsa_cr_id=0&lp_asins=B0CG91GVK3%2CB0DBV7LR9X%2CB0DHY4BL4B&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=m1gbinnDSk&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                    - link "BBETTER" [ref=e476] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JJQAwimU2hlZ0DlpLEbw1ZEAAAGep4NJVwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICC_mNjz/clv1c_ek-wBIf3FbbazjI3kId3r1eKTDKRmJm8p9qlI_3piw7ihBRzlBei3URW0xjaIVb1RFY_7RYGh_5wdhgOhfDNCOnVWKGlthwsTMEljqkXHK0m6C1bGvmmyjn7wI30Z_Q7ugI3MYo3TpQkum65QiAqP1LyI9OIRpXqlIz5_U_yjCYdU2g7qg7L_ku3B59hm53S11mzIHop9-eplGEwMUrk_jHKKUobYCo71PoW_K4bOCoi00dobjb8f5hfJ2j3f0p72MjwSuJxsym0hXn19xf5PAU_wHBn6v4OysU70zlYsoBqIUkwf21Z52ITRERwoS4BmP3RP4g5sPW6PqBCsGcksTP4kEXw4uSBY8dorx9DrNMZhVyYuu2679gIgnU-kvEEsC2KdIktjqY-zLTwj2CEV0UORXcDUI61vWJ-4RxDUrl20zKDGiOpQit4kP25ZN_VStCmZdlXE_hacRMYOvOzsB__mOEtn_GxbTQgUCWEsXkc5UK4LrCJXXTAjrChngvhps-YXapWGv5J771C1VM9BrMRK1Eaai6GDuF5HN4LBnJoO66J78od9cHsGHX7-4dP7xqYdDP7SC_8c84lmQdQTPt8xlYRJJblu5O8AR9H9BlZ_BvG1XRodk6eOzOKFeHiqr1gUI6wZDynHIQZkH4yiNzts8-zVPzwP1Q50rimCRYuliI5N3c6BnncgHkHTTVgjYfRG_SlN1SuwkacUQf8iwvQXsrmIVBK2lQwGf0ISYea-5FsyH5ATUMmnVDFaQi5jp-AFX-OOn22PNmGUDCMcRw2hEsqbLtfwwQSB8nGUXWkG7agmhuWaYwz-Ecb5y5Xz6v33qT_w6mD7bug0sFzjcDdhNTvhzmGXYwC5hYbyA6wrZwTmgzwN71M4eyZuOe1PnRoaQ7D8JiZHPV81f_EpGXYzh7YKz7ttV5Y3okmnvGzu5el_7E9FQt2BRdiTeOtX_piVgV8Zq4cQTxtUx6IV4rzioUeWLF3e_eAs4d0fjyfjraP7fqxYPeaRiYF3imfoMes8RoKJRy7Aazf9St0c3rvZ1URck7_4QH53QYCrV9idRqrZe3E19dsQlQOSPuCNT7fD0rcvdqwmfnbvS_ss5DfPcTr7hOsU78IFPPkiyyD7lEMb2bXTC6n4npr6jh31y-I_1dSSax4DEHw1FfS_EtclqRzZDYN_L0hrHDBbxAvDk1c4oMolVY2oB8URYQ5fcrX2RHT0C8CWB7K-BPShshe-KbCQTySmHosqYFHv3ndIvBko5yVFDUBECBzADNnthpstOsOHhC28ndd-iOwO65poE53guosI72miWbw1Lr-E9Axh5mJe-Xgz8dxE3tGsp4l3NGCcZr5yh8aZ7ImMsKrvkYPrNgJkgJ8aZNIiBHHZ_dGUH0hCS4nseFXsXui4lKOdj6dBRiMYq6Aze3_qkJeoX0VCjKaI6f8RTNU6P9enzw5qDwYMnSSt6lq8Ovreo2goNWvOT7G1v0Gz-E_tbZfgdpe6y1ZYImuKkiDRQuZptCxXltBAPaQjlIU1ma4k-pmxObupOXL31O43C2VwGzeTnRbohpBJYPQXEwOJjh759ZknzmBVG7rtCoLoDcx7kzxYMKREfxKLz0HC9SoF3s9_nFu36udhR-h1LLUFEQjud-Nh7eg0qAbvE_9WVBe5fhRgfR0eBrgwx7Dayn7VYQ4SG5nbmW-PKW4QArbJg/https://www.amazon.in/stores/page/8F9BF274-A8B3-4A06-AFEF-3A87B77CEC7E/?_encoding=UTF8&store_ref=SB_A0602207190ATJZYVEJ72-A0462177273B3D1U6KAE2&pd_rd_plhdr=t&aaxitk=e17370857039e4f285159339c810f776&hsa_cr_id=0&lp_asins=B0CG91GVK3%2CB0DBV7LR9X%2CB0DHY4BL4B&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=m1gbinnDSk&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                      - img "BBETTER" [ref=e477]
+                    - generic [ref=e479]:
+                      - generic [ref=e480]:
+                        - link [ref=e481] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JJQAwimU2hlZ0DlpLEbw1ZEAAAGep4NJVwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICC_mNjz/clv1c_ek-wBIf3FbbazjI3kId3r1eKTDKRmJm8p9qlI_3piw7ihBRzlBei3URW0xjaIVb1RFY_7RYGh_5wdhgOhfDNCOnVWKGlthwsTMEljqkXHK0m6C1bGvmmyjn7wI30Z_Q7ugI3MYo3TpQkum65QiAqP1LyI9OIRpXqlIz5_U_yjCYdU2g7qg7L_ku3B59hm53S11mzIHop9-eplGEwMUrk_jHKKUobYCo71PoW_K4bOCoi00dobjb8f5hfJ2j3f0p72MjwSuJxsym0hXn19xf5PAU_wHBn6v4OysU70zlYsoBqIUkwf21Z52ITRERwoS4BmP3RP4g5sPW6PqBCsGcksTP4kEXw4uSBY8dorx9DrNMZhVyYuu2679gIgnU-kvEEsC2KdIktjqY-zLTwj2CEV0UORXcDUI61vWJ-4RxDUrl20zKDGiOpQit4kP25ZN_VStCmZdlXE_hacRMYOvOzsB__mOEtn_GxbTQgUCWEsXkc5UK4LrCJXXTAjrChngvhps-YXapWGv5J771C1VM9BrMRK1Eaai6GDuF5HN4LBnJoO66J78od9cHsGHX7-4dP7xqYdDP7SC_8c84lmQdQTPt8xlYRJJblu5O8AR9H9BlZ_BvG1XRodk6eOzOKFeHiqr1gUI6wZDynHIQZkH4yiNzts8-zVPzwP1Q50rimCRYuliI5N3c6BnncgHkHTTVgjYfRG_SlN1SuwkacUQf8iwvQXsrmIVBK2lQwGf0ISYea-5FsyH5ATUMmnVDFaQi5jp-AFX-OOn22PNmGUDCMcRw2hEsqbLtfwwQSB8nGUXWkG7agmhuWaYwz-Ecb5y5Xz6v33qT_w6mD7bug0sFzjcDdhNTvhzmGXYwC5hYbyA6wrZwTmgzwN71M4eyZuOe1PnRoaQ7D8JiZHPV81f_EpGXYzh7YKz7ttV5Y3okmnvGzu5el_7E9FQt2BRdiTeOtX_piVgV8Zq4cQTxtUx6IV4rzioUeWLF3e_eAs4d0fjyfjraP7fqxYPeaRiYF3imfoMes8RoKJRy7Aazf9St0c3rvZ1URck7_4QH53QYCrV9idRqrZe3E19dsQlQOSPuCNT7fD0rcvdqwmfnbvS_ss5DfPcTr7hOsU78IFPPkiyyD7lEMb2bXTC6n4npr6jh31y-I_1dSSax4DEHw1FfS_EtclqRzZDYN_L0hrHDBbxAvDk1c4oMolVY2oB8URYQ5fcrX2RHT0C8CWB7K-BPShshe-KbCQTySmHosqYFHv3ndIvBko5yVFDUBECBzADNnthpstOsOHhC28ndd-iOwO65poE53guosI72miWbw1Lr-E9Axh5mJe-Xgz8dxE3tGsp4l3NGCcZr5yh8aZ7ImMsKrvkYPrNgJkgJ8aZNIiBHHZ_dGUH0hCS4nseFXsXui4lKOdj6dBRiMYq6Aze3_qkJeoX0VCjKaI6f8RTNU6P9enzw5qDwYMnSSt6lq8Ovreo2goNWvOT7G1v0Gz-E_tbZfgdpe6y1ZYImuKkiDRQuZptCxXltBAPaQjlIU1ma4k-pmxObupOXL31O43C2VwGzeTnRbohpBJYPQXEwOJjh759ZknzmBVG7rtCoLoDcx7kzxYMKREfxKLz0HC9SoF3s9_nFu36udhR-h1LLUFEQjud-Nh7eg0qAbvE_9WVBe5fhRgfR0eBrgwx7Dayn7VYQ4SG5nbmW-PKW4QArbJg/https://www.amazon.in/stores/page/8F9BF274-A8B3-4A06-AFEF-3A87B77CEC7E/?_encoding=UTF8&store_ref=SB_A0602207190ATJZYVEJ72-A0462177273B3D1U6KAE2&pd_rd_plhdr=t&aaxitk=e17370857039e4f285159339c810f776&hsa_cr_id=0&lp_asins=B0CG91GVK3%2CB0DBV7LR9X%2CB0DHY4BL4B&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=m1gbinnDSk&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                        - link "BBETTER" [ref=e482] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JJQAwimU2hlZ0DlpLEbw1ZEAAAGep4NJVwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICC_mNjz/clv1c_ek-wBIf3FbbazjI3kId3r1eKTDKRmJm8p9qlI_3piw7ihBRzlBei3URW0xjaIVb1RFY_7RYGh_5wdhgOhfDNCOnVWKGlthwsTMEljqkXHK0m6C1bGvmmyjn7wI30Z_Q7ugI3MYo3TpQkum65QiAqP1LyI9OIRpXqlIz5_U_yjCYdU2g7qg7L_ku3B59hm53S11mzIHop9-eplGEwMUrk_jHKKUobYCo71PoW_K4bOCoi00dobjb8f5hfJ2j3f0p72MjwSuJxsym0hXn19xf5PAU_wHBn6v4OysU70zlYsoBqIUkwf21Z52ITRERwoS4BmP3RP4g5sPW6PqBCsGcksTP4kEXw4uSBY8dorx9DrNMZhVyYuu2679gIgnU-kvEEsC2KdIktjqY-zLTwj2CEV0UORXcDUI61vWJ-4RxDUrl20zKDGiOpQit4kP25ZN_VStCmZdlXE_hacRMYOvOzsB__mOEtn_GxbTQgUCWEsXkc5UK4LrCJXXTAjrChngvhps-YXapWGv5J771C1VM9BrMRK1Eaai6GDuF5HN4LBnJoO66J78od9cHsGHX7-4dP7xqYdDP7SC_8c84lmQdQTPt8xlYRJJblu5O8AR9H9BlZ_BvG1XRodk6eOzOKFeHiqr1gUI6wZDynHIQZkH4yiNzts8-zVPzwP1Q50rimCRYuliI5N3c6BnncgHkHTTVgjYfRG_SlN1SuwkacUQf8iwvQXsrmIVBK2lQwGf0ISYea-5FsyH5ATUMmnVDFaQi5jp-AFX-OOn22PNmGUDCMcRw2hEsqbLtfwwQSB8nGUXWkG7agmhuWaYwz-Ecb5y5Xz6v33qT_w6mD7bug0sFzjcDdhNTvhzmGXYwC5hYbyA6wrZwTmgzwN71M4eyZuOe1PnRoaQ7D8JiZHPV81f_EpGXYzh7YKz7ttV5Y3okmnvGzu5el_7E9FQt2BRdiTeOtX_piVgV8Zq4cQTxtUx6IV4rzioUeWLF3e_eAs4d0fjyfjraP7fqxYPeaRiYF3imfoMes8RoKJRy7Aazf9St0c3rvZ1URck7_4QH53QYCrV9idRqrZe3E19dsQlQOSPuCNT7fD0rcvdqwmfnbvS_ss5DfPcTr7hOsU78IFPPkiyyD7lEMb2bXTC6n4npr6jh31y-I_1dSSax4DEHw1FfS_EtclqRzZDYN_L0hrHDBbxAvDk1c4oMolVY2oB8URYQ5fcrX2RHT0C8CWB7K-BPShshe-KbCQTySmHosqYFHv3ndIvBko5yVFDUBECBzADNnthpstOsOHhC28ndd-iOwO65poE53guosI72miWbw1Lr-E9Axh5mJe-Xgz8dxE3tGsp4l3NGCcZr5yh8aZ7ImMsKrvkYPrNgJkgJ8aZNIiBHHZ_dGUH0hCS4nseFXsXui4lKOdj6dBRiMYq6Aze3_qkJeoX0VCjKaI6f8RTNU6P9enzw5qDwYMnSSt6lq8Ovreo2goNWvOT7G1v0Gz-E_tbZfgdpe6y1ZYImuKkiDRQuZptCxXltBAPaQjlIU1ma4k-pmxObupOXL31O43C2VwGzeTnRbohpBJYPQXEwOJjh759ZknzmBVG7rtCoLoDcx7kzxYMKREfxKLz0HC9SoF3s9_nFu36udhR-h1LLUFEQjud-Nh7eg0qAbvE_9WVBe5fhRgfR0eBrgwx7Dayn7VYQ4SG5nbmW-PKW4QArbJg/https://www.amazon.in/stores/page/8F9BF274-A8B3-4A06-AFEF-3A87B77CEC7E/?_encoding=UTF8&store_ref=SB_A0602207190ATJZYVEJ72-A0462177273B3D1U6KAE2&pd_rd_plhdr=t&aaxitk=e17370857039e4f285159339c810f776&hsa_cr_id=0&lp_asins=B0CG91GVK3%2CB0DBV7LR9X%2CB0DHY4BL4B&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=m1gbinnDSk&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                          - img "BBETTER" [ref=e484]
+                      - generic [ref=e485]:
+                        - link [ref=e486] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JJQAwimU2hlZ0DlpLEbw1ZEAAAGep4NJVwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICC_mNjz/clv1c_ek-wBIf3FbbazjI3kId3r1eKTDKRmJm8p9qlI_3piw7ihBRzlBei3URW0xjaIVb1RFY_7RYGh_5wdhgOhfDNCOnVWKGlthwsTMEljqkXHK0m6C1bGvmmyjn7wI30Z_Q7ugI3MYo3TpQkum65QiAqP1LyI9OIRpXqlIz5_U_yjCYdU2g7qg7L_ku3B59hm53S11mzIHop9-eplGEwMUrk_jHKKUobYCo71PoW_K4bOCoi00dobjb8f5hfJ2j3f0p72MjwSuJxsym0hXn19xf5PAU_wHBn6v4OysU70zlYsoBqIUkwf21Z52ITRERwoS4BmP3RP4g5sPW6PqBCsGcksTP4kEXw4uSBY8dorx9DrNMZhVyYuu2679gIgnU-kvEEsC2KdIktjqY-zLTwj2CEV0UORXcDUI61vWJ-4RxDUrl20zKDGiOpQit4kP25ZN_VStCmZdlXE_hacRMYOvOzsB__mOEtn_GxbTQgUCWEsXkc5UK4LrCJXXTAjrChngvhps-YXapWGv5J771C1VM9BrMRK1Eaai6GDuF5HN4LBnJoO66J78od9cHsGHX7-4dP7xqYdDP7SC_8c84lmQdQTPt8xlYRJJblu5O8AR9H9BlZ_BvG1XRodk6eOzOKFeHiqr1gUI6wZDynHIQZkH4yiNzts8-zVPzwP1Q50rimCRYuliI5N3c6BnncgHkHTTVgjYfRG_SlN1SuwkacUQf8iwvQXsrmIVBK2lQwGf0ISYea-5FsyH5ATUMmnVDFaQi5jp-AFX-OOn22PNmGUDCMcRw2hEsqbLtfwwQSB8nGUXWkG7agmhuWaYwz-Ecb5y5Xz6v33qT_w6mD7bug0sFzjcDdhNTvhzmGXYwC5hYbyA6wrZwTmgzwN71M4eyZuOe1PnRoaQ7D8JiZHPV81f_EpGXYzh7YKz7ttV5Y3okmnvGzu5el_7E9FQt2BRdiTeOtX_piVgV8Zq4cQTxtUx6IV4rzioUeWLF3e_eAs4d0fjyfjraP7fqxYPeaRiYF3imfoMes8RoKJRy7Aazf9St0c3rvZ1URck7_4QH53QYCrV9idRqrZe3E19dsQlQOSPuCNT7fD0rcvdqwmfnbvS_ss5DfPcTr7hOsU78IFPPkiyyD7lEMb2bXTC6n4npr6jh31y-I_1dSSax4DEHw1FfS_EtclqRzZDYN_L0hrHDBbxAvDk1c4oMolVY2oB8URYQ5fcrX2RHT0C8CWB7K-BPShshe-KbCQTySmHosqYFHv3ndIvBko5yVFDUBECBzADNnthpstOsOHhC28ndd-iOwO65poE53guosI72miWbw1Lr-E9Axh5mJe-Xgz8dxE3tGsp4l3NGCcZr5yh8aZ7ImMsKrvkYPrNgJkgJ8aZNIiBHHZ_dGUH0hCS4nseFXsXui4lKOdj6dBRiMYq6Aze3_qkJeoX0VCjKaI6f8RTNU6P9enzw5qDwYMnSSt6lq8Ovreo2goNWvOT7G1v0Gz-E_tbZfgdpe6y1ZYImuKkiDRQuZptCxXltBAPaQjlIU1ma4k-pmxObupOXL31O43C2VwGzeTnRbohpBJYPQXEwOJjh759ZknzmBVG7rtCoLoDcx7kzxYMKREfxKLz0HC9SoF3s9_nFu36udhR-h1LLUFEQjud-Nh7eg0qAbvE_9WVBe5fhRgfR0eBrgwx7Dayn7VYQ4SG5nbmW-PKW4QArbJg/https://www.amazon.in/stores/page/8F9BF274-A8B3-4A06-AFEF-3A87B77CEC7E/?_encoding=UTF8&store_ref=SB_A0602207190ATJZYVEJ72-A0462177273B3D1U6KAE2&pd_rd_plhdr=t&aaxitk=e17370857039e4f285159339c810f776&hsa_cr_id=0&lp_asins=B0CG91GVK3%2CB0DBV7LR9X%2CB0DHY4BL4B&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=m1gbinnDSk&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                        - link "Best Health Supplements" [ref=e487] [cursor=pointer]:
+                          - /url: https://aax-eu-zaz.amazon.in/x/c/JJQAwimU2hlZ0DlpLEbw1ZEAAAGep4NJVwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICC_mNjz/clv1c_ek-wBIf3FbbazjI3kId3r1eKTDKRmJm8p9qlI_3piw7ihBRzlBei3URW0xjaIVb1RFY_7RYGh_5wdhgOhfDNCOnVWKGlthwsTMEljqkXHK0m6C1bGvmmyjn7wI30Z_Q7ugI3MYo3TpQkum65QiAqP1LyI9OIRpXqlIz5_U_yjCYdU2g7qg7L_ku3B59hm53S11mzIHop9-eplGEwMUrk_jHKKUobYCo71PoW_K4bOCoi00dobjb8f5hfJ2j3f0p72MjwSuJxsym0hXn19xf5PAU_wHBn6v4OysU70zlYsoBqIUkwf21Z52ITRERwoS4BmP3RP4g5sPW6PqBCsGcksTP4kEXw4uSBY8dorx9DrNMZhVyYuu2679gIgnU-kvEEsC2KdIktjqY-zLTwj2CEV0UORXcDUI61vWJ-4RxDUrl20zKDGiOpQit4kP25ZN_VStCmZdlXE_hacRMYOvOzsB__mOEtn_GxbTQgUCWEsXkc5UK4LrCJXXTAjrChngvhps-YXapWGv5J771C1VM9BrMRK1Eaai6GDuF5HN4LBnJoO66J78od9cHsGHX7-4dP7xqYdDP7SC_8c84lmQdQTPt8xlYRJJblu5O8AR9H9BlZ_BvG1XRodk6eOzOKFeHiqr1gUI6wZDynHIQZkH4yiNzts8-zVPzwP1Q50rimCRYuliI5N3c6BnncgHkHTTVgjYfRG_SlN1SuwkacUQf8iwvQXsrmIVBK2lQwGf0ISYea-5FsyH5ATUMmnVDFaQi5jp-AFX-OOn22PNmGUDCMcRw2hEsqbLtfwwQSB8nGUXWkG7agmhuWaYwz-Ecb5y5Xz6v33qT_w6mD7bug0sFzjcDdhNTvhzmGXYwC5hYbyA6wrZwTmgzwN71M4eyZuOe1PnRoaQ7D8JiZHPV81f_EpGXYzh7YKz7ttV5Y3okmnvGzu5el_7E9FQt2BRdiTeOtX_piVgV8Zq4cQTxtUx6IV4rzioUeWLF3e_eAs4d0fjyfjraP7fqxYPeaRiYF3imfoMes8RoKJRy7Aazf9St0c3rvZ1URck7_4QH53QYCrV9idRqrZe3E19dsQlQOSPuCNT7fD0rcvdqwmfnbvS_ss5DfPcTr7hOsU78IFPPkiyyD7lEMb2bXTC6n4npr6jh31y-I_1dSSax4DEHw1FfS_EtclqRzZDYN_L0hrHDBbxAvDk1c4oMolVY2oB8URYQ5fcrX2RHT0C8CWB7K-BPShshe-KbCQTySmHosqYFHv3ndIvBko5yVFDUBECBzADNnthpstOsOHhC28ndd-iOwO65poE53guosI72miWbw1Lr-E9Axh5mJe-Xgz8dxE3tGsp4l3NGCcZr5yh8aZ7ImMsKrvkYPrNgJkgJ8aZNIiBHHZ_dGUH0hCS4nseFXsXui4lKOdj6dBRiMYq6Aze3_qkJeoX0VCjKaI6f8RTNU6P9enzw5qDwYMnSSt6lq8Ovreo2goNWvOT7G1v0Gz-E_tbZfgdpe6y1ZYImuKkiDRQuZptCxXltBAPaQjlIU1ma4k-pmxObupOXL31O43C2VwGzeTnRbohpBJYPQXEwOJjh759ZknzmBVG7rtCoLoDcx7kzxYMKREfxKLz0HC9SoF3s9_nFu36udhR-h1LLUFEQjud-Nh7eg0qAbvE_9WVBe5fhRgfR0eBrgwx7Dayn7VYQ4SG5nbmW-PKW4QArbJg/https://www.amazon.in/stores/page/8F9BF274-A8B3-4A06-AFEF-3A87B77CEC7E/?_encoding=UTF8&store_ref=SB_A0602207190ATJZYVEJ72-A0462177273B3D1U6KAE2&pd_rd_plhdr=t&aaxitk=e17370857039e4f285159339c810f776&hsa_cr_id=0&lp_asins=B0CG91GVK3%2CB0DBV7LR9X%2CB0DHY4BL4B&lp_query=join%20amazon%20prime&lp_slot=desktop-hsa-3psl&aref=m1gbinnDSk&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=1CiN1&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=A11QQFHKV5R75PX3QQFE&pd_rd_wg=4U2Xf&pd_rd_r=ebba3130-52cd-451e-be60-d799868c6436
+                          - generic [ref=e489]:
+                            - generic [ref=e490]: Best Health Supplements
+                            - generic [ref=e491]: Best Health Supplements
+        - generic [ref=e497]:
+          - heading "Need help?" [level=2] [ref=e500]
+          - generic [ref=e501]:
+            - link "Visit the help section" [ref=e502] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201889520
+            - text: or
+            - link "contact us" [ref=e503] [cursor=pointer]:
+              - /url: /gp/help/customer/contact-us
+        - generic [ref=e506]:
+          - iframe [ref=e507]:
+            - generic [ref=f1e4]:
+              - generic [ref=f1e5]: Click to navigate to product detail page Sponsored Ad. Product image. Branded image. Bliss Welness Vegan Omega 3 6 9 1000mg | Organic Omega 369 ALA Omega3 500MG LA Omega 6 137MG OA Omega 9 200MG Essential Fatty Acid Health Supplement - 60 Vegetarian Capsules. 743.07.
+              - generic [ref=f1e8]:
+                - img "Brand logo" [ref=f1e13]
+                - img "Product image" [ref=f1e18]
+              - link "Click to navigate to product detail page" [ref=f1e22] [cursor=pointer]:
+                - /url: https://aax-eu-zaz.amazon.in/x/c/RLXSALEL4g0cotOSCzgDGRAAAAGep4NJMAoAAAH_AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAiik2A/clv1c_ek-gg4fWLcTCjhDeOZ4ZvhfJakOyKejAWNme5TbZHP9fbiaxwSb05HBgmg-iM7ok1N7c00_TnFcaQaUhR71GPHLaf7H61so73atnugI9y6wXDyv7tHDW1p9P6uk4qkqg_J21HrS_EH_KWxnYKMtpdtH10I3ckURimddjeI9Ky8A_MNHNz-Emj0w4uJTA9gk7RXgfaK-fOg1TTFV1X9HIgiaX5UZTxG50YwBF4xnv_0mU_gEdjJGwTyGqXTrXDMZ-g7LkjGcP2MiOV5z6LVPp1CwqffBRy25PakExvyBr3b0Rm46_eVEiiNKleKRyPhVOSnWEMD2QFOh3lvPqIxa3PMWuj9GvDhGXpcE0IjB43EfsowkVa2W8DtzyDV4HgG2U5idI6vvA1-D0APnW6VJ5ZiwAc7_VZhw5ufStP50wsue2SLRd5LD-S08eISn1cnOHoxrT6efiQiUdRQDQXH-sRdnMJ9UnaKLNp_dWmz13fOZNAvlHHsE608PkAGE_zL4K84pufv4F8CNGsm7k2eXrbxTial8ihhztx3vwSk1EXFuXWzt1VQAFy3a-qj1XxaPnK7rZaj9GzYiqWY_x2XgI8foYOQe5eDQdLftyN12AM1jPpuSozVKX-EGflqqqq4AkRKleSnX83-YN5bOv3YoxglziisBxhWm3tw-1nt5hIhN97L2MTnjD_oQmmjOR-Gi17QUd3lAySX0tnpWaah2WCy_y4z8d2npsv4Y2Jg2192URZSOqC62a1LJaSrVCet1KRpc8Ks31qkj9ZilUXJ9zIjznS80eyGsbxvv2MBTmyKo0UxamVZ4Gmv9AQCuqETvJXqdEc-jiBblbJhjtbVjTagYrGBSOCVbQJ9WPzRn3Hg7mtaWiVRkoqzS7GSibg7ZVphfxR6Zv0rVEisuXJVC9X6DmP7LW9-0fdPZrb5GTPKcdjSPXnlGSOpTLzLv0-Kt2T1dTA9TIPPwqm9FY5Wc0Xdarkzb4sltwRFb-WSueJpkk1cjk7Ns-3tPlc0qFtKUrsxDVtH62h0G9-9kFOw/http://www.amazon.in/dp/B0CVXCVRHW/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=6EC6r01LcP
+          - button "Leave feedback on Sponsored advertisement" [ref=e509] [cursor=pointer]:
+            - generic [ref=e510]: Sponsored
+      - link "Go back to filtering menu" [ref=e512] [cursor=pointer]:
+        - /url: "#s-skipLinkTargetForFilterOptions"
+    - dialog "Filters" [ref=e513]:
+      - generic [ref=e514]:
+        - link "Skip to main search results" [ref=e515] [cursor=pointer]:
+          - /url: "#s-skipLinkTargetForMainSearchResults"
+        - generic [ref=e521]:
+          - iframe [ref=e522]:
+            - generic [ref=f2e4]:
+              - generic [ref=f2e5]: Sponsored Ad. Brand logo. Product image. Bliss Welness Vegan Omega 3 6 9 1000mg | Organic Omega 369 ALA Omega3 500MG LA Omega 6 137MG OA Omega 9 200MG Essential Fatty Acid Health Supplement - 60 Vegetarian Capsules 743.07 Shop now
+              - link "Click to navigate to product detail page" [ref=f2e8] [cursor=pointer]:
+                - /url: https://aax-eu-zaz.amazon.in/x/c/RIe1Tp0kPIjgz_uwLc0DPVgAAAGep4NJTgoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5GVaf/clv1c_ek-gg4fWLcTCjhDeOZ4ZvhfJarHDM0_NDNtx0jaZ0dGAPCz4Sr7-UhTEOn8P02pPly2LeoQJ1_bPn_FX58UuPnFYDZjZhqEzE4kjOj25HqNpC5Rbr60jXv5VEDE_p1qLy1aV9Rg_nz6TOjiW_O83Yby_L9miZoUqks04xBnQ8MMP428KfVifCU6Coh0c3ks2nWnuRHspmBL6qvaou8u9YkmeDbdN_F_aVK9nfpN819I98Ji8FBWJyI6JxHs2Oeot3oxNdXX_5xOc9zHlJhpy-acTrn9P0TeYtexq1j7K1135AyRHa7cE3JjXJim_FsHvrCgDxthVrXOsS3zY5sfd5IvqwBUwZfI5dTNYkguHbZJ65SaTOlX0Z2SZkpo_ZMZUgmte7P2JSbsmZi2HLx6r4iLle3_2tCQJpujby4_VbvvccWX8eNqym1lqt9wR7yRpft8V4fGFYn9Z-cdymg_9RRffk5Jh6Cfj4oDECHQte-ClJ2SmysOE5gpqb-MhNOXnoDZYEs01cbEBfHWr7uj04mAhbiD9oWlGAupGphfdnxiqvL95bHwfDcuku5PUmjaUlFmMgsDIpoWmwNKkK86PQVwfSWSe9D9DabONjwNs5C-0BtmY9YN-Pz6AIAAdrwAM-wBXKHGRACX9_QcGtFeG7hdzvQiOmJOoY3jkfbYEsk6-jL9XZULYOkGn3oMLNXnryV4VC5d22ozP8P-r8f0PfKBq-tNIBvZ53dPq7tG4wVt_ozI3Gw4qxHICKwAPg2a4uM9yw9wKNTFDHeIfEHynzD2yzN1w0wzPscgW79NEYVwd1IDx8kdoM7lAGAY7hgAd1Pr84JDUnF0YL0XtHRrSQAgjILTOA1-kJXQMJ0G55YrZ-xb6hilpUFtmqInX-ZUJkTX0MxT6DCi8a0edaISGfp7VKgZUn5XL3LGkXRZKeqdOqfP53jKapn14T1E1NOznegxsFAkBFCoG8TpMIYZwdBHh6_rLnCRlHDNN0PE4BXqCUYnW_aapDZmWF56jN8vLnbP4hAi-GNgW/http://www.amazon.in/dp/B0CVXCVRHW/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=6EC6r01LcP
+              - generic [ref=f2e9]:
+                - img "Brand logo" [ref=f2e13]
+                - img "Product image" [ref=f2e17]
+                - generic [ref=f2e21]:
+                  - generic [ref=f2e22]: Bliss Welness Vegan Omega 3 6 9 1000mg | Organic Omega 369 ALA Omega3 500MG LA Omega 6 137MG OA Omega 9 200MG Essential Fatty Acid Health Supplement - 60 Vegetarian Capsules
+                  - generic [ref=f2e27]: Limited time deal
+                  - generic [ref=f2e29]:
+                    - generic [ref=f2e30]: ₹743.07
+                    - generic [ref=f2e31]:
+                      - generic [ref=f2e32]: ₹
+                      - generic [ref=f2e33]: "743"
+                      - generic [ref=f2e34]: .
+                      - generic [ref=f2e35]: "07"
+                    - generic [ref=f2e36]: List price was ₹999.00
+                    - generic [ref=f2e37]: ₹999.00
+                    - img [ref=f2e39]
+                  - link "Click to navigate to product detail page Sponsored Ad. Brand logo. Product image. Bliss Welness Vegan Omega 3 6 9 1000mg | Organic Omega 369 ALA Omega3 500MG LA Omega 6 137MG OA Omega 9 200MG Essential Fatty Acid Health Supplement - 60 Vegetarian Capsules 743.07 Shop now" [ref=f2e47] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/RIe1Tp0kPIjgz_uwLc0DPVgAAAGep4NJTgoAAAH_AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICC5GVaf/clv1c_ek-gg4fWLcTCjhDeOZ4ZvhfJarHDM0_NDNtx0jaZ0dGAPCz4Sr7-UhTEOn8P02pPly2LeoQJ1_bPn_FX58UuPnFYDZjZhqEzE4kjOj25HqNpC5Rbr60jXv5VEDE_p1qLy1aV9Rg_nz6TOjiW_O83Yby_L9miZoUqks04xBnQ8MMP428KfVifCU6Coh0c3ks2nWnuRHspmBL6qvaou8u9YkmeDbdN_F_aVK9nfpN819I98Ji8FBWJyI6JxHs2Oeot3oxNdXX_5xOc9zHlJhpy-acTrn9P0TeYtexq1j7K1135AyRHa7cE3JjXJim_FsHvrCgDxthVrXOsS3zY5sfd5IvqwBUwZfI5dTNYkguHbZJ65SaTOlX0Z2SZkpo_ZMZUgmte7P2JSbsmZi2HLx6r4iLle3_2tCQJpujby4_VbvvccWX8eNqym1lqt9wR7yRpft8V4fGFYn9Z-cdymg_9RRffk5Jh6Cfj4oDECHQte-ClJ2SmysOE5gpqb-MhNOXnoDZYEs01cbEBfHWr7uj04mAhbiD9oWlGAupGphfdnxiqvL95bHwfDcuku5PUmjaUlFmMgsDIpoWmwNKkK86PQVwfSWSe9D9DabONjwNs5C-0BtmY9YN-Pz6AIAAdrwAM-wBXKHGRACX9_QcGtFeG7hdzvQiOmJOoY3jkfbYEsk6-jL9XZULYOkGn3oMLNXnryV4VC5d22ozP8P-r8f0PfKBq-tNIBvZ53dPq7tG4wVt_ozI3Gw4qxHICKwAPg2a4uM9yw9wKNTFDHeIfEHynzD2yzN1w0wzPscgW79NEYVwd1IDx8kdoM7lAGAY7hgAd1Pr84JDUnF0YL0XtHRrSQAgjILTOA1-kJXQMJ0G55YrZ-xb6hilpUFtmqInX-ZUJkTX0MxT6DCi8a0edaISGfp7VKgZUn5XL3LGkXRZKeqdOqfP53jKapn14T1E1NOznegxsFAkBFCoG8TpMIYZwdBHh6_rLnCRlHDNN0PE4BXqCUYnW_aapDZmWF56jN8vLnbP4hAi-GNgW/http://www.amazon.in/dp/B0CVXCVRHW/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=6EC6r01LcP
+                    - generic [ref=f2e48]: Shop now
+          - button "Leave feedback on Sponsored advertisement" [ref=e524] [cursor=pointer]:
+            - generic [ref=e525]: Sponsored
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e527]:
+    - button "Back to top" [ref=e528] [cursor=pointer]:
+      - generic [ref=e529]: Back to top
+    - generic [ref=e530]:
+      - generic [ref=e531]:
+        - heading "Get to Know Us" [level=6] [ref=e532]
+        - list [ref=e533]:
+          - listitem [ref=e534]:
+            - link "About Amazon" [ref=e535] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e536]:
+            - link "Careers" [ref=e537] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e538]:
+            - link "Press Releases" [ref=e539] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e540]:
+            - link "Amazon Science" [ref=e541] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e543]:
+        - heading "Connect with Us" [level=6] [ref=e544]
+        - list [ref=e545]:
+          - listitem [ref=e546]:
+            - link "Facebook" [ref=e547] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e548]:
+            - link "Twitter" [ref=e549] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e550]:
+            - link "Instagram" [ref=e551] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e553]:
+        - heading "Make Money with Us" [level=6] [ref=e554]
+        - list [ref=e555]:
+          - listitem [ref=e556]:
+            - link "Sell on Amazon" [ref=e557] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e558]:
+            - link "Sell under Amazon Accelerator" [ref=e559] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e560]:
+            - link "Protect and Build Your Brand" [ref=e561] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e562]:
+            - link "Amazon Global Selling" [ref=e563] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e564]:
+            - link "Supply to Amazon" [ref=e565] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e566]:
+            - link "Become an Affiliate" [ref=e567] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e568]:
+            - link "Fulfilment by Amazon" [ref=e569] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e570]:
+            - link "Advertise Your Products" [ref=e571] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e572]:
+            - link "Amazon Pay on Merchants" [ref=e573] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e575]:
+        - heading "Let Us Help You" [level=6] [ref=e576]
+        - list [ref=e577]:
+          - listitem [ref=e578]:
+            - link "Your Account" [ref=e579] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e580]:
+            - link "Returns Centre" [ref=e581] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e582]:
+            - link "Recalls and Product Safety Alerts" [ref=e583] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e584]:
+            - link "100% Purchase Protection" [ref=e585] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e586]:
+            - link "Amazon App Download" [ref=e587] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e588]:
+            - link "Help" [ref=e589] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e591]:
+      - link "Amazon India Home" [ref=e594] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e597]:
+        - generic [ref=e598]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e599] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e601]: English
+          - button "Expand to Change Language or Country" [ref=e602] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e603] [cursor=pointer]:
+          - generic [ref=e605]: India
+    - generic "More on Amazon" [ref=e606]:
+      - generic "More on Amazon" [ref=e607]:
+        - list [ref=e608]:
+          - listitem [ref=e609]:
+            - link "AbeBooks Books, art & collectibles" [ref=e610] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e611]
+              - generic [ref=e612]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e613]
+          - listitem [ref=e614]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e615] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e616]
+              - generic [ref=e617]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e618]
+          - listitem [ref=e619]:
+            - link "Audible Download Audio Books" [ref=e620] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e621]
+              - generic [ref=e622]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e623]
+          - listitem [ref=e624]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e625] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e626]
+              - generic [ref=e627]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e628]:
+          - listitem [ref=e629]:
+            - link "Shopbop Designer Fashion Brands" [ref=e630] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e631]
+              - generic [ref=e632]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e633]
+          - listitem [ref=e634]:
+            - link "Amazon Business Everything For Your Business" [ref=e635] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e636]
+              - generic [ref=e637]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e638]
+          - listitem [ref=e639]:
+            - link "Amazon Music Stream millions of songs" [ref=e640] [cursor=pointer]:
+              - /url: /music/player?ref=footer_apm
+              - heading "Amazon Music" [level=5] [ref=e641]
+              - generic [ref=e642]: Stream millions of songs
+          - listitem [ref=e643]
+          - listitem [ref=e644]
+    - generic [ref=e645]:
+      - list [ref=e646]:
+        - listitem [ref=e647]:
+          - link "Conditions of Use & Sale" [ref=e648] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e649]:
+          - link "Privacy Notice" [ref=e650] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e651]:
+          - link "Interest-Based Ads" [ref=e652] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e653]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=e655]:
+    - iframe [ref=f5e2]:
+      - generic [active]:
+        - img [ref=f6e1]
+        - img [ref=f6e2]
+        - img [ref=f6e3]
+        - img [ref=f6e4]
+        - img [ref=f6e5]
+        - img [ref=f6e6]
+        - img [ref=f6e7]
+        - img [ref=f6e8]
+        - img [ref=f6e9]
+        - img [ref=f6e10]
+        - img [ref=f6e11]
+        - img [ref=f6e12]
+        - img [ref=f6e13]
+        - img [ref=f6e14]
+        - img [ref=f6e15]
+        - img [ref=f6e16]
+        - img [ref=f6e17]
+        - img [ref=f6e18]
+        - img [ref=f6e19]
+        - img [ref=f6e20]
+        - img [ref=f6e21]
+        - img [ref=f6e22]
+        - img [ref=f6e23]
+        - img [ref=f6e24]
+        - img [ref=f6e25]
+        - img [ref=f6e26]
+        - img [ref=f6e27]
+        - img [ref=f6e28]
+        - img [ref=f6e29]
+        - img [ref=f6e30]
+        - img [ref=f6e31]
+        - img [ref=f6e32]
+        - img [ref=f6e33]
+        - img [ref=f6e34]
+        - img [ref=f6e35]
+        - img [ref=f6e36]
+        - img [ref=f6e37]
+        - img [ref=f6e38]
+```
+
+# Test source
+
+```ts
+  1 | import {test,expect} from '@playwright/test';
+  2 | test('vs',async({page})=>{
+  3 |     await page.goto('https://www.amazon.in/s?k=join+amazon+prime&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=155895&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=91454ff549471d0325b625d38e469a53&tag=msndeskstdin-21&ref=pd_sl_9ntprzamt3_b');
+> 4 |     expect(await page.screenshot().toMatchSnapshot('C:\\Users\\ranga\\OneDrive\\Desktop\\praveen\\PW\\test-results\\VStesting.ts-vs-chromium\\test-failed-1.png'));
+    |                                    ^ TypeError: page.screenshot(...).toMatchSnapshot is not a function
+  5 | })
+```
