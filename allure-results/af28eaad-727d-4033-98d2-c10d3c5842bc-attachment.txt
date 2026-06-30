@@ -1,0 +1,16 @@
+{
+  firstname: 'Jim',
+  lastname: 'Brown',
+  totalprice: 1000,
+  depositpaid: true,
+  bookingdates: { checkin: '2025-07-01', checkout: '2025-07-05' },
+  additionalneeds: 'super bowls'
+}
+{
+  firstname: 'John',
+  lastname: 'Kenedy',
+  totalprice: 2000,
+  depositpaid: true,
+  bookingdates: { checkin: '2025-07-01', checkout: '2025-08-01' },
+  additionalneeds: 'orange'
+}
